@@ -24,7 +24,7 @@ Link to chapters instead of including them.
 
 This feature is particularly handy for displaying content on GitHub, where the safe mode is set to its most restrictive setting, secure.
 
-You can set the xref:asciidoctor:cli:set-safe-mode.adoc[safe mode from the CLI] and the xref:asciidoctor:api:set-safe-mode.adoc[API].
+You can set the xref:asciidoctor::set-safe-mode.adoc[safe mode from the CLI] and the xref:asciidoctor:api:set-safe-mode.adoc[API].
 
 ////
 Allow the include directive to import a file from a URI.

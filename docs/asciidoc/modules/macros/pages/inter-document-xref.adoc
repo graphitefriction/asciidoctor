@@ -18,7 +18,7 @@ If the target section is in a separate document, [.path]_document-b.adoc_, the a
 
 [source]
 ----
-include::example$xref.adoc[tag=base][tag=bad]
+include::example$xref.adoc[tag=bad]
 ----
 
 However, this link is coupled to HTML output.
@@ -28,7 +28,7 @@ These problems can be alleviated by using an inter-document xref:
 
 [source]
 ----
-include::example$xref.adoc[tag=base][tag=base-inter]
+include::example$xref.adoc[tag=base-inter]
 ----
 
 The ID of the target is now placed behind a hash symbol (`#`).

@@ -13,7 +13,7 @@ This directive is useful if you want to:
 
 CAUTION: The include directive is _disabled_ when Asciidoctor is run in secure mode.
 In this mode, the include directive is converted to a link in the output document.
-To learn more about secure mode, refer to xref:asciidoctor::safe-modes.adoc[Run Asciidoctor Securely with Safe Modes].
+To learn more about secure mode, refer to xref:asciidoctor::safe-modes.adoc[Manage Security with Safe Modes].
 
 [#include-anatomy]
 == Anatomy

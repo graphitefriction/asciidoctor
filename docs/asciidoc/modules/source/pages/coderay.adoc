@@ -93,7 +93,7 @@ ORDERED_LIST_KEYWORDS = {
 ----
 ....
 
-See the xref:asciidoctor:publish:html-code-styles.adoc#coderay[CodeRay stylesheet section] to learn about the `coderay-css` attribute.
+See the xref:asciidoctor:html:apply-code-stylesheets.adoc#coderay[CodeRay stylesheet section] to learn about the `coderay-css` attribute.
 
 ////
 Note: I'm not getting this to work. Need to come back and do some quality assurance.
