@@ -1,7 +1,6 @@
 = Blocks
 :y: Yes
 :n: No
-// block.adoc, included in um
 
 == Title
 
@@ -16,7 +15,7 @@ Here's an example of a list with a title:
 
 [source]
 ----
-include::{examplesdir}/block.adoc[tag=list-title]
+include::example$block.adoc[tag=list-title]
 ----
 
 == Metadata
@@ -31,7 +30,7 @@ Here's an example of a quote block with metadata:
 
 [source]
 ----
-include::{examplesdir}/block.adoc[tag=meta-co]
+include::example$block.adoc[tag=meta-co]
 ----
 <1> Title: Gettysburg Address
 <2> ID: gettysburg
@@ -106,14 +105,14 @@ This format is often used for single-line listings:
 
 [source]
 ....
-include::{examplesdir}/block.adoc[tag=opt-listing]
+include::example$block.adoc[tag=opt-listing]
 ....
 
 or single-line quotes:
 
 [source]
 ----
-include::{examplesdir}/block.adoc[tag=quote-name]
+include::example$block.adoc[tag=quote-name]
 ----
 
 === Masquerading blocks
@@ -139,10 +138,10 @@ This is an example inside an example
 
 The following table identifies the built-in block names and delimited blocks syntax, their purposes, and the substitutions performed on their contents.
 
-include::{partialsdir}/block-name-table.adoc[]
+include::partial$block-name-table.adoc[]
 
 This table shows the substitutions performed by each substitution group referenced in the previous table.
 
-include::{partialsdir}/subs-group-table.adoc[]
+include::partial$subs-group-table.adoc[]
 
 TIP: Surround an attribute value with single quotes in order to apply normal substitutions.

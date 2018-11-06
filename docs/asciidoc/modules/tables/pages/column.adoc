@@ -1,5 +1,4 @@
 = Table Columns
-// table-cols.adoc, included in um: tables: columns
 
 [#cols]
 == Number of columns
@@ -10,23 +9,23 @@ For example, the syntax in the two examples below will both be converted into a 
 
 [source]
 ----
-include::{examplesdir}/column.adoc[tag=2col-alt]
+include::example$column.adoc[tag=2col-alt]
 ----
 
 .Result: Rendered table with two columns as defined by the number of cells in the first row
 [width="90"]
-include::{examplesdir}/column.adoc[tag=2col-alt]
+include::example$column.adoc[tag=2col-alt]
 
 When a single number is assigned to the `cols` attribute, its value indicates the number of columns and each column will be the same width.
 
 [source]
 ----
-include::{examplesdir}/column.adoc[tag=2col]
+include::example$column.adoc[tag=2col]
 ----
 
 .Result: Rendered table with two columns as defined by the `cols` attribute
 [width="90"]
-include::{examplesdir}/column.adoc[tag=2col]
+include::example$column.adoc[tag=2col]
 
 The number of columns can also be assigned as a comma delimited list.
 The number of entries in the list determines the number of columns.
@@ -71,14 +70,14 @@ For example:
 
 [source]
 ----
-include::{examplesdir}/row.adoc[tag=indv-co]
+include::example$row.adoc[tag=indv-co]
 ----
 <1> The table will consist of three columns, as indicated by the *3*.
 The `+*+` operator ensures that the default layout and style will be applied to all of the columns.
 
 .Result: Rendered table with multiplier applied
 [width="90"]
-include::{examplesdir}/row.adoc[tag=indv]
+include::example$row.adoc[tag=indv]
 
 [#cols-align]
 === Align column content
@@ -91,13 +90,13 @@ To horizontally center the content in all of the columns, add the `+^+` operator
 [source]
 ----
 [cols="3*^"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Rendered table with horizontal, center alignment applied to all columns
 [width="90"]
 [cols="3*^"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 What if you only want to center the content in the last column?
 Assign the default styles to the preceding columns and `+^+` to the last column in the list.
@@ -105,26 +104,26 @@ Assign the default styles to the preceding columns and `+^+` to the last column 
 [source]
 ----
 [cols="2*,^"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Rendered table with horizontal, center alignment applied to last column
 [width="90"]
 [cols="2*,^"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 Let's specify a different horizontal alignment for each column.
 
 [source]
 ----
 [cols="<,^,>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Rendered table with a different horizontal alignment for each column
 [width="90"]
 [cols="<,^,>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 You'll notice that the content in the examples above is only centered on the horizontal.
 It can also be aligned vertically when the alignment operator is prefixed with a dot (`.`).
@@ -135,52 +134,52 @@ To vertically align the content to the middle of the cells in all of the columns
 [source]
 ----
 [cols="3*.^"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Rendered table with vertical, middle alignment applied to all columns
 [width="90"]
 [cols="3*.^"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 If you only want to align the content to the bottom of each cell in the last column, you'd assign the default styles to the preceding columns, and `>` to the last column in a comma separated list.
 
 [source]
 ----
 [cols="2*,.>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Rendered table with vertical, bottom alignment applied to last column
 [width="90"]
 [cols="2*,.>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 Let's specify a different vertical alignment for each column.
 
 [source]
 ----
 [cols=".<,.^,.>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Rendered table with a different vertical alignment for each column
 [width="90"]
 [cols=".<,.^,.>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 Finally, we'll also horizontally center the content in the last column.
 
 [source]
 ----
 [cols=".<,.^,^.>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Rendered table with a different vertical alignment for each column and horizontal, center alignment in the last column
 [width="90"]
 [cols=".<,.^,^.>"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 When both a horizontal and vertical alignment is assigned to a column, the horizontal alignment operator must precede the vertical operator.
 
@@ -192,36 +191,36 @@ Its value can be a proportional integer (the default is 1) or a percentage (1 to
 [source]
 ----
 [cols="1,2,6"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Table rendered with column sizes adjusted by a proportional integer
 [cols="1,2,6"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 When assigning percentage values to the cols attribute, you do not need to include the percent sign (`%`).
 
 [source]
 ----
 [cols="50,20,30"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 ----
 
 .Result: Table rendered with column sizes adjusted by a percentage
 [cols="50,20,30"]
-include::{examplesdir}/table.adoc[tag=base]
+include::example$table.adoc[tag=base]
 
 Let's create a table with custom widths and alignments.
 
 [source]
 ----
 [cols=".<2,.^5,^.>3"]
-include::{examplesdir}/column.adoc[tag=base-xtr]
+include::example$column.adoc[tag=base-xtr]
 ----
 
 .Result: Rendered table with variable widths and alignments
 [cols=".<2,.^5,^.>3"]
-include::{examplesdir}/column.adoc[tag=base-xtr]
+include::example$column.adoc[tag=base-xtr]
 
 [#cols-style]
 == Format column content
@@ -275,12 +274,12 @@ Let's apply the header style to the first column, the monospaced style to the se
 [source]
 ----
 [cols="h,m,s,e"]
-include::{examplesdir}/column.adoc[tag=4col]
+include::example$column.adoc[tag=4col]
 ----
 
 .Result: Rendered table with a header, monospaced, and strong styled column
 [width="90"]
 [cols="h,m,s,e"]
-include::{examplesdir}/column.adoc[tag=4col]
+include::example$column.adoc[tag=4col]
 
 Specifiers can also be applied to individual cells.

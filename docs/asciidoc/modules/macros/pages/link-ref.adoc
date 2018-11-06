@@ -1,5 +1,4 @@
 = Link Attributes Reference
-//sum-url.adoc
 
 [cols="1l,1,2,2"]
 |===

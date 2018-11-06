@@ -1,9 +1,5 @@
 = Quotation Marks and Apostrophes
-////
-um anchor: curved
-text-quote-apos.adoc, included in:
-- user-manual: text formatting: Smart quotation marks
-////
+// um anchor: curved
 
 == Single and double quotation mark syntax
 
@@ -15,14 +11,14 @@ However, by creating a set of backticks (`{backtick}`) contained within a set of
 .Single and double curved quotation marks syntax
 [source]
 ----
-include::{examplesdir}/text.adoc[tag=c-quote-co]
+include::example$text.adoc[tag=c-quote-co]
 ----
 <1> To output double curved quotes, enclose a word or phrase in a set of double quotes (`{quot}`) and a set of backticks (`{backtick}`).
 <2> To output single curved quotes, enclose a word or phrase in a set of single quotes (`{apos}`) and a set of backticks (`{backtick}`). In this example, the phrase _wormwood and licorice_ should be enclosed in curved single quotes when the document is rendered.
 
 .Rendered curved quotation marks
 ====
-include::{examplesdir}/text.adoc[tag=c-quote]
+include::example$text.adoc[tag=c-quote]
 ====
 
 == Apostrophe syntax
@@ -37,14 +33,14 @@ To render an apostrophe as curved when it is not bound by two characters, mark i
 .Curved apostrophe syntax
 [source]
 ----
-include::{examplesdir}/text.adoc[tag=apos]
+include::example$text.adoc[tag=apos]
 ----
 
 In the rendered output, note that the plural possessive apostrophe, seen trailing _werewolves_, is curved, as is the omission apostrophe before _60s_.
 
 .Rendered apostrophes
 ====
-include::{examplesdir}/text.adoc[tag=apos]
+include::example$text.adoc[tag=apos]
 ====
 
 If you don't want an apostrophe that is bound by two characters to be rendered as curved, escape it by preceding it with a backslash (`{backslash}`).

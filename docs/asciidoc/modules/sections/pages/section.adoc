@@ -15,7 +15,6 @@ With Asciidoctor you can:
 * xref:discrete.adoc[Create floating (discrete) sections]
 
 == Section styles for articles and books
-// section-styles.adoc,
 
 AsciiDoc provides xref:special.adoc[built-in styles], commonly referred to as [.term]_special sections_ for front matter, book parts, and back matter sections found in journal articles, academic papers, and books.
 These special section styles are:

@@ -3,7 +3,7 @@
 ////
 doc anchor: env-attributes
 attrs-env.adoc, included in:
-- user-manual appendix B attribute calatog
+- user-manual appendix B attribute catalog
 ////
 
 Asciidoctor automatically assigns values to various document attributes whenever a document is loaded or converted.

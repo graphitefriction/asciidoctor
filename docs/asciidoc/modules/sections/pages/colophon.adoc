@@ -14,7 +14,7 @@ The section must be a level 1 section (`==`), unless the book has parts.
 [colophon]
 == Colophon
 
-include::{examplesdir}/multi-special.adoc[tag=colophon]
+include::example$multi-special.adoc[tag=colophon]
 ----
 
 If the book has parts, the section must be a level 0 section (`=`).
@@ -24,9 +24,9 @@ If the book has parts, the section must be a level 0 section (`=`).
 [colophon]
 = Colophon
 
-include::{examplesdir}/multi-special.adoc[tag=colophon]
+include::example$multi-special.adoc[tag=colophon]
 ----
 
 === Hide the section title
 
-include::{partialsdir}/untitled.adoc[]
+include::partial$untitled.adoc[]

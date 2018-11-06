@@ -1,5 +1,4 @@
 = Catch a Missing or Undefined Attribute
-// attr-miss.adoc, included in user-manual: Catch a missing or undefined attribute
 
 By default, the original AsciiDoc processor drops the entire line if it contains a reference to a missing attribute (e.g., `+{bogus}+`).
 This "feature" was added for use in templates written for the original processor, which also used the AsciiDoc syntax.

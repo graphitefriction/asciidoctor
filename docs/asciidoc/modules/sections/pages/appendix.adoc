@@ -11,13 +11,13 @@ For example:
 
 [source]
 ----
-include::{examplesdir}/appendix.adoc[tag=appx-article]
+include::example$appendix.adoc[tag=appx-article]
 ----
 
 The table of contents will appear as follows:
 
 ----
-include::{examplesdir}/appendix.adoc[tag=appx-article-out]
+include::example$appendix.adoc[tag=appx-article-out]
 ----
 
 For books, the appendix must be defined as a level 1 section (`==`) if you want the appendix to be a adjacent to the chapters.
@@ -28,13 +28,13 @@ The following example shows how to define an appendix for a multi-part book.
 
 [source]
 ----
-include::{examplesdir}/appendix.adoc[tag=appx-book]
+include::example$appendix.adoc[tag=appx-book]
 ----
 
 The table of contents will appear as follows:
 
 ----
-include::{examplesdir}/appendix.adoc[tag=appx-book-out]
+include::example$appendix.adoc[tag=appx-book-out]
 ----
 
 [#caption]

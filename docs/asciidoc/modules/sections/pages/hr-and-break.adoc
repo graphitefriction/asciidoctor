@@ -1,5 +1,4 @@
 = Horizontal Rules and Page Breaks
-// hr.adoc
 
 == Horizontal rules
 
@@ -48,7 +47,6 @@ As with Markdown, whitespace between the characters is optional.
 A macro definition for the Markdown horizontal rules is included in the AsciiDoc compatibility file so they can be recognized by the `asciidoc` command as well.
 
 == Page Breaks
-// page-break.adoc
 
 .Page break syntax
 [source]

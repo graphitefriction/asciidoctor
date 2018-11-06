@@ -9,7 +9,7 @@ The `pass` style can also be set on a paragraph or an open block.
 
 [source]
 ----
-include::{examplesdir}/pass.adoc[tag=pass-style]
+include::example$pass.adoc[tag=pass-style]
 ----
 
 == Delimited passthrough block syntax
@@ -18,7 +18,7 @@ A passthrough block is delimited by four plus signs (`pass:[++++]`).
 
 [source]
 ----
-include::{examplesdir}/pass.adoc[tag=bl]
+include::example$pass.adoc[tag=bl]
 ----
 
 (Keep in mind that AsciiDoc has a video macro, so this example is merely for demonstration.
@@ -31,7 +31,7 @@ These substitutions will be applied to the content prior to it being reintroduce
 
 [source]
 ----
-include::{examplesdir}/pass.adoc[tag=subs-bl]
+include::example$pass.adoc[tag=subs-bl]
 ----
 
 The content of the pass block does not get wrapped in a paragraph.
@@ -39,7 +39,7 @@ Therefore, you can use the `pass` style in combination with the `normal` substit
 
 [source]
 ----
-include::{examplesdir}/pass.adoc[tag=no-para]
+include::example$pass.adoc[tag=no-para]
 ----
 
 WARNING: Using passthroughs to pass content (without substitutions) can couple your content to a specific output format, such as HTML.

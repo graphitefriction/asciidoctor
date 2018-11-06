@@ -1,5 +1,5 @@
 = Cross References
-// direct for um, um anchor: xref
+// um anchor: xref
 
 A link to another location within the current AsciiDoc document or in another AsciiDoc document is called a [.term]_cross reference_ (also referred to as an [.term]_xref_).
 To create a cross reference, you first need to define the location where the reference will point (i.e., the anchor).
@@ -35,12 +35,12 @@ You create a cross reference by enclosing the ID of the target block or section 
 .Cross reference using the ID of the target section
 [source]
 ----
-include::{examplesdir}/xref.adoc[tag=base]
+include::example$xref.adoc[tag=base]
 ----
 
 .Rendered cross reference using the ID of the target section
 ====
-include::{examplesdir}/xref.adoc[tag=base]
+include::example$xref.adoc[tag=base]
 ====
 
 You can also link to a block or section using the title by referencing its title, referred to as a [.term]_natural cross reference_.
@@ -50,12 +50,12 @@ The title must contain at least one space character or contain at least one uppe
 .Cross reference using a section's title
 [source]
 ----
-include::{examplesdir}/xref.adoc[tag=xref-title]
+include::example$xref.adoc[tag=xref-title]
 ----
 
 .Rendered cross reference using a section's title
 ====
-include::{examplesdir}/xref.adoc[tag=xref-title]
+include::example$xref.adoc[tag=xref-title]
 ====
 
 Converters usually use the reftext of the target as the default text of the link.
@@ -68,12 +68,12 @@ After the ID, add a comma and then enter the custom text you want the cross refe
 .Cross reference with custom xreflabel text
 [source]
 ----
-include::{examplesdir}/xref.adoc[tag=text]
+include::example$xref.adoc[tag=text]
 ----
 
 .Rendered cross reference using custom xreflabel text
 ====
-include::{examplesdir}/xref.adoc[tag=text]
+include::example$xref.adoc[tag=text]
 ====
 
 You can also use the inline xref macro as an alternative to the double angled bracket form.
@@ -81,5 +81,5 @@ You can also use the inline xref macro as an alternative to the double angled br
 .Inline xref macro
 [source]
 ----
-include::{examplesdir}/xref.adoc[tag=xref-macro]
+include::example$xref.adoc[tag=xref-macro]
 ----

@@ -1,5 +1,4 @@
 = Advanced Attribute Entries
-// taken from attr-doc.adoc
 
 == Split attribute values over multiple lines
 

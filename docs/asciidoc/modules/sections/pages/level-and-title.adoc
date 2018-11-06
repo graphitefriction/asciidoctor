@@ -13,12 +13,12 @@ The number of equal signs in front of the title represents the nesting level (us
 .Section titles available in an article doctype
 [source]
 ----
-include::{examplesdir}/section.adoc[tag=base]
+include::example$section.adoc[tag=base]
 ----
 
 The section titles are rendered as:
 
-include::{examplesdir}/section.adoc[tag=b-base]
+include::example$section.adoc[tag=b-base]
 
 Section levels must be nested logically.
 There are two rules you must follow:
@@ -31,7 +31,7 @@ For example, the following syntax is illegal:
 
 [source]
 ----
-include::{examplesdir}/section.adoc[tag=bad]
+include::example$section.adoc[tag=bad]
 ----
 
 Content above the first section title is designated as the document's preamble.
@@ -39,7 +39,7 @@ Once the first section title is reached, content is associated with the section 
 
 [source]
 ----
-include::{examplesdir}/section.adoc[tag=content]
+include::example$section.adoc[tag=content]
 ----
 
 TIP: In addition to the equals sign marker used for defining section titles, Asciidoctor recognizes the hash symbol (`#`) from Markdown.
@@ -62,5 +62,5 @@ This feature is only available for the DocBook backend.
 [dedication%untitled]
 == Dedication
 
-include::{examplesdir}/multi-special.adoc[tag=dedicate]
+include::example$multi-special.adoc[tag=dedicate]
 ----

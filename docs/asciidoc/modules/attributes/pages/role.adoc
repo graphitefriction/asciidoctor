@@ -1,9 +1,8 @@
 = The Role Attribute
-// directly from um
 
 An element can be assigned numerous roles.
 
-== Block Assignment
+== Block assignment
 
 In an attribute list, there are two ways to assign a role attribute to a block element.
 
@@ -42,7 +41,7 @@ To specify multiple roles using the shorthand syntax, separate them by dots.
 * Review 2
 ----
 
-== Inline Assignment
+== Inline assignment
 
 The role (`.`) shorthand can be used on inline text.
 

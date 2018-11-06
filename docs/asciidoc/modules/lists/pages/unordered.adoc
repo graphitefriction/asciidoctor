@@ -1,10 +1,5 @@
 = Unordered Lists
 :keywords: bulleted list
-////
-From first p to nested section, included in:
-- user-manual: Unordered lists: Introduction
-- writers-guide: lists of things
-////
 
 If you were to create a list in an e-mail, how would you do it?
 Chances are, you'd mark list items using the same characters that Asciidoctor uses to find list items.
@@ -15,7 +10,7 @@ In the example below, each list item is marked using an asterisk (`+*+`), the As
 
 [source]
 ----
-include::{examplesdir}/unordered.adoc[tag=base]
+include::example$unordered.adoc[tag=base]
 ----
 
 A list item's first line of text must be offset from the marker (`+*+`) by at least one space.
@@ -25,19 +20,19 @@ Additionally, blank lines are permitted, but not required, between list items.
 
 .Rendered unordered list
 ====
-include::{examplesdir}/unordered.adoc[tag=base]
+include::example$unordered.adoc[tag=base]
 ====
 
 You can add a title to a list by prefixing the title with a period (`.`).
 
 [source]
 ----
-include::{examplesdir}/unordered.adoc[tag=base-t]
+include::example$unordered.adoc[tag=base-t]
 ----
 
 .Rendered unordered list with a title
 ====
-include::{examplesdir}/unordered.adoc[tag=base-t]
+include::example$unordered.adoc[tag=base-t]
 ====
 
 Was your instinct to use a hyphen (`-`) instead of an asterisk to mark list items?
@@ -46,7 +41,7 @@ That works too!
 
 [source]
 ----
-include::{examplesdir}/unordered.adoc[tag=base-alt]
+include::example$unordered.adoc[tag=base-alt]
 ----
 
 You should reserve the hyphen for lists that only have a single level because the hyphen marker (`-`) doesn't work for nested lists.
@@ -61,38 +56,33 @@ Here's an example, where the `-` text in the line comment indicates the line ser
 
 [source]
 ----
-include::{examplesdir}/unordered.adoc[tag=divide]
+include::example$unordered.adoc[tag=divide]
 ----
 ****
 
 == Nested unordered list
-////
-Included in:
-- user-manual: Unordered lists: Nested
-- writers guide
-////
 
 To nest an item, just add another asterisk (`+*+`) in front of it.
 
 [source]
 ----
-include::{examplesdir}/unordered.adoc[tag=nest]
+include::example$unordered.adoc[tag=nest]
 ----
 
 .Rendered nested, unordered list
 ====
-include::{examplesdir}/unordered.adoc[tag=nest]
+include::example$unordered.adoc[tag=nest]
 ====
 
 You can have up to five levels of nesting.
 
 [source]
 ----
-include::{examplesdir}/unordered.adoc[tag=max]
+include::example$unordered.adoc[tag=max]
 ----
 
 ====
-include::{examplesdir}/unordered.adoc[tag=max]
+include::example$unordered.adoc[tag=max]
 ====
 
 While it would seem as though the number of asterisks represents the nesting level, that's not how depth is determined.
@@ -101,7 +91,6 @@ However, it's much more intuitive to follow the convention that the number of as
 After all, we are shooting for plain text markup that is readable _as is_.
 
 == Custom markers
-// Included in user-manual: Unordered lists: Custom markers
 
 Asciidoctor offers numerous bullet styles for lists.
 The list marker (bullet) is set using the list's block style.
@@ -126,9 +115,9 @@ Here's an unordered list that has square bullets:
 
 [source]
 ----
-include::{examplesdir}/unordered.adoc[tag=square]
+include::example$unordered.adoc[tag=square]
 ----
 
 ====
-include::{examplesdir}/unordered.adoc[tag=square]
+include::example$unordered.adoc[tag=square]
 ====

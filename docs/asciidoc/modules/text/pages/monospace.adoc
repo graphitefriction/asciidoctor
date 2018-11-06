@@ -1,9 +1,5 @@
 = Monospace
-////
-um anchor: mono
-text-mono.adoc, included in:
-- user-manual: text formatting: monospace
-////
+// um anchor: mono
 
 Monospace text formatting is often used to emulate how source code appears in computer terminals, simple text editors, and integrated development environments (IDEs).
 In Asciidoctor 1.5, inline content is rendered using a fixed-width font, i.e., monospaced font, when it is enclosed in a single set of backticks (`{backtick}`).
@@ -11,7 +7,7 @@ A character bounded by other characters must be enclosed in a double set of back
 
 [source]
 ----
-include::{examplesdir}/text.adoc[tag=mono]
+include::example$text.adoc[tag=mono]
 ----
 
 Monospaced text can be bold and italicized, as long as the markup sets are entered in the right order.
@@ -19,7 +15,7 @@ The monospace markup must be the outermost set, then the bold set, and the itali
 
 .Rendered monospace formatted text
 ====
-include::{examplesdir}/text.adoc[tag=mono]
+include::example$text.adoc[tag=mono]
 ====
 
 ////

@@ -92,14 +92,14 @@ Here's an example of a section with a custom ID and reference text:
 
 [source]
 ----
-include::{examplesdir}/section.adoc[tag=with-anchor]
+include::example$section.adoc[tag=with-anchor]
 ----
 
 The ID can be written using the following shorthand (though there's no shorthand yet for the reference text):
 
 [source]
 ----
-include::{examplesdir}/section.adoc[tag=with-anchor-shorthand]
+include::example$section.adoc[tag=with-anchor-shorthand]
 ----
 
 IMPORTANT: Asciidoctor permits all valid UTF-8 characters in section IDs.

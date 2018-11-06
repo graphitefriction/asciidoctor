@@ -1,6 +1,5 @@
 = Icons
 :url-fontawesome-icons: https://fontawesome.com/icons?d=gallery
-// icons.adoc
 
 Icons are used for admonition labels, callout numbers and inline symbols.
 Asciidoctor provides three strategies for display icons: as text, as images, or as characters selected from an icon font.

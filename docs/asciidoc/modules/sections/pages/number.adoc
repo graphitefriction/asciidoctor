@@ -29,14 +29,14 @@ To turn section numbering back on midstream, reset the attribute above the secti
 
 [source]
 ----
-include::{examplesdir}/section.adoc[tag=num-off]
+include::example$section.adoc[tag=num-off]
 ----
 
 For regions of the document where section numbering is turned off, the section numbering will not be incremented.
 Given the above example, the sections will be numbered as follows:
 
 ....
-include::{examplesdir}/section.adoc[tag=num-out]
+include::example$section.adoc[tag=num-out]
 ....
 
 The section number does not increment in regions of the document where section numbers are turned off.
@@ -63,7 +63,7 @@ Book parts aren't numbered by `sectnums` either, instead, they're controlled by 
 
 == Number book parts
 
-include::{partialsdir}/part-number.adoc[]
+include::partial$part-number.adoc[]
 
 [#numlevels]
 == Specify the section levels that are numbered
@@ -74,7 +74,7 @@ The `sectnumlevels` attribute accepts a value of 0 through 5, and it can only be
 
 [source]
 ----
-include::{examplesdir}/section.adoc[tag=sectnuml]
+include::example$section.adoc[tag=sectnuml]
 ----
 <1> When the `sectnumlevels` attribute is assigned a value of `2`, level 3 through 5 section titles are not numbered.
 // (i.e., not prefixed with a number).

@@ -1,5 +1,4 @@
 = The Style Attribute
-// attr-style.adoc, included in user-manual: Attributes: Style
 
 The style attribute is the first positional attribute in an attribute list.
 It specifies a predefined set of characteristics to apply to a block element or macro.

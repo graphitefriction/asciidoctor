@@ -1,5 +1,4 @@
 = Table of Contents Positioning
-// toc-layout.adoc
 
 [#left-or-right-column-layout]
 == Side column
@@ -11,7 +10,7 @@ In this case, the sidebar column containing the TOC is both fixed and scrollable
 .Assigning the left value to `toc`
 [source]
 ----
-include::{examplesdir}/toc-left.adoc[]
+include::example$toc-left.adoc[]
 ----
 
 .Result: Assigning the left value to `toc`
@@ -49,7 +48,7 @@ If `toc` is not set to `macro`, any toc macro in the document will be silently i
 .Setting toc value to macro and using the block toc macro
 [source]
 ----
-include::{examplesdir}/toc-macro.adoc[]
+include::example$toc-macro.adoc[]
 ----
 <1> The toc attribute must be set to `macro` in order to enable the use of the toc macro.
 <2> In this example, the toc macro is placed below the first section's title, indicating that this is the location where the TOC will be displayed once the document is rendered.

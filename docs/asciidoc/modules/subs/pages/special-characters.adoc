@@ -1,5 +1,4 @@
 = Special Character Substitutions
-//subs-specchar.adoc, included in um: Text Substitutions: Special characters
 
 When applicable, the first text substitution to occur is the replacement of any special characters.
 This process is handled by the `specialchars` element.

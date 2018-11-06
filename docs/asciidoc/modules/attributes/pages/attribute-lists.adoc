@@ -1,9 +1,4 @@
 = Set Attributes on an Element
-////
-attr-element.adoc, included in:
-- user-manual: Attributes: Setting attributes on an element
-also element.adoc
-////
 
 In addition to the document attributes, which generally apply to a whole document, you can assign attributes to individual elements within a document.
 

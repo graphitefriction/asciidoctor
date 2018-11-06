@@ -19,7 +19,7 @@ The table example below consists of two columns and three rows.
 .Basic table
 [source]
 ----
-include::{examplesdir}/table.adoc[tag=base-co]
+include::example$table.adoc[tag=base-co]
 ----
 <1> The table's content boundaries are defined by a vertical bar followed by three equal signs (`|===`).
 <2> Inserting a blank line before the first row is a trick to ensure the first row is not treated as the table header.
@@ -27,7 +27,7 @@ include::{examplesdir}/table.adoc[tag=base-co]
 <4> Rows can optionally be separated by any number of blank lines.
 
 .Result: Rendered basic table
-include::{examplesdir}/table.adoc[tag=base-alt]
+include::example$table.adoc[tag=base-alt]
 
 Like with all blocks, you can add a role to a table using the `role` attribute.
 The role attribute becomes a CSS class when converted to HTML.
@@ -35,13 +35,13 @@ The preferred shorthand for assigning the role attribute is to put the role name
 
 [source]
 ----
-include::{examplesdir}/table.adoc[tag=base-rolename]
+include::example$table.adoc[tag=base-rolename]
 ----
 
 Leading and trailing spaces around cell content is stripped and, therefore, doesn't affect the table's layout when rendered.
 
 :table-caption: Table
-== Table Caption
+== Table caption
 
 If you specify a title on a table, the title will be used as part of the table's caption.
 Adding a title also designates the table as a [.term]_formal table_.
@@ -51,13 +51,13 @@ By default, the title of a formal table is prefixed with the label `Table <n>.` 
 [source]
 ----
 .A formal table
-include::{examplesdir}/row.adoc[tag=impl-h]
+include::example$row.adoc[tag=impl-h]
 ----
 
 .Result: Table rendered with a title
 [width=90]
 .A table with a title
-include::{examplesdir}/row.adoc[tag=impl-h]
+include::example$row.adoc[tag=impl-h]
 
 You can customize the caption label by specifying the `caption` attribute.
 If you want a space between the label and the title, you must add a trailing space to the value of the caption attribute.
@@ -68,13 +68,13 @@ The caption attribute only sets the caption's label, not the whole caption line)
 ----
 [caption="Table A. "]
 .A formal table
-include::{examplesdir}/row.adoc[tag=impl-h]
+include::example$row.adoc[tag=impl-h]
 ----
 
 .Result: Table rendered with a title and custom label
 [width=90, caption="Table A. "]
 .A formal table
-include::{examplesdir}/row.adoc[tag=impl-h]
+include::example$row.adoc[tag=impl-h]
 
 If you want to exclude the caption label altogether, simply assign a blank value to the `caption` attribute.
 
@@ -82,13 +82,13 @@ If you want to exclude the caption label altogether, simply assign a blank value
 ----
 [caption=]
 .A formal table
-include::{examplesdir}/row.adoc[tag=impl-h]
+include::example$row.adoc[tag=impl-h]
 ----
 
 .Result: Table rendered with a title and no label
 [width=90, caption=]
 .A formal table
-include::{examplesdir}/row.adoc[tag=impl-h]
+include::example$row.adoc[tag=impl-h]
 
 :table-caption!:
 

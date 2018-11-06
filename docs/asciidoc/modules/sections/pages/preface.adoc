@@ -12,7 +12,7 @@ When a book doesn't contain parts, the preface must be defined as a level 1 sect
 
 [source]
 ----
-include::{examplesdir}/preface.adoc[tag=book]
+include::example$preface.adoc[tag=book]
 ----
 
 == Preface for a book part
@@ -22,12 +22,12 @@ The preface must be the first section in the part.
 
 [source]
 ----
-include::{examplesdir}/preface.adoc[tag=part]
+include::example$preface.adoc[tag=part]
 ----
 
 == Hide the section title
 
-include::{partialsdir}/untitled.adoc[]
+include::partial$untitled.adoc[]
 
 ////
 As an alternative to a special section, Asciidoctor will automatically promote the preamble to a preface.

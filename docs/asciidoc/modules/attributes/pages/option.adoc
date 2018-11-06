@@ -1,5 +1,4 @@
 = The Options Attribute
-// directly from um
 
 The options attribute is a versatile named attribute that can contain a comma-separated list of values.
 It can also be defined globally as an attribute entry.

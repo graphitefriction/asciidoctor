@@ -1,5 +1,4 @@
 = Section Attributes Reference
-//sum-section.adoc
 
 [cols="1,2,1,1"]
 |===

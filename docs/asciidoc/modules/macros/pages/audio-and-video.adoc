@@ -1,7 +1,6 @@
 = Audio and Video
 :url-video-element: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
 :url-video-browsers: https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility
-// video.adoc
 
 == Video macro syntax
 
@@ -27,7 +26,7 @@ See <<YouTube and Vimeo videos>> for details about how to serve videos from thes
 .Basic video file include
 [source]
 ----
-include::{examplesdir}/video.adoc[tag=base]
+include::example$video.adoc[tag=base]
 ----
 
 You can control the video settings using additional attributes on the macro.
@@ -36,7 +35,7 @@ For instance, you can offset the start time of playback using the `start` attrib
 .Set attributes for local video playback
 [source]
 ----
-include::{examplesdir}/video.adoc[tag=attr]
+include::example$video.adoc[tag=attr]
 ----
 
 You can include a caption on the video using the title attribute.
@@ -44,7 +43,7 @@ You can include a caption on the video using the title attribute.
 .Add a caption to a video
 [source]
 ----
-include::{examplesdir}/video.adoc[tag=caption]
+include::example$video.adoc[tag=caption]
 ----
 
 === YouTube and Vimeo videos
@@ -59,13 +58,13 @@ To use this feature, put the video ID in the macro target and the name of the ho
 .Embed a YouTube video
 [source]
 ----
-include::{examplesdir}/video.adoc[tag=you]
+include::example$video.adoc[tag=you]
 ----
 
 .Embed a Vimeo video
 [source]
 ----
-include::{examplesdir}/video.adoc[tag=vim]
+include::example$video.adoc[tag=vim]
 ----
 
-include::{partialsdir}/ref-table.adoc[]
+include::partial$ref-table.adoc[]

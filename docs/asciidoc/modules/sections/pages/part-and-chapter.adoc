@@ -1,5 +1,4 @@
 = Parts and Chapters
-// from file book-parts.adoc
 // anchor from user manual: book-parts-and-chapters
 
 == Book parts
@@ -18,13 +17,13 @@ A part can have its own preface, bibliography, glossary and index.
 
 [source]
 ----
-include::{examplesdir}/multi-special.adoc[tag=part]
+include::example$multi-special.adoc[tag=part]
 ----
 
 [#partnums]
 === Part numbers
 
-include::{partialsdir}/part-number.adoc[]
+include::partial$part-number.adoc[]
 
 ////
 [#part-label]

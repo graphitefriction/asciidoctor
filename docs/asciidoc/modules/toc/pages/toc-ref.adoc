@@ -1,5 +1,4 @@
 = Table of Contents Syntax and Attributes Reference
-// sum-toc.adoc
 
 [cols="1m,1,2,2,1"]
 |===

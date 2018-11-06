@@ -1,5 +1,4 @@
 = Custom Text Styles
-// text-css.adoc
 
 == Custom style syntax
 
@@ -8,13 +7,13 @@ Additionally, text marked with hash symbols can be assigned built-in styles, suc
 .Built-in CSS class syntax
 [source]
 ----
-include::{examplesdir}/text.adoc[tag=css-co]
+include::example$text.adoc[tag=css-co]
 ----
 <1> The first positional attribute is treated as a role. You can assign it a custom or built-in CSS class.
 
 .Rendered CSS class styled text
 ====
-include::{examplesdir}/text.adoc[tag=css]
+include::example$text.adoc[tag=css]
 ====
 
 You can format text with custom styles that you define as well.
@@ -22,7 +21,7 @@ You can format text with custom styles that you define as well.
 .Custom CSS class syntax
 [source]
 ----
-include::{examplesdir}/text.adoc[tag=css-custom]
+include::example$text.adoc[tag=css-custom]
 ----
 
 When converted to HTML, the word _asciidoctor_ is wrapped in `<span>` tags and the role `userinput` is used as the element's CSS class.
@@ -30,7 +29,7 @@ When converted to HTML, the word _asciidoctor_ is wrapped in `<span>` tags and t
 .HTML output
 [source,html]
 ----
-include::{examplesdir}/text.adoc[tag=css-custom-html]
+include::example$text.adoc[tag=css-custom-html]
 ----
 
 ////

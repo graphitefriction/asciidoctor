@@ -1,12 +1,11 @@
 = Question and Answer Lists
 :keywords: Q&A, Q and A
-//dlist-qa.adic file, included in user-manual: Question and answer style list
 
 == Question and answer list syntax
 
 [source]
 ----
-include::{examplesdir}/description.adoc[tag=qa]
+include::example$description.adoc[tag=qa]
 ----
 
-include::{examplesdir}/description.adoc[tag=qa]
+include::example$description.adoc[tag=qa]

@@ -1,11 +1,3 @@
-////
-Included in:
-- user-manual: Paragraphs
-- user-manual: Text formatting
-- quick-syntax
-- writers-guide: quoted text
-////
-
 // tag::para[]
 This journey begins one late Monday afternoon in Antwerp.
 Our team desperately needs coffee, but none of us dare open the office door.

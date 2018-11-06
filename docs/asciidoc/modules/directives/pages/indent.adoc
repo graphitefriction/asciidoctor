@@ -1,9 +1,5 @@
 = Normalize Block Indentation
-////
-aka Normalize Block Indentation
-From indent-include.adoc, included in:
-- user manual
-////
+// aka Normalize Block Indentation
 
 Source code snippets from external files are often padded with a leading block indent.
 This leading block indent is relevant in its original context.

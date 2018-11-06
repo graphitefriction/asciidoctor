@@ -1,5 +1,4 @@
 = Text Formatting
-// text.adoc
 
 Just as we emphasize certain words and phrases when we speak, we can emphasize them in text with formatting.
 This formatting, such as bold or monospace, is indicated by surrounding letters, words, or phrases with simple markup.

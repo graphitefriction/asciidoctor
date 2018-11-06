@@ -5,8 +5,6 @@
 //icon:times[role="red"]
 ////
 user manual anchor: subs
-From subs.adoc, included in:
-- user-manual: Text Substitutions
 
 This page needs to become a more user friendly overview of what substitutions can do, how to leverage them and how to escape them and/or prevent them with a pass through.
 
@@ -33,7 +31,7 @@ The processor runs the text substitution elements in the following order.
 In turn, these substitutions are organized into composite value groups.
 The table below shows which substitution elements are included in each group.
 
-include::{partialsdir}/subs-group-table.adoc[]
+include::partial$subs-group-table.adoc[]
 
 By default, the `normal` substitution group is applied to most block and inline elements.
 However, there are a few exceptions.

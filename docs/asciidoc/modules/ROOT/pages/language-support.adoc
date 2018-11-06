@@ -2,7 +2,6 @@
 :url-docbook-i8n: http://www.sagehill.net/docbookxsl/Localizations.html
 :url-lang-attributes: {url-org}/asciidoctor/blob/master/data/locale/attributes.adoc
 // um anchor: language-support
-// ncluded in user-manual: Using Asciidoctor with Other Languages
 
 The built-in labels, messages, and syntax keywords in Asciidoctor are English by default.
 However, Asciidoctor is not restricted to working with English-only content.

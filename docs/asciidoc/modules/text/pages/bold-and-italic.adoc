@@ -1,5 +1,4 @@
 = Bold and Italic
-// text-bold-italic.adoc
 
 The two most common ways of emphasizing a word is to format it as bold or italic.
 To apply bold styling to a word or phrase, place an asterisk (`+*+`) at the beginning and end of the text you wish to format.
@@ -11,10 +10,10 @@ When you want to bold and italicize a letter or word, the bold markup must be th
 .Bold and italic text formatting syntax
 [source,subs=replacements]
 ----
-include::{examplesdir}/text.adoc[tag=b-i]
+include::example$text.adoc[tag=b-i]
 ----
 
 .Result: bold and italic text
 ====
-include::{examplesdir}/text.adoc[tag=b-i-n]
+include::example$text.adoc[tag=b-i-n]
 ====

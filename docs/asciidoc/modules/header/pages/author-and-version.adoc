@@ -1,5 +1,4 @@
 = Author, Version and Date
-// from author.adoc and revision.adoc
 
 == Author syntax
 
@@ -10,7 +9,7 @@ Let's add an author with her email address to the document below.
 
 [source]
 ----
-include::{examplesdir}/author.adoc[tag=base]
+include::example$author.adoc[tag=base]
 ----
 
 .Result: Rendered author and email information displayed on the byline and referenced in the document's body
@@ -45,7 +44,7 @@ For example, the author of the following document has a compound last name.
 
 [source]
 ----
-include::{examplesdir}/author.adoc[tag=2-mid]
+include::example$author.adoc[tag=2-mid]
 ----
 
 .Result: Rendered author information when author has a compound name
@@ -58,7 +57,7 @@ Alternatively, the author and email attributes can be set explicitly in the head
 
 [source]
 ----
-include::{examplesdir}/author.adoc[tag=attr]
+include::example$author.adoc[tag=attr]
 ----
 
 .Result: Rendered author information when author and email attributes are explicitly set
@@ -72,7 +71,7 @@ Multiple authors and their emails are separated by semicolons (`;`) when they're
 
 [source]
 ----
-include::{examplesdir}/author.adoc[tag=multi]
+include::example$author.adoc[tag=multi]
 ----
 <1> To reference the additional authors in the document body, the author attributes are appended with an underscore (`+_+`) followed by the position of the author in the author information list (i.e., Lazarus het Draeke is the second author in the list so his author attributes are appended with a 2).
 
@@ -143,7 +142,7 @@ Here's an example of a revision line.
 
 [source]
 ----
-include::{examplesdir}/revision.adoc[tag=base]
+include::example$revision.adoc[tag=base]
 ----
 <1> revnumber and revdate must be separated by a comma (`,`).
 <2> revdate can contain words, letters, numbers, and symbols.
@@ -161,7 +160,7 @@ The revision information attributes can also be explicitly set in the header.
 
 [source]
 ----
-include::{examplesdir}/revision.adoc[tag=attr]
+include::example$revision.adoc[tag=attr]
 ----
 <1> When explicitly set, any characters preceding the version number are *not* dropped.
 <2> The revremark can contain attribute references.

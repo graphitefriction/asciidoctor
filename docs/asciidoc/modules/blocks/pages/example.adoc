@@ -1,12 +1,10 @@
 = Example Blocks
-// example.adoc, included in user-manual
 
-== Example block sytax
+== Example block syntax
 
-.Example syntax
 [source]
 ----
-include::{examplesdir}/example.adoc[tag=base]
+include::example$example.adoc[tag=base]
 ----
 
-include::{examplesdir}/example.adoc[tag=base]
+include::example$example.adoc[tag=base]

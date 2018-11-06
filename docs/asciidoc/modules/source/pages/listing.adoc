@@ -1,6 +1,5 @@
 = Listing Blocks
 :keywords: source code snippets
-// From listing.adoc, included in user-manual: Listing and Source Code Blocks
 
 Like xref:literal.adoc[literal blocks], the content in listing blocks is displayed exactly as you entered it.
 Listing block content is converted to `<pre>` text.
@@ -18,11 +17,11 @@ The listing block name is applied to an element, such as a paragraph, by setting
 .Listing style syntax
 [source]
 ----
-include::{examplesdir}/listing.adoc[tag=para]
+include::example$listing.adoc[tag=para]
 ----
 
 .Result: Listing style
-include::{examplesdir}/listing.adoc[tag=para]
+include::example$listing.adoc[tag=para]
 
 == Delimited listing block
 
@@ -31,13 +30,13 @@ A delimited listing block is surrounded by lines composed of four hyphens (`----
 .Delimited listing block syntax
 [source]
 ....
-include::{examplesdir}/listing.adoc[tag=bl]
+include::example$listing.adoc[tag=bl]
 ....
 
 Here's how the block above appears when rendered as HTML.
 
 .Result: Delimited listing block
-include::{examplesdir}/listing.adoc[tag=bl]
+include::example$listing.adoc[tag=bl]
 
 You should notice a few things about how the content is processed.
 
@@ -51,12 +50,12 @@ The example below shows a listing block with `source` and the language `ruby` ap
 .Source block syntax
 [source]
 ....
-include::{examplesdir}/source.adoc[tag=src-base]
+include::example$source.adoc[tag=src-base]
 ....
 
 .Result: Listing block with the source attribute set
 ====
-include::{examplesdir}/source.adoc[tag=src-base]
+include::example$source.adoc[tag=src-base]
 ====
 
 Detailed instructions for using the xref:source.adoc[source and source-highlighter attributes] are provided on the source code paragraphs and blocks page.
@@ -64,10 +63,10 @@ Detailed instructions for using the xref:source.adoc[source and source-highlight
 [listing]
 .Listing block with custom substitutions syntax
 ....
-include::{examplesdir}/listing.adoc[tag=subs]
+include::example$listing.adoc[tag=subs]
 ....
 
 .Result: Listing block with custom substitutions applied
 // the attribute value is hard-coded in this result since the example depends
 // on a hypothetical document attribute
-include::{examplesdir}/listing.adoc[tag=subs-out]
+include::example$listing.adoc[tag=subs-out]

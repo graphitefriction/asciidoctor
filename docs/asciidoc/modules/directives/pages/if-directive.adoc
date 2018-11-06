@@ -1,5 +1,4 @@
 = If Conditional Preprocessor Directives
-// conditional-preprocessor-directives.adoc
 
 You can include or exclude lines of text in your document using one of the following conditional preprocessor directives:
 

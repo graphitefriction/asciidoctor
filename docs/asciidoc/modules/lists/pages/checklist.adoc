@@ -1,5 +1,4 @@
 = Checklists
-// Included in user-manual: Unordered lists: Checklists
 
 List items can be marked complete using checklists.
 
@@ -9,11 +8,11 @@ Here's an example:
 .Checklist syntax
 [source]
 ----
-include::{examplesdir}/checklist.adoc[tag=check]
+include::example$checklist.adoc[tag=check]
 ----
 
 .Rendered checklist
-include::{examplesdir}/checklist.adoc[tag=check]
+include::example$checklist.adoc[tag=check]
 
 TIP: Not all items in the list have to be checklist items, as the previous example shows.
 
@@ -27,11 +26,11 @@ If you want to make the checkbox interactive (i.e., clickable), add the `interac
 .Checklist with interactive checkboxes
 [source]
 ----
-include::{examplesdir}/checklist.adoc[tag=check-int]
+include::example$checklist.adoc[tag=check-int]
 ----
 
 .Rendered checklist with interactive checkboxes
-include::{examplesdir}/checklist.adoc[tag=check-int]
+include::example$checklist.adoc[tag=check-int]
 
 ////
 This example doesn't seem quite right since nothing about it indicates font based icons.

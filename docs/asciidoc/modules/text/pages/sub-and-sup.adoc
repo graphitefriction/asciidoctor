@@ -1,5 +1,4 @@
 = Subscript and Superscript
-// text-sub-sup.adoc
 
 Subscript and superscript text is common in mathematical expressions and chemical formulas.
 When rendered, the size of subscripted and superscripted text is reduced.
@@ -15,11 +14,11 @@ Superscript:: One caret (`{caret}`) on either side of a word or phrase makes it 
 
 [source]
 ----
-include::{examplesdir}/text.adoc[tag=sub-sup]
+include::example$text.adoc[tag=sub-sup]
 ----
 
 ====
-include::{examplesdir}/text.adoc[tag=sub-sup]
+include::example$text.adoc[tag=sub-sup]
 ====
 
 NOTE: You can write equations and formulas in xref:stem:stem.adoc[AsciiDoc documents using MathJax].

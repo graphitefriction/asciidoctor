@@ -1,9 +1,4 @@
 = Set Global Attributes on a Document
-////
-attr-doc.adoc, included in:
-- user-manual: Attributes: Setting attributes on a document
-////
-
 // Change this to document attributes? entries seems too high-level and I don't think we really care what it's called technically
 
 == Attribute entries
@@ -122,7 +117,6 @@ You can also use attributes to set the base path to images (default: `_empty_`),
 NOTE: If you're familiar with writing in XML, you'll recognize document attributes as user-defined entities.
 
 == Assigning document attributes inline
-// directly from um
 
 Document attributes can be assigned using the following syntax:
 

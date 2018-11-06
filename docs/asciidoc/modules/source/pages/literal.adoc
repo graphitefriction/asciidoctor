@@ -1,5 +1,4 @@
 = Literal Blocks
-// literal.adoc, included in user-manual: Literal Text and Blocks
 
 Literal blocks display the text you write exactly as you enter it.
 Literal text is treated as preformatted text.
@@ -22,11 +21,11 @@ This method is a quick and easy way to insert code snippets.
 .Implicit literal text
 [source]
 ----
-include::{examplesdir}/literal.adoc[tag=imp]
+include::example$literal.adoc[tag=imp]
 ----
 
 .Result: Implicit literal text
-include::{examplesdir}/literal.adoc[tag=imp]
+include::example$literal.adoc[tag=imp]
 
 === Literal style
 
@@ -35,11 +34,11 @@ When you want an entire block of text to be literal and would prefer not to inde
 .Literal style syntax
 [source]
 ----
-include::{examplesdir}/literal.adoc[tag=para]
+include::example$literal.adoc[tag=para]
 ----
 
 .Result: Literal style
-include::{examplesdir}/literal.adoc[tag=para]
+include::example$literal.adoc[tag=para]
 
 === Delimited literal block
 
@@ -49,10 +48,10 @@ This method is useful when the content consists of several elements that are sep
 .Literal delimited block syntax
 [source]
 ----
-include::{examplesdir}/literal.adoc[tag=block]
+include::example$literal.adoc[tag=block]
 ----
 
 Notice in the output that the bold text formatting is not applied to the text nor are the three consecutive periods replaced by the ellipsis Unicode character.
 
 .Result: Literal delimited block
-include::{examplesdir}/literal.adoc[tag=block]
+include::example$literal.adoc[tag=block]

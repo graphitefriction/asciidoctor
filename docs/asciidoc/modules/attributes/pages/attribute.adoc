@@ -1,8 +1,4 @@
 = Attributes
-////
-attr.adoc, included in:
-- user-manual: Attributes
-////
 
 Attributes set Asciidoctor apart from other lightweight markup languages.
 They can activate features, such as behaviors, styles, and integrations, or hold replacement (variable) content.

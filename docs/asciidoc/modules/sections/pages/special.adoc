@@ -1,5 +1,4 @@
 = Special Section Styles for Articles and Books
-// Included in user-manual partintro
 
 Asciidoctor provides built-in styles for the specialized front matter and back matter sections found in journal articles, academic papers, and books.
 

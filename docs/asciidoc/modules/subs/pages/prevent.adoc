@@ -1,9 +1,4 @@
 = Prevent Substitutions
-////
-subs-prevent.adoc, included in:
-- user-manual: Text Substitutions: Preventing substitutions
-- writers-guide: preventing subs
-////
 
 Asciidoctor provides several approaches for preventing substitutions.
 
@@ -17,7 +12,7 @@ When your document is processed, the backslash is removed so it doesn't display 
 
 [source]
 ----
-include::{examplesdir}/subs.adoc[tag=slash]
+include::example$subs.adoc[tag=slash]
 ----
 
 // end::backslash[]

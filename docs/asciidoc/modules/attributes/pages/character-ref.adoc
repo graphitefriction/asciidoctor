@@ -1,8 +1,5 @@
 = Character Replacement Attributes Reference
-////
-attrs-charref.adoc
-doc anchor: charref-attributes
-////
+//doc anchor: charref-attributes
 
 [#charref-attributes-table]
 // tag::table[]

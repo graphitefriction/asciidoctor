@@ -1,9 +1,6 @@
 = Source Code Blocks
 :keywords: source code snippets
 ////
-From src.adoc, included in:
-- user-manual: Syntax Highlighting Source Code
-
 From user manual:
 NOTE we really want this ID on the section, but there are problems w/ multiple IDs per section
 [#source-code-blocks]
@@ -89,7 +86,7 @@ To apply highlighting to source code, you must add the `source` block style to a
 [listing]
 .Code block with title and syntax highlighting
 ....
-include::{examplesdir}/source.adoc[tag=src-base-co]
+include::example$source.adoc[tag=src-base-co]
 ....
 <1> An optional title can be added to the block.
 <2> An optional ID can be added to the block.
@@ -99,20 +96,20 @@ include::{examplesdir}/source.adoc[tag=src-base-co]
 
 .Result: Source block with title and syntax highlighting
 ====
-include::{examplesdir}/source.adoc[tag=src-base-co-res]
+include::example$source.adoc[tag=src-base-co-res]
 ====
 
 .Source style
 [source]
 ----
-include::{examplesdir}/source.adoc[tag=src-para-co]
+include::example$source.adoc[tag=src-para-co]
 ----
 <1> Place the attribute list directly on the paragraph
 <2> Once an empty line is encountered the syntax highlighting is unset.
 
 .Result: Source style
 ====
-include::{examplesdir}/source.adoc[tag=src-para]
+include::example$source.adoc[tag=src-para]
 ====
 
 If the majority of your source blocks use the same source language, you can set the `source-language` attribute in the document header and assign a language to it.
@@ -120,7 +117,7 @@ If the majority of your source blocks use the same source language, you can set 
 [listing]
 .Source language attribute
 ....
-include::{examplesdir}/source.adoc[tag=src-lang]
+include::example$source.adoc[tag=src-lang]
 ....
 
 Additionally, you can use an xref:directives:include-directive.adoc[include directive] to insert source code into an AsciiDoc document directly from a file.
@@ -128,7 +125,7 @@ Additionally, you can use an xref:directives:include-directive.adoc[include dire
 [listing]
 .Code block inserted from another file
 ....
-include::{examplesdir}/source.adoc[tag=src-inc]
+include::example$source.adoc[tag=src-inc]
 ....
 
 //TODO mention the use of AsciiDoc tags to include code snippets and the indent flag to reset indentation

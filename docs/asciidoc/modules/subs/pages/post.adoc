@@ -3,7 +3,6 @@
 //icon:check[role="green"]
 :n: No
 //icon:times[role="red"]
-// subs-post.adoc
 
 The line break character, `{plus}`, is replaced when the `post_replacements` process runs.
 

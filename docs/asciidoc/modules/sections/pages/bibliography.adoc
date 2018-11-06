@@ -1,5 +1,4 @@
 = Bibliography Section Style
-// biblio.adoc
 // anchor from um: user-biblio
 
 AsciiDoc has basic support for bibliographies.
@@ -36,7 +35,7 @@ Bibliography entries are declared as items in an unordered list.
 .Bibliography with references
 [source]
 ----
-include::{examplesdir}/bibliography.adoc[tag=base]
+include::example$bibliography.adoc[tag=base]
 ----
 
 You can create an anchor for a bibliography entry by prefixing the entry with an ID enclosed in triple square brackets (`+[[[id]]]+`).
@@ -44,7 +43,7 @@ With this anchor, you can reference the entry from anywhere in the document usin
 
 |===
 a|
-include::{examplesdir}/bibliography.adoc[tag=base]
+include::example$bibliography.adoc[tag=base]
 |===
 
 By default, the reference to a bibliography entry is displayed as +[id]+.

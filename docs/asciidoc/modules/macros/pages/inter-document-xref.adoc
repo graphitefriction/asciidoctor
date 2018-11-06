@@ -1,5 +1,4 @@
 = Document to Document Cross References
-//xref-interdoc.adoc, included in user-manual: Inter-document cross references
 
 The inline xref macro can also link to IDs in other AsciiDoc documents.
 This eliminates the need to use direct links between documents that are coupled to a particular converter (e.g., HTML links).
@@ -9,7 +8,7 @@ Here's how a cross reference is normally defined in Asciidoctor:
 
 [source]
 ----
-include::{examplesdir}/xref.adoc[tag=base]
+include::example$xref.adoc[tag=base]
 ----
 
 This cross reference creates a link to the section with the ID _images_.
@@ -19,7 +18,7 @@ If the target section is in a separate document, [.path]_document-b.adoc_, the a
 
 [source]
 ----
-include::{examplesdir}/xref.adoc[tag=base][tag=bad]
+include::example$xref.adoc[tag=base][tag=bad]
 ----
 
 However, this link is coupled to HTML output.
@@ -29,7 +28,7 @@ These problems can be alleviated by using an inter-document xref:
 
 [source]
 ----
-include::{examplesdir}/xref.adoc[tag=base][tag=base-inter]
+include::example$xref.adoc[tag=base][tag=base-inter]
 ----
 
 The ID of the target is now placed behind a hash symbol (`#`).
@@ -54,7 +53,6 @@ If [.path]_document-b.adoc_ is included in the same document as [.path]_document
 Now you can create inter-document cross references without the headache.
 
 == Navigating between source files
-// all content from xref-source-to-source.adoc
 
 In certain environments, such as a source repository or the browser preview extensions, you view the generated HTML through the AsciiDoc source URL.
 This has consequences for inter-document cross references.
