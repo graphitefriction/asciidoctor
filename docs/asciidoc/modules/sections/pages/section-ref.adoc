@@ -6,17 +6,17 @@
 
 |xref:abstract.adoc[Abstract]
 |`abstract`
-|N/A
+|NA
 |Can have subsections
 
 |Acknowledgments
 |`acknowledgments`
-|N/A
+|NA
 |`book` doctype only
 
 |xref:appendix.adoc[Appendix]
 |`appendix`
-|N/A
+|NA
 |Can have subsections
 
 |xref:appendix.adoc#prefix[Appendix label]
@@ -26,32 +26,32 @@
 
 |xref:bibliography.adoc[Bibliography]
 |`bibliography`
-|N/A
+|NA
 |
 
-|xref:part-and-chapter.adoc#chapter-label[Chapter label]
+|xref:parts-and-chapters.adoc#chapter-label[Chapter label]
 |`chapter-label`
 |_Chapter_ (default) or user defined text
 |`book` doctype only; Asciidoctor PDF only
 
 |xref:colophon.adoc[Colophon; copyright page]
 |`colophon`
-|N/A
+|NA
 |`book` doctype only
 
 |xref:dedication.adoc[Dedication]
 |`dedication`
-|N/A
+|NA
 |`book` doctype only
 
 |xref:discrete.adoc[Discrete section style]
 |`discrete`
-|N/A
+|NA
 |
 
 |xref:glossary.adoc[Glossary]
 |`glossary`
-|N/A
+|NA
 |
 
 |xref:id.adoc#prefix[Section ID prefix]
@@ -68,34 +68,34 @@
 
 |xref:index.adoc[Index]
 |`index`
-|N/A
+|NA
 |DocBook only
 
-|xref:part-and-chapter.adoc#partnums[Part numbers]
+|xref:parts-and-chapters.adoc#partnums[Part numbers]
 |`partnums`
-|N/A
+|NA
 |`book` doctype only
 
 |xref:preface.adoc[Preface]
 |`preface`
-|N/A
+|NA
 |`book` doctype only; can have subsections
 
 |xref:id.adoc#anchor[Section anchor]
 |`sectanchors`
-|N/A
+|NA
 |
 //Asciidoctor only
 
 |xref:id.adoc#auto-id[Section ID]
 |`sectids`
-|N/A
+|NA
 |Set by default
 //Autogenerates section IDs by default
 
 |xref:id.adoc#link[Section link]
 |`sectlinks`
-|N/A
+|NA
 |
 //Asciidoctor only
 

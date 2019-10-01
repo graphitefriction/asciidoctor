@@ -5,19 +5,19 @@
 |Attribute |Values |Description |Notes |Converters
 
 |author
-|
+|_user-defined_
 |Author's full name
 |
 |all
 
 |authorinitials
-|
+|*Derived from `author`*, _user-defined_
 |First character of each word in the `author` attribute
 |
 |all
 
 |description
-|
+|_user-defined_
 |Text describing the document
 |
 |html
@@ -29,99 +29,100 @@ d|`docinfo`, `docinfo1`, `docinfo2`
 |html, docbook
 
 |doctitle
-|Text entered by user
+|*Document title (`=`)*, _user-defined_
 |Title of document
 |Identical to the value returned by `Document#doctitle`
 |all
 
 |email
-|
-|Email address
+|_user-defined_
+|Author email address
 |
 |all
 
 |firstname
-|
+|*Derived from `author`*, _user-defined_
 |First word of `author` attribute
 |
 |all
 
 |keywords
-|
+|_user-defined_
 |A list of comma-separated values that describe the document
 |
 |html
 
 
 |lastname
-|
+|*Derived from `author`*, _user-defined_
 |Last word of `author` attribute
 |
 |all
 
 |middlename
-|
+|*Derived from `author`*, _user-defined_
 |Middle word of `author` attribute
 |
 |all
 
 d|`no-header-footer`, `-s`
-|
+|_empty_
 |Generate an embeddable document; exclude the document frame
 |
 |all
 
 |noheader
-|
+|_empty_
 |Suppresses the output of the header
 |
 |all
 
 |nofooter
-|
+|_empty_
 |Suppresses the output of the footer
 |
 |all
 
 |notitle
-|
+|_empty_
 |Toggles the display of a document's title
 |
 |all
 
 |revdate
-|
+|_user-defined_
 |Date of document version
 |
 |all
 
 |revnumber
-|
+|_user-defined_
 |Version number of the document
 |
 |all
 
 |revremark
-|
+|_user-defined_
 |Version comments
 |
 |all
 
 |showtitle
-|
+|_empty_
 |Toggles the display of an embedded document's title
 |
 |all
 
 |title
 |
-|Alternative title of the document
+|Value of`<title>` element in HTML `<head>` or main DocBook `<info>` of output document.
+Used as a fallback when the document title is not specified.
 |
-|html
+|html, docbook
 
 |version-label
-|`Version`, User defined
-|The label preceding the `revnumber` in a converted document's byline
+|*Version*, _user-defined_
+|Label preceding `revnumber` in a output's byline
 |
 |html
 

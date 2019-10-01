@@ -4,61 +4,74 @@ An element can be assigned numerous roles.
 
 == Block assignment
 
+You can assign one or more roles to a block element using the shorthand or formal syntax for the `role` attribute.
 In an attribute list, there are two ways to assign a role attribute to a block element.
 
-. Prefixing the name with a dot (`.`).
-. Specifying the name with `role=<name>`.
-
-.Shorthand syntax
+Shorthand:: Prefix the value with a dot (`.`).
+The dot implicitly set's the role attribute.
+You can assign multiple roles to a block by prefixing each value with a `.`.
++
 [source]
 ----
-[.summary]
-* Review 1
-* Review 2
+[.value]
+****
+This is a sidebar with a role assigned to it.
+****
+
+[.value.value]
+****
+This is a sidebar with two roles assigned to it.
+****
 ----
 
-.Formal syntax
+Formal:: Explicitly set `role`, followed by the equals sign (`=`), and then the value.
+Separate multiple role values with commas (`,`).
++
 [source]
 ----
-[role="summary"]
-* Review 1
-* Review 2
-----
+[role="value"]
+****
+This is a sidebar with a role assigned to it.
+****
 
-To specify multiple roles using the shorthand syntax, separate them by dots.
+[role="value,value"]
+****
+This is a sidebar with a role assigned to it.
+****
+----
 
 [source]
 ----
 [.summary.incremental]
-* Review 1
-* Review 2
+* This is a list with two roles assigned to it.
 ----
 
 [source]
 ----
 [role="summary,incremental"]
-* Review 1
-* Review 2
+* This is a list with two roles assigned to it.
 ----
 
 == Inline assignment
 
-The role (`.`) shorthand can be used on inline text.
+The shorthand role syntax (`.`) can be used on inline elements.
 
+.Inline role assignments using shorthand syntax
+[source]
+----
+[.value]*free the world*
+----
+
+////
+Check to see if this is valid (just has space, but should it be a comma?)
 .Inline text with role assignments using formal syntax
 [source]
 ----
 [big goal]*free the world*
 ----
-
-.Inline text with role assignments using shorthand syntax
-[source]
-----
-[.big.goal]*free the world*
-----
-
 TIP: The attribute list preceding formatted text can be escaped using a backslash (e.g., `+\[role]*bold*+`).
 In this case, the text will still be formatted, but the attribute list will be unescaped and output verbatim.
+////
 
 .Role-playing for text enclosed in backticks
 To align with other formatted (i.e., quoted) text in AsciiDoc, roles can now be assigned to text enclosed in backticks.
@@ -66,23 +79,23 @@ To align with other formatted (i.e., quoted) text in AsciiDoc, roles can now be 
 Given:
 
 ```
-[.rolename]`monospace text`
+[.value]`monospace text`
 ```
 
 the following HTML is produced:
 
 ```html
-<code class="rolename">monospace text</code>
+<code class="value">monospace text</code>
 ```
 
-Using the shorthand notation, an id (i.e., anchor) can also be specified:
+Using the shorthand notation, an id can also be specified:
 
 ```
-[#idname.rolename]`monospace text`
+[#value.value]`monospace text`
 ```
 
 which produces:
 
 ```html
-<a id="idname"></a><code class="rolename">monospace text</code>
+<a id="value"></a><code class="value">monospace text</code>
 ```

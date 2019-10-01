@@ -1,4 +1,4 @@
-= Formatting Marks
+= Using and Escaping Unconstrained Inline Formatting
 
 There are two categories of formatting marks for applying styles (i.e., formatting) to text, _constrained_ and _unconstrained_.
 These formatting marks are referred to as _quotes_ in the AsciiDoc syntax.
@@ -52,8 +52,8 @@ She spells her name with an "`h`", as in Sara**h**.
 
 Consider the following questions:
 
-* Is there a letter, number, underscore directly outside the formatting marks (on either side)?
-* Is there a colon, semi-colon, or closing curly bracket directly before the starting formatting mark?
+* Is there a letter, number, or underscore directly outside the formatting marks (on either side)?
+* Is there a colon, semicolon, or closing curly bracket directly before the starting formatting mark?
 * Is there a space directly inside of the formatting mark?
 
 If you answered "`yes`" to any of these questions, you need to switch to unconstrained (double formatting) quotes.
@@ -132,12 +132,7 @@ So you have to double up the marks to coerce it into formatting the text to mono
 "```endpoints```"
 ----
 
-////
-NOTE: This situation may improve in the future when Asciidoctor is switched to using a parsing expression grammar for inline formatting instead of the current regular expression-based strategy.
-For details, follow https://github.com/asciidoctor/asciidoctor/issues/61[issue #61].
-////
-
-== Escaping unconstrained quotes
+== Escaping unconstrained formatting syntax
 
 Unconstrained quotes are meant to match anywhere in the text, context free.
 However, that means you catch them formatting when you don't intend them to.

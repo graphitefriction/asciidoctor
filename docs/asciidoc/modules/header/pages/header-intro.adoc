@@ -18,7 +18,7 @@ Line comments may be used in the header, but only if those lines are directly ad
 
 The header is _optional_ when the `doctype` is `article` or `book`.
 However, a header is required when the document type is `manpage`.
-The requirements for a manual page (man page) are described in the #manpage doctype xref needed#.
+See the xref:asciidoctor:manpage:convert-to-man-page.adoc#man-page-doctype[man page doctype] section for manual page (man page) requirements.
 
 The header (document title, author, and revision information) is included by default when converting to a standalone document.
 This means that the header of a document called via an xref:directives:include-directive.adoc[include directive] will be processed and converted.
@@ -28,7 +28,7 @@ If you do not want the header of a document to be displayed, set the `noheader` 
 ****
 Many static site generators, such as Jekyll and Middleman, rely on front matter added to the top of the document to determine how to convert the content.
 Asciidoctor has a number of attributes available to correctly handle front matter.
-See the xref:asciidoctor:html:static-site-generators.adoc[static website generators section] to learn how Asciidoctor integrates with static website generators.
+See the xref:asciidoctor:html:static-site-generators.adoc[static website generators] section to learn how Asciidoctor integrates with static website generators.
 ****
 
 Now let's explore the document title in detail.

@@ -2,8 +2,7 @@
 
 When applicable, the first text substitution to occur is the replacement of any special characters.
 This process is handled by the `specialchars` element.
-The specialchars element searches for three characters (`<`, `>`, `&`) and replaces them with their #character entity references#.
-// <<char-ref-sidebar,character entity references>>.
+The specialchars element searches for three characters (`<`, `>`, `&`) and replaces them with their xref:replacements.adoc#char-ref-sidebar[chcharacter entity references].
 
 * The less than symbol, `<`, is replaced with the `\&lt;` character entity reference.
 * The greater than symbol, `>`, is replaced with the `\&gt;` character entity reference.

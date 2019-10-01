@@ -1,0 +1,266 @@
+= Document Attributes
+:disclaimer: Don't pet the wild Wolpertingers. If you let them into your system, we're \
+not responsible for any loss of hair, chocolate, or purple socks.
+:url-repo-ex: https://github.com/asciidoctor/asciidoctor
+
+Document attributes apply built-in behavior and settings to a whole document, or in select cases, to regions of a document.
+They also make user-defined information available for referencing throughout a whole document.
+Document attributes are most often set and defined in a document's header using an attribute entry, but they can also be used from the API or command line.
+
+== Using an attribute entry
+
+A document attribute is set and assigned a value with an attribute entry.
+An attribute entry consists of an <<attribute-names,attribute name>> and the attribute's value.
+
+[source]
+----
+:name: value //<1> <2>
+----
+. The attribute's name is entered at the start of a new line and enclosed in colons (`:`).
+. When an attribute accepts an explicitly assigned value, offset the value from the name by one space.
+
+An attribute entry is typically entered in the document header, or in select cases, in the body of the document.
+Once an attribute is set, its value is applied to the whole document or, when the attribute holds replacement text, available for use throughout the document when called by an attribute reference.
+Unless overridden from the command line or locked by the API, attributes can be reassigned at any subsequent point in the document.
+
+=== Attribute names
+
+All of the available built-in attribute names are listed in the xref:ref-document.adoc[Document Attributes Reference] and the built-in character replacement attribute names in the xref:ref-character-replacement.adoc[Character Replacement Attributes Reference].
+Built-in attribute names are reserved and can't be used for user-defined attribute names.
+Although uppercase characters are permitted in an attribute name, the name is converted to lowercase before being stored.
+For example, `AUTHOR` and `Author` are treated as `author` when a document is loaded or converted.
+A best practice is to only use lowercase letters in the name.
+
+User-defined attribute names must:
+
+* be at least one character long,
+* begin with a word character (A-Z, a-z, 0-9, or _), and
+* only contain word characters and hyphens.
+
+A user-defined attribute name cannot contain dots or spaces.
+A best practice is to only use lowercase letters in the name and avoid starting the name with a number.
+
+=== Attribute value types and assignment methods
+
+The value of an attribute may be <<empty,empty>>, an integer such as 5 or 2, or a string characters like your name or a URL.
+Attributes that accept string values may include <<ref-anatomy,references to other attributes>> and inline macros.
+Values can't contain complex, multi-line block elements such as tables or sidebars.
+
+A value may be <<empty,assigned by default when the value is empty>> or assigned explicitly by the user.
+The type of value an attribute accepts and whether it uses a default value, has multiple built-in values, accepts a user-defined value, or requires a value to be explicitly assigned depends on the attribute.
+
+[#empty]
+== Setting an attribute that doesn't accept a value
+// Setting an attribute
+
+Some built-in attributes never accept a value because they act like a basic switch or toggle.
+That is, their sole function is to activate one behavior.
+The attribute's behavior is turned on when it is set.
+Its value field is always left blank (empty).
+
+[source]
+----
+:name: //<1>
+----
+. On a new line, type a colon (`:`), directly followed by the attribute's name and then another `:`.
+After the closing `:`, press kbd:Enter[].
+The attribute is now set and its behavior will be applied to the converted document.
+
+The document attribute `sectanchors` never accepts a value because it can only be switched on.
+When `sectanchors` is set, it xref:sections:id.adoc#anchor[activates an anchor in front of a section title] when a cursor hovers over it.
+
+[source]
+----
+:sectanchors:
+----
+
+* it's a built-in attribute doesn't accept any explicitly set values because it only turns on a behavior,
+* it's a built-in attribute that uses a default value when its value is left empty, or
+* the attribute was set, but not assigned a value by accident.
+In this case, it will use its default value if applicable or output an error message when the document is processed.
+
+The value of a built-in attribute that only turns on a behavior is always empty.
+
+[source]
+----
+:sectanchors: //<1>
+----
+. The value of `sectanchors` is always empty since its function is to xref:sections:id.adoc#anchor[turn on an anchor in front of section titles] on cursor hover.
+
+Many built-in attributes have a built-in value that is designated as the default value.
+This default value is assigned when the attribute is set and its value is left empty.
+For example, the xref:sections:id.adoc#separator[ID word separator attribute] can accept <<user-values,user-defined values>> and it has one default value.
+If you set `idseparator` and leave the value empty, the default value will be assigned automatically when the document is processed.
+
+[source]
+----
+:idseparator:  //<1>
+----
+. The words in automatically generated IDs will be separated with an underscore (`_`), the attribute's default value, because the value is empty.
+
+To override the default value of an attribute, you have to explicitly assign a new value when you set the attribute.
+
+[source]
+----
+:idseparator: - //<1>
+----
+. The words in automatically generated IDs will be separated with a hyphen (`-`).
+The value must be offset from the attribute's name by a space.
+
+The xref:ref-document.adoc[Document Attributes Reference] lists the available built-in attributes, their accepted value types, and their available built-in values.
+
+==== Explicit values
+
+Built-in attributes that don't accept an empty value or have a default value, as well as <<set-user-defined,user-defined attributes>>, must have a value explicitly assigned to them when they're set.
+For example,
+
+[source]
+----
+:keywords: content engineering, branch collisions, 42, {meta-topics}, FTW //<1> <2>
+----
+. The xref:header:metadata.adoc#keywords[built-in keywords attribute] doesn't have a default value, so you must explicitly assign it a value when you set it.
+. Attributes that accept string values may include <<ref-anatomy,references to other attributes>>, e.g, `+{meta-topics}+`.
+See the xref:ref-document.adoc[Document Attributes Reference] for information about each built-in attribute's accepted value types.
+
+You must explicitly assign a value to a built-in attribute when you want to override its default value.
+For instance, when a section in a document is assigned the appendix style, that section title will be automatically prefixed with a label and a letter that signifies that section's order, e.g., Appendix A, by default.
+Let's override the default letter ordering and use a number instead.
+
+[source]
+----
+:appendix-number: 1
+----
+
+Now the first section assigned the appendix style will be prefixed Appendix 1, the second, Appendix 2, and so forth.
+
+Let's dive deeper into using document attributes.
+
+[#set-built-in]
+== Set built-in document attributes
+
+Built-in attributes are used to add common features, such as the table of contents, or control the generated output, such as selecting a converter.
+Many built-in attributes only take effect when defined in the document header.
+
+To enable the table of contents, set the `toc` attribute in the document header as follows:
+
+[source]
+----
+:toc:
+----
+
+When the value is empty, as it is in the example above, the default value will be assigned.
+The default value for `toc` is `auto`; therefore, the table of contents will be placed below the document's title when the document is rendered.
+
+Some built-in attributes, such as `toc`, have several built-in values.
+You can assign `toc` the built-in value `right` to place the table of contents on the right side of the document.
+
+[source]
+----
+:toc: right
+----
+
+The `right` value will override the default value.
+
+[#set-user-defined]
+== Set user-defined document attributes
+
+When you find yourself typing the same text repeatedly, or text that often needs to be updated, consider creating your own attribute.
+User-defined attributes must have a name and explicitly assigned value.
+
+Attribute names must:
+
+* be at least one character long,
+* begin with a word character (A-Z, a-z, 0-9, or _), and
+* only contain word characters and hyphens.
+
+The name cannot contain dots or spaces.
+
+Although uppercase characters are permitted in an attribute name, the name is converted to lowercase before being stored.
+For example, `URL` and `Url` are treated as `url`.
+A best practice is to only use lowercase letters in the name and avoid starting the name with a number.
+
+[[user-values]]Attribute values can:
+
+* be any inline content, and
+* contain line breaks, but only if an xref:wrap-values.adoc#hard[explicit line continuation] (`+`) is used.
+
+For example, user-defined attributes can store snippets of text and URLs.
+
+[#user-set-ex]
+[source]
+----
+:disclaimer: Don't pet the wild Wolpertingers. If you let them into your system, we're \ //<1>
+not responsible for any loss of hair, chocolate, or purple socks.
+:url-repo-ex: https://github.com/asciidoctor/asciidoctor
+----
+. Long values can be xref:wrap-values.adoc[soft wrapped] using a backslash (`\`).
+
+Now, you can <<ref-anatomy,reference these attributes>> throughout the document.
+
+[#ref-anatomy]
+== Referencing a document attribute
+
+You'll likely use the value of a user-defined attribute entry or certain built-in attributes in specific locations throughout a document.
+To reference and use the value of a document attribute, you enclose the attribute's name in curly brackets (`+{ }+`).
+This inline element is called an attribute reference.
+Let's reference the attributes set and assigned values in the <<user-set-ex,previous example>>.
+
+[source]
+----
+Asciidoctor is {url-repo-ex}[open source]. //<1>
+
+WARNING: {disclaimer} //<2>
+If you're missing a lime colored sock, file a ticket in
+the {url-repo-ex}/issues[Asciidoctor issue tracker]. //<3>
+----
+. Attribute references can be used in macros.
+. Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.
+Since there isn't a blank line between the `disclaimer` reference and the following sentence, the following sentence will be directly appended to the end of the attribute's value when it's processed.
+. The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:link.adoc[link macro].
+
+As you can see below, the attribute references are replaced with the corresponding attribute value when the document is processed.
+
+****
+Asciidoctor is {url-repo-ex}[open source].
+
+WARNING: {disclaimer}
+If you're missing a lime colored sock, file a ticket in the {url-repo-ex}/issues[Asciidoctor issue tracker].
+****
+
+If you use an attribute that xref:catch-errors.adoc[is missing a value], you can specify how Asciidoctor handles attribute reference errors.
+
+// == Set document attributes in the document body
+
+== Document attribute guidelines
+
+Attributes let you do a surprising amount of formatting for what is fundamentally a text replacement tool.
+
+Document attributes can:
+
+* have values that xref:wrap-values.adoc[span multiple, contiguous lines]
+* include basic inline AsciiDoc syntax, such as:
+** <<ref-anatomy,attribute references>>
+** text formatting (usually wrapped in a xref:customize-substitutions.adoc#pass-macro[pass macro])
+** inline macros (usually wrapped in a xref:customize-substitutions.adoc#pass-macro[pass macro])
+
+Document attributes can't:
+
+* override attributes xref:assignment-precedence.adoc[assigned from the command line or API]
+* include complex AsciiDoc syntax and content, such as:
+** lists
+** multiple paragraphs
+** blocks, such as tables, sidebars, and examples
+** other whitespace-dependent markup types
+
+////
+You can also use attributes to set the base path to images (default: `_empty_`), icons (default: `./images/icons`), stylesheets (default: `./stylesheets`) and JavaScript files (default: `./javascripts`).
+
+.Base path config example
+[source]
+----
+:imagesdir: ./images
+:iconsdir: ./icons
+:stylesdir: ./styles
+:scriptsdir: ./js
+----
+////

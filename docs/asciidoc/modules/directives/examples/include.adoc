@@ -1,6 +1,5 @@
 ////
 Included in:
-
 - user-manual: Include Directive
 - quick-ref
 ////

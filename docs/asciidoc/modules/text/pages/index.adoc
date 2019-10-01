@@ -1,15 +1,68 @@
-= Text Formatting
+= Inline Text and Punctuation Formatting Concepts
 
-Just as we emphasize certain words and phrases when we speak, we can emphasize them in text with formatting.
+Just as we emphasize certain words and phrases when we speak, we emphasize them in text with formatting and punctuation.
 This formatting, such as bold or monospace, is indicated by surrounding letters, words, or phrases with simple markup.
-When Asciidoctor processes text enclosed by formatting markup, the markup is replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution phase].
+When Asciidoctor processes text enclosed by inline formatting syntax, the markup is replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution phase].
 
-.Text formatting versus quotes
-****
-The original AsciiDoc processor calls this markup and its related features _quotes_, _quotes substitutions_, and _quoted text_.
-However, in the Asciidoctor documentation, we refer to the text formatting markup as, you guessed it, text formatting.
-When you need to control when text formatting is applied to certain blocks, the substitution attribute is still named `quotes`, but we're considering changing this to a more semantic name in a future Asciidoctor version.
-****
+== Inline formatting marks
+
+//Inline::
+
+Formatting mark:: A formatting mark is the character, typically a symbol, that indicates the style or behavior you want Asciidoctor to apply to the text.
+Formatting marks usually, but with some exceptions, come in sets.
+The *opening mark* indicates where you want the style or behavior to start and the *closing mark* indicates where you want the style or behavior to end.
+The built-in inline text styles are bold, italic, monospace, highlight, subscript, and superscript.
+
+The built-in inline punctuation styles are smart quotation marks and smart apostrophes.
+
+== Why is the text formatting sometimes referred to as "`quotes`"
+
+The original AsciiDoc Python implementation calls this inline text formatting syntax and its related features _quotes_, _quotes substitutions_, and _quoted text_.
+However, in the Asciidoctor documentation, we refer to the inline text formatting markup as, you guessed it, text formatting.
+When you need to control what text formatting is applied to a block, the substitution attribute is named `quotes`, but we're considering changing this to a more semantic name in a future Asciidoctor version.
+
+== Constrained and unconstrained formatting syntax
+
+Where you want to apply inline text or punctuation formatting--around a phrase or word versus around a few characters inside of a word--dictates whether you use the _constrained_ or _unconstrained_ syntax of a style.
+
+=== Constrained formatting syntax
+
+When the inline formatting is applied to an individual word or continuous sequence of words, such as a phrase or sentence (as long as that formatting doesn't start or stop in the middle of a word), a single set of the formatting syntax characters is used to enclose the text.
+The syntax is referred to as *constrained* because the inline formatting is constrained by the blank space that directly precedes the set's opening formatting character and the blank space or punctuation mark (`,`, `.`, `?`, and `!`) that directly follows the set's closing formatting character.
+
+For example, you use this form to format a word that stands alone,
+
+[source]
+----
+That is *strong* stuff!
+----
+
+to format a sequence of words,
+
+[source]
+----
+That is *really strong* stuff!
+----
+
+or to format a word adjacent to punctuation, like an exclamation mark.
+
+[source]
+----
+This stuff sure is *strong*!
+----
+
+=== Unconstrained formatting syntax
+
+A double set of the formatting syntax characters is used to enclose text when the opening formatting character isn't directly preceded by a blank space or the closing formatting character isn't directly followed by a blank space or punctuation mark (`,`, `.`, `?`, and `!`).
+The syntax is referred to as *unconstrained*.
+You use the unconstrained syntax to format just one or a few letters in a word.
+
+[source]
+----
+She spells her name with an "`h`", as in Sara**h**.
+----
+
+See #When should I use unconstrained quotes?, Unconstrained formatting edge cases, and Escaping unconstrained formatting syntax# for more examples and information.
 
 Continue reading to learn how to format letters, words or phrases with the following styles:
 
@@ -20,6 +73,7 @@ Continue reading to learn how to format letters, words or phrases with the follo
 - [x] custom styles
 - [x] smart quotation marks and apostrophes
 - [x] subscript and superscript
+
 
 ////
 CAUTION: You may not always want these symbols to indicate text formatting.

@@ -1,33 +1,24 @@
-= Catch a Missing or Undefined Attribute
+= Catch Attribute Errors
 
-By default, the original AsciiDoc processor drops the entire line if it contains a reference to a missing attribute (e.g., `+{bogus}+`).
-This "feature" was added for use in templates written for the original processor, which also used the AsciiDoc syntax.
+When you reference a missing or undefined attribute, the entire line that contains the attribute reference is dropped when the document is converted.
+You can change this behavior using the `attribute-missing` and `attribute-undefined` attributes.
 
-This behavior is not needed in Asciidoctor since templates are written in a dedicated template language (e.g., ERB, Haml, Slim, etc.).
-More critically, the behavior is frustrating for the author, editor or reader.
-To them, it's not immediately apparent when a line goes missing.
-Discovering its absence often requires a full (and tedious) read-through of the document or section.
+== Missing attribute 
 
-Asciidoctor has two attributes to alleviate this inconvenience: `attribute-missing` and `attribute-undefined`.
-
-== Missing attribute
-
-The attribute attribute-missing controls how missing references are handled.
+Attribute-missing controls how missing references are handled.
 By default, missing references are left intact so it's clear to the author when one hasn't been satisfied since, likely, the intent is for it to be replaced.
 
 This attribute has four possible values:
 
 `skip`:: leave the reference in place (default setting)
 `drop`:: drop the reference, but not the line
-`drop-line`:: drop the line on which the reference occurs (compliant behavior)
+`drop-line`:: drop the line on which the reference occurs
 `warn`:: print a warning about the missing attribute
 
-Consider the following line of AsciiDoc:
+Consider the following line:
 
 [source]
-----
 Hello, {name}!
-----
 
 Here's how the line is handled in each case, assuming the `name` attribute is not defined:
 
@@ -43,7 +34,7 @@ Here's how the line is handled in each case, assuming the `name` attribute is no
 
 == Undefined attribute
 
-The attribute attribute-undefined controls how expressions that undefine an attribute are handled.
+Attribute-undefined controls how expressions that undefine an attribute are handled.
 By default, the line is dropped since the expression is a statement, not content.
 
 This attribute has two possible values:
@@ -59,7 +50,7 @@ Consider the following declaration:
 {set:name!}
 ```
 
-Depending on whether attribute-undefined is `drop` or `drop-line`, either the statement or the line that contains it will be discarded.
+Depending on whether `attribute-undefined` is `drop` or `drop-line`, either the statement or the line that contains it will be discarded.
 It's reasonable to stick with the compliant behavior, drop-line, in this case.
 
 TIP: We recommend putting any statement that undefines an attribute on a line by itself.

@@ -1,14 +1,9 @@
 = Environment Attributes Reference
 :url-epoch: https://reproducible-builds.org/specs/source-date-epoch
-////
-doc anchor: env-attributes
-attrs-env.adoc, included in:
-- user-manual appendix B attribute catalog
-////
 
-Asciidoctor automatically assigns values to various document attributes whenever a document is loaded or converted.
-These attributes, termed [.term]_environment attributes_, provide information about the runtime environment, such as how, where and when the document is being processed.
-Like other document attributes, environment attributes can be referenced where ever attribute references are permitted.
+Asciidoctor automatically assigns values to various attributes whenever a document is loaded or converted.
+These _environment attributes_ provide information about the runtime environment, such as how, where and when the document is being processed.
+Like document attributes, environment attributes can be referenced wherever attribute references are permitted.
 It's recommended that you treat these attributes as read only.
 
 [#env-attributes-table]
@@ -52,7 +47,6 @@ For example, if the backend is `docbook5`, the basebackend is `docbook`.
 
 |docfilesuffix
 |File extension of the source document, including the leading period.
-_Introduced in 1.5.6._
 |.adoc
 
 |docname
@@ -69,7 +63,7 @@ _Introduced in 1.5.6._
 
 |docyear
 |Year that the document was last modified.^[1,2]^
-|2018
+|{docyear}
 
 |embedded
 |Set if content is being converted to an embeddable document (body only).
@@ -97,7 +91,7 @@ _Introduced in 1.5.6._
 
 |localyear
 |Year when the document was converted.^[2]^
-|2018
+|{localyear}
 
 |outdir
 |Full path of the output directory.

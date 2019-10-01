@@ -3,10 +3,10 @@
 The id attribute specifies a unique name for an element.
 That name can only be used once in a document.
 
-An id has two purposes:
+An id:
 
-. to provide an internal link or cross reference anchor for the element
-. to reference a style or script used by the output processor
+. provides an internal link or cross reference anchor for an element, and
+. references an optional style or behavior used by the output processor.
 
 ////
 BlockId
@@ -19,7 +19,7 @@ NOTE: Section pending
 In an attribute list, there are two ways to assign an id attribute to a block element.
 
 . Prefixing the name with a hash (`#`).
-. Specifying the name with `id=<name>`.
+. Specifying the name with `id=name`.
 
 [source]
 ----
@@ -46,7 +46,7 @@ TIP: The order of ID and role values in the shorthand syntax does not matter.
 // tag::in[]
 The id (`#`) shorthand can be used on inline quoted text.
 
-.Quoted text block with id assignment using Asciidoctor shorthand
+.Quoted text block with id assignment using shorthand syntax
 ----
 [#free_the_world]*free the world*
 ----

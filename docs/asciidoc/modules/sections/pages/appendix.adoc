@@ -38,11 +38,11 @@ include::example$appendix.adoc[tag=appx-book-out]
 ----
 
 [#caption]
-== Appendix prefix
+== Appendix label
 
 When rendered, the titles of sections marked as `appendix` will include:
 
-* A prefix, taken from the value of the `appendix-caption` attribute, which defaults to "`Appendix`"
+* A label, taken from the value of the `appendix-caption` attribute, which defaults to "`Appendix`"
 * A letter that represents the order of the appendix within the sequence of appendices (A, B, ...)
 * A colon
 * The section title

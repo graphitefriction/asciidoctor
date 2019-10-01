@@ -1,0 +1,90 @@
+= The Options Attribute
+
+The options attribute is a versatile xref:element.adoc#named[named attribute] that can be assigned one or more values.
+It can also be defined globally as an attribute entry.
+
+== Block Assignment
+
+You can assign one or more options to a block element using the shorthand or formal syntax for the `options` attribute.
+
+Shorthand:: Prefix the value with a percent sign (`%`).
+Additional options' values are each prefixed with a `%`.
+The percent sign implicitly sets the options attribute.
++
+[source]
+----
+[%value]
+****
+This is a sidebar with an option assigned to it.
+****
+
+[%value%value]
+****
+This is a sidebar with two options assigned to it.
+****
+----
+
+Formal:: Explicitly set `options` (or `opts`), followed by the equals sign (`=`), and then the value.
+Separate multiple values with commas (`,`).
++
+[source]
+----
+[options="value"]
+****
+This is a sidebar with an option assigned to it.
+****
+
+[options="value,value,value"]
+****
+This is a sidebar with three options assigned to it.
+****
+----
+
+Consider a table block with the three values `header`, `footer`, and `autowidth`.
+Here's how the options are assigned to the table using `options`.
+
+[source]
+----
+[options="header,footer,autowidth"]
+|===
+| Cell A | Cell B
+|===
+----
+
+Here's how the values are assigned to the table using the shorthand notation.
+
+[source]
+----
+[%header%footer%autowidth]
+|===
+| Cell A | Cell B
+|===
+----
+
+=== Using options with other attributes
+
+Let's consider `options` when combined with other attributes.
+The following example show how to structure an attribute list when you have style, role, and options attributes.
+
+.Shorthand
+[source]
+----
+[horizontal.properties%step] // <1> <2> <3>
+property 1:: does stuff
+property 2:: does different stuff
+----
+. xref:style.adoc[Style is a positional attribute] and its value, in this case `horizontal`, is placed at the start of the attribute list.
+. `properties` is prefixed with a dot (`.`), signifying that it's a value of the `role` attribute.
+The role and options attributes can be set in either order, i.e., `[horizontal%step.properties]`.
+. The percent sign (`%`) sets the xref:options.adoc[options attribute] and assigns the `step` value to it.
+
+When you use the formal syntax, the positional and named attributes are separated by commas (`,`).
+
+.Formal
+[source]
+----
+[horizontal, role="properties", options="step"] // <1>
+property 1:: does stuff
+property 2:: does different stuff
+----
+. Like in the shorthand example, named attributes such as `role` and `options` can be set in any order in the attribute list once any xref:element.adoc#positional[positional attributes] are set.

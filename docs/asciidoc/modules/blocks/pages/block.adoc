@@ -23,7 +23,7 @@ include::example$block.adoc[tag=list-title]
 In addition to a title, a block can be assigned additional metadata including:
 
 * ID (xref:attributes:id.adoc#anchor[anchor])
-* Block name (first positional attribute)
+* Block style (first positional attribute)
 * Block attributes
 
 Here's an example of a quote block with metadata:
@@ -84,7 +84,7 @@ invalid sidebar block
 ****
 ----
 
-When the processor encounters the previous example, it will put the remainder of the content in the document inside the delimited block (without warning, currently).
+When Asciidoctor encounters the previous example, it will put the remainder of the content in the document inside the delimited block (without warning, currently).
 As far as the processor is concerned, the closing delimiter is just a line of content.
 If you want the closing delimiter to be matched, it must be the same length as the opening delimiter.
 
@@ -93,9 +93,6 @@ If you want the closing delimiter to be matched, it must be the same length as t
 valid sidebar block
 ****
 ----
-
-The AsciiDoc Python processor did not require the delimiters to be balanced, but also never documented that this was permissible.
-We view AsciiDoc Python's behavior of matching unbalanced delimited blocks to be a bug and therefore do not allow it in Asciidoctor.
 
 === Optional delimiters
 

@@ -3,6 +3,7 @@
 Document metadata, such as a description of the document, keywords, and the title, can be assigned to attributes in the header.
 When converted to HTML, the values of these attributes will correspond to tags contained in the `<head>` section of an HTML document.
 
+[#description]
 == Description
 
 You can include a description of the document using the `description` attribute.
@@ -20,6 +21,7 @@ include::example$metadata.adoc[tag=desc-html]
 
 // TODO: Add attribute continuation documentation to attributes section
 
+[#keywords]
 == Keywords
 
 The `keywords` attribute contains a list of comma separated values that are assigned to the HTML `<meta>` tag.
@@ -32,6 +34,7 @@ include::example$metadata.adoc[tag=key-base]
 .HTML output
 include::example$metadata.adoc[tag=key-html]
 
+[#alt-title]
 == Alternate title
 
 By default, Asciidoctor uses the text of the document title as the value of the HTML `<title>` tag.
@@ -39,5 +42,5 @@ You can override this behavior by setting the `title` attribute in the document 
 
 == Custom metadata, styles and functions
 
-You can add content, such as custom metadata, stylesheet, and script information, to the header of the output document using docinfo ("`document information`") files.
+You can add content, such as custom metadata, stylesheet, and script information, to the header of the output document using docinfo (document information) files.
 The xref:asciidoctor::docinfo.adoc[docinfo file] section details what these files can contain and how to use them.

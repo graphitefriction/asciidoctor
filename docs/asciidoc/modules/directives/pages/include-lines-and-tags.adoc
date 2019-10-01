@@ -20,12 +20,12 @@ The example below shows how you tag a region of content inside a file containing
 ----
 include::example$include.adoc[tag=tag-co]
 ----
-<1> To indicate the start of a tagged region, insert a comment line in the code.
-<2> Assign a unique name to the `tag` directive. In this example the tag is called _timings_.
-<3> Insert another comment line where you want the tagged region to end.
-<4> Assign the name of the region you want to terminate to the `end` directive.
-<5> This is the start a tagged snippet named _parse_.
-<6> This is the end of the tagged snippet named _parse_.
+. To indicate the start of a tagged region, insert a comment line in the code.
+. Assign a unique name to the `tag` directive. In this example the tag is called _timings_.
+. Insert another comment line where you want the tagged region to end.
+. Assign the name of the region you want to terminate to the `end` directive.
+. This is the start a tagged snippet named _parse_.
+. This is the end of the tagged snippet named _parse_.
 
 IMPORTANT: The `tag::[]` and `end::[]` directives should be placed after a line comment as defined by the language of the source file.
 The directives must also appear at the _end_ of the line.

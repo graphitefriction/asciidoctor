@@ -23,7 +23,7 @@ You can set this attribute in the document or from the CLI or API.
 //Some source highlighters, such as CodeRay and Pygments, require an additional library to be installed.
 //Others, like highlight.js and prettify, load the library at runtime from a CDN or from a custom URL or file path.
 
-If you set the attribute in the document, it _must_ be defined in the #document header#.
+If you set the attribute in the document, it _must_ be defined in the document header.
 
 [source]
 ----

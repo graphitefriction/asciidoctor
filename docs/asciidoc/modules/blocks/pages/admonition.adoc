@@ -43,8 +43,10 @@ The label must be uppercase when set as an attribute on a block.
 ----
 include::example$admonition.adoc[tag=bl-c]
 ----
-<1> Set the label in an attribute list on a delimited block. The label must be uppercase.
-<2> Admonition styles are commonly set on example blocks. Example blocks are delimited by four equal signs (`====`).
+<1> Set the label in an attribute list on a delimited block.
+The label must be uppercase.
+<2> Admonition styles are commonly set on example blocks.
+Example blocks are delimited by four equal signs (`====`).
 
 :icons!:
 .Result: Admonition block
