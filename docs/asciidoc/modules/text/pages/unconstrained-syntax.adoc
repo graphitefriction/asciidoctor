@@ -1,4 +1,4 @@
-= Using and Escaping Unconstrained Inline Formatting
+= Troubleshooting and Escaping Unconstrained Syntax
 
 There are two categories of formatting marks for applying styles (i.e., formatting) to text, _constrained_ and _unconstrained_.
 These formatting marks are referred to as _quotes_ in the AsciiDoc syntax.

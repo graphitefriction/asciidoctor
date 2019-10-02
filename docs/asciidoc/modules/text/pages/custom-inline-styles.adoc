@@ -1,4 +1,4 @@
-= Custom Text Styles
+= Using Custom Inline Styles
 
 == Custom style syntax
 
