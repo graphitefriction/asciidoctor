@@ -206,7 +206,7 @@ _Book doctype only_.
 |*NAME*, _any_
 |{y}
 |
-|Label for program name section in the manpage.
+|Label for program name section in the man page.
 
 |nolang
 |{n}
@@ -993,7 +993,7 @@ Use CSS stylesheet instead.*
 |_any_
 |{y}
 |{n}
-|Metadata for manpage output.
+|Metadata for man page output.
 //<<man-pages>>
 
 |manvolnum
@@ -1001,7 +1001,7 @@ Use CSS stylesheet instead.*
 |_any_
 |{y}
 |{n}
-|Metadata for manpage output.
+|Metadata for man page output.
 //<<man-pages>>
 
 |manname
@@ -1009,7 +1009,7 @@ Use CSS stylesheet instead.*
 |_any_
 |{y}
 |{n}
-|Metadata for manpage output.
+|Metadata for man page output.
 //<<man-pages>>
 
 |manpurpose
@@ -1017,7 +1017,7 @@ Use CSS stylesheet instead.*
 |_any_
 |{y}
 |{n}
-|Metadata for manpage output.
+|Metadata for man page output.
 //<<man-pages>>
 
 |man-linkstyle
@@ -1025,7 +1025,7 @@ Use CSS stylesheet instead.*
 |*blue R <>*, _link format sequence_
 |{y}
 |{n}
-|Link style in manpage output.
+|Link style in man page output.
 //<<man-pages>>
 
 |mansource
@@ -1033,7 +1033,7 @@ Use CSS stylesheet instead.*
 |_any_
 |{y}
 |{n}
-|Source (e.g., application and version) the manpage describes.
+|Source (e.g., application and version) the man page describes.
 //<<man-pages>>
 
 |manmanual
@@ -1041,7 +1041,7 @@ Use CSS stylesheet instead.*
 |_any_
 |{y}
 |{n}
-|Manual name displayed in the manpage footer.
+|Manual name displayed in the man page footer.
 //<<man-pages>>
 |===
 
