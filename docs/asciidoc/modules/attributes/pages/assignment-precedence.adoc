@@ -2,27 +2,27 @@
 
 == Default attribute value precedence
 
-By default, the attribute assignment precedence, from highest (i.e., overrides all other assigned values) to lowest, is:
+The attribute assignment precedence, listed from highest to lowest, is:
 
-. Attribute set and defined via the API or command line
-. Attribute set and defined in the document
-. Attribute automatically set and defined by default
+. An attribute passed to the API or CLI
+. An attribute defined in the document
+. The default value of the attribute, if applicable
 
 Let's use the `doctype` attribute to show how precedence works.
 
-Asciidoctor automatically sets the `doctype` attribute and assigns it the default value of `article`.
-In other words, if `doctype` isn't set and assigned a value in the document header, API, or from the command line, it will be set and assigned the value `article` at runtime.
-However, if `doctype` is set in the document header and assigned the value `book`, `book` will override the default value.
-Finally, a value assigned to `doctype` via the API or command line, will overrule a value assigned in the document and the default value.
+The default value for the `doctype` attribute is `article`.
+Therefore, if the `doctype` attribute is not assigned a value (either in the document, API, or CLI), the processor will assign it the default value of `article`.
+If the `doctype` attribute is set in the document (i.e., assigned a new value, such as `book`), that value will override the default value.
+Finally, if a value is assigned to the `doctype` attribute via the API or CLI, that value will override both the default value and the value assigned in the document.
 
 == Change attribute value precedence
 
-You can adjust the precedence of attribute values assigned via the API or command line.
-In the API or CLI, you can add an `@` symbol to the end of an attribute value and make that value assignment have a lower precedence than an assignment in the document.
+You can adjust the precedence of attribute values passed to the API or CLI by adding the `@` override modifier to the end of the attribute value (or, since 1.5.7, the end of the attribute name).
+Adding this modifier lowers the precedence of an attribute (assigned using the API or CLI) so the document can override the value.
 
-The API or CLI adjusted precedence, from highest to lowest, is:
+Let's update the attribute assignment precedence list defined earlier to reflect this additional rule:
 
-. Attribute passed to the API or CLI that does not end in `@`
-. Attribute defined in the document
-. Attribute passed to the API or CLI that ends in `@`
-. Default value
+. An attribute passed to the API or CLI whose value does not end in `@`
+. An attribute defined in the document
+. An attribute passed to the API or CLI whose value (or, since Asciidoctor 1.5.7, name) ends in `@`
+. The default value of the attribute, if applicable
