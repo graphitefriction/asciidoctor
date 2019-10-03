@@ -1,19 +1,19 @@
 = Character Replacement Attributes Reference
 
-[width="75%", cols="^4l,^3l,^3"]
+[width="75%", cols="^4m,^3l,^3"]
 |===
 |Attribute name |Replacement text |Appearance
 
 |blank
-|_nothing_
+e|nothing
 |{empty}
 
 |empty
-|_nothing_
+e|nothing
 |{empty}
 
 |sp
-|_single space_
+e|single space
 |{sp}
 
 |nbsp
