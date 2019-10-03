@@ -1,5 +1,10 @@
-.xref:paragraph.adoc[Paragraphs and Block Styles]
-* xref:preamble.adoc[Preamble and Lead]
+.Paragraphs & Breaks
+* xref:paragraph.adoc[Paragraphs]
+** xref:preamble-and-lead.adoc[Preamble and Lead Styles]
+* xref:line-and-page-breaks.adoc[Line and Page Breaks]
+* xref:horizontal-rules.adoc[Horizontal Rules]
+
+.Blocks (To be moved)
 * xref:admonition.adoc[Admonitions]
 * xref:example.adoc[Examples]
 * xref:quote.adoc[Quotes and Excerpts]

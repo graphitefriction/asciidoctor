@@ -1,10 +1,10 @@
-= Abstract Section Style
+= Abstract
 // anchor um: user-abstract
 
 An abstract is a concise overview of an article.
 The abstract section style can be used in the `article` document type.
 
-== Article abstract syntax
+== Abstract section syntax
 
 The `abstract` section style must be set on the first section of the article, as seen in the example below:
 

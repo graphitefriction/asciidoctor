@@ -1,4 +1,4 @@
-= Preface Section Style
+= Preface
 :keywords: front matter, forward, introduction, proem, pref
 // anchor from um: user-preface
 

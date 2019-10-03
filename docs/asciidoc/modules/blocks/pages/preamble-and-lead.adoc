@@ -1,4 +1,4 @@
-= Preamble and Lead Paragraphs
+= Preamble and Lead Styles
 // new page
 
 == Preamble

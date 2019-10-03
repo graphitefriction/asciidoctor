@@ -1,4 +1,4 @@
-= Bibliography Section Style
+= Bibliography
 // anchor from um: user-biblio
 
 AsciiDoc has basic support for bibliographies.

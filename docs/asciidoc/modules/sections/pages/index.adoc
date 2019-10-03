@@ -1,4 +1,4 @@
-= Index Section Style
+= Index
 // anchor from um: user-index
 
 You can mark index terms explicitly in AsciiDoc content.

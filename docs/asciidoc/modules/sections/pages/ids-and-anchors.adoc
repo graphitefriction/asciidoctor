@@ -1,4 +1,4 @@
-= Section IDs, Anchors and Links
+= Section IDs and Anchors
 :url-ntname: https://www.w3.org/TR/REC-xml/#NT-Name
 :url-adoc-a2x: http://aerostitch.github.io/misc/asciidoc/asciidoc-title_uft8.html
 // New page, content taken from sections.adoc
