@@ -1,2 +1,2 @@
-.Equations, Formulas & STEM
+.Equations, Formulas, and STEM
 * xref:stem.adoc[Equations and Formulas]

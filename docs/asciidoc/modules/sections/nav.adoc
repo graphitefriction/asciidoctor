@@ -1,4 +1,4 @@
-.Sections & Table of Contents
+.Sections and Table of Contents
 * xref:titles-and-levels.adoc[Section Titles and Levels]
 ** xref:discrete-titles.adoc[Discrete Titles]
 ** xref:hr-and-break.adoc[Horizontal Rules and Page Breaks]

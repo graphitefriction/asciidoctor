@@ -1,4 +1,0 @@
-.Key Concepts
-* xref:blocks:block.adoc[Blocks]
-** xref:blocks:index.adoc[Block Styles]
-* xref:comment.adoc[Comments]

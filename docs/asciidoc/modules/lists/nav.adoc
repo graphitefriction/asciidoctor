@@ -1,4 +1,4 @@
-.Lists & Counters
+.Lists and Counters
 * xref:ordered.adoc[Ordered]
 * xref:unordered.adoc[Unordered]
 * xref:description.adoc[Description]

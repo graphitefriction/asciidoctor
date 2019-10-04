@@ -1,4 +1,4 @@
-= Admonition Blocks
+= Admonitions
 
 // tag::intro[]
 There are certain statements that you may want to draw attention to by taking them out of the content's flow and labeling them with a priority.

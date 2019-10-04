@@ -1,5 +1,12 @@
-= Quote and Excerpt Blocks
+= Blockquotes
 :url-air: http://en.wikipedia.org/wiki/Air_quotes
+
+Prose excerpts, quotes and verses share the same syntax structure, including:
+
+* block name, either `quote` or `verse`
+* name of who the content is attributed to
+* bibliographical information of the book, speech, play, poem, etc., where the content was drawn from
+* excerpt text
 
 == Basic quote syntax
 

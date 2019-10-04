@@ -1,4 +1,4 @@
-.xref:substitutions.adoc[Substitutions & Passthroughs]
+.xref:substitutions.adoc[Substitutions and Passthroughs]
 * xref:special-characters.adoc[Special Characters]
 * xref:quotes.adoc[Inline Formatting Syntax]
 * xref:attributes.adoc[Attribute References]

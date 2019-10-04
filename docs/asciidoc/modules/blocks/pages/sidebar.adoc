@@ -1,4 +1,4 @@
-= Sidebar Blocks
+= Sidebars
 
 Use a sidebar for ancillary content that doesn't fit into the flow of the document's narrative.
 

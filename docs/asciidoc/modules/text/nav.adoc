@@ -1,4 +1,4 @@
-.Text & Punctuation
+.Text and Punctuation
 * xref:index.adoc[Inline Text and Punctuation Formatting]
 * xref:bold.adoc[Bold]
 * xref:italic.adoc[Italic]
