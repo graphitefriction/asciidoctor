@@ -6,6 +6,7 @@
 
 .Processing Files
 * xref:output-file-name.adoc[Specify an Output File]
+* xref:io-piping.adoc[Piping Output]
 * xref:process-multiple-files.adoc[Process Multiple Files]
 * xref:docinfo.adoc[Configure Docinfo Files]
 //** Adding Header Content
