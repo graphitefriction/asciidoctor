@@ -44,7 +44,7 @@ Hanging from...
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content="Asciidoctor 1.5.7">
+<meta name="generator" content="Asciidoctor 2.0.11">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A story chronicling the inexplicable hazards and vicious beasts a documentation team must surmount and vanquish on their journey to finding an open source project's true power.">
 <title>The Dangerous and Thrilling Documentation Chronicles</title>
@@ -67,7 +67,7 @@ This journey begins on a bleary Monday morning.
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="generator" content="Asciidoctor 1.5.7">
+<meta name="generator" content="Asciidoctor 2.0.11">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="documentation, team, obstacles, journey, victory">
 <title>The Dangerous and Thrilling Documentation Chronicles</title>

@@ -1,6 +1,0 @@
-.Document Header
-* xref:header-intro.adoc[Document Header]
-* xref:title.adoc[Titles and Subtitles]
-* xref:author-and-version.adoc[Author, Version and Date]
-* xref:metadata.adoc[Metadata]
-* xref:header-ref.adoc[Header Reference]

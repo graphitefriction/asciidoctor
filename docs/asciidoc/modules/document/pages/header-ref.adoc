@@ -1,126 +1,127 @@
-= Header Attributes and Values
+= Document Header Reference
+//Attributes and Values
 
-[cols="1m,1,2,2,1"]
+[cols="1,1,2,2,1"]
 |===
 |Attribute |Values |Description |Notes |Converters
 
-|author
+|`author`
 |_user-defined_
 |Author's full name
 |
 |all
 
-|authorinitials
+|`authorinitials`
 |*Derived from `author`*, _user-defined_
 |First character of each word in the `author` attribute
 |
 |all
 
-|description
+|`description`
 |_user-defined_
 |Text describing the document
 |
 |html
 
-d|`docinfo`, `docinfo1`, `docinfo2`
+|`docinfo`, `docinfo1`, `docinfo2`
 |
 |Adds content from a docinfo file to header
 |
 |html, docbook
 
-|doctitle
+|`doctitle`
 |*Document title (`=`)*, _user-defined_
 |Title of document
 |Identical to the value returned by `Document#doctitle`
 |all
 
-|email
+|`email`
 |_user-defined_
 |Author email address
 |
 |all
 
-|firstname
+|`firstname`
 |*Derived from `author`*, _user-defined_
 |First word of `author` attribute
 |
 |all
 
-|keywords
+|`keywords`
 |_user-defined_
 |A list of comma-separated values that describe the document
 |
 |html
 
 
-|lastname
+|`lastname`
 |*Derived from `author`*, _user-defined_
 |Last word of `author` attribute
 |
 |all
 
-|middlename
+|`middlename`
 |*Derived from `author`*, _user-defined_
 |Middle word of `author` attribute
 |
 |all
 
-d|`no-header-footer`, `-s`
+|`no-header-footer`, `-s`
 |_empty_
 |Generate an embeddable document; exclude the document frame
 |
 |all
 
-|noheader
+|`noheader`
 |_empty_
 |Suppresses the output of the header
 |
 |all
 
-|nofooter
+|`nofooter`
 |_empty_
 |Suppresses the output of the footer
 |
 |all
 
-|notitle
+|`notitle`
 |_empty_
 |Toggles the display of a document's title
 |
 |all
 
-|revdate
+|`revdate`
 |_user-defined_
 |Date of document version
 |
 |all
 
-|revnumber
+|`revnumber`
 |_user-defined_
 |Version number of the document
 |
 |all
 
-|revremark
+|`revremark`
 |_user-defined_
 |Version comments
 |
 |all
 
-|showtitle
+|`showtitle`
 |_empty_
 |Toggles the display of an embedded document's title
 |
 |all
 
-|title
+|`title`
 |
-|Value of`<title>` element in HTML `<head>` or main DocBook `<info>` of output document.
+|Value of `<title>` element in HTML `<head>` or main DocBook `<info>` of output document.
 Used as a fallback when the document title is not specified.
 |
 |html, docbook
 
-|version-label
+|`version-label`
 |*Version*, _user-defined_
 |Label preceding `revnumber` in a output's byline
 |

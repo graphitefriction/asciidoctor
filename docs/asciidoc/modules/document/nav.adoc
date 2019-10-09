@@ -1,0 +1,8 @@
+.Document Title and Information
+* xref:header.adoc[Document Header]
+* xref:title.adoc[Document Title]
+* xref:subtitle.adoc[Document Subtitle]
+* xref:author-name-and-email.adoc[Author Name and Email]
+* xref:version-and-date.adoc[Version and Date]
+* xref:metadata.adoc[Document Metadata]
+* xref:header-ref.adoc[Document Header Reference]
