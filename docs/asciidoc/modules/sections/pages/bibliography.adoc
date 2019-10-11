@@ -46,6 +46,9 @@ a|
 include::example$bibliography.adoc[tag=base]
 |===
 
+TIP: To escape a bibliography anchor anywhere in the text, use the syntax `[\[[word]]]`.
+This prevents the anchor from being matched as a bibliography anchor or a normal anchor.
+
 By default, the reference to a bibliography entry is displayed as +[id]+.
 If you specify reference text (xreftext) on the bibliography entry anchor (`+[[[id,xreftext]]]+`), a reference to the bibliography entry converts to +[xreftext]+.
 
