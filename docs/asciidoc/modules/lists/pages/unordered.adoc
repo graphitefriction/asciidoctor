@@ -62,7 +62,8 @@ include::example$unordered.adoc[tag=divide]
 
 == Nested unordered list
 
-To nest an item, just add another asterisk (`+*+`) in front of it.
+To nest an item, just add another asterisk (`+*+`) to the marker.
+Continue doing this for each subsequent level.
 
 [source]
 ----
@@ -74,7 +75,9 @@ include::example$unordered.adoc[tag=nest]
 include::example$unordered.adoc[tag=nest]
 ====
 
-You can have up to five levels of nesting.
+You can nest unordered lists to any depth.
+Keep in mind, however, that some interfaces will begin flatting lists after a certain depth.
+For instance, GitHub starts flattening list after 10 levels of nesting.
 
 [source]
 ----
@@ -88,7 +91,7 @@ include::example$unordered.adoc[tag=max]
 While it would seem as though the number of asterisks represents the nesting level, that's not how depth is determined.
 A new level is created for each unique marker encountered.
 However, it's much more intuitive to follow the convention that the number of asterisks equals the level of nesting.
-After all, we are shooting for plain text markup that is readable _as is_.
+After all, we're shooting for plain text markup that is readable _as is_.
 
 == Custom markers
 
