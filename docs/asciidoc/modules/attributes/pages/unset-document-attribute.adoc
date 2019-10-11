@@ -2,7 +2,7 @@
 
 Document attributes can be unset in the document header, body, command line, and API.
 
-== Unsetting a document attribute in the header
+== Unset a document attribute in the header
 
 Document attributes can be unset by adding a bang symbol (`!`) directly in front of or after the attribute's name.
 Like when setting an attribute in a document header, the attribute entry must be on its own line.
@@ -29,7 +29,7 @@ This is an attribute that is set and assigned a default value of `Example` autom
 The `!` can be placed either before or after the attribute's name.
 `:!example-caption:` also unsets the attribute.
 
-== Unsetting a document attribute in the body
+== Unset a document attribute in the body
 
 Some document attributes can be turned off in the body of the document using an attribute entry and the bang symbol (`!`) as described in the above section.
 For example, if you set the section numbering attribute in the header of your document, but didn't want the two sections midway through the document to be numbered.
