@@ -1,4 +1,4 @@
-= Catch Attribute Errors
+= Handle Unresolved References
 
 When you reference a missing attribute (e.g., `+{does-not-exist}+`), Asciidoctor will leave the attribute reference behind.
 If you undefine an attribute on the same line as other text (e.g., `+{set:attribute-no-more!}+`), Asciidoctor will drop the whole line.

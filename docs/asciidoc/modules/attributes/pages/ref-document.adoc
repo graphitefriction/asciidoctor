@@ -47,14 +47,14 @@ When you set an attribute in the body, it's visible from the point it's set unti
 |*skip*, drop, drop-line, warn
 |{y}
 |{y}
-|Controls how xref:catch-errors.adoc[missing references] are handled.
+|Controls how xref:handle-unresolved-ref.adoc#missing-attribute[missing attribute references] are handled.
 
 |attribute-undefined
 |{n}
 |*drop-line*, drop
 |{y}
 |{y}
-|Controls how xref:catch-errors.adoc[undefined attributes] are handled.
+|Controls how xref:handle-unresolved-ref.adoc#undefined-attribute[undefined attributes] are handled.
 
 |compat-mode
 |{n}

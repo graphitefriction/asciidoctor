@@ -360,4 +360,4 @@ Now you can use this link in a section title (where the order of substitutions i
 
 === Handling a missing attribute
 
-If you use an attribute that xref:catch-errors.adoc[is not defined], you can specify how Asciidoctor handles attribute reference errors.
+If you use an attribute that xref:handle-unresolved-ref.adoc[is not defined], you can specify how Asciidoctor handles attribute reference errors.

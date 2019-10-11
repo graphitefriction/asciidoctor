@@ -11,4 +11,4 @@
 ** xref:id.adoc[ID]
 ** xref:options.adoc[Options]
 ** xref:role.adoc[Role]
-* xref:catch-errors.adoc[Catch Attribute Errors]
+* xref:handle-unresolved-ref.adoc[Handle Unresolved References]
