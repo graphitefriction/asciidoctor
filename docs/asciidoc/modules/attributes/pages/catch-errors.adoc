@@ -49,6 +49,17 @@ If a missing attribute is found in the target of an include directive, the proce
 Another case is the `ifeval` directive.
 A missing attribute reference can safely be used in the clause of the `ifeval` directive without any side effects (i.e., `drop`) since the purpose of that statement is to determine whether an attribute resolves to a value.
 
+=== Forcing failure
+
+If you want the processor to fail when the document contains a missing attribute, set the `attribute-missing` attribute to `warn` and pass the `--failure-level=WARN` option to the CLI.
+
+ $ asciidoctor -a attribute-missing=warn --failure-level=WARN doc.adoc
+
+The processor will convert the entire document, but the application will complete with a non-zero exit status.
+
+When using the API, you can consult the logger for the max severity of all messages reported or look for specific messages in the stack.
+It's up to the application code to decide how and when to terminate the application.
+
 == Undefined attribute
 
 The `attribute-undefined` attribute controls how expressions that undefine an attribute are handled.
