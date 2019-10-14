@@ -4,6 +4,7 @@ version: 'master'
 nav:
 - modules/document/nav.adoc
 - modules/attributes/nav.adoc
+- modules/toc/nav.adoc
 - modules/sections/nav.adoc
 - modules/text/nav.adoc
 - modules/blocks/nav.adoc

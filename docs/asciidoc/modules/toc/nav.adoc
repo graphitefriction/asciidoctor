@@ -1,0 +1,4 @@
+.Table of Contents
+* xref:toc.adoc[Table of Contents]
+** xref:toc-position.adoc[Positioning]
+* xref:toc-ref.adoc[TOC Reference]

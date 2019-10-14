@@ -54,13 +54,13 @@
 |NA
 |
 
-|xref:ids-and-anchors.adoc#prefix[Section ID prefix]
+|xref:id-prefix-and-separator.adoc#prefix[Section ID prefix]
 |`idprefix`
 |`_` (default) or user defined text
 |Set by default
 //Set to prepend string to generated section ID
 
-|xref:ids-and-anchors.adoc#separator[Section ID word separator]
+|xref:id-prefix-and-separator.adoc#separator[Section ID word separator]
 |`idseparator`
 |`_` (default) or user defined character
 |Set by default
@@ -81,19 +81,19 @@
 |NA
 |`book` doctype only; can have subsections
 
-|xref:ids-and-anchors.adoc#anchor[Section anchor]
+|xref:title-links.adoc#anchor[Section anchor]
 |`sectanchors`
 |NA
 |
 //Asciidoctor only
 
-|xref:ids-and-anchors.adoc#auto-id[Section ID]
+|xref:ids.adoc[Section ID]
 |`sectids`
 |NA
 |Set by default
 //Autogenerates section IDs by default
 
-|xref:ids-and-anchors.adoc#link[Section link]
+|xref:title-links.adoc#link[Section link]
 |`sectlinks`
 |NA
 |
