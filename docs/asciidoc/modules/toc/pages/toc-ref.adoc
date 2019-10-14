@@ -1,4 +1,4 @@
-= Table of Contents Syntax and Attributes Reference
+= Table of Contents Attributes Reference
 
 [cols="1m,1,2,2,1"]
 |===
