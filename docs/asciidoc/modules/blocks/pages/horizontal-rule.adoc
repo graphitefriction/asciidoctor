@@ -1,4 +1,4 @@
-= Horizontal rules
+= Horizontal Rule
 
 .Horizontal rule syntax
 [source]
@@ -7,9 +7,9 @@
 ----
 
 .Result: Horizontal rule
---
+====
 '''
---
+====
 
 == Markdown-style horizontal rules
 

@@ -1,4 +1,4 @@
-= Preamble and Lead Styles
+= Preamble and Lead Style
 // new page
 
 == Preamble
@@ -16,10 +16,10 @@ include::example$preamble.adoc[]
 When using the default Asciidoctor stylesheet, the `lead` attribute is applied to the first paragraph of the preamble.
 
 .Result: Preamble
---
+====
 #Rendered or image output goes here.#
 // image::preamble.png[Preamble with lead attribute applied]
---
+====
 
 == Lead style
 
@@ -34,8 +34,8 @@ include::example$paragraph.adoc[tag=lead]
 ----
 
 .Result: Lead paragraph
---
+====
 include::example$paragraph.adoc[tag=lead]
---
+====
 
 When you convert a document to HTML and view it using the default stylesheet, the first paragraph of the preamble is automatically styled as a lead paragraph.

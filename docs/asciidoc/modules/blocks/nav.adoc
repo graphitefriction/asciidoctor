@@ -1,19 +1,19 @@
-.Paragraphs and Breaks
+.Block Syntax and Features
+* xref:block.adoc[Blocks]
+* xref:open.adoc[Open]
+
+.Paragraphs, Breaks, and Comments
 * xref:paragraph.adoc[Paragraphs]
-** xref:preamble-and-lead.adoc[Preamble and Lead Styles]
+** xref:preamble-and-lead.adoc[Preamble and Lead Style]
 * xref:line-and-page-breaks.adoc[Line and Page Breaks]
-* xref:horizontal-rules.adoc[Horizontal Rules]
+* xref:horizontal-rule.adoc[Horizontal Rule]
 * xref:ROOT:comment.adoc[Comments]
 
-.Admonitions and Sidebars
+.Admonition, Example, and Sidebar Blocks
 * xref:admonition.adoc[Admonitions]
+* xref:example.adoc[Examples]
 * xref:sidebar.adoc[Sidebars]
 
-.Excerpts, Quotes, and Verses
+.Excerpt and Verse Blocks
 * xref:blockquote.adoc[Blockquotes]
 * xref:verse.adoc[Verses]
-
-.Blocks (To be moved)
-* xref:block.adoc[Blocks]
-* xref:example.adoc[Examples]
-* xref:open.adoc[Open]

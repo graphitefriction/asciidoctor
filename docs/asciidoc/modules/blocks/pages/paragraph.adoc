@@ -15,5 +15,7 @@ To start a new paragraph after another element, such as a section title or table
 include::example$paragraph.adoc[tag=para]
 ----
 
-.The two paragraphs rendered using the default (html5) converter and stylesheet (asciidoctor.css)
+.Result: The two paragraphs rendered using the default (html5) converter and stylesheet (asciidoctor.css)
+====
 include::example$paragraph.adoc[tag=para]
+====

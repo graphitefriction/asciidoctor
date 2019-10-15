@@ -1,13 +1,5 @@
 = Line and Page Breaks
 
-== Page Breaks
-
-.Page break syntax
-[source]
-----
-<<<
-----
-
 [#hardbreaks]
 == Line breaks
 
@@ -46,3 +38,11 @@ include::example$paragraph.adoc[tag=hb-attr]
 ----
 
 You can also preserve line breaks using xref:source:literal.adoc[literal blocks], xref:source:listing.adoc[listing blocks], and xref:verse.adoc[verses].
+
+== Page breaks
+
+.Page break syntax
+[source]
+----
+<<<
+----
