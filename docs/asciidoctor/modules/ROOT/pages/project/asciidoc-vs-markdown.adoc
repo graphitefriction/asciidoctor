@@ -169,6 +169,19 @@ See <<_usage>>.
 == Usage
 ----
 
+|Block ID (aka anchor)
+a|
+[source,markdown]
+----
+<h2 id="_usage">Usage</h2>
+----
+a|
+[source,asciidoc]
+----
+[#usage]
+== Usage
+----
+
 |Inline anchor
 |_n/a_
 a|
