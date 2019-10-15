@@ -1,0 +1,132 @@
+= Troubleshooting Unconstrained Formatting Sets
+
+== What is an unconstrained set?
+
+A double set of formatting marks is required to enclose text when the xref:index.adoc#mark-def[opening mark] isn't directly preceded by a blank space or it's directly followed by a blank space.
+Also, a double set of formatting marks is required when the xref:index.adoc#mark-def[closing mark] isn't directly followed by a blank space or punctuation mark.
+In this context, a formatting set is an *unconstrained set*.
+
+For example, you use an unconstrained set to format just one or a few letters in a word.
+
+[source]
+----
+She spells her name with an "`h`", as in Sara**h**.
+----
+
+[#when-to-use-unconstrained]
+== When should I use an unconstrained set?
+
+Consider the following questions:
+
+. Is there a letter, number, or underscore directly outside the formatting marks (on either side)?
+. Is there a colon, semicolon, or closing curly bracket directly before the starting formatting mark?
+. Is there a space directly inside of the formatting mark?
+
+If you answered "`yes`" to any of these questions, you need to use an unconstrained formatting set.
+
+To help you determine whether a particular syntax pattern requires an unconstrained set versus a xref:index.adoc#constrained-def[constrained set], consider the following scenarios:
+
+.Constrained or Unconstrained?
+[#constrained-or-unconstrained,cols=4*]
+|===
+|AsciiDoc |Result |Formatting Set |Reason
+
+|`+Sara__h__+`
+|Sara__h__
+|Unconstrained
+|The letter `a` is directly adjacent to the opening mark.
+
+|`+**B**old+`
+|**B**old
+|Unconstrained
+|The `o` is directly adjacent to the closing mark.
+
+|`+&ndash;**2016**+`
+|&ndash;**2016**
+|Unconstrained
+|The `;` is directly adjacent to the opening mark.
+
+|`+** bold **+`
+|** bold **
+|Unconstrained
+|There are spaces directly inside the formatting marks.
+
+|`+*2016*&ndash;+`
+|*2016*&ndash;
+|Constrained
+|The adjacent `&` is not a letter, number, underscore, colon, or semicolon.
+
+|`+*9*-to-*5*+`
+|*9*-to-*5*
+|Constrained
+|The adjacent hyphen is not a letter, number, underscore, colon, or semicolon.
+|===
+
+[#unconstrained-edge]
+=== Unconstrained formatting edge cases
+
+There are cases when it might seem logical to use a constrained set, but an unconstrained set is required.
+xref:subs:substitutions.adoc[Substitutions] may be applied by the parser before getting to the formatting marks, in which case the characters adjacent to those marks may not be what you see in the original source.
+
+One such example is enclosing a xref:monospace.adoc[monospace phrase] inside xref:quotation-marks-and-apostrophes.adoc[curved quotation marks], such as "```end points```".
+
+You might start with the following syntax:
+
+[source]
+----
+"`end points`"
+----
+
+That only gives you "`end points`".
+The backticks contribute to making the curved quotation marks, but the word isn't rendered in monospace.
+
+Adding another set of backticks isn't enough either.
+
+[source]
+----
+"``end points``"
+----
+
+The parser ignores the inner set of backticks and interprets them as literal characters, rendering the phrase as "``end points``".
+
+You have to use an unconstrained set of monospace formatting marks to render the phrase in monospace and a constrained set of backticks to render the quotation marks as curved.
+That's three sets of backticks in total.
+
+.A monospace phrase inside curved quotation marks
+[source]
+----
+"```end points```"
+----
+
+If, instead, you wanted to surround the monospace phrase with typewriter quotation marks, such as "[.code]``end points``", then you need to interrupt the curved quotation marks by applying a role to the monospace phrase.
+For example:
+
+.A monospace phrase inside typewriter quotation marks
+[source]
+----
+"[.code]``end points``"
+----
+
+Another example is a possessive, monospace phrase that ends in an "`s`".
+In this case, you must switch the monospace phrase to unconstrained formatting.
+
+[source]
+----
+The ``class```' static methods make it easy to operate
+on files and directories.
+----
+
+.Rendered possessive, monospace phrase
+====
+The ``class```' static methods make it easy to operate on files and directories.
+====
+
+Alternately, you could encode the curved apostrophe directly in the AsciiDoc source to get the same result.
+
+[source]
+----
+The `class`’ static methods make it easy to operate on files and directories.
+----
+
+This situation is expected to improve in the future when Asciidoctor switches to using a parsing expression grammar for inline formatting instead of the current regular expression-based strategy.
+For details, follow https://github.com/asciidoctor/asciidoctor/issues/61[issue #61].

@@ -1,5 +1,7 @@
 .Text and Punctuation
-* xref:index.adoc[Inline Text and Punctuation Formatting]
+* xref:index.adoc[Formatting Inline Text and Punctuation]
+** xref:troubleshoot-unconstrained-formatting.adoc[Troubleshooting Unconstrained Formatting Sets]
+** xref:escape-unconstrained-formatting.adoc[Escaping Unconstrained Formatting Marks]
 * xref:bold.adoc[Bold]
 * xref:italic.adoc[Italic]
 * xref:monospace.adoc[Monospace]
@@ -7,4 +9,3 @@
 * xref:quotation-marks-and-apostrophes.adoc[Quotation Marks and Apostrophes]
 * xref:subscript-and-superscript.adoc[Subscript and Superscript]
 * xref:custom-inline-styles.adoc[Using Custom Inline Styles]
-* xref:unconstrained-syntax.adoc[Troubleshooting and Escaping Unconstrained Syntax]

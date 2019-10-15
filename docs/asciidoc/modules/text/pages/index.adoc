@@ -1,4 +1,4 @@
-= Inline Text and Punctuation Formatting
+= Formatting Inline Text and Punctuation
 
 Just as we emphasize certain words and phrases when we speak, we emphasize them in text with formatting and punctuation.
 AsciiDoc provides six inline text styles and one punctuation style that are applied solely with formatting marks and two built-in styles that are applied with an additional role.
@@ -6,13 +6,14 @@ You can also create custom inline formatting roles.
 
 == Formatting terms and concepts
 
-Formatting marks and sets:: A *formatting mark* is the character, such as `*`, `_`, or `~`, that indicates the style you want Asciidoctor to apply to the text.
+[[mark-def]]Formatting marks and sets:: A [.term]*formatting mark* is the character, such as `+*+`, `_`, or `~`, that indicates the inline style you want Asciidoctor to apply to the text.
 Formatting marks come in sets.
-A *formatting set* consists of an identical opening mark and closing mark.
-The *opening mark* indicates where you want the style to start and the *closing mark* indicates where you want the style to end.
+A [.term]*formatting set* consists of an identical opening mark and closing mark.
+The [.term]*opening mark* indicates where you want the style to start and the [.term]*closing mark* indicates where you want the style to end.
+Depending on where the formatting marks of a set are placed, a formatting set is either constrained or unconstrained.
 
-Constrained:: When a blank space directly precedes the formatting set's opening mark and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`) directly follows the set's closing mark, the syntax is *constrained*.
-A single opening mark and a single closing mark can be used to enclose the text you want styled.
+[[constrained-def]]Constrained set:: When a blank space directly precedes the formatting set's opening mark and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`) directly follows the set's closing mark, the formatting set is referred to as a *constrained set*.
+A constrained set uses a single opening mark and a single closing mark to enclose the text that will be styled.
 +
 --
 For example, you use this form to format a word that stands alone,
@@ -33,12 +34,12 @@ or to format a word adjacent to punctuation, like an exclamation mark.
 
 [source]
 ----
-This stuff sure is *strong*!
+This stuff is *strong*!
 ----
 --
 
-Unconstrained:: A double set of the formatting marks is required to enclose text when the opening mark isn't directly preceded by a blank space or the closing mark isn't directly followed by a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`).
-The syntax is referred to as *unconstrained*.
+[[unconstrained-def]]Unconstrained set:: A double set of formatting marks is required to enclose text when the opening mark isn't directly preceded by a blank space or the closing mark isn't directly followed by a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`).
+In this context, a formatting set is an *unconstrained set*.
 You use the unconstrained syntax to format just one or a few letters in a word.
 +
 --
@@ -47,7 +48,7 @@ You use the unconstrained syntax to format just one or a few letters in a word.
 She spells her name with an "`h`", as in Sara**h**.
 ----
 
-See #When should I use unconstrained quotes?, Unconstrained formatting edge cases, and Escaping unconstrained formatting syntax# for more examples and information.
+See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained set?] and xref:escape-unconstrained-formatting.adoc[Escaping unconstrained formatting marks] for more examples and information.
 --
 
 == Inline text and punctuation styles
