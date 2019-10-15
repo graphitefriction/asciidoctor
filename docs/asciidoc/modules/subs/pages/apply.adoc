@@ -84,7 +84,7 @@ include::example$subs.adoc[tag=subs-add]
 Similarly, you can remove the `callouts` substitution.
 
 .Remove callouts substitution from a default substitution list
-[source]
+[source,subs=-callouts]
 ....
 include::example$subs.adoc[tag=subs-sub]
 ....
@@ -92,7 +92,7 @@ include::example$subs.adoc[tag=subs-sub]
 You can also specify whether the substitution is placed at the beginning or end of the substitution list.
 If a `+` comes before the name of the substitution, then it's added to the end of the existing list, and if a `+` comes after the name, it's added to the beginning of the list.
 
-[source]
+[source,subs=-callouts]
 ....
 include::example$subs.adoc[tag=subs-multi]
 ....
