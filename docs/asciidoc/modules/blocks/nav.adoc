@@ -1,6 +1,15 @@
 .Block Syntax and Features
-* xref:block.adoc[Blocks]
-* xref:open.adoc[Open]
+* xref:get-started.adoc[Getting Started with Blocks]
+** xref:build-basic-block.adoc[Build a Basic Block]
+** xref:add-title.adoc[Add a Title]
+** xref:assign-id.adoc[Assign an ID]
+//** Set Attributes
+* Advanced Block Patterns
+** xref:nest.adoc[Nesting Blocks]
+** xref:masquerade.adoc[Masquerading Blocks]
+** xref:open.adoc[Using Open Blocks]
+//** Customizing Substitutions
+* xref:troubleshoot-blocks.adoc[Troubleshooting Blocks]
 
 .Paragraphs, Breaks, and Comments
 * xref:paragraph.adoc[Paragraphs]
