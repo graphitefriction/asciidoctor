@@ -7,16 +7,20 @@
 * xref:custom-ids.adoc[Assign Custom IDs and Reference Text]
 * xref:numbers.adoc[Section Numbers]
 * xref:styles.adoc[Section Styles for Article and Books]
+** xref:special-section-titles.adoc[Hide Special Section Titles]
+** xref:special-section-numbers.adoc[Number Special Sections]
 // Front matter
 ** xref:colophon.adoc[Colophon]
 ** xref:dedication.adoc[Dedication]
 // & Epigraph
 ** xref:abstract.adoc[Abstract]
 ** xref:preface.adoc[Preface]
-** xref:parts-and-chapters.adoc[Parts and Chapters]
+** xref:parts.adoc[Book Parts]
+*** xref:part-numbers-and-labels.adoc[Number and Label Parts]
+** xref:chapters.adoc[Chapters]
 // Back matter
 ** xref:appendix.adoc[Appendix]
 ** xref:glossary.adoc[Glossary]
 ** xref:bibliography.adoc[Bibliography]
 ** xref:index.adoc[Index]
-* xref:section-ref.adoc[Section Reference]
+* xref:section-ref.adoc[Attributes and Styles Reference]

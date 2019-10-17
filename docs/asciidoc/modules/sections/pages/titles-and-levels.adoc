@@ -20,7 +20,9 @@ include::example$section.adoc[tag=base]
 
 The section titles are rendered as:
 
+====
 include::example$section.adoc[tag=b-base]
+====
 
 Section levels must be nested logically.
 There are two rules you must follow:
@@ -48,21 +50,6 @@ TIP: In addition to the equals sign marker used for defining section titles, Asc
 That means the outline of a Markdown document will be converted just fine as an AsciiDoc document.
 
 == Titles as HTML headings
-// tag::heading[]
+
 When the document is converted to HTML 5 (using the built-in `html5` backend), each section title becomes a heading element where the heading level matches the number of equal signs.
 For example, a level 1 section (`==`) maps to an `<h2>` element.
-// end::heading[]
-
-[#untitled]
-== Hide special section titles
-
-The titles of xref:styles.adoc[special sections], such as the dedication, can be turned off by assigning `untitled` to the section's options attribute (`%` or `options=untitled`).
-This feature is only available for the DocBook backend.
-
-[source]
-----
-[dedication%untitled]
-== Dedication
-
-include::example$multi-special.adoc[tag=dedicate]
-----

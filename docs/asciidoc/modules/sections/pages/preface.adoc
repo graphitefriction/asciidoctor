@@ -25,10 +25,6 @@ The preface must be the first section in the part.
 include::example$preface.adoc[tag=part]
 ----
 
-== Hide the section title
-
-include::partial$untitled.adoc[]
-
 ////
 As an alternative to a special section, Asciidoctor will automatically promote the preamble to a preface.
 The title of the preface is set using the `preface-title` document attribute.
