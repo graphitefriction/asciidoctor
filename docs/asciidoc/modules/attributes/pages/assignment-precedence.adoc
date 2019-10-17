@@ -17,9 +17,9 @@ Finally, if a value is assigned to the `imagesdir` attribute via the API or CLI,
 
 It's possible to alter this order of precedence using a modifier, covered in the next section.
 
-== Altering the Attribute Assignment Precedence
+== Altering the assignment precedence
 
-You can allow the document to reassign an attribute that is defined via the API or CLI by adding the `@` precedence modifier to the end of the attribute value (or, since 1.5.7, the end of the attribute name).
+You can allow the document to reassign an attribute that is defined via the API or CLI by adding the `@` precedence modifier to the end of the attribute value or the end of the attribute name.
 Adding this modifier lowers the precedence so that an assignment in the document still wins out.
 We sometimes refer to this as "`soft setting`" the attribute.
 This feature can be useful for assigning default values for attribute, but still letting the document control its own fate.
@@ -55,7 +55,7 @@ Let's update the attribute assignment precedence list defined earlier to reflect
 
 . An attribute passed to the API or CLI whose value does not end in `@`
 . An attribute defined in the document
-. An attribute passed to the API or CLI whose value (or, since Asciidoctor 1.5.7, name) ends in `@`
+. An attribute passed to the API or CLI whose value or name ends in `@`
 . The default value of the attribute, if applicable
 
 Regardless of whether the precedence modifier is applied, an attribute assignment always overrides the default value.

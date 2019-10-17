@@ -1,10 +1,8 @@
-= Attribute Key Concepts
+= Attribute Types
 
 Attributes set AsciiDoc apart from other lightweight markup languages.
 Attributes activate behaviors, styles, and integrations, or hold replacement (variable) content.
 There are three types of attributes: document, element, and environment.
-
-== Attribute types
 
 Document attributes:: xref:document.adoc[Document attributes] apply <<built-in-def,built-in>> behavior and settings to a whole document, or in select cases, to regions of a document.
 They make <<user-defined-def,user-defined information>> available for use throughout a whole document.
