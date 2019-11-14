@@ -1,5 +1,6 @@
-= Normalize Block Indentation
+= Using Indent with Included Content
 // aka Normalize Block Indentation
+// This content needs to be made applicable to includes...like add a step in the example flow to show it coming from an include file.
 
 Source code snippets from external files are often padded with a leading block indent.
 This leading block indent is relevant in its original context.

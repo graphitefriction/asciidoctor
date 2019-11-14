@@ -1,7 +1,10 @@
 .Include Directives
 * xref:include-directive.adoc[Include Directives]
-* xref:include-lines-and-tags.adoc[Include by Lines or Tags]
-** xref:indent.adoc[Normalize Indentation]
+** xref:include-with-leveloffset.adoc[Using Leveloffset with Included Content]
+** xref:include-with-indent.adoc[Using Indent with Included Content]
+** xref:include-multiple-times-in-same-document.adoc[Include a File Multiple Times in the Same Document]
+* xref:include-tagged-regions.adoc[Include Content by Tagged Regions]
+* xref:include-lines.adoc[Include Content by Line Ranges]
 * xref:include-uri.adoc[Include by URI]
 
 .Conditional Directives

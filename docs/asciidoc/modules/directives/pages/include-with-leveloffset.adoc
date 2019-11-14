@@ -1,0 +1,70 @@
+= Using Leveloffset with Included Content
+//Partitioning Large Documents and using leveloffset
+// [#include-partitioning]
+
+When your document gets large, you can split it up into subdocuments for easier editing.
+
+----
+= My book
+
+\include::chapter01.adoc[]
+
+\include::chapter02.adoc[]
+
+\include::chapter03.adoc[]
+----
+
+TIP: Note the blank lines before and after the include directives.
+This practice is recommended whenever including AsciiDoc content to avoid unexpected results (e.g., a section title getting interpreted as a line at the end of a previous paragraph).
+
+== Manipulate heading levels with leveloffset
+
+The leveloffset attribute can help here by pushing all headings in the included document down by the specified number of levels.
+This allows you to publish each chapter as a standalone document (complete with a document title), but still be able to include the chapters into a master document (which has its own document title).
+
+You can easily assemble your book so that the chapter document titles become level 1 headings using:
+
+----
+= My Book
+
+\include::chapter01.adoc[leveloffset=+1]
+
+\include::chapter02.adoc[leveloffset=+1]
+
+\include::chapter03.adoc[leveloffset=+1]
+----
+
+Because the leveloffset is _relative_ (it begins with + or -), this works even if the included document has its own includes and leveloffsets.
+
+If you have lots of chapters to include and want them all to have the same offset, you can save some typing by setting leveloffset around the includes:
+
+[source]
+----
+= My book
+
+:leveloffset: +1
+
+\include::chapter01.adoc[]
+
+\include::chapter02.adoc[]
+
+\include::chapter03.adoc[]
+
+:leveloffset: -1
+----
+
+The final line returns the leveloffset to 0.
+
+Alternatively, you could use absolute levels:
+
+[source]
+----
+:leveloffset: 1
+
+//includes
+
+:leveloffset: 0
+----
+
+Relative levels are preferred.
+Absolute levels become awkward when you have nested includes since they aren't context aware.
