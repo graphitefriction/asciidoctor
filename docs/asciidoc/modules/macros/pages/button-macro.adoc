@@ -1,0 +1,20 @@
+= Button UI Macro
+
+IMPORTANT: You must set the `experimental` attribute to enable the UI macros.
+
+== Button macro syntax
+
+It can be equally difficult to communicate to the reader that they need to press a button.
+They can't tell if you are saying "`OK`" or they are supposed to look for a button labeled *OK*.
+It's all about getting the semantics right.
+The `btn` macro to the rescue!
+
+[source]
+----
+include::example$ui.adoc[tag=button]
+----
+
+.Result: Button macros displaying UI buttons
+====
+include::example$ui.adoc[tag=button]
+====

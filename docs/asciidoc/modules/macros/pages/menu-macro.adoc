@@ -1,0 +1,20 @@
+= Menu UI Macro
+
+IMPORTANT: You must set the `experimental` attribute to enable the UI macros.
+
+== Menu macro syntax
+
+Trying to explain to someone how to select a menu item can be a pain.
+With the `menu` macro, the symbols do the work.
+
+[source]
+----
+include::example$ui.adoc[tag=menu]
+----
+
+The instructions in the example above appear below.
+
+.Result: Menu macros displaying menu selections
+====
+include::example$ui.adoc[tag=menu]
+====
