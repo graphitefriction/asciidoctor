@@ -432,7 +432,7 @@ See xref:header:metadata.adoc#alt-title[Alternate title].
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
 |idprefix
-|Only if `sectids` is set
+|{y}
 |*_*, valid XML ID start character
 |{y}
 |{n}
@@ -440,7 +440,7 @@ See xref:header:metadata.adoc#alt-title[Alternate title].
 See xref:sections:id.adoc#prefix[Change the ID prefix].
 
 |idseparator
-|Only if `sectids` is set
+|{y}
 |*_*, valid XML ID character
 |{y}
 |{n}
@@ -471,7 +471,7 @@ _Book doctype only_.
 |xref:sections:id.adoc#anchor[Adds anchor in front of section title] on mouse cursor hover.
 
 |sectids
-|{n}
+|{y}
 |*_empty_*
 |{y}
 |{n}
@@ -500,7 +500,7 @@ See xref:sections:id.adoc#disable-id-generation[Disable ID generation].
 |xref:sections:number.adoc#numlevels[Controls depth of section numbering].
 
 |title-separator
-|
+|{y}
 |*:*, _any_
 |{y}
 |{n}

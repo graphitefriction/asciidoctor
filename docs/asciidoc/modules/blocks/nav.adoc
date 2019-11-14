@@ -3,7 +3,12 @@
 ** xref:build-basic-block.adoc[Build a Basic Block]
 ** xref:add-title.adoc[Add a Title]
 ** xref:assign-id.adoc[Assign an ID]
-//** Set Attributes
+* xref:attributes:element.adoc[Getting Started with Block Attributes]
+** xref:attributes:attribute-lists.adoc[Attribute Lists]
+** xref:attributes:style.adoc[Style]
+** xref:attributes:id.adoc[ID]
+** xref:attributes:options.adoc[Options]
+** xref:attributes:role.adoc[Role]
 * Advanced Block Patterns
 ** xref:nest.adoc[Nesting Blocks]
 ** xref:masquerade.adoc[Masquerading Blocks]

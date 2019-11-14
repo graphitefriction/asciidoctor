@@ -1,4 +1,4 @@
-= Attribute Assignment Precedence
+= Managing Document Attribute Assignment Precedence
 
 == Default attribute value precedence
 

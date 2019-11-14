@@ -1,4 +1,4 @@
-= Customize Attribute Substitutions
+= Customize Attribute Entry Substitutions
 
 When Asciidoctor processes a document, it uses a set of six text substitution elements.
 xref:subs:substitutions.adoc[Text substitution elements] replace characters, markup, attribute references, and macros with converter-specific styles and values.

@@ -1,0 +1,69 @@
+= Attribute Entries
+
+== What is an attribute entry?
+
+Before you can use a document attribute in your document, you have to declare it.
+An [.term]*attribute entry* is the primary mechanism for activating the attribute and assigning it a value in an AsciiDoc document.
+It's like a global variable assignment for AsciiDoc.
+
+An attribute entry consists of two parts: a *name* and a *value*.
+Each attribute entry must be entered on its own line.
+An attribute entry starts with an opening colon (`:`), directly followed by the attribute's name, and then a closing colon (`:`).
+This [.term]*sets* -- that is, turns on -- the document attribute so you can use it in your document.
+
+[source]
+----
+:name-of-an-attribute: // <1>
+----
+<1> The attribute's name is directly preceded with a opening colon (`:`) and directly followed by a closing colon (`:`).
+
+In many cases, you explicitly assign a value to a document attribute by entering information after its name in the attribute entry.
+The value must be offset from the closing colon (`:`) by at least one space.
+
+[source]
+----
+:name-of-an-attribute: value of the attribute // <1>
+----
+<1> An explicitly assigned value is offset from the closing colon (`:`) by at least one blank space.
+At the end of the value, press kbd:[Enter].
+
+Some built-in attributes don't require a value to be explicitly assigned in an attribute entry because they're a boolean attribute or have a default value.
+
+[source]
+----
+:name-of-an-attribute: // <1>
+----
+<1> If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
+
+The values of built-in boolean attributes are always blank because their only accepted value is an _empty string_.
+Other built-in attributes may have a default value.
+If you set a built-in attribute and leave its value blank, Asciidoctor assigns the default value, if it has one, to the attribute at processing time.
+
+== Where can I use an attribute entry?
+
+An attribute entry is typically defined in the document header.
+When set it the document header, the attribute is available to the entire document until it is reset or unset.
+The attribute's value can be reassigned or the attribute unset at any subsequent point in the document, unless the attribute is locked (typically by defining it using the CLI or API).
+
+Many, but not all, document attributes can be set, assigned a value, or unset in the document's body (anywhere below the document header).
+When you set an attribute in the body, it's visible from the point it's set until it's unset.
+See the xref:ref-document.adoc[Document Attributes Reference] for where in a document each attribute can be set.
+
+Finally, document attributes can also be set, assigned values, and unset via the CLI and API, but these methods don't use the attribute entry syntax.
+When an attribute is set from the command line or API, it's defined for the whole document and can't be changed in the document header or body unless `@` is added to the end of the value.
+See xref:assignment-precedence.adoc[Managing Attribute Assignment Precedence] for more information.
+The one exception to this rule is the `sectnums` attribute, which can always be changed.
+
+////
+An exclamation point (`!`) before (or after) the attribute name unsets the attribute.
+
+[source]
+----
+:!name: <1>
+----
+<1> The leading `!` indicates this attribute should be unset.
+In this case, the value is ignored.
+
+An attribute entry must start at the beginning of the line.
+If the attribute entry follows a paragraph, it must be offset by a blank line.
+////

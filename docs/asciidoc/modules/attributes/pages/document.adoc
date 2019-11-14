@@ -1,363 +1,76 @@
-= Document Attributes
-:disclaimer: Don't pet the wild Wolpertingers. If you let them into your system, we're \
-not responsible for any loss of hair, chocolate, or purple socks.
-:url-repo: https://github.com/asciidoctor/asciidoctor
+= Getting Started with Document Attributes
 
-Document attributes are both a text replacement tool and a means of controlling built-in settings and behavior for the whole document or regions of the document.
-You can think of a document attribute as a kind of global variable for the AsciiDoc language.
+Document attributes are a powerful text replacement tool and means of controlling built-in settings and behavior for a whole document or regions of a document.
+You can think of a document attribute as a global variable for the AsciiDoc language.
 
-Document attributes can either be defined in the document using an attribute entry (most often in the document's header) or passed in via the API or CLI.
+Document attributes:
 
-== Purpose and Characteristics
+* Turn on or turn off built-in features
+* Configure built-in features
+* Declare built-in asset locations
+* Hold content for reuse throughout a document
 
-Document attributes are a very powerful reuse tool.
-They serve three main purposes:
+== Types of document attributes
 
-. Toggle or configure built-in features
-. Set built-in asset locations
-. Content reuse
+Document attributes fall into the following groups.
 
-But there are certain limitations to be aware of.
-Here's what document attributes can and cannot do.
+Built-in attributes:: Built-in attributes add, configure, and control common features in a document.
+Many built-in attributes only take effect when defined in the document header with an attribute entry.
 
-Document attributes can:
+Boolean attributes:: Boolean attributes are a subgroup of the built-in attribute.
+They don't have an explicitly assigned value because they act like a toggle.
+Their sole function is to turn on or turn off a feature.
 
-* have no value (defaults to empty string)
+User-defined attributes:: #TBA#
+
+== What does setting and unsetting a document attribute mean?
+
+* be unset (turned off) with a leading (preferred) or trailing `!` added to the name
+
+== What does defining a document attribute mean?
+
+* have default values in the case of built-in attributes
+* have no value in the case of boolean attributes and built-in attributes with default values
 * have a single line value
 * have a value that xref:wrap-values.adoc[spans multiple, contiguous lines]
-* include basic inline AsciiDoc syntax, such as:
- ** <<attribute-reference,attribute references>>
- ** text formatting (if wrapped in a xref:customize-substitutions.adoc#pass-macro[pass macro])
- ** inline macros (if wrapped in a xref:customize-substitutions.adoc#pass-macro[pass macro])
-* be unset (turned off) with a leading (preferred) or trailing `!` added to the name
-* have default values (in the case of a built-in attribute)
-* be declared in the following places:
- ** the document header (as an attribute entry)
- ** the document body (as an attribute entry)
- ** the API (via the `:attributes` option)
- ** the CLI (via the `-a` option)
+* have a value that includes basic inline AsciiDoc syntax, such as:
+** attribute references
+** text formatting (if wrapped in a xref:customize-substitutions.adoc#pass-macro[pass macro])
+** inline macros (if wrapped in a xref:customize-substitutions.adoc#pass-macro[pass macro])
 
+But there are certain limitations to be aware of.
 Document attributes cannot:
 
+* have a value that includes AsciiDoc block content, such as:
+** lists
+** multiple paragraphs
+** blocks (tables, sidebars, examples, etc)
+** other whitespace-dependent markup
+
+== Where are document attributes set, defined, and unset?
+
+Document attributes can be declared in the:
+
+* document header as an xref:attribute-entries.adoc[attribute entry]
+* document body as an xref:attribute-entries.adoc[attribute entry]
+* API via the `:attributes` option
+* CLI via the `-a` option
 * override locked attributes assigned from the command line
-* include AsciiDoc block content, such as:
- ** lists
- ** multiple paragraphs
- ** blocks (tables, sidebars, examples, etc)
- ** other whitespace-dependent markup
 
-== Attribute entries
+== What does referencing a document attribute mean?
 
-An [.term]_attribute entry_ is the primary mechanism for defining a document attribute in an AsciiDoc document.
-In other words, it's like a global variable assignment for AsciiDoc.
+TBA
 
-An attribute entry is typically defined in the document header, particularly for built-in attributes.
-For user-defined attributes, the attribute entry can appear anywhere in the document (and is typically referenced using an attribute reference).
+== Where can document attributes be referenced?
 
-Once an attribute is set it is available until it is set again or unset.
-Unless the document attribute is locked (typically by defining it using the CLI or API), its value can be reassigned (or it can be unset) at any subsequent point in the document.
+TBA
 
-=== Anatomy
 
-An attribute entry consists of two parts: an <<attribute-names,attribute name>> and the attribute's optional value.
-The attribute's name comes first and must be enclosed in colons (e.g., `:name:`).
 
-The attribute value is optional.
-If a value is not specified, the value empty string is assumed.
-An empty value is often used to set (i.e., activate) a boolean attribute (thus making a blank value implicitly true).
 
-[source]
-----
-:name: <1> <2>
-----
-<1> The attribute's name is entered at the start of a new line and enclosed in colons (`:`).
-<2> If no value is specified, empty string is assumed.
 
-If the attribute value is present, it must be offset from the name part by at least one space (e.g., `:name: value`).
-
-[source]
-----
-:name: value <1> <2>
-----
-<1> The attribute's name is entered at the start of a new line and enclosed in colons (`:`).
-<2> If the attribute defines a value, offset the value from the name by one space.
-
-An exclamation point (`!`) before (or after) the attribute name unsets the attribute.
-
-[source]
-----
-:!name: <1>
-----
-<1> The leading `!` indicates this attribute should be unset.
-In this case, the value is ignored.
-
-An attribute entry must start at the beginning of the line.
-If the attribute entry follows a paragraph, it must be offset by a blank line.
-
-=== Attribute names
-
-All of the available built-in attribute names are listed in the xref:ref-document.adoc[Document Attributes Reference] and the built-in character replacement attribute names in the xref:ref-character-replacement.adoc[Character Replacement Attributes Reference].
-Built-in attribute names are reserved and can't be used for user-defined attribute names.
-Although uppercase characters are permitted in an attribute name, the name is converted to lowercase before being stored.
-For example, `AUTHOR` and `Author` are treated as `author` when a document is loaded or converted.
-A best practice is to only use lowercase letters in the name.
-
-User-defined attribute names must:
-
-* be at least one character long,
-* begin with a word character (A-Z, a-z, 0-9, or _), and
-* only contain word characters and hyphens.
-
-A user-defined attribute name cannot contain dots or spaces.
-A best practice is to only use lowercase letters in the name and avoid starting the name with a number.
-
-=== Attribute value types and assignment methods
-
-The value of an attribute may be <<boolean-attribute,empty>>, an integer such as 5 or 2, or a string characters like your name or a URL.
-Attributes that accept string values may include <<attribute-reference,references to other attributes>> and inline macros.
-Values can't contain complex, multi-line block elements such as tables or sidebars.
-
-A value may be <<boolean-attribute,assigned by default when the value is empty>> or assigned explicitly by the user.
-The type of value an attribute accepts and whether it uses a default value, has multiple built-in values, accepts a user-defined value, or requires a value to be explicitly assigned depends on the attribute.
-
-[#boolean-attribute]
-=== Setting a boolean attribute
-
-Some built-in attributes never accept a value because they act like a basic switch or toggle.
-That is, their sole function is to activate one behavior.
-The attribute's behavior is turned on when it is set.
-Its value field is always left blank (empty).
-
-[source]
-----
-:name: <1>
-----
-<1> On a new line, type a colon (`:`), directly followed by the attribute's name and then another `:`.
-After the closing `:`, press kbd:Enter[].
-The attribute is now set and its behavior will be applied to the converted document.
-
-The document attribute `sectanchors` never accepts a value because it can only be switched on.
-When `sectanchors` is set, it xref:sections:id.adoc#anchor[activates an anchor in front of a section title] when a cursor hovers over it.
-
-[source]
-----
-:sectanchors:
-----
-
-* it's a built-in attribute doesn't accept any explicitly set values because it only turns on a behavior,
-* it's a built-in attribute that uses a default value when its value is left empty, or
-* the attribute was set, but not assigned a value by accident.
-In this case, it will use its default value if applicable or output an error message when the document is processed.
-
-The value of a built-in attribute that only turns on a behavior is always empty.
-
-[source]
-----
-:sectanchors: <1>
-----
-<1> The value of `sectanchors` is always empty since its function is to xref:sections:id.adoc#anchor[turn on an anchor in front of section titles] on cursor hover.
-
-Many built-in attributes have a built-in value that is designated as the default value.
-This default value is assigned when the attribute is set and its value is left empty.
-For example, the xref:sections:id.adoc#separator[ID word separator attribute] can accept <<user-values,user-defined values>> and it has one default value.
-If you set `idseparator` and leave the value empty, the default value will be assigned automatically when the document is processed.
-
-[source]
-----
-:idseparator: <1>
-----
-<1> The words in automatically generated IDs will be separated with an underscore (`_`), the attribute's default value, because the value is empty.
-
-To override the default value of an attribute, you have to explicitly assign a new value when you set the attribute.
-
-[source]
-----
-:idseparator: - <1>
-----
-<1> The words in automatically generated IDs will be separated with a hyphen (`-`).
-The value must be offset from the attribute's name by a space.
-
-The xref:ref-document.adoc[Document Attributes Reference] lists the available built-in attributes, their accepted value types, and their available built-in values.
-
-=== Explicit values
-
-Built-in attributes that don't accept an empty value or have a default value, as well as <<set-user-defined,user-defined attributes>>, must have a value explicitly assigned to them when they're set.
-For example,
-
-[source]
-----
-:keywords: content engineering, branch collisions, 42, {meta-topics}, FTW <1> <2>
-----
-<1> The xref:header:metadata.adoc#keywords[built-in keywords attribute] doesn't have a default value, so you must explicitly assign it a value when you set it.
-<2> Attributes that accept string values may include <<attribute-reference,references to other attributes>>, e.g, `+{meta-topics}+`.
-See the xref:ref-document.adoc[Document Attributes Reference] for information about each built-in attribute's accepted value types.
-
-You must explicitly assign a value to a built-in attribute when you want to override its default value.
-For instance, when a section in a document is assigned the appendix style, that section title will be automatically prefixed with a label and a letter that signifies that section's order, e.g., Appendix A, by default.
-Let's override the default letter ordering and use a number instead.
-
-[source]
-----
-:appendix-number: 1
-----
-
-Now the first section assigned the appendix style will be prefixed Appendix 1, the second, Appendix 2, and so forth.
-
-Let's dive deeper into using document attributes.
-
-[#set-built-in]
-== Set built-in document attributes
-
-Numerous attribute are reserved for special purposes.
-Built-in attributes are used to add common features, such as the table of contents, or control the generated output, such as selecting a converter.
-Many built-in attributes only take effect when defined in the document header.
-
-For example, to enable the built-in table of contents, you can define (i.e., set) the `toc` attribute using an attribute entry in the document header as follows:
-
-[source]
-----
-:toc:
-----
-
-When the value following an attribute is left empty, as it is in the example above, the default value will be assigned (if any).
-The default value for `toc` is `auto`.
-Therefore, the table of contents will be placed in the default location (below the document's title) when the document is converted.
-
-Some built-in attributes, such as `toc`, have several built-in values.
-You can assign `toc` the built-in value `right` to place the table of contents on the right side of the document.
-
-[source]
-----
-:toc: right
-----
-
-The `right` value will override the default value.
-The value assigned to an attribute in the document header replaces the default value (assuming the attribute is not locked).
-
-=== Asset locations
-
-You can also use attributes to set the base path to images (default: `_empty_`), icons (default: `./images/icons`), stylesheets (default: `./stylesheets`) and JavaScript files (default: `./javascripts`).
-
-.Base path config example
-[source]
-----
-:imagesdir: ./images
-:iconsdir: ./icons
-:stylesdir: ./styles
-:scriptsdir: ./js
-----
-
-[#set-user-defined]
-== Set user-defined document attributes
-
-If you're familiar with writing in XML, you might recognize a document attribute as a user-defined entity.
-When you find yourself typing the same text repeatedly, or text that often needs to be updated, consider creating your own attribute.
-User-defined attributes must have a name and explicitly assigned value.
-
-Attribute names must:
-
-* be at least one character long,
-* begin with a word character (A-Z, a-z, 0-9, or _), and
-* only contain word characters and hyphens.
-
-The name cannot contain dots or spaces.
-
-Although uppercase characters are permitted in an attribute name, the name is converted to lowercase before being stored.
-For example, `URL` and `Url` are treated as `url`.
-A best practice is to only use lowercase letters in the name and avoid starting the name with a number.
-
-[[user-values]]Attribute values can:
-
-* be any inline content, and
-* contain line breaks, but only if an xref:wrap-values.adoc#hard[explicit line continuation] (`+`) is used.
-
-A prime use case for attribute entries is to promote frequently used text and URLs to the top of the document.
-
-[#user-set-ex]
-[source]
-----
-:disclaimer: Don't pet the wild Wolpertingers. If you let them into your system, we're \ <1>
-not responsible for any loss of hair, chocolate, or purple socks.
-:url-repo: https://github.com/asciidoctor/asciidoctor
-----
-<1> Long values can be xref:wrap-values.adoc[soft wrapped] using a backslash (`\`).
-
-Now, you can <<attribute-reference,reference these attributes>> throughout the document.
-
-[#attribute-reference]
-== Referencing a document attribute
-
-You'll likely use the value of a user-defined attribute entry or certain built-in attributes in specific locations throughout a document.
-To reference and use the value of a document attribute, you enclose the attribute's name (`name`) in curly brackets (`+{name}+`).
-This inline element is called an attribute reference.
-Let's reference the attributes set and assigned values in the <<user-set-ex,previous example>>.
-
-[source]
-----
-Asciidoctor is {url-repo}[open source]. <1>
-
-WARNING: {disclaimer} <2>
-If you're missing a lime colored sock, file a ticket in
-the {url-repo}/issues[Asciidoctor issue tracker]. <3>
-----
-<1> Attribute references can be used in macros.
-<2> Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.
-Since there isn't a blank line between the `disclaimer` reference and the following sentence, the following sentence will be directly appended to the end of the attribute's value when it's processed.
-<3> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:link.adoc[link macro].
-
-As you can see below, the attribute references are replaced with the corresponding attribute value when the document is processed.
-
-****
-Asciidoctor is {url-repo}[open source].
-
-WARNING: {disclaimer}
-If you're missing a lime colored sock, file a ticket in the {url-repo}/issues[Asciidoctor issue tracker].
-****
-
-Instead of having to type the URL out longhand in the link macro, as follows:
-
-.A case for using an attribute reference
-[source]
-----
-Did you know there's an https://apps.fedoraproject.org/packages/rubygem-asciidoctor[Asciidoctor package for Fedora]?
-----
-
-We can replace the target side of the link macro with a reference to our attribute.
-
-.url-fedpkg attribute usage example
-[source]
-----
-Did you know there's an {url-fedpkg}[Asciidoctor package for Fedora]?
-----
-
-To save even more typing, you can store the whole link in an attribute value.
-
-.Link attribute entry
-[source]
-----
-:link-fedpkg: https://apps.fedoraproject.org/packages/rubygem-asciidoctor[Asciidoctor package for Fedora]
-----
-
-Now you insert this link anywhere in the document using an attribute reference.
-
-.link-fedpkg attribute usage example
-[source]
-----
-Did you know there's an {link-fedpkg}?
-----
-
-Note that the link substitution occurs _after_ the attribute reference is resolved.
-This works thanks to the default order of substitutions on a paragraph.
-If you want the link macro to be resolved eagerly at the time the attribute is assigned, you need to enclose it in a pass macro.
-
-.Link attribute entry resolved eagerly
-[source]
-----
-:link-fedpkg: pass:m[https://apps.fedoraproject.org/packages/rubygem-asciidoctor[Asciidoctor package for Fedora]]
-----
-
-Now you can use this link in a section title (where the order of substitutions is different).
-
-=== Handling a missing attribute
+////
+== Handling a missing attribute
 
 If you use an attribute that xref:handle-unresolved-ref.adoc[is not defined], you can specify how Asciidoctor handles attribute reference errors.
+////
