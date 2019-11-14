@@ -1,4 +1,4 @@
-= If Conditional Preprocessor Directives
+= Ifdef and ifndef Directives
 
 You can include or exclude lines of text in your document using one of the following conditional preprocessor directives:
 
@@ -12,7 +12,8 @@ The conditions are based on the presence or value of document attributes.
 For example, say you want to include a certain section of content only when converting to HTML.
 Conditional preprocessor directives make this possible.
 You simply check for the presence of the `basebackend-html` attribute using an `ifdef` directive.
-Details of this example, as well as others, are described in the following sections.
+Details of this example and more `ifdef` and `ifndef` examples, are described in the following sections.
+See xref:ifeval-directives.adoc[Ifeval Directive] for `ifeval` examples.
 
 == ifdef directive
 
@@ -84,7 +85,7 @@ The syntax of the start directive is `ifndef::<attribute>[]`, where `<attribute>
 
 The `ifndef` directive supports the same single-line and long-form variants as `ifdef`.
 
-== Checking multiple attributes (ifdef and ifndef only)
+== Checking multiple attributes
 
 Both the `ifdef` and `ifndef` directives accept multiple attribute names.
 The combinator can be "`and`" or "`or`".
@@ -119,89 +120,3 @@ Specifically, when attributes are separated by commas, content is only included 
 When attributes are separated by pluses, content is included if at least one of the attributes is undefined.
 See https://github.com/asciidoctor/asciidoctor/issues/1983[issue #1983] to find the discussion about this behavior and the rationale for the change.
 ////
-
-[#ifeval]
-== ifeval directive
-
-Content between `ifeval` and `endif` gets included if the expression inside the square brackets evaluates to true.
-
-.ifeval example
-[source]
-----
-\ifeval::[{sectnumlevels} == 3]
-If the `sectnumlevels` attribute has the value 3, this sentence is included.
-\endif::[]
-----
-
-The `ifeval` directive does not have a single-line or long-form variant like `ifdef` and `ifndef`.
-
-=== Anatomy
-
-The expression consists of a left-hand value and a right-hand value with an operator in between.
-
-.ifeval expression examples
-[source]
-----
-\ifeval::[2 > 1]
-...
-\endif::[]
-
-\ifeval::["{backend}" == "html5"]
-...
-\endif::[]
-
-\ifeval::[{sectnumlevels} == 3]
-...
-\endif::[]
-
-// the value of outfilesuffix includes a leading period (e.g., .html)
-\ifeval::["{docname}{outfilesuffix}" == "master.html"]
-...
-\endif::[]
-----
-
-=== Values
-
-Each expression value can reference the name of zero or more AsciiDoc attribute using the attribute reference syntax (for example, `+{backend}+`).
-
-Attribute references are resolved (substituted) first.
-Once attributes references have been resolved, each value is coerced to a recognized type.
-
-When the expected value is a string (i.e., a string of characters), we recommend that you enclose the expression in quotes.
-
-The following values types are recognized:
-
-number:: Either an integer or floating-point value.
-quoted string:: Enclosed in either single (`'`) or double (`"`) quotes.
-boolean:: Literal value of `true` or `false`.
-
-==== How value type coercion works
-
-If a value is enclosed in quotes, the characters between the quotes are preserved and coerced to a string.
-
-If a value is not enclosed in quotes, it is subject to the following type coercion rules:
-
-* an empty value becomes nil (aka null).
-* a value of `true` or `false` becomes a boolean value.
-* a value of only repeating whitespace becomes a single whitespace string.
-* a value containing a period becomes a floating-point number.
-* any other value is coerced to an integer value.
-
-=== Operators
-
-The value on each side is compared using the operator to derive an outcome.
-
-`==`::
-Checks if the two values are equal.
-`!=`::
-Checks if the two values are not equal.
-`<`::
-Checks whether the left-hand side is less than the right-hand side.
-`+<=+`::
-Checks whether the left-hand side is less than or equal to the right-hand side.
-`>`::
-Checks whether the left-hand side is greater than the right-hand side.
-`+>=+`::
-Checks whether the left-hand side is greater than or equal to the right-hand side.
-
-NOTE: The operators follow the same rules as operators in Ruby.

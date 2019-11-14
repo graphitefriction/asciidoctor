@@ -1,12 +1,13 @@
 .Include Directives
-* xref:include-directive.adoc[Include Directives]
+* xref:include-directives.adoc[Include Directives]
 ** xref:include-with-leveloffset.adoc[Using Leveloffset with Included Content]
 ** xref:include-with-indent.adoc[Using Indent with Included Content]
 ** xref:include-multiple-times-in-same-document.adoc[Include a File Multiple Times in the Same Document]
 * xref:include-tagged-regions.adoc[Include Content by Tagged Regions]
 * xref:include-lines.adoc[Include Content by Line Ranges]
-* xref:include-uri.adoc[Include by URI]
+* xref:include-uri.adoc[Include Content by URI]
 
 .Conditional Directives
-* xref:if-directive.adoc[If Directives]
-** xref:safe-modes.adoc[Set Attributes By Safe Mode]
+* xref:ifdef-ifndef-directives.adoc[Ifdef and ifndef Directives]
+** xref:safe-modes.adoc[Using ifdef to Set Attributes by Safe Mode]
+* xref:ifeval-directives.adoc[Ifeval Directives]
