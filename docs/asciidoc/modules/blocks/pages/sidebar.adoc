@@ -1,20 +1,58 @@
 = Sidebars
+// Moved upstream from the Antora documentation at docs.antora.org
 
-Use a sidebar for ancillary content that doesn't fit into the flow of the document's narrative.
+On this page, you'll learn:
 
-== Sidebar block syntax
+* [x] How to mark up a sidebar with AsciiDoc.
 
-A sidebar can be titled and contain any type of content such as source code and images.
+A sidebar can contain any type of content, such as quotes, equations, and images.
+Normal substitutions are applied to sidebar content.
 
-.Sidebar syntax
+== Sidebar style syntax
+
+If the sidebar content is contiguous, the block style `sidebar` can be placed directly on top of the text in an attribute list (`[]`).
+
 [source]
 ----
-include::example$sidebar.adoc[tag=base-c]
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
 ----
-<1> A title is optional.
-<2> A sidebar is delimited by four asterisks (`+****+`).
 
-.Result: Sidebar with title
---
-include::example$sidebar.adoc[tag=base]
---
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+
+== Delimited sidebar syntax
+
+A delimited sidebar block is delimited by a set of four consecutive asterisks (`pass:[****]`).
+You don't need to set the style name when you use the sidebar's delimiters.
+
+[source]
+....
+.Optional Title
+****
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
+
+TIP: They can contain any type of content.
+
+.Source code block in a sidebar
+[source,js]
+----
+const { expect, expectCalledWith, heredoc } = require('../test/test-utils')
+----
+****
+....
+
+.Optional Title
+****
+Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
+
+TIP: They can contain any type of content.
+
+.Source code block in a sidebar
+[source,js]
+----
+const { expect, expectCalledWith, heredoc } = require('../test/test-utils')
+----
+****
