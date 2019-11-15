@@ -1,0 +1,109 @@
+= Aligning Content by Column
+// [#cols-align]
+
+== Horizontal alignment
+
+The alignment component allows you to horizontally or vertically align a column's content.
+Content can be horizontally aligned left (`<`), center (`+^+`), or right (`>`).
+
+To horizontally center the content in all of the columns, add the `+^+` operator after the multiplier.
+
+[source]
+----
+[cols="3*^"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Rendered table with horizontal, center alignment applied to all columns
+[width="90"]
+[cols="3*^"]
+include::example$table.adoc[tag=base]
+
+What if you only want to center the content in the last column?
+Assign the default styles to the preceding columns and `+^+` to the last column in the list.
+
+[source]
+----
+[cols="2*,^"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Rendered table with horizontal, center alignment applied to last column
+[width="90"]
+[cols="2*,^"]
+include::example$table.adoc[tag=base]
+
+Let's specify a different horizontal alignment for each column.
+
+[source]
+----
+[cols="<,^,>"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Rendered table with a different horizontal alignment for each column
+[width="90"]
+[cols="<,^,>"]
+include::example$table.adoc[tag=base]
+
+== Vertical alignment
+
+You'll notice that the content in the examples above is only centered on the horizontal.
+It can also be aligned vertically when the alignment operator is prefixed with a dot (`.`).
+Content can be vertically aligned to the top (`<`), middle (`+^+`), or bottom (`>`) of a cell.
+
+To vertically align the content to the middle of the cells in all of the columns, add a `.` and then the `+^+` operator after the multiplier.
+
+[source]
+----
+[cols="3*.^"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Rendered table with vertical, middle alignment applied to all columns
+[width="90"]
+[cols="3*.^"]
+include::example$table.adoc[tag=base]
+
+If you only want to align the content to the bottom of each cell in the last column, you'd assign the default styles to the preceding columns, and `>` to the last column in a comma separated list.
+
+[source]
+----
+[cols="2*,.>"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Rendered table with vertical, bottom alignment applied to last column
+[width="90"]
+[cols="2*,.>"]
+include::example$table.adoc[tag=base]
+
+Let's specify a different vertical alignment for each column.
+
+[source]
+----
+[cols=".<,.^,.>"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Rendered table with a different vertical alignment for each column
+[width="90"]
+[cols=".<,.^,.>"]
+include::example$table.adoc[tag=base]
+
+== Mixing horizontal and vertical alignment
+
+Finally, we'll also horizontally center the content in the last column.
+
+[source]
+----
+[cols=".<,.^,^.>"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Rendered table with a different vertical alignment for each column and horizontal, center alignment in the last column
+[width="90"]
+[cols=".<,.^,^.>"]
+include::example$table.adoc[tag=base]
+
+When both a horizontal and vertical alignment is assigned to a column, the horizontal alignment operator must precede the vertical operator.

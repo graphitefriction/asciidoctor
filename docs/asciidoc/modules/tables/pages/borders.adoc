@@ -1,0 +1,90 @@
+= Table Borders
+
+The borders on a table are controlled using the `frame` and `grid` attributes.
+You can combine these two attributes to achieve a variety of border styles for your tables.
+
+== Frame
+
+The border around a table is controlled using the `frame` attribute.
+By default, the frame attribute is assigned the `all` value, which draws a border on each side of the table.
+If you set the frame attribute, you can override the default value with the values `topbot`, `sides` or `none`.
+
+The `topbot` value draws a border on the top and bottom of the table.
+
+[source]
+----
+[frame=topbot]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result: Table rendered with frame=topbot
+[width=90,frame=topbot]
+include::example$row.adoc[tag=base-h]
+
+The `sides` value draws a border on the right and left side of the table.
+
+[source]
+----
+[frame=sides]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result: Table rendered with frame=sides
+[width=90,frame=sides]
+include::example$row.adoc[tag=base-h]
+
+The `none` value removes the borders around the table.
+
+[source]
+----
+[frame=none]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result: Table rendered with frame=none
+[width=90,frame=none]
+include::example$row.adoc[tag=base-h]
+
+== Grid
+
+The borders between the cells in a table are controlled using the `grid` attribute.
+By default, the grid attribute is assigned the `all` value, which draws a border between all cells.
+If you set the `grid` attribute, you can override the default value with the values `rows`, `cols` or `none`.
+
+The `rows` value draws a border between the rows of the table.
+
+[source]
+----
+[grid=rows]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result: Table rendered with grid=rows
+[width=90,grid=rows]
+include::example$row.adoc[tag=base-h]
+
+The `cols` value draws borders between the columns.
+
+[source]
+----
+[grid=cols]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result: Table rendered with grid=cols
+[width=90,grid=cols]
+include::example$row.adoc[tag=base-h]
+
+The `none` value removes all borders between the cells.
+
+[source]
+----
+[grid=none]
+include::example$row.adoc[tag=base-h]
+----
+
+.Result: Table rendered with grid=none
+[width=90,grid=none]
+include::example$row.adoc[tag=base-h]
+
+//NOTE: At this time, Asciidoctor has not implemented the `align`, `halign`, or `valign` attributes.

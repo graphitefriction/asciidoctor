@@ -1,16 +1,12 @@
-= Tables
+= Build a Basic Table
 
-Tables are one of the most intricate, yet refined areas of the AsciiDoc syntax.
-Armed with a bit of knowledge, you should discover that they are both easy to create and easy to read in raw form.
-Yet, under all that simplicity, they are remarkably sophisticated.
-
-== Basic, default table structure
+== Table syntax
 
 A table is delimited by a vertical bar and three equal signs (`|===`) and made up of cells.
 A cell is specified by a vertical bar (`|`).
 The default table data format is PSV (Prefix Separated Values); that means the processor creates a new cell each time it encounters a vertical bar.
 Cells are grouped into rows.
-Each row must share the same number of cells, taking into account any xref:cell.adoc#span[column or row spans].
+Each row must share the same number of cells, taking into account any xref:span.adoc[column or row spans].
 Then, each consecutive cell in a row is placed in a separate column.
 
 The table example below consists of two columns and three rows.
@@ -40,64 +36,6 @@ include::example$table.adoc[tag=base-rolename]
 
 Leading and trailing spaces around cell content is stripped and, therefore, doesn't affect the table's layout when rendered.
 
-:table-caption: Table
-== Table caption
-
-If you specify a title on a table, the title will be used as part of the table's caption.
-Adding a title also designates the table as a [.term]_formal table_.
-
-By default, the title of a formal table is prefixed with the label `Table <n>.` followed by a space, where `<n>` is the 1-based index of all formal tables in the document.
-
-[source]
-----
-.A formal table
-include::example$row.adoc[tag=impl-h]
-----
-
-.Result: Table rendered with a title
-[width=90]
-.A table with a title
-include::example$row.adoc[tag=impl-h]
-
-You can customize the caption label by specifying the `caption` attribute.
-If you want a space between the label and the title, you must add a trailing space to the value of the caption attribute.
-(Don't let the name of the attribute mislead you.
-The caption attribute only sets the caption's label, not the whole caption line).
-
-[source]
-----
-[caption="Table A. "]
-.A formal table
-include::example$row.adoc[tag=impl-h]
-----
-
-.Result: Table rendered with a title and custom label
-[width=90, caption="Table A. "]
-.A formal table
-include::example$row.adoc[tag=impl-h]
-
-If you want to exclude the caption label altogether, simply assign a blank value to the `caption` attribute.
-
-[source]
-----
-[caption=]
-.A formal table
-include::example$row.adoc[tag=impl-h]
-----
-
-.Result: Table rendered with a title and no label
-[width=90, caption=]
-.A formal table
-include::example$row.adoc[tag=impl-h]
-
-:table-caption!:
-
-Alternatively, you can disable the caption label for tables globally by undefining the `table-caption` document attribute.
-
-[source]
-----
-:table-caption!:
-----
 
 ////
 The two examples below illustrate how leading and trailing spaces don't change the rendered table's layout.

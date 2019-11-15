@@ -1,0 +1,65 @@
+= Table Titles and Captions
+
+== Add a title
+
+If you specify a title on a table, the title will be used as part of the table's caption.
+
+[source]
+----
+.A table with a title
+include::example$row.adoc[tag=impl-h]
+----
+
+By default, the title of a table is prefixed with the label `Table <n>.` followed by a space, where `<n>` is the 1-based index of all formal tables in the document.
+
+.Result: Table rendered with a title
+====
+[width=90, caption="Table 1. "]
+.A table with a title
+include::example$row.adoc[tag=impl-h]
+====
+
+== Customize the table caption
+
+You can customize the caption label by specifying the `caption` attribute.
+If you want a space between the label and the title, you must add a trailing space to the value of the caption attribute.
+(Don't let the name of the attribute mislead you.
+The caption attribute only sets the caption's label, not the whole caption line).
+
+[source]
+----
+[caption="Table A. "]
+.A table with a title and a custom label
+include::example$row.adoc[tag=impl-h]
+----
+
+.Result: Table rendered with a title and custom label
+====
+[width=90, caption="Table A. "]
+.A table with a title and a custom label
+include::example$row.adoc[tag=impl-h]
+====
+
+== Disable the table caption
+
+If you want to exclude the caption label altogether, simply assign a blank value to the `caption` attribute.
+
+[source]
+----
+[caption=]
+.A table with a title but no label
+include::example$row.adoc[tag=impl-h]
+----
+
+.Result: Table rendered with a title and no label
+[width=90, caption=]
+.A table with a title but no label
+include::example$row.adoc[tag=impl-h]
+
+Alternatively, you can disable the caption label for all of the tables in a document by unsetting the `table-caption` document attribute.
+
+[source]
+----
+= Title of Document
+:table-caption!:
+----

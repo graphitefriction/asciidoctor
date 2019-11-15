@@ -1,0 +1,17 @@
+= Aligning Content by Cell
+// [#align-cell]
+
+The alignment component for cells works the same as the xref:align-by-column.adoc[column specifier alignment component].
+
+.Cells aligned horizontally, vertically, and across a span of three columns
+[source]
+----
+include::example$cell.adoc[tag=cell-align]
+----
+
+.Result: Rendered cells aligned horizontally, vertically, and across a span of three columns
+[width="90"]
+include::example$cell.adoc[tag=cell-align]
+
+[#pipe-in-table-cell]
+IMPORTANT: To use a pipe (`|`) within the content of a cell without creating a new cell, you must use the `+{vbar}+` attribute.

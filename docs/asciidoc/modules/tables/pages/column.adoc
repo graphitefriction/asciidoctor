@@ -43,145 +43,7 @@ This syntax provides that same result:
 [cols="4*"]
 ----
 
-Now, let's talk about that asterisk in the syntax above.
-
-[#cols-format]
-== Column formatting
-
-The AsciiDoc syntax provides a variety of ways to control the size, style and layout of content within columns.
-These *specifiers* can be applied to whole columns.
-
-To apply a specifier to a column, you must set the `cols` attribute and assign it a value.
-A column specifier can contain any of the following components:
-
-* multiplier
-* align
-* width
-* style
-
-Each component is optional.
-
-=== Multiplier
-
-The multiplier operator (`+*+`) is used when you want a specifier to apply to more than one consecutive column.
-If used, the multiplier must always be placed at the beginning of the specifier.
-
-For example:
-
-[source]
-----
-include::example$row.adoc[tag=indv-co]
-----
-<1> The table will consist of three columns, as indicated by the *3*.
-The `+*+` operator ensures that the default layout and style will be applied to all of the columns.
-
-.Result: Rendered table with multiplier applied
-[width="90"]
-include::example$row.adoc[tag=indv]
-
-[#cols-align]
-=== Align column content
-
-The alignment component allows you to horizontally or vertically align a column's content.
-Content can be horizontally aligned left (`<`), center (`+^+`), or right (`>`).
-
-To horizontally center the content in all of the columns, add the `+^+` operator after the multiplier.
-
-[source]
-----
-[cols="3*^"]
-include::example$table.adoc[tag=base]
-----
-
-.Result: Rendered table with horizontal, center alignment applied to all columns
-[width="90"]
-[cols="3*^"]
-include::example$table.adoc[tag=base]
-
-What if you only want to center the content in the last column?
-Assign the default styles to the preceding columns and `+^+` to the last column in the list.
-
-[source]
-----
-[cols="2*,^"]
-include::example$table.adoc[tag=base]
-----
-
-.Result: Rendered table with horizontal, center alignment applied to last column
-[width="90"]
-[cols="2*,^"]
-include::example$table.adoc[tag=base]
-
-Let's specify a different horizontal alignment for each column.
-
-[source]
-----
-[cols="<,^,>"]
-include::example$table.adoc[tag=base]
-----
-
-.Result: Rendered table with a different horizontal alignment for each column
-[width="90"]
-[cols="<,^,>"]
-include::example$table.adoc[tag=base]
-
-You'll notice that the content in the examples above is only centered on the horizontal.
-It can also be aligned vertically when the alignment operator is prefixed with a dot (`.`).
-Content can be vertically aligned to the top (`<`), middle (`+^+`), or bottom (`>`) of a cell.
-
-To vertically align the content to the middle of the cells in all of the columns, add a `.` and then the `+^+` operator after the multiplier.
-
-[source]
-----
-[cols="3*.^"]
-include::example$table.adoc[tag=base]
-----
-
-.Result: Rendered table with vertical, middle alignment applied to all columns
-[width="90"]
-[cols="3*.^"]
-include::example$table.adoc[tag=base]
-
-If you only want to align the content to the bottom of each cell in the last column, you'd assign the default styles to the preceding columns, and `>` to the last column in a comma separated list.
-
-[source]
-----
-[cols="2*,.>"]
-include::example$table.adoc[tag=base]
-----
-
-.Result: Rendered table with vertical, bottom alignment applied to last column
-[width="90"]
-[cols="2*,.>"]
-include::example$table.adoc[tag=base]
-
-Let's specify a different vertical alignment for each column.
-
-[source]
-----
-[cols=".<,.^,.>"]
-include::example$table.adoc[tag=base]
-----
-
-.Result: Rendered table with a different vertical alignment for each column
-[width="90"]
-[cols=".<,.^,.>"]
-include::example$table.adoc[tag=base]
-
-Finally, we'll also horizontally center the content in the last column.
-
-[source]
-----
-[cols=".<,.^,^.>"]
-include::example$table.adoc[tag=base]
-----
-
-.Result: Rendered table with a different vertical alignment for each column and horizontal, center alignment in the last column
-[width="90"]
-[cols=".<,.^,^.>"]
-include::example$table.adoc[tag=base]
-
-When both a horizontal and vertical alignment is assigned to a column, the horizontal alignment operator must precede the vertical operator.
+//Now, let's talk about that asterisk in the syntax above.
 
 == Column width
 
@@ -222,6 +84,40 @@ include::example$column.adoc[tag=base-xtr]
 [cols=".<2,.^5,^.>3"]
 include::example$column.adoc[tag=base-xtr]
 
+[#cols-format]
+== Column formatting
+
+The AsciiDoc syntax provides a variety of ways to control the size, style and layout of content within columns.
+These *specifiers* can be applied to whole columns.
+
+To apply a specifier to a column, you must set the `cols` attribute and assign it a value.
+A column specifier can contain any of the following components:
+
+* multiplier
+* align
+* width
+* style
+
+Each component is optional.
+
+=== Multiplier
+
+The multiplier operator (`+*+`) is used when you want a specifier to apply to more than one consecutive column.
+If used, the multiplier must always be placed at the beginning of the specifier.
+
+For example:
+
+[source]
+----
+include::example$row.adoc[tag=indv-co]
+----
+<1> The table will consist of three columns, as indicated by the *3*.
+The `+*+` operator ensures that the default layout and style will be applied to all of the columns.
+
+.Result: Rendered table with multiplier applied
+[width="90"]
+include::example$row.adoc[tag=indv]
+
 [#cols-style]
 == Format column content
 
@@ -238,7 +134,7 @@ The column styles are described in the table below.
 |a
 |Supports block-level elements (paragraphs, delimited blocks, and block macros).
 This style effectively creates a nested, standalone AsciiDoc document.
-Implicit attributes such as doctitle from the parent document will be shadowed.
+Implicit attributes such as `doctitle` from the parent document will be shadowed.
 Custom attributes are inherited.
 
 |Emphasis

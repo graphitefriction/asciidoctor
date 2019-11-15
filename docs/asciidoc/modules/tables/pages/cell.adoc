@@ -29,64 +29,6 @@ include::example$cell.adoc[tag=3dup]
 [width="90"]
 include::example$cell.adoc[tag=3dup]
 
-[#span]
-== Span columns and rows
-
-To have a cell span multiple, consecutive columns, prefix the `|` with the span factor and the `{plus}` operator.
-
-.Cell spanning three columns
-[source]
-----
-include::example$cell.adoc[tag=3span]
-----
-
-.Result: Rendered table where cell spans three columns
-[width="90"]
-include::example$cell.adoc[tag=3span]
-
-If you want to have a cell span multiple, consecutive rows, prefix the span factor with a dot (`.`).
-
-.Cell spanning two rows
-[source]
-----
-include::example$cell.adoc[tag=2span-r]
-----
-
-.Result: Rendered table where a cell spans two rows
-[width="90"]
-include::example$cell.adoc[tag=2span-r]
-
-Of course you can combine spanning over columns and rows.
-The number before the dot (`.`) is the number of columns to span and the number after the dot (`.`) is the number of rows to span.
-
-.Cell spanning columns and rows
-[source]
-----
-include::example$cell.adoc[tag=span-cr]
-----
-
-.Result: Rendered table where a cell spans over columns and rows
-[width="90"]
-include::example$cell.adoc[tag=span-cr]
-
-[#align-cell]
-== Align cell content
-
-The alignment component for cells works the same as the xref:column.adoc#cols-align[column specifier alignment component].
-
-.Cells aligned horizontally, vertically, and across a span of three columns
-[source]
-----
-include::example$cell.adoc[tag=cell-align]
-----
-
-.Result: Rendered cells aligned horizontally, vertically, and across a span of three columns
-[width="90"]
-include::example$cell.adoc[tag=cell-align]
-
-[#pipe-in-table-cell]
-IMPORTANT: To use a pipe (`|`) within the content of a cell without creating a new cell, you must use the `+{vbar}+` attribute.
-
 == Style cell content
 
 The xref:column.adoc#cols-style[style component] can also be applied to individual cells.
