@@ -12,7 +12,10 @@
 
 .Images, Icons, and Multimedia
 * Images
-* xref:icon.adoc[Icons]
+* xref:icons.adoc[Icons]
+** xref:image-icons.adoc[Image Icons]
+** xref:font-based-icons.adoc[Font-Based Icons]
+** xref:unicode-icons.adoc[Unicode Icons]
 * xref:audio-and-video.adoc[Audio and Video]
 
 .UI Visualizations
