@@ -4,7 +4,6 @@ Asciidoctor provides several approaches for preventing substitutions.
 
 == Escape with a backslash
 
-// tag::backslash[]
 To prevent punctuation from being interpreted as formatting markup, precede it with a backslash (`\`).
 If the formatting punctuation begins with two characters (e.g., `+__+`), you need to precede it with two backslashes (`+\\+`).
 This is also how you can prevent character and attribute references from substitution.
@@ -15,5 +14,11 @@ When your document is processed, the backslash is removed so it doesn't display 
 include::example$subs.adoc[tag=slash]
 ----
 
-// end::backslash[]
-You can also control and prevent substitutions with the xref:pass-macro.adoc[inline passthrough macros] and the xref:pass-block.adoc[block passthrough].
+== Passthroughs
+
+The passthrough is the primary mechanism by which to escape content in AsciiDoc.
+As the name implies, a passthrough passes content directly through to the output document.
+In some forms, it's possible to apply a custom set of substitutions before the content is reintroduced.
+Otherwise, the content is excluded from all substitutions.
+
+You can also control and prevent substitutions in inline text with the xref:pass-macro.adoc[inline passthrough macros] and for entire blocks of content with the xref:pass-block.adoc[block passthrough].

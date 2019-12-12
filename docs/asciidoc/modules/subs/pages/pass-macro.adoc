@@ -1,7 +1,7 @@
 = Inline Passthroughs
 //um anchor: pass-macros
 
-Asciidoctor supports several forms of the passthrough macro.
+Asciidoctor supports several inline passthrough macros.
 
 == Inline passthrough macros
 
@@ -41,7 +41,7 @@ include::example$pass.adoc[tag=3p]
 ====
 
 [#pass-subs]
-== Inline pass macro and explicit substitutions
+== Inline pass macro
 
 To exclude inline content from substitutions and disable escaping of special characters, enclose it in the inline pass macro.
 For example, here's one way to format text as underline when generating HTML from AsciiDoc:
@@ -55,50 +55,14 @@ include::example$pass.adoc[tag=in-macro]
 include::example$pass.adoc[tag=in-macro]
 ====
 
-If you want to enable ad-hoc `quotes` substitution, then assign the `macros` value to `subs` and use the inline pass macro.
-
-....
-include::example$pass.adoc[tag=sub-in]
-....
-<1> `macros` is assigned to `subs`, which allows any macros within the block to be processed.
-<2> The pass macro is assigned the `quotes` value. Text within the square brackets will be formatted.
-
-The inline pass macro does introduce additional markup into the source code that could make it invalid in raw form.
-However, the output it produces will be valid when viewed in a viewer (HTML, PDF, etc.).
-
-====
-include::example$pass.adoc[tag=sub-out]
-====
-
-The inline pass macro also accepts shorthand values for specifying substitutions.
-
-* `c` = special characters
-* `q` = quotes
-* `a` = attributes
-* `r` = replacements
-* `m` = macros
-* `p` = post replacements
-
-For example, the quotes text substitution value is assigned in the inline passthrough macro below:
-
-[source]
-----
-include::example$pass.adoc[tag=s-macro]
-----
-
-====
-include::example$pass.adoc[tag=s-macro]
-====
-
 WARNING: Using passthroughs to pass content (without substitutions) can couple your content to a specific output format, such as HTML.
 In these cases, you should use conditional preprocessor directives to route passthrough content for different output formats based on the current backend.
 
 == Nesting blocks and passthroughs
 
-When you're using passthroughs inside literal and listing blocks, it can be easy to forget that the single plus and triple plus passthroughs are macros substitutions (not quotes).
-If you want to enable the passthroughs, make sure to assign the `macros` value to the `subs` attribute.
+When you're using passthroughs inside literal and listing blocks, it can be easy to forget that the single plus and triple plus passthroughs are xref:macros.adoc[macros substitutions].
+To enable the passthroughs, assign the `macros` value to the `subs` attribute.
 
-[source]
 ....
 [source,java,subs="+quotes,+macros"]
 ----
@@ -114,6 +78,7 @@ protected void configure(HttpSecurity http) throws Exception {
 ----
 ....
 
+To learn more about applying substitutions to blocks, see xref:apply-subs-to-blocks.adoc[Customize the substitutions applied to blocks].
 
 [source,java,subs="+quotes,+macros"]
 ----

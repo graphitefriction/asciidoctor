@@ -1,4 +1,4 @@
-= Substitutions and Passthroughs
+= Substitution Steps and Groups
 :y: Yes
 //icon:check[role="green"]
 :n: No
@@ -15,63 +15,69 @@ The single plus macro has no explanation (at least not in this module).
 The deprecate syntax needs to be moved to the deprecated table and/or migration docs.
 ////
 
-== Substitutions
+== Substitution steps
 
-Text substitution elements replace characters, markup, attribute references, and macros with converter specific styles and values.
-When Asciidoctor processes a document it uses a set of six text substitution elements.
-The processor runs the text substitution elements in the following order.
+The text substitution steps replace characters, markup, attribute references, and macros with the appropriate output for a given converter.
+When a document is processed, up to six text substitution steps may be carried out depending on the block or inline element's assigned substitution group.
+The processor runs the text substitution steps in the following order:
 
 . xref:special-characters.adoc[Special characters]
-. xref:quotes.adoc[Inline formatting syntax (i.e., `quotes`)]
+. xref:quotes.adoc[Quotes (i.e., inline formatting)]
 . xref:attributes.adoc[Attribute references]
 . xref:replacements.adoc[Character replacements]
-. xref:macros.adoc[Inline macros]
-. xref:post.adoc[Post replacements]
+. xref:macros.adoc[Macros]
+. xref:post-replacements.adoc[Post replacements]
 
-In turn, these substitutions are organized into composite value groups.
-The table below shows which substitution elements are included in each group.
+These steps are organized into substitution groups.
+
+== Substitution groups
+
+Each block and inline element has a default substitution group that is applied unless you customize the substitution steps for a particular element.
+The table below shows the substitution steps included in each group.
 
 include::partial$subs-group-table.adoc[]
 
-By default, the `normal` substitution group is applied to most block and inline elements.
-However, there are a few exceptions.
+=== Normal substitution group
+
+The `normal` substitution group is applied to the majority of the AsciiDoc block and inline elements except for those specific elements listed under the groups described in the next sections.
+
+==== Title substitution group
+
+The `title` substitution group includes the same substitutions as the `normal` group.
+However, the order that the steps are executed is slightly different.
+The steps are applied to titles in the following sequence:
+
+. Special characters
+. Quotes
+. Character replacements
+. Macros
+. Attribute references
+. Post replacements
+
+=== Header substitution group
 
 The `header` substitution group is applied to metadata lines (author and revision information) in the document header.
-This group is also applied to the values of attribute entries, regardless of whether those entries are defined in the header or elsewhere in the document.
-In the header, only special characters and attribute references are replaced.
-In attribute entries, you can also use the xref:pass-macro.adoc[inline pass macro].
+It's also applied to the values of attribute entries, regardless of whether those entries are defined in the document header or body.
+Only special characters, attribute references, and the inline pass macro are replaced in elements that fall under the header group.
 
-Fenced, literal, listing, and source blocks are processed with the `verbatim` substitution group.
+TIP: You can use the xref:apply-subs-to-text.adoc[inline pass macro] in attribute entries to customize the substitution steps applied to the attribute's value.
+
+=== Verbatim substitution group
+
+Literal, listing, and source blocks are processed using the `verbatim` substitution group.
 Only special characters are replaced in these blocks.
+
+=== Pass substitution group
 
 The `pass` substitution group can only be applied to passthrough elements.
 Attribute references and macros are replaced in passthroughs.
 
+=== None substitution group
+
 The `none` substitution group is applied to comment blocks.
 
-.The title substitution group
-****
-The `title` substitution group includes the same text substitutions as the normal group.
-However, the order that the substitutions are executed is slightly different.
-Text substitutions are applied to titles in the following sequence:
-
-. Special characters
-. Quotes
-. Replacements
-. Inline macros
-. Attribute references
-. Post replacements
-****
-
-== Passthroughs and Escapes
+== Escaping substitutions
 // This paragraph is all new
-Asciidoctor provides several approaches for preventing substitutions depending on the situation.
-When you want to prevent punctuation from being interpreted as formatting markup, [.term]_escaping_ the punctuation with a backslash may be sufficient.
-For more comprehensive escape and substitution control, you can use a passthrough.
-
-// From pass-intro.adoc, included in user-manual: Macro and Block Passthroughs
-The passthrough is the primary mechanism by which to escape content in AsciiDoc.
-As the name implies, a passthrough passes content directly through to the output document.
-In some forms, it's possible to apply a custom set of substitutions before the content is reintroduced.
-Otherwise, the content is excluded from all substitutions.
-AsciiDoc provides a number of xref:pass-macro.adoc[inline passthrough mechanisms] and a xref:pass-block.adoc[passthrough block].
+Asciidoctor provides several approaches for preventing substitutions.
+When you want to prevent punctuation and symbols from being interpreted as formatting markup, xref:prevent.adoc[escaping the punctuation with a backslash] may be sufficient.
+For more comprehensive substitution prevention and control, you can use xref:pass-macro.adoc[inline passthrough macros] or xref:pass-block.adoc[passthrough blocks].

@@ -1,11 +1,9 @@
-// Included in user-manual: Blocks, Substitutions
-
-.Substitution groups
-[cols="2h,6*^"]
+.The substitution steps included in each substitution group
+[cols="1,6*^"]
 |===
 |Group |Special characters |Quotes |Attributes |Replacements |Macros |Post replacements
 
-|Header
+s|Header
 |{y}
 |{n}
 |{y}
@@ -13,7 +11,7 @@
 |{n}
 |{n}
 
-|None
+s|None
 |{n}
 |{n}
 |{n}
@@ -21,7 +19,7 @@
 |{n}
 |{n}
 
-|Normal
+s|Normal
 |{y}
 |{y}
 |{y}
@@ -29,7 +27,7 @@
 |{y}
 |{y}
 
-|Pass
+s|Pass
 |{n}
 |{n}
 |{n}
@@ -37,7 +35,7 @@
 |{n}
 |{n}
 
-|Verbatim
+s|Verbatim
 |{y}
 |{n}
 |{n}
