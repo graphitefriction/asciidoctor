@@ -1,52 +1,42 @@
-= Inline Macro Substitutions
+= Macro Substitutions
 :y: Yes
 //icon:check[role="green"]
 :n: No
 //icon:times[role="red"]
 // um anchor: subs-mac
 
-Macros are processed by the `macros` element.
-The macros substitution replaces a macro's content with the appropriate built-in and user-defined configuration.
+The content of macros, such as cross references, links, and icons, are processed by the `macros` substitution step.
+The `macros` step replaces a macro's content with the appropriate built-in and user-defined configuration.
 
-.Elements subject to macros substitution
-[width="40%", cols="3,^2"]
+== Blocks and inline elements subject to the macros substitution step
+
+[width="60%", cols="3,^3"]
 |===
-|Element | `macros` substitution
+|Blocks and elements |`macros` applied
 
-|Attribute Entry Value |inline pass macro only
+|Attribute entry values |Only the `pass` macro
 
-|Comment |{n}
+|Comments |{n}
 
-|Example |{y}
+|Examples |{y}
 
-|Fenced |{n}
+|Headers |{n}
 
-|Header |{n}
+|Literal, listings, and source |{n}
 
-|Literal |{n}
-
-|Listing |{n}
-
-|Macro |{y}
+|Macros |{y}
 
 |Open |Varies
 
-|Paragraph |{y}
+|Paragraphs |{y}
 
-|Passthrough |{y}
+|Passthroughs |{y}
 
-|Quote |{y}
+|Quotes and verses |{y}
 
-|Sidebar |{y}
+|Sidebars |{y}
 
-|Source |{n}
+|Tables |Varies
 
-|Special sections |{y}
-
-|Table |Varies
-
-|Title |{y}
-
-|Verse |{y}
-
+|Titles |{y}
 |===

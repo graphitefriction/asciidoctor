@@ -1,4 +1,4 @@
-= Character Substitutions
+= Character Replacement Substitutions
 :y: Yes
 //icon:check[role="green"]
 :n: No
@@ -6,16 +6,16 @@
 :url-html-ref: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
 :url-unicode: https://en.wikipedia.org/wiki/List_of_Unicode_characters
 
-The replacements substitution processes textual characters such as marks, arrows and dashes and replaces them with the decimal format of their Unicode code point, i.e., their <<char-ref-sidebar,numeric character reference>>.
+The character replacement substitution step processes textual characters such as marks, arrows and dashes and replaces them with the decimal format of their Unicode code point, i.e., their <<char-ref-sidebar,numeric character reference>>.
 
 // Table of Textual symbol replacements is inserted below
 include::partial$subs-symbol-repl.adoc[]
 
-WARNING: The `replacements` element depends on the substitutions completed by the `specialcharacters` element.
+WARNING: The `replacements` step depends on the substitutions completed by the `specialchars` step.
 This is important to keep in mind when applying custom substitutions to a block.
-See xref:apply.adoc[applying substitutions] for more information.
+See xref:apply-subs-to-blocks.adoc[Customize the substitutions applied to blocks] for more information.
 
-The replacements substitution also recognizes {url-html-ref}[HTML and XML character references^] as well as {url-unicode}[decimal and hexadecimal Unicode code points^] and substitutes them for their corresponding decimal form Unicode code point.
+This substitution step also recognizes {url-html-ref}[HTML and XML character references^] as well as {url-unicode}[decimal and hexadecimal Unicode code points^] and substitutes them for their corresponding decimal form Unicode code point.
 
 For example, to produce the `&sect;` symbol you could write `\&sect;`, `\&#x00A7;`, or `\&#167;`.
 When the document is processed, `replacements` will replace the section symbol reference, regardless of whether it is a named character reference or a numeric character reference, with `\&#167;`.
@@ -52,50 +52,40 @@ For example, to produce an `&#64;` sign using a Unicode escape sequence, you wou
 However, Asciidoctor doesn't process and replace Unicode escape sequences at this time.
 ****
 
-TIP: Asciidoctor also provides numerous built-in attributes for representing characters and symbols.
-These attributes and their corresponding output are listed in the xref:attributes:character-replacements.adoc[Character Replacement Attributes Reference Table].
+TIP: Asciidoctor also provides built-in attributes for representing some common symbols.
+These attributes and their corresponding output are listed in the xref:attributes:ref-character-replacement.adoc[Character replacement attributes reference].
 
-The replacements substitution occurs within title, paragraph, example, quote, sidebar, and verse blocks.
+== Blocks and inline elements subject to the replacements substitution step
 
-.Elements subject to replacements text substitution
-[width="40%", cols="3,^2"]
+The `replacements` step occurs within title, paragraph, example, quote, sidebar, and verse blocks.
+
+[width="60%", cols="3,^2"]
 |===
-|Element | `replacements` substitution
+|Blocks and elements |`replacements` applied
 
-|Attribute Entry Value |{n}
+|Attribute entry values |{n}
 
-|Comment |{n}
+|Comments |{n}
 
-|Example |{y}
+|Examples |{y}
 
-|Fenced |{n}
+|Headers |{n}
 
-|Header |{n}
+|Literal, listings, and source |{n}
 
-|Literal |{n}
-
-|Listing |{n}
-
-|Macro |{y}
+|Macros (except passthroughs) |{y}
 
 |Open |Varies
 
-|Paragraph |{y}
+|Paragraphs |{y}
 
-|Passthrough |{n}
+|Passthroughs |{n}
 
-|Quote |{y}
+|Quotes and verses |{y}
 
-|Sidebar |{y}
+|Sidebars |{y}
 
-|Source |{n}
+|Tables |Varies
 
-|Special sections |{y}
-
-|Table |Varies
-
-|Title |{y}
-
-|Verse |{y}
-
+|Titles |{y}
 |===

@@ -1,0 +1,40 @@
+= Post Replacement Substitutions
+:y: Yes
+//icon:check[role="green"]
+:n: No
+//icon:times[role="red"]
+
+The line break character, `{plus}`, is replaced when the `post_replacements` substitution step runs.
+
+== Blocks and inline elements subject to the post replacements substitution step
+
+[width="70%", cols="3,^3"]
+|===
+|Blocks and elements |`post_replacements` applied
+
+|Attribute entry values |{n}
+
+|Comments |{n}
+
+|Examples |{y}
+
+|Headers |{n}
+
+|Literal, listings, and source |{n}
+
+|Macros (except passthroughs) |{y}
+
+|Open |Varies
+
+|Paragraphs |{y}
+
+|Passthroughs |{n}
+
+|Quotes and verses |{y}
+
+|Sidebars |{y}
+
+|Tables |Varies
+
+|Titles |{y}
+|===

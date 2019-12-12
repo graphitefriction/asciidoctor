@@ -4,47 +4,37 @@
 :n: No
 //icon:times[role="red"]
 
-Attribute references are replaced with their values when they're processed by the `attributes` substitution.
+Attribute references are replaced with their values when they're processed by the `attributes` substitution step.
 
-.Elements subject to attributes text substitution
-[width="40%", cols="3,^2"]
+== Blocks and inline elements subject to the attributes substitution step
+
+[width="60%", cols="3,^2"]
 |===
-|Element | `attributes` substitution
+|Blocks and elements |`attributes` applied
 
-|Attribute Entry Value |{y}
+|Attribute entry values |{y}
 
-|Comment |{n}
+|Comments |{n}
 
-|Example |{y}
+|Examples |{y}
 
-|Fenced |{n}
+|Headers |{y}
 
-|Header |{y}
+|Literal, listings, and source |{n}
 
-|Literal |{n}
-
-|Listing |{n}
-
-|Macro |{y}
+|Macros (except passthroughs) |{y}
 
 |Open |Varies
 
-|Paragraph |{y}
+|Paragraphs |{y}
 
-|Passthrough |{n}
+|Passthroughs |{n}
 
-|Quote |{y}
+|Quotes and verses |{y}
 
-|Sidebar |{y}
+|Sidebars |{y}
 
-|Source |{n}
+|Tables |Varies
 
-|Special sections |{y}
-
-|Table |Varies
-
-|Title |{y}
-
-|Verse |{y}
-
+|Titles |{y}
 |===

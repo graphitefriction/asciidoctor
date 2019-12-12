@@ -1,15 +1,13 @@
 = Special Character Substitutions
 
-When applicable, the first text substitution to occur is the replacement of any special characters.
-This process is handled by the `specialchars` element.
-The specialchars element searches for three characters (`<`, `>`, `&`) and replaces them with their xref:replacements.adoc#char-ref-sidebar[named character references].
+The special characters substitution step (`specialchars`) searches for three characters (`<`, `>`, `&`) and replaces them with their xref:replacements.adoc#char-ref-sidebar[named character references].
 
 * The less than symbol, `<`, is replaced with the named character reference `\&lt;`.
 * The greater than symbol, `>`, is replaced with the named character reference `\&gt;`.
 * An ampersand, `&`, is replaced with the named character reference `\&amp;`.
 
-By default, the special characters substitution occurs on all inline and block elements except for comments and certain passthroughs.
-The substitution of special characters can be controlled on blocks using the xref:apply.adoc[subs attribute] and on inline elements using the xref:pass-macro.adoc#pass-subs[passthrough macro].
+By default, the `specialchars` step occurs on all inline and block elements except for comments and certain passthroughs.
+The substitution of special characters can be controlled on blocks using the xref:apply-subs-to-blocks.adoc[subs attribute] and on inline text using the xref:apply-subs-to-text.adoc[pass macro].
 
 [NOTE]
 ====
