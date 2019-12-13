@@ -1,0 +1,166 @@
+= Customize the Title Label
+:table-caption: Data Set
+
+When you xref:add-a-title.adoc[add a title to a table], the processor automatically prefixes it with the label _Table <n>._, where _<n>_ is the 1-based index of all of the titled tables in the document.
+This label can be modified or deactivated.
+
+== Modify the label using table-caption
+
+You can change the content of all of the label's for titled tables using the document attribute `table-caption`.
+(Don't let the attribute's name mislead you.
+It's the attribute that controls the table title labels at the document level.)
+
+In the document header, set the `table-caption` attribute and assign it your custom label text.
+
+[source]
+----
+= Document Title
+:table-caption: Data Set // <1> <2>
+----
+<1> Set the document attribute `table-caption` and assign it the text you want to prefix each table title.
+<2> Don't enter a number after the label text.
+The processor will automatically insert and increment the number.
+
+Now let's add three tables to our document.
+
+[source]
+----
+= Document Title
+:table-caption: Data Set
+
+.A table with a title
+[cols="2,1"]
+|===
+|Lots and lots of data |A little data
+
+|834,734 |3
+|3,999,271.5601 |5
+|===
+
+[cols="4*"]
+|===
+|Content in column 1, row 1
+|Content in column 2, row 1
+|Content in column 3, row 1
+|Content in column 4, row 1
+|===
+
+.Another table with a title
+|===
+|Value |Result |Notes
+
+|Null |A mystery |See Appendix R
+|===
+----
+
+Since `table-caption` is set and assigned the value _Data Set_, any table title should be prefixed with the label _Data Set <n>._, where _<n>_ is the 1-based index of all the titled tables in the document.
+
+.Result: Customized title labels
+====
+.A table with a title
+[cols="2,1"]
+|===
+|Lots and lots of data |A little data
+
+|834,734 |3
+|3,999,271.5601 |5
+|===
+
+[cols=4*]
+|===
+|Content in column 1, row 1
+|Content in column 2, row 1
+|Content in column 3, row 1
+|Content in column 4, row 1
+|===
+
+.Another table with a title
+|===
+|Value |Result |Notes
+
+|Null |A mystery |See Appendix R
+|===
+====
+
+Notice in the above result that the table that doesn't have a title didn't get a label nor was it counted when the processor incremented the label number.
+Therefore, the third table is assigned the label _Data Set 2._
+
+== Modify the label of an individual table
+
+You can customize the label on an individual table by setting the `caption` attribute.
+You must assign it the exact value you want displayed, including trailing whitespaces, when using `caption`.
+Labels assigned using `caption` don't get an automatically incremented number and only apply to the table they are set on.
+
+[source]
+----
+[caption="Table A. "] // <1> <2>
+.A table with a custom label
+include::example$row.adoc[tag=impl-h]
+----
+<1> Create an attribute list directly on the table's title and set the named attribute `caption`, followed by an equals sign (`=`), and then the value.
+<2> To include a blank space after the last character of the value, enclose the value in double quotation marks (`"`).
+Otherwise the processor will remove any trailing whitespaces and the title text will start directly after the last character of the label.
+
+.Result: Table rendered with a custom label
+====
+[caption="Table A. "]
+.A table with a custom label
+include::example$row.adoc[tag=impl-h]
+====
+
+If you create any subsequent tables in your document and don't set `caption` on them and assign it a value, the title labels will revert to the default _Table <n>._ value or value you explicitly assigned to `table-caption`.
+
+== Disable the label using table-caption
+
+You can disable the title label for all of the tables in a document by unsetting the `table-caption` document attribute.
+
+[source]
+----
+= Title of Document
+:table-caption!: // <1>
+
+.A table with a title
+[cols="2,1"]
+|===
+|Lots and lots of data |A little data
+
+|834,734 |3
+|3,999,271.5601 |5
+|===
+----
+<1> In an attribute entry, enter the name of the attribute, `table-caption`, and append a bang symbol (`!`) to the end of the name.
+This unsets the attribute.
+
+When `table-caption` is unset, table titles won't be prefixed with a label.
+
+:table-caption!:
+
+.Result: Table title when `table-caption` is unset
+====
+.A table with a title
+[cols="2,1"]
+|===
+|Lots and lots of data |A little data
+
+|834,734 |3
+|3,999,271.5601 |5
+|===
+====
+
+== Disable the label using caption
+
+To exclude the label on an individual table, assign an empty value to the `caption` attribute.
+
+[source]
+----
+[caption=] // <1>
+.A table with a title but no label
+include::example$row.adoc[tag=impl-h]
+----
+<1> Enter the attribute's name, `caption`, in an attribute list set on the table title, followed by an equals sign (`=`).
+Don't enter a value after the `=`.
+
+.Result: Table rendered with a title and no label
+[width=90, caption=]
+.A table with a title but no label
+include::example$row.adoc[tag=impl-h]

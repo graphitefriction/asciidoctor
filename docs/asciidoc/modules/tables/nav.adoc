@@ -1,7 +1,9 @@
 .Tables
 * xref:get-started.adoc[Getting Started with Tables]
-** xref:build-basic-table.adoc[Build a Basic Table]
-** xref:titles-and-captions.adoc[Titles and Captions]
+** xref:build-a-basic-table.adoc[Build a Basic Table]
+** xref:add-a-title.adoc[Add a Title]
+** xref:customize-title-label.adoc[Customize the Title Label]
+//** Assign IDs and Attributes
 * xref:row.adoc[Rows]
 ** xref:header-and-footer-rows.adoc[Header and Footer Rows]
 * xref:column.adoc[Columns]
@@ -13,6 +15,7 @@
 ** xref:width.adoc[Width]
 ** xref:borders.adoc[Borders]
 ** xref:orientation.adoc[Orientation]
+** xref:assign-a-role.adoc[Assign a Role]
 ** xref:nested.adoc[Nesting Tables]
 * xref:data-format.adoc[CSV, TSV and DSV Data]
 * xref:table-ref.adoc[Table Reference]

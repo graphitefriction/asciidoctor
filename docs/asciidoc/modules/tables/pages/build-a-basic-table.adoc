@@ -1,0 +1,181 @@
+= Build a Basic Table
+:xrefstyle: short
+:listing-caption: Example
+:example-caption!:
+
+== Set up a table using the cols attribute
+
+A table is delimited block.
+You can use an attribute list to apply an id, additional options, and designate the number of columns as well as their widths and alignment.
+In <<ex-cols>>, we'll use the `cols` attribute to specify the number of columns that table contains.
+
+[#ex-cols]
+.Create a table with two columns
+[source]
+----
+[cols="1,1"] // <1> <2>
+|=== // <3>
+----
+<1> In an attribute list, set the `cols` attribute followed by an equals sign (`=`).
+<2> After the equals sign (`=`), enter a list of comma-separated numerical values enclosed in double quotation marks (`"`).
+Each value represents a column.
+<3> On the line directly after the attribute list, enter one vertical bar followed by three equal signs (`|===`).
+This delimiter indicates the beginning of the table block.
+
+The table in <<ex-cols>> will contain two columns of equal width.
+The columns will be of equal width, regardless of the content they contain because each value in the `cols` list represents an individual column and that columns width relative to the other columns in the table.
+When the numerical value representing each column is the same number, all of the column widths are identical.
+You could also use a shorthand modifier to specify the number of columns and adjust the width of a column by increasing the value of the digit that represents that column.
+
+Next, let's add three rows to the table.
+Each row must share the same number of cells.
+Since the table in <<ex-rows>> has two columns, each row must contain two cells.
+A cell is specified by a vertical bar (`|`).
+
+[#ex-rows]
+.Add three rows to the table
+[source]
+----
+[cols="1,1"]
+|===
+|Cell in column 1, row 1 // <1>
+|Cell in column 2, row 1
+// <2>
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|=== // <3>
+----
+<1> A new cell is marked by a vertical bar (`|`).
+Each consecutive cell in a row is placed in a separate column.
+<2> Rows can be separated by one or more blank lines.
+<3> On a new line, enter another table delimiter (`|===`) to close the table block.
+
+.Result: Table with two columns and three rows
+====
+[cols="1,1"]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2
+|Cell in column 1, row 3 |Cell in column 2, row 3
+|===
+====
+
+Alternatively, you can enter more that one cell or all of the cells in a row on the same line since the processor creates a new cell each time it encounters a vertical bar (`|`).
+The three column table in <<ex-alt-rows>> contains two rows.
+
+[#ex-alt-rows]
+.Add two rows to a three column table
+[source]
+----
+[cols="1,1,1"]
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1
+|Cell in column 3, row 1 // <1>
+
+|Cell in column 1, row 2 |Cell in column 2, row 2 |Cell in column 3, row 2 // <2>
+|===
+----
+<1> A row's cells can be entered on more than one line.
+<2> A row's cells can be entered on a single line.
+
+.Result: Table with three columns and two rows
+====
+[cols="1,1,1"]
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2 |Cell in column 3, row 2
+|===
+====
+
+== Specify the number of columns using the first row
+
+If you don't want to customize the width of a table's columns or the alignment of the content in each column, you can specify the number of columns using the table's first row.
+To implicitly declare the number of columns, enter all of the first row's cells on the same line.
+The processor will derive the number columns from the number of cells in this row.
+<<ex-implicit>> uses its first row to indicate that it has three columns.
+
+[#ex-implicit]
+.Create a table with three columns using its first row
+[source]
+----
+|===
+// <1>
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1 // <2>
+
+|Cell in column 1, row 2 // <3>
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+----
+<1> After the opening delimiter, insert a blank line before the first row, otherwise the first row will be treated as header row.
+<2> Enter all of the first row's cells on a single line.
+Each cell will represent one column.
+<3> The cells in subsequent rows don't need to be entered on a single line.
+
+The table in <<ex-implicit>> has three columns since its first row contains three cells.
+
+.Result: Table with three columns that were implicitly specified using the number of cells in its first row
+====
+|===
+
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2 |Cell in column 3, row 2
+|===
+====
+
+//You can also implicitly specify the first row as a header row.
+
+////
+Its delimiter is a vertical bar and three equal signs (`|===`).
+The default table data format is PSV (Prefix Separated Values); that means the processor creates a new cell each time it encounters a vertical bar.
+Cells are grouped into rows.
+Each row must share the same number of cells, taking into account any xref:span.adoc[column or row spans].
+Then, each consecutive cell in a row is placed in a separate column.
+
+The table example below consists of two columns and three rows.
+
+[#basic-table]
+.Basic table
+[source]
+----
+include::example$table.adoc[tag=base-co]
+----
+<1> The table's content boundaries are defined by a vertical bar followed by three equal signs (`|===`).
+<2> Inserting a blank line before the first row is a trick to ensure the first row is not treated as the table header.
+<3> A new cell is marked by a vertical bar (`|`).
+<4> Rows can optionally be separated by any number of blank lines.
+
+.Result: Rendered basic table
+include::example$table.adoc[tag=base-alt]
+
+Leading and trailing spaces around cell content is stripped and, therefore, doesn't affect the table's layout when rendered.
+The two examples below illustrate how leading and trailing spaces don't change the rendered table's layout.
+
+.Cell content adjacent to the |
+[source]
+----
+include::ex-table.adoc[tag=cell1]
+----
+
+.Result: Rendered table when cell content was entered adjacent to the |
+[width="90"]
+include::ex-table.adoc[tag=cell1]
+
+.Cell content with varying leading and trailing spaces
+[source]
+----
+include::ex-table.adoc[tag=cell2]
+----
+
+.Result: Rendered table when cell content was bounded by varying leading and trailing spaces
+[width="90"]
+include::ex-table.adoc[tag=cell2]
+////

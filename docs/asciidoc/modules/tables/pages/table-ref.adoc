@@ -4,10 +4,22 @@
 |===
 |Attribute |Description |Value |Description |Notes
 
+|caption
+|defines the title label on a single table
+d|user-defined
+|
+|
+
+|table-caption
+|defines the title label on all titled tables
+d|`Table <n>.`, user-defined
+|
+|
+
 |cols
 |comma-separated list of column specifiers
 d|specifiers
-|see cols for details
+|see `cols` for details
 |
 
 .4+|format
