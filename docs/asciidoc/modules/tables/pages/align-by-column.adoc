@@ -1,109 +1,247 @@
-= Aligning Content by Column
+= Align Content by Column
 // [#cols-align]
 
-== Horizontal alignment
+The alignment operators allow you to horizontally and vertically align a column's content.
 
-The alignment component allows you to horizontally or vertically align a column's content.
-Content can be horizontally aligned left (`<`), center (`+^+`), or right (`>`).
+[#horizontal-operators]
+== Horizontal alignment operators
 
-To horizontally center the content in all of the columns, add the `+^+` operator after the multiplier.
+Content can be horizontally aligned to the left or right side of the column as well as the center of the column.
 
-[source]
-----
-[cols="3*^"]
-include::example$table.adoc[tag=base]
-----
+* The less-than symbol (`<`) left aligns the content.
+This is the default horizontal alignment.
+* The greater-than symbol (`>`) right aligns the content.
+* The caret (`+^+`) centers the content.
 
-.Result: Rendered table with horizontal, center alignment applied to all columns
-[width="90"]
-[cols="3*^"]
-include::example$table.adoc[tag=base]
+The horizontal alignment operator is entered in front a <<vertical-operators,vertical alignment operator>> (if present) and in front of a xref:add-columns.adoc[column specifier] unless the multiplier (`+*+`) is used.
+A horizontal alignment operator is appended after the multiplier.
 
-What if you only want to center the content in the last column?
-Assign the default styles to the preceding columns and `+^+` to the last column in the list.
+* `[cols="2,^1"]` A horizontal alignment operator is placed in front of the column specifier unless the multiplier is present.
+* `[cols=">.^1,2"]` A horizontal alignment operator is placed in front of a vertical alignment operator.
+* `[cols="3*>"]` The horizontal alignment operator is placed directly after a multiplier.
+* `[cols=">,^"]` When a numeric specifier isn't needed, the horizontal alignment operator can represent both the column and the column content's alignment.
 
-[source]
-----
-[cols="2*,^"]
-include::example$table.adoc[tag=base]
-----
+=== Center content horizontally in a column
 
-.Result: Rendered table with horizontal, center alignment applied to last column
-[width="90"]
-[cols="2*,^"]
-include::example$table.adoc[tag=base]
-
-Let's specify a different horizontal alignment for each column.
+To horizontally center the content in a column, place the `+^+` operator in front of the xref:add-columns.adoc[column's specifier].
 
 [source]
 ----
-[cols="<,^,>"]
-include::example$table.adoc[tag=base]
+[cols="^4,1"]
+|===
+|This content is horizontally centered.
+|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
+The default horizontal alignment is for the content to be aligned to the left side of the column.
+|===
 ----
 
-.Result: Rendered table with a different horizontal alignment for each column
-[width="90"]
-[cols="<,^,>"]
-include::example$table.adoc[tag=base]
+The table from the above example is rendered below.
 
-== Vertical alignment
+[cols="^4,1"]
+|===
+|This content is horizontally centered.
+|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
+The default horizontal alignment is for the content to be aligned to the left side of the column.
+|===
 
-You'll notice that the content in the examples above is only centered on the horizontal.
-It can also be aligned vertically when the alignment operator is prefixed with a dot (`.`).
-Content can be vertically aligned to the top (`<`), middle (`+^+`), or bottom (`>`) of a cell.
-
-To vertically align the content to the middle of the cells in all of the columns, add a `.` and then the `+^+` operator after the multiplier.
+When the columns are specified using the xref:add-columns.adoc#column-multiplier[multiplier], place the `+^+` operator after the multiplier operator (`+*+`).
 
 [source]
 ----
-[cols="3*.^"]
-include::example$table.adoc[tag=base]
+[cols="2*^"]
+|===
+|This content is horizontally centered.
+|This content is also horizontally centered.
+|===
 ----
 
-.Result: Rendered table with vertical, middle alignment applied to all columns
-[width="90"]
-[cols="3*.^"]
-include::example$table.adoc[tag=base]
+The table from the above example is rendered below.
 
-If you only want to align the content to the bottom of each cell in the last column, you'd assign the default styles to the preceding columns, and `>` to the last column in a comma separated list.
+[cols="2*^"]
+|===
+|This content is horizontally centered.
+|This content is also horizontally centered.
+|===
+
+=== Right align content in a column
+
+To align the content in a column to its right side, place the `+>+` operator in front of the column's specifier.
 
 [source]
 ----
-[cols="2*,.>"]
-include::example$table.adoc[tag=base]
+[cols=">4,1"]
+|===
+|This content is aligned to the right side of the column.
+|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
+The default horizontal alignment is for the content to be aligned to the left side of the column.
+|===
 ----
 
-.Result: Rendered table with vertical, bottom alignment applied to last column
-[width="90"]
-[cols="2*,.>"]
-include::example$table.adoc[tag=base]
+The table from the above example is rendered below.
 
-Let's specify a different vertical alignment for each column.
+[cols=">4,1"]
+|===
+|This content is aligned to the right side of the column.
+|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
+The default horizontal alignment is for the content to be aligned to the left side of the column.
+|===
+
+When the columns are specified using the multiplier, place the `+>+` operator after the xref:add-columns.adoc#column-multiplier[multiplier].
 
 [source]
 ----
-[cols=".<,.^,.>"]
-include::example$table.adoc[tag=base]
+[cols="2*>"]
+|===
+|This content is aligned to the right side of the column.
+|This content is also aligned to the right side of the column.
+|===
 ----
 
-.Result: Rendered table with a different vertical alignment for each column
-[width="90"]
-[cols=".<,.^,.>"]
-include::example$table.adoc[tag=base]
+The table from the above example is rendered below.
 
-== Mixing horizontal and vertical alignment
+[cols="2*>"]
+|===
+|This content is aligned to the right side of the column.
+|This content is also aligned to the right side of the column.
+|===
 
-Finally, we'll also horizontally center the content in the last column.
+[#vertical-operators]
+== Vertical alignment operators
+
+Content can be vertically aligned to the top or bottom of a column's cells as well as the center of a column.
+Vertical alignment operators begin with a dot (`.`).
+
+* The dot and less-than symbol (`.<`) aligns the content to the top of the column's cells.
+This is the default vertical alignment.
+* The dot and greater-than symbol (`.>`) aligns the content to the bottom of the column's cells.
+* The dot and caret (`+.^+`) centers the content vertically.
+
+Where the vertical alignment operator is placed on a column specifier depends on whether a <<horizontal-operators,horizontal alignment operator>> or the multiplier (`+*+`) is present.
+
+* `[cols="2,.^1"]` A vertical alignment operator is placed in front of the column specifier unless a multiplier is present.
+* `[cols=">.^1,2"]` The vertical alignment operator is placed after the horizontal alignment operator but before the column specifier.
+* `[cols="3*.>"]` The vertical operator is placed after a multiplier.
+* `[cols=".^,.>"]` When a numeric specifier isn't needed, the vertical alignment operator can represent both the column and the column content's alignment.
+
+=== Align content to the bottom of a column's cells
+
+To align the content in a column to the bottom of each cell, place the `+.>+` operator in front of the xref:add-columns.adoc[column's specifier].
 
 [source]
 ----
-[cols=".<,.^,^.>"]
-include::example$table.adoc[tag=base]
+[cols=".>2,1"]
+|===
+|This content is vertically aligned to the bottom of the cell.
+|There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
+The default vertical alignment is for the content to be positioned at the top of the cell.
+|===
 ----
 
-.Result: Rendered table with a different vertical alignment for each column and horizontal, center alignment in the last column
-[width="90"]
-[cols=".<,.^,^.>"]
-include::example$table.adoc[tag=base]
+The table from the above example is rendered below.
 
-When both a horizontal and vertical alignment is assigned to a column, the horizontal alignment operator must precede the vertical operator.
+[cols=".>2,1"]
+|===
+|This content is vertically aligned to the bottom of the cell.
+|There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
+The default vertical alignment is for the content to be positioned at the top of the cell.
+|===
+
+=== Center content vertically in a column
+
+To vertically center the content in a column, place the `+.^+` operator in front of the xref:add-columns.adoc[column's specifier].
+
+[source]
+----
+[cols=".^2,1"]
+|===
+|This content is centered vertically in the cell.
+|There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
+The default vertical alignment is for the content to be positioned at the top of the cell.
+|===
+----
+
+The table from the above example is rendered below.
+
+[cols=".^2,1"]
+|===
+|This content is centered vertically in the cell.
+|There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
+The default vertical alignment is for the content to be positioned at the top of the cell.
+|===
+
+To vertically align the content to the middle of the cells in all of the columns, add the vertically center operator (`.^`) after the xref:add-columns.adoc#column-multiplier[multiplier].
+
+[source]
+----
+[cols="2*.^"]
+|===
+|This content is vertically centered.
+|This content is also vertically centered.
+|===
+----
+
+The table from the above example is rendered below.
+
+[cols="2*.^"]
+|===
+|This content is centered vertically in the cell.
+|This content is also centered vertically in the cell.
+|===
+
+== Apply horizontal and vertical alignment operators to the same column
+
+A column can have a vertical and horizontal alignment operator placed on its xref:add-columns.adoc[specifier].
+The <<horizontal-operators,horizontal operator>> always precedes the <<vertical-operators,vertical operator>>.
+Both operators always precede the column specifier unless a xref:add-columns.adoc#column-multiplier[multiplier] is used, then the operators are placed after the multiplier.
+
+[source]
+----
+[cols="^.>2,1,>.^1"]
+|===
+|This content is centered horizontally and aligned to the bottom of the cell.
+|There aren't any alignment operators on this column's specifier, so the column falls back to the default alignments.
+The default horizontal alignment is the left side of the column.
+The default vertical alignment is the top of the cell.
+|This content is aligned to the right side of the cell and centered vertically.
+|===
+----
+
+The table from the above example is rendered below.
+
+[cols="^.>2,1,>.^1"]
+|===
+|This content is centered horizontally and aligned to the bottom of the cell.
+|There aren't any alignment operators on this column's specifier, so the column falls back to the default alignments.
+The default horizontal alignment is the left side of the column.
+The default vertical alignment is the top of the cell.
+|This content is aligned to the right side of the cell and centered vertically.
+|===
+
+////
+To apply a horizontal and vertical alignment operator to columns that are specified via the multiplier, enter the horizontal alignment operator directly after the multiplier and then the vertical operator.
+
+In the following example, the content in the table's three columns will be horizontally and vertically centered.
+
+[source]
+----
+[cols="3*^.^",width=50]
+|===
+|This content is centered horizontally and vertically in its cell.
+|When the multiplier is used on the column specifier the horizontal alignment operator and the vertical alignment operator are entered after the multiplier.
+
+When a multiplier isn't used, the alignment operators always preceded the alignment operators.
+|This content is centered horizontally and vertically in its cell.
+|===
+----
+
+The table from the above example is rendered below.
+
+[cols="3*^.^",width=50]
+|===
+|This content is centered horizontally and vertically in its cell.
+|When the multiplier is used on the column specifier the horizontal alignment operator and the vertical alignment operator are entered after the multiplier.
+
+When a multiplier isn't used, the alignment operators always preceded the alignment operators.
+|This content is centered horizontally and vertically in its cell.
+|===
+////
