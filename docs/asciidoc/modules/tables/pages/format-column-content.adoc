@@ -1,0 +1,98 @@
+= Format Content by Column
+
+[#cols-style]
+== Column styles and their operators
+
+You can style all of the content in a column by adding a style operator to a column's specifier.
+
+include::partial$style-operators.adoc[]
+
+When no style operator is applied to a column's specifier, the column is processed as regular paragraph text, i.e., the `d` style is applied by default.
+Inline formatting markup and inline macros are also processed.
+
+TIP: Style operators can also be applied to xref:format-cell-content.adoc[individual cells].
+
+== Apply a style operator to a column
+
+The style operator is placed last on a column specifier when other operators are present.
+
+* `[cols="2e,.^3s"]` A style operator is placed directly after the width operator of the column's specifier unless a multiplier is present.
+* `[cols="h,e"]` When a numeric specifier isn't needed, the style operator can represent both the column and the column's content style.
+* `[cols="3*.>m"]` When a multiplier is present, the style operator is placed after any horizontal and vertical alignment operators.
+
+Let's apply the header style to the first column, the monospace style to the second, the strong style to the third, and the emphasis style to the fourth.
+
+[source]
+----
+[cols="h,2m,^.^s,>2e"]
+include::example$column.adoc[tag=4col]
+----
+
+.Result: Table with a header, monospace, strong, and emphasis styled column
+[cols="h,2m,^.^s,>2e"]
+include::example$column.adoc[tag=4col]
+
+== Use AsciiDoc block elements in a column
+
+To use AsciiDoc blocks, such as delimited source blocks and lists, place the lowercase letter `a` on the column specifier.
+
+.Table with AsciiDoc block style operator applied to first column
+[source]
+....
+[cols="2a,2"]
+|===
+|Column with the `a` style operator applied to its specifier |Column using default style
+
+|
+* List item 1
+* List item 2
+* List item 3
+|
+* List item 1
+* List item 2
+* List item 3
+
+|
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+|
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
+|===
+....
+
+.Result: Table with AsciiDoc block style operator applied to first column
+[cols="2a,2"]
+|===
+|Column with the `a` style operator applied to its specifier |Column using default style
+
+|
+* List item 1
+* List item 2
+* List item 3
+|
+* List item 1
+* List item 2
+* List item 3
+
+|
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+|
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
+|===
+
+You can also apply the xref:format-cell-content.adoc#a-operator[AsciiDoc block style operator to individual cells].

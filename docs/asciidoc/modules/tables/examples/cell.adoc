@@ -79,10 +79,10 @@ Examples for table sections, cell specifiers
 // end::cell-align[]
 
 // tag::cell-ad[]
-[cols="2"]
+[cols="2*"]
 |===
 
-a|This cell is prefixed with an `a`, so the processor interpets the following lines as an AsciiDoc list.
+a|This cell is prefixed with an `a`, so the processor interprets the following lines as an AsciiDoc list.
 
 * List item 1
 * List item 2
@@ -93,36 +93,40 @@ a|This cell is prefixed with an `a`, so the processor interpets the following li
 * List item 2
 * List item 3
 
-a|This cell is prefixed with an `a`, so the processor honors the `lead` style on the following paragraph.
+a|This cell is prefixed with an `a`, so the listing block is processed and rendered according to the `source` style rules.
 
-[.lead]
-I am a paragraph styled with the lead attribute.
-|This cell *is not* prefixed with an `a`, so the processor does not honor the `lead` style on the following paragraph.
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
 
-[.lead]
-I am a paragraph styled with the lead attribute.
+|This cell *is not* prefixed with an `a`, so the processor doesn't interpret the listing block delimiters or the `source` style.
+
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
 |===
 // end::cell-ad[]
 
 // tag::cell-v[]
 |===
 
-2*>m|This content is duplicated across two columns.
+2*>m|This content is duplicated across two columns (2*) and aligned to the right side of the cell (>).
 
-It is aligned right horizontally.
+It's rendered using a monospace font (m).
 
-And it is monospaced.
+.3+^.>s|This cell spans 3 rows (`3+`). The content is centered horizontally (`+^+`), vertically aligned to the bottom of the cell (`.>`), and styled as strong (`s`).
+e|This content is italicized (`e`).
 
-.3+^.>s|This cell spans 3 rows. The content is centered horizontally, aligned to the bottom of the cell, and strong.
-e|This content is emphasized.
+l|This cell is treated like a literal block (l).
 
-.^l|This content is aligned to the top of the cell and literal.
-
-v|This cell contains a verse
+v|This cell contains a xref:blocks:verse.adoc[verse block] (`v`)
 that may one day expound on the
 wonders of tables in an
 epic sonnet.
-
 |===
 // end::cell-v[]
 

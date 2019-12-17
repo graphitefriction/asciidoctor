@@ -1,0 +1,40 @@
+[cols="2,2m,6"]
+|===
+|Style |Operator |Description
+
+|AsciiDoc
+|a
+|Supports block elements (lists, delimited blocks, and block macros).
+This style effectively creates a nested, standalone AsciiDoc document.
+Implicit attributes such as `doctitle` from the parent document will be shadowed.
+Custom attributes are inherited.
+
+|Default
+|d
+|Text is handled like a normal paragraph.
+Supports all markup that is permitted in a paragraph (i.e., inline formatting, inline macros).
+
+|Emphasis
+|e
+|Text is italicized.
+
+|Header
+|h
+|Header text and border styles are applied to the column.
+
+|Literal
+|l
+|Column content is treated as if it were inside a literal block.
+
+|Monospace
+|m
+|Text is rendered in monospace font.
+
+|Strong
+|s
+|Text is bold.
+
+|Verse
+|v
+|Column content is treated as if it were inside a verse block.
+|===

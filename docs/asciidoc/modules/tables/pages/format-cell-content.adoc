@@ -1,0 +1,51 @@
+= Format Content by Cell
+
+== Cell styles and their operators
+
+You can style all of the content in an individual cell by adding a style operator to the cell's specifier.
+
+include::partial$style-operators.adoc[]
+
+When no style operator is specified on the cell (or xref:format-column-content.adoc[column]), its contents are processed as regular paragraph text, i.e., the `d` style is applied by default.
+Inline formatting markup and inline macros are also processed.
+
+== Apply a style operator to a table cell
+
+Let's apply some of the style operators to individual cells.
+
+[source]
+----
+include::example$cell.adoc[tag=cell-v]
+----
+
+.Result: Rendered table using style, alignment, and multiplier operators
+include::example$cell.adoc[tag=cell-v]
+
+[#a-operator]
+== Use AsciiDoc block elements in a table cell
+
+To use AsciiDoc blocks, such as delimited source blocks and lists, prefix the cell's vertical bar (`|`) with the lowercase letter `a`.
+
+.Cells applying AsciiDoc block styles versus not applying AsciiDoc block styles
+[source]
+....
+include::example$cell.adoc[tag=cell-ad]
+....
+
+.Result: Rendered table of cells applying AsciiDoc block styles versus not applying AsciiDoc block styles
+include::example$cell.adoc[tag=cell-ad]
+
+////
+Source blocks can be placed inside a cells by using the listing syntax.
+
+.Cells with source code listing
+....
+include::example$cell.adoc[tag=cell-src]
+....
+
+.Result: Rendered table with cells containing source code listing
+[width="90"]
+====
+include::example$cell.adoc[tag=cell-src]
+====
+////
