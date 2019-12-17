@@ -1,7 +1,7 @@
 = Aligning Content by Cell
 // [#align-cell]
 
-The alignment component for cells works the same as the xref:align-by-column.adoc[column specifier alignment component].
+The alignment operators for cells work much like the xref:align-by-column.adoc[alignment operators for columns].
 
 .Cells aligned horizontally, vertically, and across a span of three columns
 [source]

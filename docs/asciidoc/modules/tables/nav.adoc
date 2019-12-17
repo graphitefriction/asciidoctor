@@ -4,13 +4,19 @@
 ** xref:add-a-title.adoc[Add a Title]
 ** xref:customize-title-label.adoc[Customize the Title Label]
 //** Assign IDs and Attributes
-* xref:row.adoc[Rows]
-** xref:header-and-footer-rows.adoc[Header and Footer Rows]
-* xref:column.adoc[Columns]
-** xref:align-by-column.adoc[Aligning Content by Column]
-* xref:cell.adoc[Cells]
-** xref:span.adoc[Spanning Columns and Rows]
-** xref:align-by-cell.adoc[Aligning Content by Cell]
+* Using Columns
+** xref:add-columns.adoc[Create Columns]
+** xref:adjust-column-widths.adoc[Adjust Column Widths]
+** xref:align-by-column.adoc[Align Content by Column]
+** xref:format-column-content.adoc[Format Content by Column]
+* Using Rows and Cells
+** xref:add-cells-and-rows.adoc[Add Cells and Rows]
+*** xref:add-header-row.adoc[Create a Header Row]
+*** xref:add-footer-row.adoc[Create a Footer Row]
+** xref:align-by-cell.adoc[Align Content by Cell]
+** xref:format-cell-content.adoc[Format Content by Cell]
+** xref:span.adoc[Span Columns and Rows]
+** xref:copy-cell-content.adoc[Copy Cell Content]
 * Layout and Styles
 ** xref:width.adoc[Width]
 ** xref:borders.adoc[Borders]

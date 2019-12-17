@@ -1,0 +1,85 @@
+= Add Columns to a Table
+
+The number of columns in a table is determined by the number of cells found in the first non-blank line after the table delimiter (`|===`) or by the values assigned to the `cols` attribute.
+
+[#cols]
+== Number of columns
+
+For example, the syntax in the two examples below will both be converted into a table with two columns.
+
+[source]
+----
+include::example$column.adoc[tag=2col-alt]
+----
+
+.Result: Rendered table with two columns as defined by the number of cells in the first row
+[width="90"]
+include::example$column.adoc[tag=2col-alt]
+
+When a single number is assigned to the `cols` attribute, its value indicates the number of columns and each column will be the same width.
+
+[source]
+----
+include::example$column.adoc[tag=2col]
+----
+
+.Result: Rendered table with two columns as defined by the `cols` attribute
+[width="90"]
+include::example$column.adoc[tag=2col]
+
+The number of columns can also be assigned as a comma delimited list.
+The number of entries in the list determines the number of columns.
+The comma delimited list below creates a table with four columns of equal width.
+
+[source]
+----
+[cols="1,1,1,1"]
+----
+
+This syntax provides that same result:
+
+[source]
+----
+[cols="4*"]
+----
+
+//Now, let's talk about that asterisk in the syntax above.
+
+[#cols-format]
+== Column formatting
+
+The AsciiDoc syntax provides a variety of ways to control the size, style and layout of content within columns.
+These *operators* can be applied to whole columns as well as individual cells.
+
+To apply an operator to a column, the `cols` attribute must be set and assigned a value.
+A column specifier can contain any of the following components:
+
+* multiplier
+* align
+* width
+* style
+
+Each component is optional.
+
+[#column-multiplier]
+=== Multiplier operator
+
+The multiplier operator (`+*+`) allows you to apply the same width, horizontal alignment, vertical alignment, and content style to all of the columns in a table.
+The multiplier is placed after the column specifier, but in this case, the specifier has a new meaning.
+When using the multiplier, the numerical value of the specifier represents how many columns the table contains instead of the width of a single column.
+For instance, if `[cols="5*"]` then the *5* specifier indicates that the table will contain five columns of equal width because it is appended with the multiplier.
+
+For example:
+
+[source]
+----
+include::example$row.adoc[tag=indv-co]
+----
+<1> The table will consist of three columns, as indicated by the *3*.
+The `+*+` operator ensures that the same width, alignment, and style is applied to the three columns.
+
+// the default layout and style will be applied to all of the columns.
+
+.Result: Rendered table with multiplier applied
+[width="90"]
+include::example$row.adoc[tag=indv]

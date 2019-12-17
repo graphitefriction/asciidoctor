@@ -1,4 +1,4 @@
-= Table Header and Footer Rows
+= Add a Header Row
 
 == Header row
 
@@ -45,16 +45,3 @@ That's because the number of columns are determined by the number of cells in th
 
 CAUTION: We're considering using a similar convention for enabling the footer in the future.
 Thus, if you rely on this convention to enable the header row, it's advised that you not put all the cells in the last row on the same line unless you intend on making it the footer row.
-
-== Footer row
-
-The last row of a table can be styled as a footer by adding the `footer` keyword to the `options` attribute.
-
-[source]
-----
-include::example$row.adoc[tag=opt-f]
-----
-
-.Result: Table rendered with a footer
-[width=90]
-include::example$row.adoc[tag=opt-f]

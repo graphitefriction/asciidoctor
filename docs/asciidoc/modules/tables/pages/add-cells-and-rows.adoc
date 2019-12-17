@@ -1,4 +1,4 @@
-= Table Rows
+= Add Cells and Rows
 
 There are multiple ways to group cells into a row.
 The cells in a row can be placed on:

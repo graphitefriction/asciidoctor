@@ -1,0 +1,43 @@
+= Adjust Column Widths
+
+== Column width
+
+The width of a column is described by its column specifier.
+Its value is an integer or a percentage that represents the width of the column in proportion to the other columns in the table.
+The default width integer is `1`.
+//re(the default is 1) or a percentage (1 to 99).
+//proportional integer (the default is 1) or a percentage (1 to 99).
+
+[source]
+----
+[cols="1,2,6"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Table rendered with column sizes adjusted by a proportional integer
+[cols="1,2,6"]
+include::example$table.adoc[tag=base]
+
+When assigning percentage values to the cols attribute, you do not need to include the percent sign (`%`).
+
+[source]
+----
+[cols="50,20,30"]
+include::example$table.adoc[tag=base]
+----
+
+.Result: Table rendered with column sizes adjusted by a percentage
+[cols="50,20,30"]
+include::example$table.adoc[tag=base]
+
+Let's create a table with custom widths and alignments.
+
+[source]
+----
+[cols=".<2,.^5,^.>3"]
+include::example$column.adoc[tag=base-xtr]
+----
+
+.Result: Rendered table with variable widths and alignments
+[cols=".<2,.^5,^.>3"]
+include::example$column.adoc[tag=base-xtr]
