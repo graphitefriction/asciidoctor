@@ -4,13 +4,13 @@
 ** xref:add-a-title.adoc[Add a Title]
 ** xref:customize-title-label.adoc[Customize the Title Label]
 //** Assign IDs and Attributes
-* Using Columns
-** xref:add-columns.adoc[Create Columns]
+* Working with Columns
+** xref:add-columns.adoc[Add Columns to a Table]
 ** xref:adjust-column-widths.adoc[Adjust Column Widths]
 ** xref:align-by-column.adoc[Align Content by Column]
 ** xref:format-column-content.adoc[Format Content by Column]
-* Using Rows and Cells
-** xref:add-cells-and-rows.adoc[Add Cells and Rows]
+* Working with Rows and Cells
+** xref:add-cells-and-rows.adoc[Add Cells and Rows to a Table]
 *** xref:add-header-row.adoc[Create a Header Row]
 *** xref:add-footer-row.adoc[Create a Footer Row]
 ** xref:align-by-cell.adoc[Align Content by Cell]

@@ -1,43 +1,132 @@
 = Adjust Column Widths
+:xrefstyle: short
+:listing-caption: Example
 
-== Column width
+== Assign a width to a column
 
-The width of a column is described by its column specifier.
-Its value is an integer or a percentage that represents the width of the column in proportion to the other columns in the table.
-The default width integer is `1`.
-//re(the default is 1) or a percentage (1 to 99).
-//proportional integer (the default is 1) or a percentage (1 to 99).
+The width of a column is assigned by its xref:add-columns.adoc#col-specifier[column specifier].
+The value of a column's width is either an integer, such as 3, or a percentage like 40%.
+The integer or percentage represents the width of the column in proportion to the other columns in the table.
+The default width value is `1`.
 
+To assign widths to the columns in a table, set the `cols` attribute and assign it a list of comma-separated column specifiers using integers.
+
+[#ex-int]
+.Assign column widths using integers
 [source]
 ----
-[cols="1,2,6"]
-include::example$table.adoc[tag=base]
+[cols="2,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 2
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
 ----
 
-.Result: Table rendered with column sizes adjusted by a proportional integer
-[cols="1,2,6"]
-include::example$table.adoc[tag=base]
+As seen in the table below, the columns stretch across the width of the page according to their proportional widths.
 
-When assigning percentage values to the cols attribute, you do not need to include the percent sign (`%`).
+.Result of <<ex-int>>
+[cols="2,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
 
+|This column has a proportional width of 2
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
+
+== Increase or decrease the width of a column
+
+To increase the width of a column, use a bigger integer in the column's specifier.
+Let's make column 1 from <<ex-int>> the largest column in the table by increasing its width from `2` to `6` in <<ex-increase>>.
+
+[#ex-increase]
+.Increase the width of a column
 [source]
 ----
-[cols="50,20,30"]
-include::example$table.adoc[tag=base]
+[cols="6,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
 ----
 
-.Result: Table rendered with column sizes adjusted by a percentage
-[cols="50,20,30"]
-include::example$table.adoc[tag=base]
+Now, column 1 is much wider than column 3.
 
-Let's create a table with custom widths and alignments.
+.Result of <<ex-increase>>
+[cols="6,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
 
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
+
+To decrease the width of a column, use a smaller integer in the column's specifier.
+In <<ex-decrease>>, let's make the width of column 3 smaller, but not quite as small as column 2, by decreasing its width from `3` to `2`.
+
+[#ex-decrease]
+.Decrease the width of a column
 [source]
 ----
-[cols=".<2,.^5,^.>3"]
-include::example$column.adoc[tag=base-xtr]
+[cols="6,1,2"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 2
+|===
 ----
 
-.Result: Rendered table with variable widths and alignments
-[cols=".<2,.^5,^.>3"]
-include::example$column.adoc[tag=base-xtr]
+The columns have adjusted across the width of the page according to their proportional widths.
+
+.Result of <<ex-decrease>>
+[cols="6,1,2"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 6
+|This column has a proportional width of 1
+|This column has a proportional width of 2
+|===
+
+== Change column widths using percentage values
+
+Column widths can also be assigned using a percentage between `1%` and `99%`.
+Like with integer values, set `cols` and assign it a list of comma-separated column specifiers using percentages.
+
+[#ex-percent]
+.Assign column widths using percentages
+[source]
+----
+[cols="15%,30%,55%"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a width of 15%
+|This column has a width of 30%
+|This column has a width of 55%
+|===
+----
+
+As seen in the table below, the columns stretch across the width of the page according to the percentage assigned via their column specifiers.
+
+.Result of <<ex-percent>>
+[cols="15%,30%,55%"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a width of 15%
+|This column has a width of 30%
+|This column has a width of 55%
+|===
+
+When assigning percentages to `cols`, you don't have to include the percent sign (`%`).
+For instance, both `[cols="15%,30%,55%"]` and `[cols="15,30,55"]` are valid.

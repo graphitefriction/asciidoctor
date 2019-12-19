@@ -6,8 +6,8 @@
 |a
 |Supports block elements (lists, delimited blocks, and block macros).
 This style effectively creates a nested, standalone AsciiDoc document.
-Implicit attributes such as `doctitle` from the parent document will be shadowed.
-Custom attributes are inherited.
+The parent document's implicit attributes, such as `doctitle`, are shadowed and custom attributes are inherited.
+// what does "shadowed" actually mean???
 
 |Default
 |d
@@ -20,15 +20,15 @@ Supports all markup that is permitted in a paragraph (i.e., inline formatting, i
 
 |Header
 |h
-|Header text and border styles are applied to the column.
+|Applies header text and border styles to the cells.
 
 |Literal
 |l
-|Column content is treated as if it were inside a literal block.
+|Content is treated as if it were inside a literal block.
 
 |Monospace
 |m
-|Text is rendered in monospace font.
+|Text is rendered using a monospace font.
 
 |Strong
 |s
@@ -36,5 +36,5 @@ Supports all markup that is permitted in a paragraph (i.e., inline formatting, i
 
 |Verse
 |v
-|Column content is treated as if it were inside a verse block.
+|Content is treated as if it were inside a verse block.
 |===

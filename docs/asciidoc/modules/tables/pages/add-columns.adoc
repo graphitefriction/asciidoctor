@@ -1,85 +1,177 @@
 = Add Columns to a Table
+:xrefstyle: short
+:listing-caption: Example
 
-The number of columns in a table is determined by the number of cells found in the first non-blank line after the table delimiter (`|===`) or by the values assigned to the `cols` attribute.
+The number of columns in a table is specified by the `cols` attribute or by the number of cells found in the first non-blank line after the table delimiter (`|===`).
 
-[#cols]
-== Number of columns
+== Specify the number of columns with the `cols` attribute
 
-For example, the syntax in the two examples below will both be converted into a table with two columns.
+The `cols` attribute is set in an attribute list on a table block.
+It accepts a comma-separated list of column specifiers.
+[[col-specifier]]Each [.term]*column specifier* represents a column and the width, alignment, and style properties assigned to that column.
+A column specifier is commonly represented by a number.
+For instance, in <<ex-cols>>, `cols` has been assigned a comma-separated list of four column specifiers.
 
+[#ex-cols]
+.Assign column specifiers to the `cols` attribute
 [source]
 ----
-include::example$column.adoc[tag=2col-alt]
+[cols="1,1,1,1"] // <1>
 ----
+<1> The number of entries in the comma-separated list determines the number of columns in the table.
 
-.Result: Rendered table with two columns as defined by the number of cells in the first row
-[width="90"]
-include::example$column.adoc[tag=2col-alt]
+The value assigned to `cols` in <<ex-cols>> contains four column specifiers.
+This means the table will contain four columns.
+The numerical value of a specifier, such as `1` in the above example, represents the xref:adjust-column-widths.adoc[width of the column in proportion to the other columns in the table].
+In <<ex-cols>>, each column will be the same width because the integer in each specifier is the same.
+Let's look at the list of column specifiers in <<ex-cols-alt>> and compare it to <<ex-cols>>.
 
-When a single number is assigned to the `cols` attribute, its value indicates the number of columns and each column will be the same width.
-
+[#ex-cols-alt]
+.Assign column specifiers to the `cols` attribute
 [source]
 ----
-include::example$column.adoc[tag=2col]
+[cols="3,3,3,3"]
 ----
 
-.Result: Rendered table with two columns as defined by the `cols` attribute
-[width="90"]
-include::example$column.adoc[tag=2col]
+<<ex-cols>> and <<ex-cols-alt>> would produce tables with four identical columns of equal width.
+Let's use the `cols` value in <<ex-cols-alt>> to create a table.
 
-The number of columns can also be assigned as a comma delimited list.
-The number of entries in the list determines the number of columns.
-The comma delimited list below creates a table with four columns of equal width.
-
+[#ex-cols-table]
+.Create a table with four columns of equal width
 [source]
 ----
-[cols="1,1,1,1"]
+[cols="3,3,3,3"] // <1>
+|=== // <2>
+|Column 1 |Column 2 |Column 3 |Column 4 // <3>
+// <4>
+|Cell in column 1 // <5>
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|=== // <6>
 ----
+<1> In an attribute list, set the `cols` attribute, followed by an equals sign (`=`), and then a list of comma-separated column specifiers enclosed in double quotation marks (`"`).
+<2> On the line directly after the attribute list, enter one vertical bar followed by three equal signs (`|===`).
+This delimiter indicates the beginning of the table block.
+<3> A table cell is specified by a vertical bar (`|`).
+Since four consecutive cells are entered on the first line directly after the delimiter, this row is implicitly set as the table's header row.
+<4> Insert a blank line after the header row.
+<5> The cells for the next row can be entered on a single line or on individual lines.
+<6> On a new line after the last cell of the last row, enter another table delimiter (`|===`) to close the table block.
 
-This syntax provides that same result:
+<<ex-cols-table>> creates the table displayed below.
 
+.Result of <<ex-cols-table>>
+[cols="3,3,3,3"]
+|===
+|Column 1 |Column 2 |Column 3 |Column 4
+
+|Cell in column 1
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|===
+
+As specified, the table includes four columns of equal width, a header row, and a regular row.
+Since all of the columns in <<ex-cols-table>> are assigned the same width via their column specifiers (i.e., `3`), you could also specify the number of columns using a <<multiplier,column multiplier>>.
+If you want to customize the width of one or more columns in a table, see xref:adjust-column-widths.adoc[Adjust column widths].
+
+[#multiplier]
+=== Using a column multiplier
+
+A [.term]*column multiplier* allows you to apply the same width, horizontal alignment, vertical alignment, and content style to multiple, consecutive columns in a table.
+A multiplier is an integer (`<n>`) and an asterisk (`+*+`).
+The integer represents the number of consecutive columns to be added to the table.
+The asterisk (`+*+`) is called the [.term]*multiplier operator* and is placed directly after the integer (`<n>*`).
+The operator tells the converter to interpret the integer as part of a column multiplier instead of a column specifier.
+
+For example, let's rewrite the value of `[cols="5,5,5"]` as a column multiplier.
+
+.Rewrite `[cols="5,5,5"]` using a column multiplier
 [source]
 ----
-[cols="4*"]
+[cols="3*"] // <1>
+----
+<1> Assign an integer to `cols` that represents the number of columns in the table.
+Enter the multiplier operator (`+*+`) directly after the integer.
+
+The integer `3`, combined with the `+*+` operator, indicates that the table will contain three columns of equal width.
+
+A multiplier can also be used in a comma-separated list with column specifiers.
+In <<ex-spec-and-multiplier>>, the first column is represented by a column specifier, and the next three columns are represented by a column multiplier.
+
+[#ex-spec-and-multiplier]
+.Assign a column specifier and a column multiplier to `cols`
+[source]
+----
+[cols="5,3*"]
+|===
+|Column 1 |Column 2 |Column 3 |Column 4
+
+|Cell in column 1
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|===
 ----
 
-//Now, let's talk about that asterisk in the syntax above.
+As shown below, <<ex-spec-and-multiplier>> creates a table containing a xref:adjust-column-widths.adoc[wide first column] followed by three columns of equal width.
+
+.Result of <<ex-spec-and-multiplier>>
+[cols="5,3*"]
+|===
+|Column 1 |Column 2 |Column 3 |Column 4
+
+|Cell in column 1
+|Cell in column 2
+|Cell in column 3
+|Cell in column 4
+|===
 
 [#cols-format]
-== Column formatting
+=== Alignment and style column operators
 
-The AsciiDoc syntax provides a variety of ways to control the size, style and layout of content within columns.
-These *operators* can be applied to whole columns as well as individual cells.
+AsciiDoc provides a variety of [.term]*operators* to control the positioning and style of column content when the `cols` attribute is set.
+A column specifier or multiplier can contain optional operators from one or more of the following properties:
 
-To apply an operator to a column, the `cols` attribute must be set and assigned a value.
-A column specifier can contain any of the following components:
+* xref:align-by-column.adoc#horizontal-operators[horizontal alignment]
+* xref:align-by-column.adoc#vertical-operators[vertical alignment]
+* xref:format-column-content.adoc[content style]
 
-* multiplier
-* align
-* width
-* style
+Many of these operators can be applied to individual cells as well.
 
-Each component is optional.
+[#implicit-cols]
+== Specify the number of columns using the first row
 
-[#column-multiplier]
-=== Multiplier operator
+When all of the columns in a table use the default width, alignment, and style values, you don't need to set the `cols` attribute.
+Instead, you can implicitly declare the number of columns by entering all of the first row's cells on the same line.
+The processor will derive the number columns from the number of cells in this row.
+<<ex-implicit>> uses its first row to indicate that it has three columns.
 
-The multiplier operator (`+*+`) allows you to apply the same width, horizontal alignment, vertical alignment, and content style to all of the columns in a table.
-The multiplier is placed after the column specifier, but in this case, the specifier has a new meaning.
-When using the multiplier, the numerical value of the specifier represents how many columns the table contains instead of the width of a single column.
-For instance, if `[cols="5*"]` then the *5* specifier indicates that the table will contain five columns of equal width because it is appended with the multiplier.
-
-For example:
-
+[#ex-implicit]
+.Create a table with three columns using its first row
 [source]
 ----
-include::example$row.adoc[tag=indv-co]
+|===
+// <1>
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1 // <2>
+
+|Cell in column 1, row 2 // <3>
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
 ----
-<1> The table will consist of three columns, as indicated by the *3*.
-The `+*+` operator ensures that the same width, alignment, and style is applied to the three columns.
+<1> After the opening delimiter, insert a blank line before the first row, unless you want the first row to be treated as header row.
+<2> Enter all of the first row's cells on a single line.
+Each cell represents one column.
+<3> The cells in subsequent rows don't need to be entered on a single line.
 
-// the default layout and style will be applied to all of the columns.
+The table in <<ex-implicit>> has three columns since its first row contains three cells.
 
-.Result: Rendered table with multiplier applied
-[width="90"]
-include::example$row.adoc[tag=indv]
+.Result of <<ex-implicit>>
+|===
+
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2 |Cell in column 3, row 2
+|===
