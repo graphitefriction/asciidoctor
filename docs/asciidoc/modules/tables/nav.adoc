@@ -1,8 +1,9 @@
 .Tables
 * xref:get-started.adoc[Getting Started with Tables]
 ** xref:build-a-basic-table.adoc[Build a Basic Table]
-** xref:add-a-title.adoc[Add a Title]
-** xref:customize-title-label.adoc[Customize the Title Label]
+** xref:add-title.adoc[Add a Title]
+*** xref:customize-title-label.adoc[Customize the Title Label]
+*** xref:turn-off-title-label.adoc[Turn off the Title Label]
 //** Assign IDs and Attributes
 * Working with Columns
 ** xref:add-columns.adoc[Add Columns to a Table]
