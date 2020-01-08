@@ -1,24 +1,26 @@
 = Align Content by Column
+// Using wikipedia's names for the operators. For reference, see https://en.wikipedia.org/wiki/Less-than_sign
 
 The alignment operators allow you to horizontally and vertically align a column's content.
+They're applied to a column specifier and xref:add-columns.adoc#cols-attribute[assigned to the `cols` attribute].
 
 [#horizontal-operators]
 == Horizontal alignment operators
 
 Content can be horizontally aligned to the left or right side of the column as well as the center of the column.
 
-* The less-than symbol (`<`) left aligns the content.
+Flush left operator (<):: The less-than sign (`<`) left aligns the content.
 This is the default horizontal alignment.
-* The greater-than symbol (`>`) right aligns the content.
-* The caret (`+^+`) centers the content.
+Flush right operator (>):: The greater-than sign (`>`) right aligns the content.
+Center operator (^):: The caret (`+^+`) centers the content.
 
-A horizontal alignment operator is entered in front a <<vertical-operators,vertical alignment operator>> (if present) and in front of a xref:adjust-column-widths.adoc[column's width] unless the multiplier (`+<n>*+`) is used.
-A horizontal alignment operator is appended after the multiplier.
+A horizontal alignment operator is entered in front a <<vertical-operators,vertical alignment operator>> (if present) and in front of a xref:adjust-column-widths.adoc[column's width] (if present).
+If the number of columns is assigned using a multiplier (`+<n>*+`), the horizontal alignment operator is placed directly after the multiplier operator (`+*+`).
 
-* `[cols="2,^1"]` A horizontal alignment operator is placed in front of the column width unless the multiplier is present.
-* `[cols=">.^1,2"]` A horizontal alignment operator is placed in front of a vertical alignment operator.
-* `[cols="3*>"]` The horizontal alignment operator is placed directly after a multiplier.
-* `[cols=">,^"]` When a column width isn't needed, the horizontal alignment operator can represent both the column and the column content's alignment.
+* `[cols="2,pass:q[#^#]1"]` A horizontal alignment operator is placed in front of the column width.
+* `[cols="pass:q[#>#].^1,2"]` A horizontal alignment operator is placed in front of a vertical alignment operator.
+* `[cols="pass:q[#>#],pass:q[#^#]"]` When a column width isn't specified, a horizontal alignment operator can represent both the column and the column content's alignment.
+* `[cols="3*pass:q[#>#]"]` The horizontal alignment operator is placed directly after a multiplier.
 
 === Center content horizontally in a column
 
@@ -108,23 +110,26 @@ The table from the above example is rendered below.
 == Vertical alignment operators
 
 Content can be vertically aligned to the top or bottom of a column's cells as well as the center of a column.
-Vertical alignment operators begin with a dot (`.`).
+Vertical alignment operators always begin with a dot (`.`).
 
-* The dot and less-than symbol (`.<`) aligns the content to the top of the column's cells.
+Flush top operator (.<):: The dot and less-than sign (`.<`) aligns the content to the top of the column's cells.
 This is the default vertical alignment.
-* The dot and greater-than symbol (`.>`) aligns the content to the bottom of the column's cells.
-* The dot and caret (`+.^+`) centers the content vertically.
+Flush bottom operator (.>):: The dot and greater-than sign (`.>`) aligns the content to the bottom of the column's cells.
+Center operator (.^):: The dot and caret (`+.^+`) centers the content vertically.
 
-Where the vertical alignment operator is placed on a column specifier depends on whether a <<horizontal-operators,horizontal alignment operator>> or a multiplier (`+<n>*+`) is present.
+A vertical alignment operator is entered directly after a <<horizontal-operators,horizontal alignment operator>> (if present) and before a xref:adjust-column-widths.adoc[column's width] (if present).
+If the number of columns is assigned using a multiplier (`+<n>*+`), the vertical alignment operator is placed directly after the horizontal alignment operator (if present).
+Otherwise, it's placed directly after the multiplier operator (`+*+`).
 
-* `[cols="2,.^1"]` A vertical alignment operator is placed in front of the column width unless a multiplier is present.
-* `[cols=">.^1,2"]` The vertical alignment operator is placed after the horizontal alignment operator but before the column width.
-* `[cols="3*.>"]` The vertical alignment operator is placed after a multiplier.
-* `[cols=".^,.>"]` When a column width isn't required, the vertical alignment operator can represent both the column and the column content's alignment.
+* `[cols="2,pass:q[#.^#]1"]` A vertical alignment operator is placed in front of the column width.
+* `[cols=">pass:q[#.^#]1,2"]` The vertical alignment operator is placed after the horizontal alignment operator but before the column width.
+* `[cols="pass:q[#.^#],pass:q[#.>#]"]` When a column width doesn't need to be specified, a vertical alignment operator can represent both the column and the column content's alignment.
+* `[cols="3*pass:q[#.>#]"]` The vertical alignment operator is placed directly after a multiplier unless there is a horizontal alignment operator.
+Then it's placed after the horizontal alignment operator, (e.g., `[cols="3*^pass:q[#.>#]"]`)
 
 === Align content to the bottom of a column's cells
 
-To align the content in a column to the bottom of each cell, place the `+.>+` operator in front of the xref:adjust-column-widths.adoc[column's width].
+To align the content in a column to the bottom of each cell, place the `+.>+` operator directly in front of the xref:adjust-column-widths.adoc[column's width].
 
 [source]
 ----
