@@ -11,8 +11,7 @@ The parent document's implicit attributes, such as `doctitle`, are shadowed and 
 
 |Default
 |d
-|Text is handled like a normal paragraph.
-Supports all markup that is permitted in a paragraph (i.e., inline formatting, inline macros).
+|All of the markup that is permitted in a paragraph (i.e., inline formatting, inline macros) is supported.
 
 |Emphasis
 |e
@@ -20,7 +19,7 @@ Supports all markup that is permitted in a paragraph (i.e., inline formatting, i
 
 |Header
 |h
-|Applies header text and border styles to the cells.
+|Applies the header semantics and styles to the text and cell borders.
 
 |Literal
 |l
@@ -33,8 +32,6 @@ Supports all markup that is permitted in a paragraph (i.e., inline formatting, i
 |Strong
 |s
 |Text is bold.
-
-|Verse
-|v
-|Content is treated as if it were inside a verse block.
 |===
+
+// the verse operator `v` has been deprecated
