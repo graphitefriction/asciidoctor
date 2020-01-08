@@ -1,17 +1,277 @@
 = Aligning Content by Cell
-// [#align-cell]
+:xrefstyle: short
+:listing-caption: Example
 
-The alignment operators for cells work much like the xref:align-by-column.adoc[alignment operators for columns].
+The alignment operators are applied to a xref:add-cells-and-rows.adoc#specifiers[cell's specifier] and allow you to horizontally and vertically align a cell's content.
 
-.Cells aligned horizontally, vertically, and across a span of three columns
+[#horizontal-operators]
+== Horizontal alignment operators
+
+Content can be horizontally aligned to the left or right side of the cell as well as the center of the cell.
+
+Flush left operator (<):: The less-than sign (`<`) aligns the content to the left side of the cell.
+This is the default horizontal alignment.
+Flush right operator (>):: The greater-than sign (`>`) aligns the content to the right side of the cell.
+Center operator (^):: The caret (`+^+`) centers the content horizontally in the cell.
+
+A horizontal alignment operator is entered after a span or duplication operator (if present) and in front a <<vertical-operators,vertical alignment operator>> (if present).
+
+====
+<factor><span or duplication operator><**horizontal alignment operator**><vertical alignment operator><style operator>|<cell's content>
+====
+
+=== Center content horizontally in a cell
+
+To horizontally center the content in a cell, place the `+^+` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any blank spaces between the `|` and the operator.
+
+[#ex-basic]
+.Center the content of a cell horizontally
+[source%nowrap]
+----
+|===
+|Column Name |Column Name
+
+^|This content is horizontally centered because the cell specifier includes the `+^+` operator.
+|There isn't a horizontal alignment operator on this cell specifier, so the cell falls back to the default horizontal alignment.
+Content is aligned to the left side of the cell by default.
+|===
+----
+
+The table from <<ex-basic>> is rendered below.
+
+.Result of <<ex-basic>>
+|===
+|Column Name |Column Name
+
+^|This content is horizontally centered because the cell specifier includes the `+^+` operator.
+|There isn't a horizontal alignment operator on this cell specifier, so the cell falls back to the default horizontal alignment.
+Content is aligned to the left side of the cell by default.
+|===
+
+If the cell specifier includes a span (`<n>+`) or duplication (`+<n>*+`), place the `+^+` directly after the span or duplication operator.
+
+[#ex-factor]
+.Center content horizontally in spanned columns and duplicated cells
 [source]
 ----
-include::example$cell.adoc[tag=cell-align]
+|===
+|Column Name |Column Name
+
+2+^|This cell spans two columns, and its content is horizontally centered because the cell specifier includes the `+^+` operator.
+2*^|This content is duplicated in two adjacent columns.
+Its content is horizontally centered because the cell specifier
+includes the `+^+` operator.
+|===
 ----
 
-.Result: Rendered cells aligned horizontally, vertically, and across a span of three columns
-[width="90"]
-include::example$cell.adoc[tag=cell-align]
+The table from <<ex-factor>> is rendered below.
 
-[#pipe-in-table-cell]
-IMPORTANT: To use a pipe (`|`) within the content of a cell without creating a new cell, you must use the `+{vbar}+` attribute.
+.Result of <<ex-factor>>
+|===
+|Column Name |Column Name
+
+2+^|This cell spans two columns, and its content is horizontally centered because the cell specifier includes the `+^+` operator.
+2*^|This content is duplicated in two adjacent columns.
+Its content is horizontally centered because the cell specifier
+includes the `+^+` operator.
+|===
+
+== Align the content of a cell to the right
+
+To align the content in a cell to its right side, place the `>` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`), but after a span (`<n>+`) or duplication (`+<n>*+`) operator (if present).
+Don't insert any blank spaces between the `|` and the operators.
+
+[#ex-right]
+.Right align the content of a cell
+[source]
+----
+|===
+|Column Name |Column Name
+
+>|This content is aligned to the right side of the cell because the cell specifier includes the `>` operator.
+|There isn't a horizontal alignment operator on this cell specifier, so the cell falls back to the default horizontal alignment.
+Content is aligned to the left side of the cell by default.
+
+2+>|This cell spans two columns.
+
+Its content is aligned to the right because the cell specifier includes the `>` operator.
+The `>` operator must be placed directly after the span operator (`+`).
+|===
+----
+
+The table from <<ex-right>> is rendered below.
+
+.Result of <<ex-right>>
+|===
+|Column Name |Column Name
+
+>|This content is aligned to the right side of the cell because the cell specifier includes the `>` operator.
+|There isn't a horizontal alignment operator on this cell specifier, so the cell falls back to the default horizontal alignment.
+Content is aligned to the left side of the cell by default.
+
+2+>|This cell spans two columns.
+
+Its content is aligned to the right because the cell specifier includes the `>` operator.
+The `>` operator must be placed directly after the span operator (`+`).
+|===
+
+[#vertical-operators]
+== Vertical alignment operators
+
+Content can be vertically aligned to the top or bottom of a cell as well as the center of a cell.
+Vertical alignment operators always begin with a dot (`.`).
+
+Flush top operator (.<):: The dot and less-than sign (`.<`) aligns the content to the top of the cell.
+This is the default vertical alignment.
+Flush bottom operator (.>):: The dot and greater-than sign (`.>`) aligns the content to the bottom of the cell.
+Center operator (.^):: The dot and caret (`+.^+`) centers the content vertically.
+
+A vertical alignment operator is entered after a <<horizontal-operators,horizontal alignment operator>> (if present) and in front of a style operator (if present).
+
+====
+<factor><span or duplication operator><horizontal alignment operator><**vertical alignment operator**><style operator>|<cell's content>
+====
+
+=== Align content to the bottom of a cell
+
+To align the content to the bottom of a cell, place the `+.>+` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any blank spaces between the `|` and the operator.
+
+[#ex-bottom]
+.Align content to the bottom of a cell
+[source]
+----
+[cols="2,1"]
+|===
+|Column Name |Column Name
+
+.>|This content is aligned to the bottom of the cell because the cell specifier includes the `.>` operator.
+|There isn't a vertical alignment operator on this cell specifier, so the cell falls back to the alignment assigned via the column specifier or the default vertical alignment.
+Content is aligned to the top of the cell by default.
+|===
+----
+
+The table from <<ex-bottom>> is rendered below.
+
+.Result of <<ex-bottom>>
+[cols="2,1"]
+|===
+|Column Name |Column Name
+
+.>|This content is aligned to the bottom of the cell because the cell specifier includes the `.>` operator.
+|There isn't a vertical alignment operator on this cell specifier, so the cell falls back to the alignment assigned via the column specifier or the default vertical alignment.
+Content is aligned to the top of the cell by default.
+|===
+
+If the cell specifier includes a span (`<n>+`) or duplication (`+<n>*+`), place the `.>` after the span or duplication operator.
+
+[#ex-span-vertical]
+.Align content to the bottom of a cell that spans rows
+[source]
+----
+|===
+|Column Name |Column Name
+
+|There isn't a vertical alignment operator on this cell specifier, so the content is aligned to the top of the cell by default.
+
+.2+.>|This cell spans two rows, and its content is aligned to the bottom because the cell specifier includes the `.>` operator.
+
+|This content is aligned to the top of the cell by default.
+|===
+----
+
+The table from <<ex-span-vertical>> is rendered below.
+
+.Result of <<ex-span-vertical>>
+|===
+|Column Name |Column Name
+
+|There isn't a vertical alignment operator on this cell specifier, so the content is aligned to the top of the cell by default.
+
+.2+.>|This cell spans two rows, and its content is aligned to the bottom because the cell specifier includes the `.>` operator.
+
+|This content is aligned to the top of the cell by default.
+|===
+
+=== Center content vertically in a cell
+
+To vertically center the content in a cell, place the `+.^+` operator in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+Don't insert any blank spaces between the `|` and the operator.
+
+[#ex-vcenter]
+.Center the content of a cell vertically
+[source]
+----
+|===
+|Column Name |Column Name
+
+.^|This content is vertically centered because the cell specifier includes the `+.^+` operator.
+|There isn't a vertical alignment operator on this cell specifier, so the cell falls back to the default vertical alignment.
+Content is aligned to the top of the cell by default.
+|===
+----
+
+The table from <<ex-vcenter>> is rendered below.
+
+.Result of <<ex-vcenter>>
+|===
+|Column Name |Column Name
+
+.^|This content is vertically centered because the cell specifier includes the `+.^+` operator.
+|There isn't a vertical alignment operator on this cell specifier, so the cell falls back to the default vertical alignment.
+Content is aligned to the top of the cell by default.
+|===
+
+== Apply horizontal and vertical alignment operators to the same cell
+
+A cell can have a vertical and horizontal alignment operator included in its cell specifier.
+The <<horizontal-operators,horizontal operator>> always precedes the <<vertical-operators,vertical operator>>.
+
+[#ex-combine]
+.Cells aligned horizontally and vertically
+[source]
+----
+|===
+|Column 1 |Column 2 |Column 3
+
+^.>|The specifier for this cell is `^.>`.
+The content is centered horizontally and aligned to the bottom of the cell.
+|There aren't any alignment operators on this cell's specifier, so the cell falls back to the default alignments.
+The default horizontal alignment is the left side of the cell.
+The default vertical alignment is the top of the cell.
+>.^|The specifier for this cell is `>.^`.
+The content is aligned to the right side of the cell and centered vertically.
+
+2.3+^.^|The specifier for this cell is `pass:[2.3+^.^]`.
+It spans two columns and three rows.
+
+Its content is centered horizontally and vertically.
+3*.>|The specifier for this cell is `3*.>`.
+The cell is duplicated in three consecutive rows in the same column.
+It's content is aligned to the bottom of the cell.
+|===
+----
+
+The table from <<ex-combine>> is rendered below.
+
+.Result <<ex-combine>>
+|===
+|Column 1 |Column 2 |Column 3
+
+^.>|The specifier for this cell is `^.>`.
+The content is centered horizontally and aligned to the bottom of the cell.
+|There aren't any alignment operators on this cell's specifier, so the cell falls back to the default alignments.
+The default horizontal alignment is the left side of the cell.
+The default vertical alignment is the top of the cell.
+>.^|The specifier for this cell is `>.^`.
+The content is aligned to the right side of the cell and centered vertically.
+
+2.3+^.^|The specifier for this cell is `pass:[2.3+^.^]`.
+It spans two columns and three rows.
+
+Its content is centered horizontally and vertically.
+3*.>|The specifier for this cell is `3*.>`.
+The cell is duplicated in three consecutive rows in the same column.
+It's content is aligned to the bottom of the cell.
+|===
