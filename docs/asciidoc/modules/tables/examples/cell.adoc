@@ -79,19 +79,28 @@ Examples for table sections, cell specifiers
 // end::cell-align[]
 
 // tag::cell-ad[]
-[cols="2*"]
 |===
+|Column 1 |Column 2
 
 a|This cell is prefixed with an `a`, so the processor interprets the following lines as an AsciiDoc list.
 
 * List item 1
 * List item 2
 * List item 3
-|This cell *is not* prefixed with an `a`, so the processor does not interpret the following lines as an AsciiDoc list.
+
+|This cell isn't prefixed with an `a`, so the processor doesn't interpret the following lines as an AsciiDoc list.
 
 * List item 1
 * List item 2
 * List item 3
+
+|This cell isn't prefixed with an `a`, so the processor doesn't interpret the listing block delimiters or the `source` style.
+
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
 
 a|This cell is prefixed with an `a`, so the listing block is processed and rendered according to the `source` style rules.
 
@@ -101,32 +110,24 @@ import os
 print "%s" %(os.uname())
 ----
 
-|This cell *is not* prefixed with an `a`, so the processor doesn't interpret the listing block delimiters or the `source` style.
-
-[source,python]
-----
-import os
-print ("%s" %(os.uname()))
-----
 |===
 // end::cell-ad[]
 
 // tag::cell-v[]
 |===
+|Column 1 |Column 2
 
 2*>m|This content is duplicated across two columns (2*) and aligned to the right side of the cell (>).
 
 It's rendered using a monospace font (m).
 
-.3+^.>s|This cell spans 3 rows (`3+`). The content is centered horizontally (`+^+`), vertically aligned to the bottom of the cell (`.>`), and styled as strong (`s`).
+.3+^.>s|This cell spans 3 rows (`3+`).
+The content is centered horizontally (`+^+`), vertically aligned to the bottom of the cell (`.>`), and styled as strong (`s`).
 e|This content is italicized (`e`).
 
-l|This cell is treated like a literal block (l).
+m|This content is rendered using a monospace font (m).
 
-v|This cell contains a xref:blocks:verse.adoc[verse block] (`v`)
-that may one day expound on the
-wonders of tables in an
-epic sonnet.
+s|This content is bold (`s`).
 |===
 // end::cell-v[]
 
