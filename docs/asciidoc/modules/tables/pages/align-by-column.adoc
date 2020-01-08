@@ -31,8 +31,8 @@ To horizontally center the content in a column, place the `+^+` operator at the 
 [cols="^4,1"]
 |===
 |This content is horizontally centered.
-|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
-Content is aligned to the left side of the column by default.
+|There isn't a horizontal alignment operator on this column's specifier, so the column falls back to the default horizontal alignment.
+Content is left-aligned by default.
 |===
 ----
 
@@ -41,16 +41,19 @@ The table from the above example is rendered below.
 [cols="^4,1"]
 |===
 |This content is horizontally centered.
-|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
-Content is aligned to the left side of the column by default.
+|There isn't a horizontal alignment operator on this column's specifier, so the column falls back to the default horizontal alignment.
+Content is left-aligned by default.
 |===
 
 When the columns are specified using the xref:add-columns.adoc#column-multiplier[multiplier], place the `+^+` operator after the multiplier operator (`+*+`).
 
 [source]
 ----
-[cols="2*^"]
+[cols="2*^",options=header]
 |===
+|Column name
+|Column name
+
 |This content is horizontally centered.
 |This content is also horizontally centered.
 |===
@@ -58,8 +61,11 @@ When the columns are specified using the xref:add-columns.adoc#column-multiplier
 
 The table from the above example is rendered below.
 
-[cols="2*^"]
+[cols="2*^",options=header]
 |===
+|Column name
+|Column name
+
 |This content is horizontally centered.
 |This content is also horizontally centered.
 |===
@@ -73,8 +79,8 @@ To align the content in a column to its right side, place the `+>+` operator in 
 [cols=">4,1"]
 |===
 |This content is aligned to the right side of the column.
-|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
-Content is aligned to the left side of the column by default.
+|There isn't a horizontal alignment operator on this column's specifier, so the column falls back to the default horizontal alignment.
+Content is left-aligned by default.
 |===
 ----
 
@@ -83,16 +89,19 @@ The table from the above example is rendered below.
 [cols=">4,1"]
 |===
 |This content is aligned to the right side of the column.
-|Since there isn't a horizontal alignment operator on this column's specifier, the column falls back to the default horizontal alignment.
-Content is aligned to the left side of the column by default.
+|There isn't a horizontal alignment operator on this column's specifier, so the column falls back to the default horizontal alignment.
+Content is left-aligned by default.
 |===
 
-When the columns are specified using the multiplier, place the `+>+` operator after the xref:add-columns.adoc#column-multiplier[multiplier].
+When the columns are specified using the xref:add-columns.adoc#column-multiplier[multiplier], place the `+>+` operator after the multiplier operator (`+*+`).
 
 [source]
 ----
-[cols="2*>"]
+[cols="2*>",options=header]
 |===
+|Column name
+|Column name
+
 |This content is aligned to the right side of the column.
 |This content is also aligned to the right side of the column.
 |===
@@ -100,8 +109,11 @@ When the columns are specified using the multiplier, place the `+>+` operator af
 
 The table from the above example is rendered below.
 
-[cols="2*>"]
+[cols="2*>",options=header]
 |===
+|Column name
+|Column name
+
 |This content is aligned to the right side of the column.
 |This content is also aligned to the right side of the column.
 |===
@@ -137,7 +149,7 @@ To align the content in a column to the bottom of each cell, place the `+.>+` op
 |===
 |This content is vertically aligned to the bottom of the cell.
 |There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
-The content is positioned at the top of the cell by default.
+Content is top-aligned by default.
 |===
 ----
 
@@ -147,12 +159,12 @@ The table from the above example is rendered below.
 |===
 |This content is vertically aligned to the bottom of the cell.
 |There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
-The content is positioned at the top of the cell by default.
+Content is top-aligned by default.
 |===
 
 === Center content vertically in a column
 
-To vertically center the content in a column, place the `+.^+` operator in front of the xref:adjust-column-widths.adoc[column's width].
+To vertically center the content in a column, place the `+.^+` operator directly in front of the xref:adjust-column-widths.adoc[column's width].
 
 [source]
 ----
@@ -160,7 +172,7 @@ To vertically center the content in a column, place the `+.^+` operator in front
 |===
 |This content is centered vertically in the cell.
 |There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
-The content is positioned at the top of the cell by default.
+Content is top-aligned by default.
 |===
 ----
 
@@ -170,15 +182,18 @@ The table from the above example is rendered below.
 |===
 |This content is centered vertically in the cell.
 |There isn't a vertical alignment operator on this column's specifier, so the column falls back to the default vertical alignment.
-The content is positioned at the top of the cell by default.
+Content is top-aligned by default.
 |===
 
-To vertically align the content to the middle of the cells in all of the columns, add the vertically center operator (`.^`) after the xref:add-columns.adoc#column-multiplier[multiplier].
+To vertically align the content to the middle of the cells in all of the columns, enter the  `.^` operator after the xref:add-columns.adoc#column-multiplier[multiplier].
 
 [source]
 ----
-[cols="2*.^"]
+[cols="2*.^",options=header]
 |===
+|Column name
+|Column name
+
 |This content is vertically centered.
 |This content is also vertically centered.
 |===
@@ -186,27 +201,38 @@ To vertically align the content to the middle of the cells in all of the columns
 
 The table from the above example is rendered below.
 
-[cols="2*.^"]
+[cols="2*.^",options=header]
 |===
+|Column name
+|Column name
+
 |This content is centered vertically in the cell.
 |This content is also centered vertically in the cell.
 |===
+
+When a horizontal alignment operator is also applied to the multiplier, then the vertical alignment operator is placed directly after the horizontal operator (e.g., `[cols="2*>.^"]`).
 
 == Apply horizontal and vertical alignment operators to the same column
 
 A column can have a vertical and horizontal alignment operator placed on its xref:add-columns.adoc#col-specifier[specifier].
 The <<horizontal-operators,horizontal operator>> always precedes the <<vertical-operators,vertical operator>>.
-Both operators precede the column width except when a xref:add-columns.adoc#column-multiplier[multiplier] is used, then the operators are placed after the multiplier.
+Both operators precede the column width.
+When a xref:add-columns.adoc#column-multiplier[multiplier] is used, the operators are placed after the multiplier.
 
 [source]
 ----
 [cols="^.>2,1,>.^1"]
 |===
-|This content is centered horizontally and aligned to the bottom of the cell.
-|There aren't any alignment operators on this column's specifier, so the column falls back to the default alignments.
-The default horizontal alignment is the left side of the column.
-The default vertical alignment is the top of the cell.
-|This content is aligned to the right side of the cell and centered vertically.
+|Column name |Column name |Column name
+
+|This content is centered horizontally and aligned to the bottom
+of the cell.
+|There aren't any alignment operators on this column's specifier,
+so the column falls back to the default alignments.
+The default horizontal alignment is left-aligned.
+The default vertical alignment is top-aligned.
+|This content is aligned to the right side of the cell and
+centered vertically.
 |===
 ----
 
@@ -214,9 +240,16 @@ The table from the above example is rendered below.
 
 [cols="^.>2,1,>.^1"]
 |===
-|This content is centered horizontally and aligned to the bottom of the cell.
-|There aren't any alignment operators on this column's specifier, so the column falls back to the default alignments.
-The default horizontal alignment is the left side of the column.
-The default vertical alignment is the top of the cell.
-|This content is aligned to the right side of the cell and centered vertically.
+|Column name |Column name |Column name
+
+|This content is centered horizontally and aligned to the bottom
+of the cell.
+|There aren't any alignment operators on this column's specifier,
+so the column falls back to the default alignments.
+The default horizontal alignment is left-aligned.
+The default vertical alignment is top-aligned.
+|This content is aligned to the right side of the cell and
+centered vertically.
 |===
+
+IMPORTANT: If there is an xref:align-by-cell.adoc[alignment operator on a cell's specifier], it will override the column's alignment operator.
