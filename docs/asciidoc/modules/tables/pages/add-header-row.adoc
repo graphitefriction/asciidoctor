@@ -1,47 +1,113 @@
-= Add a Header Row
+= Create a Header Row
+:xrefstyle: short
+:listing-caption: Example
 
-== Header row
+The first row of a table is promoted to a header row if the `header` value is assigned to the table's `options` attribute.
+You can assign `header` to a table's first row explicitly or implicitly.
 
-The first row of a table is promoted to a header row if the `header` option is set (either explicitly or implicitly).
+TIP: The header row ignores any style operators assigned via column and cell specifiers.
+It also ignores alignment operators assigned to the table's column specifiers; however, any alignment operators assigned to a cell specifier in the header row are applied.
 
-You can enable the header option by adding the `header` keyword to the comma-separated list of values in the `options` attribute on the table.
-You can also enable the header option by adding the `%header` directive to the table style (the first positional attribute).
+== Explicitly assign `header` to the first row
 
-In the example below, the table has an attribute list containing an `options` attribute that includes the `header` option.
+The header row semantics and styles are explicitly assigned to the first row in a table by assigning `header` to the `options` attribute.
+The `options` attribute is set in the table's attribute list using the shorthand (`%value`) or formal syntax (`options="value"`).
 
-.Table with the header value assigned to the options attribute
+The `options` attribute is represented by the percent sign (`%`) when it's set using the shorthand syntax.
+In <<ex-short>>, `header` is assigned to using the shorthand syntax for `options`.
+
+[#ex-short]
+.Table with `header` assigned using the shorthand syntax
+[source]
+----
+[%header,cols="2,2,1"] // <1>
+|===
+|Column 1, header row
+|Column 2, header row
+|Column 3, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+----
+<1> Values assigned using the shorthand syntax must be entered before the `cols` attribute (or any other named attributes) in a table's attribute list, otherwise the processor will ignore them.
+
+The table from <<ex-short>> is displayed below.
+
+.Result of <<ex-short>>
+[%header,cols="2,2,1"]
+|===
+|Column 1, header row
+|Column 2, header row
+|Column 3, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+In <<ex-formal>>, the `options` attribute is set and assigned the `header` value using the formal syntax.
+The `options` attribute accepts a comma-separated list of values.
+
+[#ex-formal]
+.Table with `header` assigned to the `options` attribute
 [source]
 ----
 include::example$row.adoc[tag=opt-h]
 ----
 
-.Result: Rendered table when the header value is assigned to the options attribute
-[width=90]
+The first row of the table in <<ex-formal>> is rendered using the corresponding header styles and semantics.
+
+.Result of <<ex-formal>>
 include::example$row.adoc[tag=opt-h]
 
-Alternately, you can define the header row based on how you layout the table.
-Asciidoctor use the following conventions to determine when the first row should become the header row:
+== Implicitly assign `header` to the first row
 
-. The first line of content inside the table block delimiters is not empty.
-. The second line of content inside the table block delimiters is empty.
-. The `options` attribute has not been specified in the block attributes (prior to 1.5.5).
+You can implicitly define a header row based on how you layout the table.
+The following conventions determine when the first row automatically becomes the header row:
 
-As seen in the result of the example below, if all of these rules hold, then the first row of the table is treated as a header.
+. The first line of content inside the table delimiters is not empty.
+. The second line of content inside the table delimiters is empty.
 
-.Table that has an implicit header row
+[#ex-implicit]
+.First row is implicitly assigned `header`
 [source]
 ----
 include::example$row.adoc[tag=impl-h]
 ----
 
-.Result: Rendered table when the header row was assigned implicitly
-[width=90]
+As seen in the result below, if all of these rules hold true, then the first row of the table is treated as a header row.
+
+.Result of <<ex-implicit>>
 include::example$row.adoc[tag=impl-h]
 
-If you want to suppress this implicit behavior of promoting the first row to a header row, set the option value `noheader` (or add the `%noheader` directive to the table style).
+=== Deactivate the implicit assignment of `header`
 
-Notice that when the implicit method of assigning the header row is used, it's not necessary to set the `cols` attribute.
-That's because the number of columns are determined by the number of cells in the first line if the `cols` attribute is absent.
+To suppress the implicit behavior of promoting the first row to a header row, assign the value `noheader` to the `options` attribute using the formal (`options=noheader`) or shorthand (`%noheader`) syntax.
+In <<ex-noheader>>, `noheader` is assigned using the shorthand syntax.
 
-CAUTION: We're considering using a similar convention for enabling the footer in the future.
-Thus, if you rely on this convention to enable the header row, it's advised that you not put all the cells in the last row on the same line unless you intend on making it the footer row.
+[#ex-noheader]
+.Deactivate implicit header row with `noheader`
+[source]
+----
+[%noheader]
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2
+|===
+----
+
+The table from <<ex-noheader>> is displayed below.
+
+.Result of <<ex-noheader>>
+[%noheader]
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1
+
+|Cell in column 1, row 2 |Cell in column 2, row 2
+|===
+
+//CAUTION: We're considering using a similar convention for enabling the footer in the future.
+//Thus, if you rely on this convention to enable the header row, it's advised that you not put all the cells in the last row on the same line unless you intend on making it the footer row.
