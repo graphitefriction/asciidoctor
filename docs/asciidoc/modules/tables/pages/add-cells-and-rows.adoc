@@ -20,7 +20,7 @@ All of the content entered after a cell separator is included in that cell until
 
 When the processor encounters another `|`, it creates a new cell in the next consecutive column.
 Once the processor reaches the xref:add-columns.adoc[last column assigned to the table], the next cell it encounters is placed in a new row.
-Taking into account any xref:span.adoc[spans], which are applied via a <<specifiers,cell specifier>>, each row consists of the same number of cells.
+Taking into account any xref:span-cells.adoc[spans], which are applied via a <<specifiers,cell specifier>>, each row consists of the same number of cells.
 
 [#specifiers]
 === Cell specifiers and operators
@@ -39,8 +39,8 @@ In the example below, a vertical alignment operator and style operator have been
 
 AsciiDoc provides operators to control the following cell properties:
 
-* xref:span.adoc[span]
-* xref:copy-cell-content.adoc[duplication]
+* xref:span-cells.adoc[span]
+* xref:duplicate-cells.adoc[duplication]
 * xref:align-by-cell.adoc#horizontal-operators[horizontal alignment]
 * xref:align-by-cell.adoc#vertical-operators[vertical alignment]
 * xref:format-cell-content.adoc[content style]

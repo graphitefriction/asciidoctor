@@ -1,0 +1,63 @@
+= Duplicate Cells
+:xrefstyle: short
+:listing-caption: Example
+// clone, copy, replicate, duplicate
+
+The contents of a cell can be duplicated in consecutive cells.
+
+== Duplication factor and operator
+
+The duplication factor and operator are applied to a xref:add-cells-and-rows.adoc#specifiers[cell's specifier] and allow you to clone a cell's content and properties across consecutive cells.
+A duplication is the first operator in a cell specifier.
+
+====
+<**duplication factor**><**duplication operator**><horizontal alignment operator><vertical alignment operator><style operator>|<cell's content>
+====
+
+The [.term]*duplication factor* is a single integer (`<n>`) that indicates how many times the cell's content should be duplicated.
+
+The [.term]*duplication operator* is an asterisk (`+*+`) placed directly after the duplication factor (`+<n>*+`).
+The duplication operator tells the converter to interpret the duplication factor as part of a duplication instead of a span.
+
+== Duplicate a cell and its properties
+
+To duplicate a cell, enter the duplication factor and duplication operator (`+<n>*+`) in the cell specifier.
+Don't insert any blank spaces between the duplication, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
+
+[#ex-clone]
+.Duplicate the contents of two cells
+[source]
+----
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row
+
+2*|This cell is duplicated in columns 1 and 2 because its specifier contains a duplication of `2*`
+|Cell in column 3, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+3*e|This cell specifier contains the duplication `3*` and style operator `e`.
+
+The cell's text is italicized and duplicated in column 3, row 3 and columns 1 and 2 on row 4.
+
+|Cell in column 3, row 4
+|===
+----
+
+The table from <<ex-clone>> is displayed below.
+
+.Result of <<ex-clone>>
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row
+
+2*|This cell is duplicated in columns 1 and 2 because its specifier contains a duplication of `2*`
+|Cell in column 3, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+3*e|This cell specifier contains the duplication `3*` and style operator `e`.
+
+The cell's text is italicized and duplicated in column 3, row 3 and columns 1 and 2 on row 4.
+
+|Cell in column 3, row 4
+|===
