@@ -5,13 +5,13 @@ Asciidoctor supports several inline passthrough macros.
 
 == Inline passthrough macros
 
-single plus:: A special syntax for preventing text from being formatted.
-Only escapes special characters and doesn't support explicit substitutions.
+single and double plus:: A special syntax for preventing text from being formatted.
+Only escapes special characters for compliance with the output format and doesn't support explicit substitutions.
 
 triple plus:: A special syntax for designating passthrough content.
-Does not apply any substitutions and doesn't support explicit substitutions.
+Does not apply any substitutions (equivalent to the inline pass macro with no target) and doesn't support explicit substitutions.
 
-pass macro:: An inline macro named `pass` that can be used to passthrough content.
+inline pass macro:: An inline macro named `pass` that can be used to passthrough content.
 Supports an optional set of substitutions.
 +
 [source]

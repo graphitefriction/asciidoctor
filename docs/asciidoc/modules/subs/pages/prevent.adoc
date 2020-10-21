@@ -16,9 +16,8 @@ include::example$subs.adoc[tag=slash]
 
 == Passthroughs
 
-The passthrough is the primary mechanism by which to escape content in AsciiDoc.
-As the name implies, a passthrough passes content directly through to the output document.
-In some forms, it's possible to apply a custom set of substitutions before the content is reintroduced.
-Otherwise, the content is excluded from all substitutions.
+The passthrough is the primary mechanism by which to escape content in AsciiDoc (far more comprehensive and consistent than using a backslash).
+As the name implies, a passthrough passes content directly through to the output document without applying any substitutions.
 
 You can also control and prevent substitutions in inline text with the xref:pass-macro.adoc[inline passthrough macros] and for entire blocks of content with the xref:pass-block.adoc[block passthrough].
+Other forms of passthroughs, such as the single and double plus, apply substitutions strictly for compliance with the output format.
