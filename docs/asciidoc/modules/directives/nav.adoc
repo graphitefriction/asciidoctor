@@ -3,6 +3,7 @@
 ** xref:include-with-leveloffset.adoc[Using Leveloffset with Included Content]
 ** xref:include-with-indent.adoc[Using Indent with Included Content]
 ** xref:include-multiple-times-in-same-document.adoc[Include a File Multiple Times in the Same Document]
+** xref:include-list-item-content.adoc[Include List Item Content]
 * xref:include-tagged-regions.adoc[Include Content by Tagged Regions]
 * xref:include-lines.adoc[Include Content by Line Ranges]
 * xref:include-uri.adoc[Include Content by URI]
