@@ -55,7 +55,7 @@ In the next section, you'll see how a title can be place on a block that has att
 
 == Add a title to a block with attributes
 
-When you're applying attributes to a block, the title is placed on the line above the the attribute list (or lists).
+When you're applying attributes to a block, the title is placed on the line above the attribute list (or lists).
 <<ex-2>> shows a delimited source code block that's titled _Specify GitLab CI stages_.
 
 [#ex-2]

@@ -27,7 +27,7 @@ In this section, we'll assign an ID to this blockquote:
 Roads? Where we're going, we don't need roads.
 
 When the style attribute is explicitly assigned to a block, the style name is always placed in the first position of the attribute list.
-Then, the ID is attached directly to the end of the the style name.
+Then, the ID is attached directly to the end of the style name.
 
 The blockquote with an assigned style and ID in <<ex-1>> shows this order of attributes.
 
