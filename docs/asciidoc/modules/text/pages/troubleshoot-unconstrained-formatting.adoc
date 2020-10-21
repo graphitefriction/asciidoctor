@@ -98,13 +98,13 @@ That's three sets of backticks in total.
 "```end points```"
 ----
 
-If, instead, you wanted to surround the monospace phrase with typewriter quotation marks, such as "[.code]``end points``", then you need to interrupt the curved quotation marks by applying a role to the monospace phrase.
+If, instead, you wanted to surround the monospace phrase with typewriter quotation marks, such as "[.code]``end points``", then you need to interrupt the curved quotation marks by applying a role to the monospace phrase or escaping the typewriter quote.
 For example:
 
 .A monospace phrase inside typewriter quotation marks
 [source]
 ----
-"[.code]``end points``"
+"[.code]``end points``" or \"``end points``"
 ----
 
 Another example is a possessive, monospace phrase that ends in an "`s`".
