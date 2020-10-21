@@ -603,7 +603,10 @@ See xref:sections:id.adoc#disable-id-generation[Disable ID generation].
 |*AMS*, all, none
 |{y}
 |
-|Controls automatic equation numbering on LaTeX blocks in HTML output (MathJax). See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numbering[equation numbering in MathJax].
+|Controls automatic equation numbering on LaTeX blocks in HTML output (MathJax).
+If the value is AMS, only LaTeX content enclosed in an `+\begin{equation}...\end{equation}+` container will be numbered.
+If the value is all, then all LaTeX blocks will be numbered.
+See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numbering[equation numbering in MathJax].
 
 |hardbreaks
 |{n}
