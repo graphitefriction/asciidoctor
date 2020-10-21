@@ -30,6 +30,7 @@ The processor runs the text substitution steps in the following order:
 
 These steps are organized into substitution groups.
 
+[#substitution-groups]
 == Substitution groups
 
 Each block and inline element has a default substitution group that is applied unless you customize the substitution steps for a particular element.
