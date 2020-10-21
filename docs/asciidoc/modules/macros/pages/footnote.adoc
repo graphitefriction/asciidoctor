@@ -63,8 +63,10 @@ For example:
 
 [source,asciidoc]
 ----
+See <<heading>>.
+
 [[heading,Heading]]
 == Headingfootnote:[This is a heading with a footnote]
 ----
 
-Not only will this prevent the footnote from being processed out of document order (and thus assigned the wrong number in the sequence), it will also prevent the footnote from appearing in the table of contents or the text of an xref.
+Not only will this prevent the footnote from being processed out of document order (and thus assigned the wrong number in the sequence), it will also prevent the footnote number from reappearing in the text of an xref.
