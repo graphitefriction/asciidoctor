@@ -114,6 +114,7 @@ If you want to use the new Asciidoctor syntax, make sure to use `= Title` or exp
 
 Visit xref:ROOT:new-features.adoc[What's New] for a complete list of new Asciidoctor and AsciiDoc features.
 
+////
 == Proposed changes for future versions
 
 [cols="15,20,20,5,20"]
@@ -152,6 +153,7 @@ pass:[--]
 |2.0
 |
 |===
+////
 
 ////
 == Compatibility mode

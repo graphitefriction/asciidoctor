@@ -628,6 +628,8 @@ See https://docs.mathjax.org/en/v2.5-latest/tex.html#automatic-equation-numberin
 |{y}
 |
 |xref:macros:link.adoc#link-macro-attributes[Parse attributes inside link macros].
+Removed in Asciidoctor 1.5.7.
+Attributes are now parsed automatically if an equal sign is found after a comma (e.g., `[link text,window=_blank]`).
 
 |media
 |{n}
