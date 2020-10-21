@@ -165,13 +165,15 @@ link:{site-url}/assets/mydoc.pdf[get the PDF]
 a|
 [source,markdown]
 ----
-See link:#_usage[Usage].
+See [Usage](#_usage).
+
 <h2 id="_usage">Usage</h2>
 ----
 a|
 [source,asciidoc]
 ----
 See <<_usage>>.
+
 == Usage
 ----
 
