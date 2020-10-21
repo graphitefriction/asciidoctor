@@ -11,17 +11,17 @@
 
 |`window`
 |`blank`
-|+++http://discuss.asciidoctor.org[Discuss Asciidoctor, window="_blank"]+++
+|+++https://discuss.asciidoctor.org[Discuss Asciidoctor, window="_blank"]+++
 |The blank value can also be specified using `^`. Requires `linkattrs`.
 
 |`window`
 |`+^+`
-|+++http://example.org["Google, Yahoo, Bing^"]+++ and +++http://discuss.asciidoctor.org[Discuss Asciidoctor^]+++
+|+++https://example.org["Google, Yahoo, Bing^"]+++ and +++https://discuss.asciidoctor.org[Discuss Asciidoctor^]+++
 |Requires `linkattrs`.
 
 |`role`
 |CSS classes available to inline elements
-|+++http://discuss.asciidoctor.org[Discuss Asciidoctor, role="teal"]+++
+|+++https://discuss.asciidoctor.org[Discuss Asciidoctor, role="teal"]+++
 |Requires `linkattrs`.
 
 |`id`

@@ -155,4 +155,4 @@ Input is welcome.
 == Translation
 
 Asciidoctor (or DocBook) currently does not support translation of content out of the box.
-There's a proposal to integrate gettext (http://discuss.asciidoctor.org/Professional-providers-translating-Asciidoc-tt2692.html#none[discussion^]), and suggestions are welcome.
+There's a proposal to integrate gettext (https://discuss.asciidoctor.org/Professional-providers-translating-Asciidoc-tt2692.html#none[discussion^]), and suggestions are welcome.

@@ -34,7 +34,7 @@ eve - analyzes an image to determine if it's a picture of a life form
 
 == Resources
 
-*Project web site:* http://eve.example.org
+*Project web site:* https://eve.example.org
 
 == Copying
 

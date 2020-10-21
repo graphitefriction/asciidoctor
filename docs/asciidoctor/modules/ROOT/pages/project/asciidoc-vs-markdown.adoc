@@ -458,7 +458,7 @@ For details about migration, see #url-home/docs/asciidoc-syntax-quick-reference/
 ////
 To read more about the shortcomings of Markdown, see these opinion pieces:
 
-* http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/[Why You Shouldn't Use "`Markdown`" for Documentation]
+* https://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/[Why You Shouldn't Use "`Markdown`" for Documentation]
 * https://medium.com/@bbirdiman/markdown-considered-harmful-495ccfe24a52[Markdown Considered Harmful]
 * https://www.simple-talk.com/blogs/2014/02/28/sundown-on-markdown/[Sundown on Markdown?]
 

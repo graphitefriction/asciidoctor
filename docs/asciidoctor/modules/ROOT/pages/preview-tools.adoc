@@ -108,7 +108,7 @@ Here's an overview of the different ways to setup live preview of AsciiDoc.
 == Using a system monitor
 
 The first step is to setup a file monitor to watch for changes.
-We'll use http://rubydoc.info/gems/guard/frames[Guard] for that task.
+We'll use https://rubydoc.info/gems/guard/frames[Guard] for that task.
 Install Guard and the shell file monitor using:
 
  gem install guard guard-shell
@@ -146,7 +146,7 @@ In the `watch` block, replace [.path]_mydoc.adoc_ with `.*\.adoc` to monitor all
 
 === Using Bundler
 
-An alternative way to do retrieve all the required gems is to use http://gembundler.com[Bundler].
+An alternative way to do retrieve all the required gems is to use https://gembundler.com[Bundler].
 Bundler is a dependency management system for ruby.
 The easiest way to get started is to follow the steps below:
 
@@ -201,7 +201,7 @@ end
 
 == Web preview
 
-Next, install http://projects.gnome.org/epiphany/[Epiphany] (now called Web).
+Next, install https://wiki.gnome.org/Apps/Web[Gnome Web] (formerly Epiphany).
 
 TIP: Alternatively, you can use any browser with an auto-refresh plugin.
 Epiphany just happens to do it out of the box by monitoring the file system for changes (similar to how Guard works).
@@ -227,7 +227,7 @@ Below are some other tools you can use to setup a similar environment to the one
 
 === LiveReload
 
-If you want to use Chrome or Firefox instead of Epiphany, check out http://livereload.com/[LiveReload]. It describes itself as:
+If you want to use Chrome or Firefox instead of Gnome Web, check out http://livereload.com/[LiveReload]. It describes itself as:
 
 [quote]
 *The Web Developer Wonderland* +

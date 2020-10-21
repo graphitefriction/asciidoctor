@@ -1,6 +1,6 @@
 = Table Data Formats
 :url-dsv: https://en.wikipedia.org/wiki/Delimiter-separated_values
-:url-rfc-4180: http://tools.ietf.org/html/rfc4180
+:url-rfc-4180: https://tools.ietf.org/html/rfc4180
 
 == Default table syntax
 

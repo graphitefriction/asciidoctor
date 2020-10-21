@@ -29,7 +29,7 @@ When font-based icons are activated, Asciidoctor adds a reference to the Font Aw
 [source,xml]
 ----
 <link rel="stylesheet"
-  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 ----
 
 Here's how the HTML converter converts the above syntax when the `icons` attribute is assigned the `font` value.
@@ -128,14 +128,14 @@ Here's an example of an icon with a link:
 
 [source]
 ----
-icon:download[link="http://rubygems.org/downloads/asciidoctor-2.0.10.gem"]
+icon:download[link="https://rubygems.org/downloads/asciidoctor-2.0.10.gem"]
 ----
 
 The previous example emits the following HTML:
 
 [source,html]
 ----
-<span class="icon"><a class="image" href="http://rubygems.org/downloads/asciidoctor-2.0.10.gem"><i class="fa-download"></i></a></span>
+<span class="icon"><a class="image" href="https://rubygems.org/downloads/asciidoctor-2.0.10.gem"><i class="fa-download"></i></a></span>
 ----
 
 == Default font-based admonition icons

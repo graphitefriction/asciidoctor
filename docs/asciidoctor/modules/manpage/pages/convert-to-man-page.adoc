@@ -1,6 +1,6 @@
 = Convert AsciiDoc to Man Pages
-:url-man7: http://man7.org/linux/man-pages/man7/roff.7.html
-:url-docbook-refmisc: https://www.docbook.org/tdg5/en/html/refmiscinfo.html
+:url-man7: https://man7.org/linux/man-pages/man7/roff.7.html
+:url-docbook-refmisc: https://tdg.docbook.org/tdg/5.0/refmiscinfo.html
 :url-manpage-raw: https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/man/asciidoctor.adoc
 
 Asciidoctor's built-in man page converter generates {url-man7}[roff-formatted^] manual pages from AsciiDoc documents.

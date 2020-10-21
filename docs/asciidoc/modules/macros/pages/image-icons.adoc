@@ -97,5 +97,5 @@ Here's an example of an icon with a link:
 
 [source]
 ----
-icon:download[link="http://rubygems.org/downloads/asciidoctor-2.0.10.gem"]
+icon:download[link="https://rubygems.org/downloads/asciidoctor-2.0.10.gem"]
 ----
