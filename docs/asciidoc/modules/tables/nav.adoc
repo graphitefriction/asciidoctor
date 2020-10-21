@@ -21,6 +21,7 @@
 * Layout and Styles
 ** xref:width.adoc[Width]
 ** xref:borders.adoc[Borders]
+** xref:striping.adoc[Striping]
 ** xref:orientation.adoc[Orientation]
 ** xref:assign-a-role.adoc[Assign a Role]
 ** xref:nested.adoc[Nesting Tables]
