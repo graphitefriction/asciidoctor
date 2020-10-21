@@ -1,6 +1,7 @@
 .API & Extension Points
 * xref:overview.adoc[Ruby API Overview]
 * xref:convert-strings.adoc[Convert Strings]
+* xref:generate-html-toc.adoc[Generate an HTML TOC]
 * xref:load-templates.adoc[Load Custom Templates]
 * xref:set-safe-mode.adoc[Set Safe Mode]
 * xref:register-extensions.adoc[Register Extensions]
