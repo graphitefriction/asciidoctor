@@ -10,6 +10,7 @@
 ** xref:postprocessor.adoc[Postprocessor]
 ** xref:docinfo-processor.adoc[Docinfo Processor]
 ** xref:block-processor.adoc[Block Processor]
+** xref:compound-block-processor.adoc[Compound Block Processor]
 ** xref:block-macro-processor.adoc[Block Macro Processor]
 ** xref:inline-macro-processor.adoc[Inline Macro Processor]
 ** xref:include-processor.adoc[Include Processor]
