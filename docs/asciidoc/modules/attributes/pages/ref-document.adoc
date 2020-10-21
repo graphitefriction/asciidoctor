@@ -353,11 +353,11 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |xref:header:author-and-version.adoc#author[Author's first name].
 
 |front-matter
-|
+|If front matter is captured
 |_any_
-|{y}
-|
-|If `skip-front-matter` is set, holds any YAML-style frontmatter skimmed from the top of the document.
+|n/a
+|n/a
+|If `skip-front-matter` is set via the API or CLI, any YAML-style frontmatter skimmed from the top of the document is stored in this attribute.
 
 |keywords
 |{n}
