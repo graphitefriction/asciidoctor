@@ -1,7 +1,7 @@
 = Footnotes
 // anchor from um: user-footnotes
 
-A footnote is created with the footnote macro (`+footnote:[]+`).
+You can add footnotes to your document using the footnote macro (`+footnote:[]+`).
 If you plan to reference a footnote more than once, use the footnote macro with a target (`+footnote:id[]+`).
 
 .Footnote syntax
@@ -25,32 +25,25 @@ include::example$footnote.adoc[tag=base-x]
 |===
 ====
 
-////
-Roll this text out in 1.5.7
+== Externalizing a Footnote
 
-A footnote is created with the footnote macro (`+footnote:[]+`).
+Since footnotes are defined using an inline macro, the footnote content ends up right alongside the text it's annotating, making that text harder to read.
+You can solve this probably by externalizing your footnotes using document attributes.
 
-.Footnote macro syntax
+Here's the previous example with the footnotes defined in document attributes and inserted using attribute references.
+Notice you still get the benefit of seeing where the footnote is placed without all the noise.
+
+.Externalized footnote
 [source]
 ----
-include::ex-footnote.adoc[tag=base-c]
+include::example$footnote.adoc[tag=externalized]
 ----
-<1> Insert the footnote macro directly after any punctuation. The footnote macro only uses one colon.
-<2> The first time you enter a footnote you want to reuse, give it a unique ID directly after the `:`.
-<3> Insert the footnote's content within the square brackets of the macro. The text may span several lines.
-<4> The next time you reference the footnote you only need to insert the ID, followed by an empty set of square brackets.
 
-The footnotes will be numbered consecutively throughout the document.
+This approach works since attribute references are expanded before footnotes are parsed.
+The redundant text in the second disclaimer footnote is simply ignored.
 
-.Rendered footnotes
-====
-[.unstyled]
-|===
-a|
-include::ex-footnote.adoc[tag=base-x]
-|===
-====
-////
+You could even simplify the attribute names to fn-1, fn-2, etc. if brevity is your main concern.
+And once in document attributes, these defintions could even be moved to an included file.
 
 == Footnotes in Headings
 
