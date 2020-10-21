@@ -8,6 +8,7 @@ Docinfo files are useful for injecting auxiliary metadata, stylesheet, and scrip
 
 Different docinfo files get used depending on whether you are converting to HTML or DocBook.
 
+[#head]
 == Head docinfo files
 
 The content of head docinfo files gets injected into the top of the document.

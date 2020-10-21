@@ -41,6 +41,12 @@
 |
 |all
 
+|favicon
+|Adds a link to a favicon to the HTML `<head>`.
+|_not set_
+|_any_
+|html
+
 |`firstname`
 |*Derived from `author`*, _user-defined_
 |First word of `author` attribute
@@ -126,5 +132,4 @@ Used as a fallback when the document title is not specified.
 |Label preceding `revnumber` in a output's byline
 |
 |html
-
 |===

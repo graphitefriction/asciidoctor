@@ -6,6 +6,7 @@
 ** xref:create-stylesheet.adoc[Create a Custom Stylesheet]
 ** xref:apply-stylesheet.adoc[Apply a Custom Stylesheet]
 * xref:convert-to-xhtml.adoc[Convert AsciiDoc to XHTML]
+* xref:favicon.adoc[Adding a favicon]
 
 .Generating Man Pages
 * xref:manpage:convert-to-man-page.adoc[Convert AsciiDoc to Man Pages]
