@@ -41,7 +41,7 @@ the {url-repo}/issues[Asciidoctor issue tracker]. // <3>
 <1> Attribute references can be used in macros.
 <2> Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.
 Since there isn't a blank line between the `disclaimer` reference and the next sentence, the sentence will be directly appended to the end of the attribute's value when it's processed.
-<3> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:link.adoc[link macro].
+<3> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:link.adoc[URL macro].
 
 As you can see below, the attribute references are replaced with the corresponding attribute value when the document is processed.
 
@@ -71,7 +71,7 @@ Did you know there's an {link-fedpkg}?
 
 Note that the link substitution occurs _after_ the attribute reference is resolved.
 This works thanks to the default order of substitutions on a paragraph.
-If you want the link macro to be resolved eagerly at the time the attribute is assigned, you need to enclose it in a pass macro.
+If you want the URL macro to be resolved eagerly at the time the attribute is assigned, you need to enclose it in a pass macro.
 
 .Link attribute entry resolved eagerly
 [source]
