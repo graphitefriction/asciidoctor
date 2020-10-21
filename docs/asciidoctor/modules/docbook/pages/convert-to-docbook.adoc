@@ -1,4 +1,5 @@
 = Convert AsciiDoc to DocBook
+:url-docbook45: https://github.com/asciidoctor/asciidoctor-docbook45
 :url-yelp: https://wiki.gnome.org/action/show/Apps/Yelp
 
 Asciidoctor can produce DocBook 5.0 XML output.
@@ -74,11 +75,4 @@ If you're using the Asciidoctor API, you can generate a DocBook document directl
 Asciidoctor.convert_file 'mysample.adoc', backend: 'docbook'
 ----
 
-////
-Set the backend to `docbook45` to generate DocBook 4.5 XML.
-
- $ asciidoctor -b docbook45 mysample.adoc
-
-By default, the `xmlns` attribute is not added to the root element of a DocBook 4.5 document.
-To enable it, assign an empty value to the `xmlns` attribute.
-////
+If you need to output DocBook 4.5, you may find the community-supported {url-docbook45}[DocBook 4.5 Converter] useful.
