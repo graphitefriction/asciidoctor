@@ -685,6 +685,15 @@ Attributes are now parsed automatically if an equal sign is found after a comma 
 |The path prefix to add to relative xrefs.
 //<<navigating-between-source-files>>
 
+|relfilesuffix
+|{y} _value of outfilesuffix_
+|Path segment
+|{y}
+|
+|The path suffix (e.g., file extension) to add to relative xrefs.
+(Preferred over modifying outfilesuffix).
+//|<<navigating-between-source-files>>
+
 |show-link-uri
 |{n}
 |_empty_
