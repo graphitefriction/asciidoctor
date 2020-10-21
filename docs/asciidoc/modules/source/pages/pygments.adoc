@@ -88,6 +88,31 @@ To list the available Pygments styles, run the following command in a terminal:
 The pygments.rb gem uses a bundled version of Pygments (often ahead of the latest release).
 This command ensures that you are invoking the `pygmentize` command from the Pygments used by that gem.
 
+== Highlight Select Lines
+
+Not to be confused with syntax highlighting, you can configure Pygments to highlight (i.e., emphasize) select lines in order to call attention to them.
+This feature is activated on a source block if the highlight attribute is defined.
+
+The highlight attribute accepts a comma or semi-colon delimited list of line ranges.
+A line range is represented by two numbers separated by a double period (e.g., `2..5`).
+These numbers correspond to the line numbers of the source block, inclusive, where the first line is 1.
+
+.Highlight select lines in a source block
+[source]
+....
+:source-highlighter: pygments
+
+[source,ruby,highlight=2..5]
+----
+ORDERED_LIST_KEYWORDS = {
+  'loweralpha' => 'a',
+  'lowerroman' => 'i',
+  'upperalpha' => 'A',
+  'upperroman' => 'I',
+}
+----
+....
+
 == Using a custom Pygments installation
 
 If you already have Pygments installed on your system, you want to use your own fork, or you want to customize how Pygments is configured, you can get Asciidoctor to use a custom version of Pygments instead of the one bundled with the pygments.rb gem.
