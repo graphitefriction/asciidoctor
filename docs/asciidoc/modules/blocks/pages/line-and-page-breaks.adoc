@@ -6,7 +6,7 @@
 Since adjacent lines of text are combined into a single paragraph when Asciidoctor converts a document, that means you can wrap paragraph text or put each sentence or phrase on a separate line.
 The line breaks won't appear in the output.
 
-However, if you want the line breaks in a paragraph to be preserved, you can either use a space followed by a plus sign (`{plus}`) or the `hardbreaks` attribute.
+However, if you want the line breaks in a paragraph to be preserved, you can either use a space followed by a plus sign (`{plus}`) or set the `hardbreaks` option on the paragraph.
 This results in a visible line break (e.g., `<br>`) following each line.
 
 [source]
@@ -20,7 +20,7 @@ include::example$paragraph.adoc[tag=hb]
 ====
 
 [source]
-.Line breaks preserved using the hardbreaks attribute
+.Line breaks preserved using the hardbreaks option
 ----
 include::example$paragraph.adoc[tag=hb-p]
 ----
@@ -29,7 +29,7 @@ include::example$paragraph.adoc[tag=hb-p]
 include::example$paragraph.adoc[tag=hb-p]
 ====
 
-Alternatively, you can preserve line breaks throughout your whole document by adding the `hardbreaks` attribute to the document's header.
+To preserve line breaks throughout your whole document, set the `hardbreaks` attribute in the document header.
 
 .Line breaks preserved throughout the document using the hardbreaks attribute
 [source]
