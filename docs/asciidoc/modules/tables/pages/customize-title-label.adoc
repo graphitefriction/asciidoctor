@@ -18,7 +18,7 @@ In the document header, set the `table-caption` attribute and assign it your cus
 [source]
 ----
 = Document Title
-:table-caption: Data Set // <1> <2>
+:table-caption: Data Set <1> <2>
 ----
 <1> Set the document attribute `table-caption` and assign it the text you want to precede each table title.
 <2> Don't enter a number after the label text.
@@ -99,14 +99,18 @@ Therefore, the third table is assigned the label _Data Set 2._
 == Modify the label of an individual table using `caption`
 
 You can customize the label on an individual table by setting the `caption` attribute.
-When using `caption`, assign it the exact value you want displayed, including trailing whitespaces.
+(Don't let the name of the attribute mislead you.
+The caption attribute only sets the caption's label, not the whole caption line).
+When using `caption`, assign it the exact value you want displayed (including trailing spaces).
 Labels assigned using `caption` don't get an automatically incremented number and only apply to the table they are set on.
+
+CAUTION: If you want a space between the label and the title, you must add a trailing space to the value of the caption attribute.
 
 [#ex-caption]
 .Modify the label using `caption`
 [source]
 ----
-[caption="Table A. "] // <1> <2>
+[caption="Table A. "] <1> <2>
 .A table with a custom label
 [cols="3*"]
 |===
@@ -131,3 +135,20 @@ The table from <<ex-caption>> is displayed below.
 |===
 
 If you create any subsequent tables in your document and don't set `caption` on them, the title labels will revert to the value assigned to `table-caption`.
+
+If you want the caption of the table to only consist of the caption label, use the following syntax:
+
+[source]
+----
+[caption=,title='{table-caption} {counter:table-number}']
+include::example$table.adoc[tag=b-col-h]
+----
+
+Alternately, you can write is as follows:
+
+[source]
+----
+.{blank}
+[caption='{table-caption} {counter:table-number}']
+include::example$table.adoc[tag=b-col-h]
+----
