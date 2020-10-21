@@ -44,7 +44,7 @@ Here's an example:
 == Literal Monospace
 
 Unlike other markup languages, monospaced text in AsciiDoc is not synonymous with literal text.
-Instead, it gets interpretted just like normal text.
+Instead, it gets interpreted just like normal text.
 In other words, it's subject to all text substitutions by default.
 
 This might be surprising at first.
