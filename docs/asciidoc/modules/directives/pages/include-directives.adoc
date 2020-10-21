@@ -16,6 +16,7 @@ It has no awareness of the surrounding context.
 This directive is useful if you want to:
 
 * partition a large document into smaller files (for better organization and to make restructuring simpler),
+ ** (always separate consecutive include directives by a blank line unless your intent is for the included lines to run together)
 * insert snippets of source code (so your examples are kept up-to-date with the latest source files),
 * populate tables with output from other programs (e.g., CSV data),
 * create document variants by combining the include directive with preprocessor conditionals (e.g., `ifdef`), and
@@ -60,8 +61,15 @@ The include directive is a preprocessor directive that always adds lines.
 
 The best way to think of the include directive is to imagine that it is being replaced by the lines from the include file (i.e., the imported lines).
 Only then does the parser read and interpret those lines.
-That's also why it's important to surround the include directive by blank lines if it imports in a discrete structure.
-You only want to place include files directly adjacent to one another if the imported content should be directly adjacent.
+//That's also why it's important to surround the include directive by blank lines if it imports in a discrete structure.
+//You only want to place include files directly adjacent to one another if the imported content should be directly adjacent.
+
+IMPORTANT: Take note of the blank lines between the include directives.
+The blank line between include directives prevents the first and last lines of the included files from being adjoined.
+This practice is *strongly* encouraged when combining document parts.
+If you don't include these blank lines, you might find that the AsciiDoc processor swallows section titles.
+This happens because the leading section title can get interpretted as the last line of the final paragraph in the preceding include.
+Only place include directives on consecutive lines if the intent is for the includes to run together (such as in a listing block).
 
 == Escaping an include directive
 
