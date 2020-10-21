@@ -1,5 +1,4 @@
 = Blockquotes
-:url-air: https://en.wikipedia.org/wiki/Air_quotes
 
 Prose excerpts, quotes and verses share the same syntax structure, including:
 
@@ -73,20 +72,6 @@ include::example$quote.adoc[tag=abbr]
 .Result: Quoted paragraph
 ====
 include::example$quote.adoc[tag=abbr]
-====
-
-=== Air quotes
-
-{url-air}[Air quotes^] are two double quotes on each line, emulating the gesture of making quote marks with two fingers on each hand.
-
-[source]
-----
-include::example$quote.adoc[tag=air]
-----
-
-.Result: Air quotes
-====
-include::example$quote.adoc[tag=air]
 ====
 
 === Markdown-style blockquotes
