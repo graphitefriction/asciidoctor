@@ -5,7 +5,7 @@ If you undefine an attribute on the same line as other text (e.g., `+{set:attrib
 You can tailor these behaviors in Asciidoctor using the `attribute-missing` and `attribute-undefined` attributes.
 You'll want to think about how you want the processor to handle these situations and configure the processor accordingly.
 
-== Missing attribute 
+== Missing attribute
 
 The `attribute-missing` attribute controls how missing references are handled.
 By default, missing references are left behind so the integrity of the document is preserved and it's easy for the author to track down.
