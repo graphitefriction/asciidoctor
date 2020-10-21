@@ -426,14 +426,16 @@ a|
 a|
 [source,markdown]
 ----
-[home]: https://example.org "Home"
-Go [home].
+Go to the [home page][home].
+
+[home]: https://example.org
 ----
 a|
 [source,asciidoc]
 ----
 :home: https://example.org
-Go {home}[Home].
+
+Go to the {home}[home page].
 ----
 
 |Custom CSS classes
