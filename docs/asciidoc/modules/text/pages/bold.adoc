@@ -6,8 +6,8 @@ Bold is useful when the text needs to catch the attention of a site visitor quic
 
 == Bold syntax
 
-A word or phrase is marked as bold when it's enclosed in a single set of asterisks, e.g., `+*word*+` (constrained).
-Bounded characters are marked as bold when they're enclosed in a set of double asterisks, e.g., `+char**act**ers+` (unconstrained).
+You can mark a word or phrase as bold by enclosing it in a single set of asterisks (e.g., `+*word*+`) (constrained).
+You can mark bounded characters (i.e., characters within a word) as bold by enclosing them in a set of double asterisks (e.g., `+char**act**ers+`) (unconstrained).
 
 .Bold inline formatting
 [source,asciidoc]

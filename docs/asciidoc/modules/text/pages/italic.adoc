@@ -6,8 +6,8 @@ Italic type slants slightly to the right, and depending on the font, may have cu
 
 == Italic syntax
 
-A word or phrase is marked as italic when it is enclosed in a single set of underscores (`+_word_+`) (constrained).
-Bounded characters are marked as italic when they're enclosed in a set of double underscores (`+char__act__ers+`) (unconstrained).
+You can emphasize (aka italicize) a word or phrase by enclosing it in a single set of underscores (e.g., `+_word_+`) (constrained).
+You can emphasize bounded characters (i.e., characters within a word) by enclosing them in a set of double underscores (e.g., `+char__act__ers+`) (unconstrained).
 
 .Italic inline formatting
 [source,asciidoc]
