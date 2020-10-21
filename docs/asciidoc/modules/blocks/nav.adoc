@@ -19,6 +19,7 @@
 .Paragraphs, Breaks, and Comments
 * xref:paragraph.adoc[Paragraphs]
 ** xref:preamble-and-lead.adoc[Preamble and Lead Style]
+** xref:paragraph-alignment.adoc[Alignment]
 * xref:line-and-page-breaks.adoc[Line and Page Breaks]
 * xref:horizontal-rule.adoc[Horizontal Rule]
 * xref:ROOT:comment.adoc[Comments]
