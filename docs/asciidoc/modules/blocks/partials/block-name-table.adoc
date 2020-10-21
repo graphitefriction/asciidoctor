@@ -44,7 +44,8 @@ d|n/a
 |Fenced
 d|n/a
 |++```++
-|Source code or keyboard input is displayed as entered
+|Source code or keyboard input is displayed as entered.
+Will be colorized by the source highlighter if enabled on the document and a language is set.
 |Verbatim
 
 |Listing
@@ -86,7 +87,8 @@ d|Most block names
 |Source
 |++[source]++
 |++----++
-|Source code or keyboard input to be displayed as entered
+|Source code or keyboard input to be displayed as entered.
+Will be colorized by the source highlighter if enabled on the document and a language is set.
 |Verbatim
 
 |Stem
