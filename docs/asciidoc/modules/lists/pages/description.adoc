@@ -2,12 +2,13 @@
 :keywords: labeled list, definition list
 
 // tag::label[]
-Description lists are useful when you need to include a description, definition, or supporting text for each item in a list.
+A description list (often abbreviated as dlist) is useful when you need to include a description, definition, or supporting text for one or more terms.
 Each item in a description list consists of a term or phrase followed by:
 
-* a separator (typically a double colon, `::`)
+* one or more terms
+* a separator following each term (typically a double colon, `::`)
 * at least one space or endline
-* the item's content
+* the supporting content (i.e., description) (can be text, attached blocks, or both)
 
 Here's an example of a description list that identifies parts of a computer:
 
