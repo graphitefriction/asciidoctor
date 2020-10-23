@@ -34,12 +34,6 @@ include::example$metadata.adoc[tag=key-base]
 .HTML output
 include::example$metadata.adoc[tag=key-html]
 
-[#alt-title]
-== Alternate title
-
-By default, Asciidoctor uses the text of the xref:title.adoc[document title] as the value of the HTML `<title>` tag.
-You can override this behavior by setting the `title` attribute in the document header.
-
 == Custom metadata, styles, and functions
 
 You can add content, such as custom metadata, stylesheet, and script information, to the header of the output document using docinfo (document information) files.

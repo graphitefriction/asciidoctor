@@ -1,16 +1,14 @@
-// User Manual - Description metadata
-// User Manual - keyword metadata example
-
 // tag::desc-base[]
-= The Dangerous and Thrilling Documentation Chronicles
-Kismet Rainbow Chameleon <kismet@asciidoctor.org>; Lazarus het_Draeke <lazarus@asciidoctor.org>
-:description: A story chronicling the inexplicable hazards and vicious beasts a \ // <1>
-documentation team must surmount and vanquish on their journey to finding an \
-open source project's true power.
+= The Intrepid Chronicles
+Kismet Lee; Lazarus Draeke
+:description: A story chronicling the inexplicable \ // <1>
+hazards and unique challenges a team must vanquish \
+on their journey to finding an open source \
+project's true power.
 
 This journey begins on a bleary Monday morning.
 // end::desc-base[]
-Our intrepid team is in desperate need of double shot mochas, but the milk expired eight days ago.
+Our team is in desperate need of double shot mochas, but the milk expired eight days ago.
 A trip to the dairy was out of the question.
 On Friday night, a mutant, script-injecting warlock had infected the Shetland cattle herd with a ravenous craving for tags and annotations.
 The security wolves were at a trust building retreat in Katchanga, and no one in the village could locate their defensive operations manual.
@@ -46,16 +44,18 @@ Hanging from...
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 2.0.11">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A story chronicling the inexplicable hazards and vicious beasts a documentation team must surmount and vanquish on their journey to finding an open source project's true power.">
-<title>The Dangerous and Thrilling Documentation Chronicles</title>
+<meta name="description" content="A story chronicling the inexplicable
+hazards and unique challenges a team must vanquish on their journey
+to finding an open source project's true power.">
+<title>The Intrepid Chronicles</title>
 <style>
 ----
 // end::desc-html[]
 
 // tag::key-base[]
-= The Dangerous and Thrilling Documentation Chronicles
-Kismet Rainbow Chameleon <kismet@asciidoctor.org>; Lazarus het_Draeke <lazarus@asciidoctor.org>
-:keywords: documentation, team, obstacles, journey, victory
+= The Intrepid Chronicles
+Kismet Lee; Lazarus Draeke
+:keywords: team, obstacles, journey, victory
 
 This journey begins on a bleary Monday morning.
 // end::key-base[]
@@ -69,8 +69,8 @@ This journey begins on a bleary Monday morning.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="Asciidoctor 2.0.11">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="documentation, team, obstacles, journey, victory">
-<title>The Dangerous and Thrilling Documentation Chronicles</title>
+<meta name="keywords" content="team, obstacles, journey, victory">
+<title>The Intrepid Chronicles</title>
 <style>
 ----
 // end::key-html[]
