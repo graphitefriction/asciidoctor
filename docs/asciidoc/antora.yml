@@ -1,6 +1,11 @@
 name: asciidoc
 title: AsciiDoc
-version: 'master'
+version: 'dev'
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+    xrefstyle: short@
+    listing-caption: Example@
 nav:
 - modules/document/nav.adoc
 - modules/attributes/nav.adoc
