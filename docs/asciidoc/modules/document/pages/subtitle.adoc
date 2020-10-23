@@ -1,54 +1,58 @@
-= Document Subtitle
-// this page has some weird complexity for such a simple thing
+= Subtitle
+//From @graphitefriction: this page has some weird complexity for such a simple thing
 
-Asciidoctor recognizes a subtitle in the xref:title.adoc[document title].
+An optional subtitle can be appended to a xref:title.adoc[document title].
+
+NOTE: The HTML 5 converter does not distinguish the document title from the subtitle in its output.
+It's only distinguished from the document title when you use the Docbook, EPUB 3, and PDF converters.
 
 == Subtitle syntax
 
-If the document title (level-0 section heading) contains at least one colon followed by a space (i.e, `:{sp}`), Asciidoctor treats the text after the final colon-space sequence as the subtitle.
+When the document title contains a colon followed by a space (i.e, `:{sp}`), the text after the final colon-space sequence is treated as a subtitle.
 
-NOTE: The subtitle is not distinguished from the document title in the `html5` output.
-It's only distinguished from the document title when using the `docbook`, `epub3`, and `pdf` converters.
-
-.A document title that contains a subtitle
+.A document title and subtitle
 [source]
 ----
 = Main Title: Subtitle
 ----
 
-The separator is searched from the end of the text.
+The separator is searched for from the end of the text.
 Therefore, only the last occurrence of the separator (i.e, `:{sp}`) is used for partitioning the title.
 
-.A document title that contains a subtitle and more than one separator
+.A document title that contains more than one colon-space sequence
 [source]
 ----
 = Main Title: Main Title Continued: Subtitle
 ----
 
-You can modify the title separator by specifying the `separator` block attribute explicitly above the document title.
-Note that a space will automatically be appended to the separator value.
+=== Modify the title separator
 
-.A document title with an explicit title separator
+You can change the title separator by specifying the `separator` block attribute explicitly above the document title.
+A space will automatically be appended to the separator value.
+
+.Assign separator to the document title
 [source]
 ----
 [separator=::]
 = Main Title:: Subtitle
 ----
 
-You can also set the separator using a document attribute, either in the document:
+You can also assign a separator using a document attribute `title-separator` in the header.
 
-.A document title with an explicit title separator
+.Assign title-separator to the document title
 [source]
 ----
 = Main Title:: Subtitle
 :title-separator: ::
 ----
 
-or from the API or CLI (shown here):
+`title-separator` can also be assigned via the CLI.
 
 ....
 $ asciidoctor -a title-separator=:: document.adoc
 ....
+
+== Partition the title using the API
 
 You can partition the title from the API when calling the `doctitle` method on Document:
 
