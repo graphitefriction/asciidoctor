@@ -1,5 +1,113 @@
-= Document Header Reference
+= Header Reference
 //Attributes and Values
+
+[cols="2,2,1,2"]
+|===
+|Attribute |Values |Converters |Notes
+
+|`author`, `author_<n>`
+|_user-defined_
+|all
+|
+
+|`authorinitials`, `authorinitials_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`description`
+|_user-defined_
+|html
+|
+
+|`docinfo`, `docinfo1`, `docinfo2`
+|
+|html, docbook
+|
+
+|`doctitle`
+|*Derived from level-0 section title*, _user-defined_
+|all
+|
+
+|`email`, `email_<n>`
+|_user-defined_
+|all
+|
+
+|`firstname`, `firstname_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`keywords`
+|_user-defined_
+|html
+|
+
+|`lastname`, `lastname_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`middlename`, `middlename_<n>`
+|*Derived from `author`*, _user-defined_
+|all
+|
+
+|`no-header-footer`, `-s`
+|_empty_
+|all
+|
+
+|`noheader`
+|_empty_
+|all
+|
+
+|`nofooter`
+|_empty_
+|all
+|
+
+|`notitle`
+|_empty_
+|all
+|
+
+|`revdate`
+|_user-defined_
+|all
+|
+
+|`revnumber`
+|_user-defined_
+|all
+|
+
+|`revremark`
+|_user-defined_
+|all
+|
+
+|`showtitle`
+|_empty_
+|all
+|
+
+|`title`
+|*Derived from level-0 section title or `doctitle`*, _user-defined_
+|html, docbook
+|
+
+|`version-label`
+|*Version*, _user-defined_
+|html
+|
+|===
+
+////
+From @graphitefriction: Old table with descriptions that can probably be deleted.
 
 [cols="1,1,2,2,1"]
 |===
@@ -133,3 +241,4 @@ Used as a fallback when the document title is not specified.
 |
 |html
 |===
+////
