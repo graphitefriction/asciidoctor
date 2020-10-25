@@ -1,50 +1,46 @@
 = Preamble and Lead Style
-// new page
 
+[#preamble]
 == Preamble
-// um anchor: doc-preamble
 
-Content between the document header and the first section title is called the preamble.
-The preamble is optional.
+Content between the end of the xref:document:header.adoc[document header] and the first section title in the document body is called the preamble.
+A preamble is optional.
 
 .Preamble
-[source]
+[source#ex-preamble]
 ----
 include::example$preamble.adoc[]
 ----
 
-When using the default Asciidoctor stylesheet, the `lead` attribute is applied to the first paragraph of the preamble.
+When using the default Asciidoctor stylesheet, the <<lead-style,lead style>> is automatically applied to the first paragraph of the preamble.
+The result of <<ex-preamble>> is displayed below.
 
-.Result: Preamble
-====
-#Rendered or image output goes here.#
-// image::preamble.png[Preamble with lead attribute applied]
-====
+image::preamble.png[The preamble of a document,role=screenshot]
 
+[#lead-style]
 == Lead style
 
 Apply the `lead` style to any paragraph, and it will render using a larger font size.
 The lead style is assigned to the xref:attributes:role.adoc[role attribute].
-You can set `role` using the long- or shorthand method.
+You can set `role` using the classic or shorthand method.
 
-.Setting role using shorthand (`.`) and assigning it the lead value
-[source]
+.Setting role to lead using the shorthand syntax
+[source#ex-lead]
 ----
 include::example$paragraph.adoc[tag=lead]
 ----
 
-.Result: Lead paragraph
-====
-include::example$paragraph.adoc[tag=lead]
-====
+The result of <<ex-lead>> is displayed below.
 
-When you convert a document to HTML using the default stylesheet, the first paragraph of the preamble is automatically styled as a lead paragraph.
+image::lead.png[Paragraph styled with the lead role value,role=screenshot]
+
+When you convert a document to HTML using the default stylesheet, the first paragraph of the <<preamble,preamble>> is automatically styled as a lead paragraph.
 To disable this behavior, assign any role to the first paragraph.
 
 .Disabling the automatic lead paragraph styling
 [source]
 ----
-include::example$paraagraph.adoc[tag=no-lead]
+include::example$paragraph.adoc[tag=no-lead]
 ----
 
 The presence of the custom role (`normal`) informs the CSS not to style it as a lead paragraph.

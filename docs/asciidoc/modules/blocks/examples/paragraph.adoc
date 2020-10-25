@@ -53,8 +53,12 @@ Topazes are blue.
 // end::hb-attr[]
 
 // tag::lead[]
+== Section title
+
+This is a regular paragraph.
+
 [.lead]
-This is the ultimate paragraph.
+This is a paragraph styled as a lead paragraph.
 // end::lead[]
 
 // tag::no-lead[]
@@ -64,5 +68,5 @@ This is a normal paragraph, regardless of its position in the document.
 
 // tag::b-lead[]
 [.lead]
-This text will be styled as a lead paragraph (i.e., larger font).
+This text is styled as a lead paragraph (i.e., larger font).
 // end::b-lead[]
