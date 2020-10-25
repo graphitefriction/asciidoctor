@@ -48,14 +48,14 @@ When you set an attribute in the body, it's visible from the point it's set unti
 |*skip*, drop, drop-line, warn
 |{y}
 |{y}
-|Controls how xref:handle-unresolved-ref.adoc#missing-attribute[missing attribute references] are handled.
+|Controls how xref:unresolved-references.adoc#missing[missing attribute references] are handled.
 
 |attribute-undefined
 |{n}
 |*drop-line*, drop
 |{y}
 |{y}
-|Controls how xref:handle-unresolved-ref.adoc#undefined-attribute[undefined attributes] are handled.
+|Controls how xref:unresolved-references.adoc#undefined[undefined attributes] are handled.
 
 |compat-mode
 |{n}
@@ -69,7 +69,7 @@ When you set an attribute in the body, it's visible from the point it's set unti
 |_empty_
 |{y}
 |{n}
-|Enables xref:macros:ui.adoc[UI macros].
+|Enables xref:macros:menu-macro.adoc[], xref:macros:keyboard-macro.adoc[], and xref:macros:button-macro.adoc[].
 
 |reproducible
 |{n}
@@ -135,7 +135,7 @@ Useful for storing the output in a source code control system as it prevents spu
 |*Chapter*, _any_
 |{y}
 |{y}
-|xref:sections:parts-and-chapters.adoc#chapter-labels[Label added to level-1 section titles (chapters)].
+|xref:sections:chapters.adoc[Label added to level-1 section titles (chapters)].
 _PDF converter only_.
 _Book doctype only_.
 
@@ -263,7 +263,7 @@ _Book doctype only_.
 |*Table of Contents*, _any_
 |{y}
 |
-|xref:toc:toc.adoc#title[Title for table of contents].
+|xref:toc:title.adoc[Title for table of contents].
 
 |untitled-label
 |
@@ -299,7 +299,7 @@ _Book doctype only_.
 |{y}
 |{n}
 |Can be set automatically via the author info line or explicitly.
-See xref:header:author-and-version.adoc#author[Author syntax].
+See xref:document:author-information.adoc[].
 
 |authorinitials
 |Only if present in author info line or `author`
@@ -307,7 +307,7 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |{y}
 |{n}
 |Derived from the author attribute by default.
-See xref:header:author-and-version.adoc#author[Author syntax].
+See xref:document:author-information.adoc[].
 
 |authors
 |Only if present in author info line
@@ -315,7 +315,7 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |{y}
 |{n}
 |Can be set automatically via the author info line or explicitly as a comma-separated value list.
-See xref:header:author-and-version.adoc#author[Author syntax].
+See xref:document:author-information.adoc[].
 
 |copyright
 |{n}
@@ -329,14 +329,14 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |_any_
 |{y}
 |{n}
-|See xref:header:title.adoc#doctitle-attr[doctitle attribute].
+|See xref:document:title.adoc#reference-doctitle[doctitle attribute].
 
 |description
 |{n}
 |_any_
 |{y}
 |{n}
-|Adds xref:header:metadata.adoc#description[description] meta element in HTML document head.
+|Adds xref:document:metadata.adoc#description[description] meta element in HTML document head.
 
 |email
 |Only if present in author info line
@@ -344,14 +344,14 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |{y}
 |{n}
 |Can be any inline macro, such as a URL.
-See xref:header:author-and-version.adoc#author[Author syntax].
+See xref:document:author-information.adoc[].
 
 |firstname
 |Only if present in author info line
 |_any_
 |{y}
 |{n}
-|xref:header:author-and-version.adoc#author[Author's first name].
+|See xref:document:author-information.adoc[].
 
 |front-matter
 |If front matter is captured
@@ -365,21 +365,21 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |_any_
 |{y}
 |{n}
-|Adds xref:header:metadata.adoc#keywords[keywords] meta element in HTML document head.
+|Adds xref:document:metadata.adoc#keywords[keywords] meta element in HTML document head.
 
 |lastname
 |Only if present in author info line
 |_any_
 |{y}
 |{n}
-|xref:header:author-and-version.adoc#author[Author's last name].
+|See xref:document:author-information.adoc[].
 
 |middlename
 |Only if present in author info line
 |_any_
 |{y}
 |{n}
-|xref:header:author-and-version.adoc#author[Author's middle name or initial].
+|See xref:document:author-information.adoc[].
 
 |orgname
 |{n}
@@ -393,21 +393,21 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |_any_
 |{y}
 |{n}
-|xref:header:author-and-version.adoc#revision[Revision date].
+|See xref:document:revision-information.adoc[].
 
 |revremark
 |Only if present in version info line
 |_any_
 |{y}
 |{n}
-|xref:header:author-and-version.adoc#revision[Revision description].
+|See xref:document:revision-information.adoc[].
 
 |revnumber
 |Only if present in version info line
 |_any_
 |{y}
 |{n}
-|See xref:header:author-and-version.adoc#revision[Version, revision and date syntax].
+|See xref:document:revision-information.adoc[].
 
 |title
 |{n}
@@ -416,14 +416,14 @@ See xref:header:author-and-version.adoc#author[Author syntax].
 |{n}
 |Value of `<title>` element in HTML `<head>` or main DocBook `<info>` of output document.
 Used as a fallback when the document title is not specified.
-See xref:header:metadata.adoc#alt-title[Alternate title].
+See xref:document:title.adoc#title-attr[title attribute].
 
 |version-label
-|Only if present in version and revision info line
+|Only if `revnumber` is set
 |*Version*, _any_
 |{y}
 |
-|xref:header:author-and-version.adoc#revision[Label preceding revnumber] in output's byline.
+|See xref:document:version-label.adoc[].
 |===
 
 == Section titles and table of contents attributes
@@ -438,7 +438,7 @@ See xref:header:metadata.adoc#alt-title[Alternate title].
 |{y}
 |{n}
 |Prefix of auto-generated section IDs.
-See xref:sections:id.adoc#prefix[Change the ID prefix].
+See xref:sections:id-prefix-and-separator.adoc#prefix[Change the ID prefix].
 
 |idseparator
 |{y}
@@ -446,7 +446,7 @@ See xref:sections:id.adoc#prefix[Change the ID prefix].
 |{y}
 |{n}
 |Word separator used in auto-generated section IDs.
-See xref:sections:id.adoc#separator[Change the ID word separator].
+See xref:sections:id-prefix-and-separator.adoc#separator[Change the ID word separator].
 
 |leveloffset
 |{n}
@@ -461,7 +461,7 @@ See xref:sections:id.adoc#separator[Change the ID word separator].
 |*_empty_*
 |{y}
 |{n}
-|See xref:sections:parts-and-chapters.adoc#partnums[Part numbers].
+|See xref:sections:part-numbers-and-labels.adoc#partnums[Part numbers].
 _Book doctype only_.
 
 |sectanchors
@@ -469,7 +469,7 @@ _Book doctype only_.
 |_empty_
 |{y}
 |{n}
-|xref:sections:id.adoc#anchor[Adds anchor in front of section title] on mouse cursor hover.
+|xref:sections:title-links.adoc#anchor[Adds anchor in front of section title] on mouse cursor hover.
 
 |sectids
 |{y}
@@ -477,49 +477,49 @@ _Book doctype only_.
 |{y}
 |{n}
 |Generates and assigns an ID to any section that does not have an ID.
-See xref:sections:id.adoc#disable-id-generation[Disable ID generation].
+See xref:sections:ids.adoc#disable[Disable ID generation].
 
 |sectlinks
 |{n}
 |_empty_
 |{y}
 |{n}
-|xref:sections:id.adoc#link[Turns section titles into self-referencing links].
+|xref:sections:title-links.adoc[Turns section titles into self-referencing links].
 
 |sectnums
 |{n}
 |*_empty_*, all
 |{y}
 |{n}
-|xref:sections:number.adoc[Numbers sections] to depth specified by `sectnumlevels`.
+|xref:sections:numbers.adoc[Numbers sections] to depth specified by `sectnumlevels`.
 
 |sectnumlevels
 |Only if `sectnums` is set
 |*3*, 0{en}5
 |{y}
 |{n}
-|xref:sections:number.adoc#numlevels[Controls depth of section numbering].
+|xref:sections:numbers.adoc#numlevels[Controls depth of section numbering].
 
 |title-separator
 |{y}
 |*:*, _any_
 |{y}
 |{n}
-|Character used to xref:header:title.adoc#document-subtitle[separate document title and subtitle].
+|Character used to xref:document:subtitle.adoc[separate document title and subtitle].
 
 |toc
 |{n}
 |*auto*, left, right, macro or preamble
 |{y}
 |{n}
-|Turns on xref:toc:toc.adoc[table of contents] and specifies xref:toc:toc-position.adoc[its location].
+|Turns on xref:toc:toc.adoc[table of contents] and specifies xref:toc:position.adoc[its location].
 
 |toclevels
 |Only if `toc` is set
 |*2*, 1{en}5
 |{y}
 |{n}
-|xref:toc:toc.adoc#levels[Maximum section level to display].
+|xref:toc:section-depth.adoc[Maximum section level to display].
 
 // NOTE toc-placement moved to deprecated table in migration guide
 //|toc-placement
@@ -708,7 +708,7 @@ _PDF converter only_.
 |_empty_
 |{y}
 |{n}
-|xref:header:title.adoc#title-visibility[Displays an embedded document's title].
+|xref:document:title.adoc#hide-or-show[Displays an embedded document's title].
 Mutually exclusive with the `notitle` attribute.
 
 |stem
@@ -777,7 +777,7 @@ Only used when `icons` attribute is set to `font`.
 |*image*, font
 |{y}
 |{y}
-|Chooses xref:macros:icon.adoc[images or font icons] instead of text for admonitions.
+|Chooses xref:macros:icons.adoc[images or font icons] instead of text for admonitions.
 
 |iconsdir
 |Only used when `icons` attribute is set to `image`

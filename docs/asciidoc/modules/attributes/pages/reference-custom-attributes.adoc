@@ -1,6 +1,4 @@
 = Reference Custom Attributes
-:xrefstyle: short
-:listing-caption: Example
 :disclaimer: Don't pet the wild Wolpertingers. We're not responsible for any loss \
 of hair, chocolate, or purple socks.
 :url-repo: https://github.com/asciidoctor/asciidoctor
@@ -12,12 +10,11 @@ This inline element is called an *attribute reference*.
 
 == Reference user-defined attributes
 
-Before you can reference an attribute in a document it must be declare using an attribute entry in the document's header.
-Let's reference the two user-defined attributes set and assigned values in <<ex1>>.
+Before you can reference an attribute in a document it must be declare using an attribute entry in the document header.
+Let's reference the two user-defined attributes set and assigned values in <<ex-user-attrs>>.
 
-[#ex1]
 .User-defined document attributes set in the document header
-[source]
+[source#ex-user-attrs]
 ----
 = Ops Manual
 :disclaimer: Don't pet the wild Wolpertingers. We're not responsible for any loss \
@@ -26,17 +23,16 @@ of hair, chocolate, or purple socks.
 ----
 
 Once you've set and assigned a value to the attribute, you can reference that attribute throughout your document.
-In <<ex2>>, the attribute `url-repo` is referenced twice and `disclaimer` is referenced once.
+In <<ex-reference>>, the attribute `url-repo` is referenced twice and `disclaimer` is referenced once.
 
-[#ex2]
-.User-defined document attributed reference in the document's body
-[source]
+.User-defined attribute referenced in the document body
+[source#ex-reference]
 ----
-Asciidoctor is {url-repo}[open source]. // <1>
+Asciidoctor is {url-repo}[open source]. <1>
 
-WARNING: {disclaimer} // <2>
+WARNING: {disclaimer} <2>
 If you're missing a lime colored sock, file a ticket in
-the {url-repo}/issues[Asciidoctor issue tracker]. // <3>
+the {url-repo}/issues[Asciidoctor issue tracker]. <3>
 ----
 <1> Attribute references can be used in macros.
 <2> Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.

@@ -1,6 +1,4 @@
 = Reference Built-in Attributes
-//:xrefstyle: short
-//:listing-caption: Example
 
 You'll likely use the values of certain built-in attributes in specific locations throughout a document.
 To reference and use the value of a document attribute, you enclose the attribute's name in curly brackets (`+{name-of-an-attribute}+`).
@@ -18,7 +16,7 @@ That means that you can reference them throughout your document without having t
 
 [source]
 ----
-TIP: Wolpertingers don't like temperatures above 100{deg}C. // <1>
+TIP: Wolpertingers don't like temperatures above 100{deg}C. <1>
 Our servers don't like them either.
 ----
 <1> Reference the character replacement attribute `deg` by enclosing its name in a set of curly brackets (`+{ }+`).

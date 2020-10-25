@@ -11,8 +11,8 @@ Don't add a value to the entry.
 [source]
 ----
 = Title
-:name!: // <1>
-:!name: // <2>
+:name!: <1>
+:!name: <2>
 ----
 <1> An attribute is unset when a `!` is appended to its name.
 <2> An attribute is unset when a `!` is prefixed to its name.
@@ -23,7 +23,7 @@ This is an attribute that is set and assigned a default value of `Example` autom
 [source]
 ----
 = Title
-:example-caption!:  // <1>
+:example-caption!: <1>
 ----
 <1> Example blocks won't be labeled and numbered, e.g., Example 1, because the attribute controlling that behavior is unset with the `!`.
 The `!` can be placed either before or after the attribute's name.
@@ -38,16 +38,16 @@ To do that, you'd unset `sectnums` before the first section you didn't want numb
 [source]
 ----
 = Title
-:sectnums:  // <1>
+:sectnums: <1>
 
 == Section Title
 
-:!sectnums: // <2>
+:!sectnums: <2>
 == Section Title
 
 === Section Title
 
-:sectnums: // <3>
+:sectnums: <3>
 == Section Title
 ----
 <1> The `sectnums` attribute is set in the header to activate section numbering throughout the document.

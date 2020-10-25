@@ -26,6 +26,7 @@ The `book` document type permits multiple level-0 section titles.
 When the `doctype` is `book`, the level-0 title in the header is set as the document's title.
 Subsequent level-0 section titles in the document's body are set as xref:sections:parts.adoc[part titles].
 
+[#hide-or-show]
 == Hide or show the document title
 
 When converting a standalone document, the document title is shown by default.

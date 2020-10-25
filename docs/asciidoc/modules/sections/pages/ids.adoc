@@ -22,6 +22,7 @@ Asciidoctor builds an ID from a section title using the following order of event
 For example, the section title `Wiley & Sons, Inc.` produces the ID `_wiley_sons_inc`.
 You can toggle ID autogeneration on and off using `sectids` and xref:id-prefix-and-separator.adoc[customize the ID prefix and word separator].
 
+[#disable]
 == Disable section ID generation
 
 To disable the autogeneration of section IDs, unset the `sectids` attribute.

@@ -16,7 +16,7 @@ This [.term]*sets* -- that is, turns on -- the document attribute so you can use
 
 [source]
 ----
-:name-of-an-attribute: // <1>
+:name-of-an-attribute: <1>
 ----
 <1> The attribute's name is directly preceded with a opening colon (`:`) and directly followed by a closing colon (`:`).
 
@@ -26,7 +26,7 @@ Be aware that xref:attribute-entry-substitutions.adoc[header substitutions] auto
 
 [source]
 ----
-:name-of-an-attribute: value of the attribute // <1>
+:name-of-an-attribute: value of the attribute <1>
 ----
 <1> An explicitly assigned value is offset from the closing colon (`:`) by at least one blank space.
 At the end of the value, press kbd:[Enter].
@@ -35,7 +35,7 @@ Some built-in attributes don't require a value to be explicitly assigned in an a
 
 [source]
 ----
-:name-of-an-attribute: // <1>
+:name-of-an-attribute: <1>
 ----
 <1> If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
 

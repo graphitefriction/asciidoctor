@@ -3,14 +3,15 @@
 == Valid built-in names
 
 Built-in attribute names are reserved and can't be re-purposed for user-defined attribute names.
-The built-in attribute names are listed in the xref:ref-document.adoc[Document Attributes Reference] and xref:ref-character-replacement.adoc[Character Replacement Attributes Reference].
+The built-in attribute names are listed in the xref:ref-document.adoc[] and xref:ref-character-replacement.adoc[].
 
+[#user-defined]
 == Valid user-defined names
 
 User-defined attribute names must:
 
 * be at least one character long,
-* begin with a word character (A-Z, a-z, 0-9, or _), and
+* begin with a word character (a-z, 0-9, or _), and
 * only contain word characters and hyphens (-).
 
 A user-defined attribute name cannot contain dots (.) or spaces.
@@ -33,7 +34,7 @@ Many built-in attributes have one or more built-in values.
 One of these values may be designated as the attribute's default value.
 Asciidoctor will fall back to this default value if you set the attribute but leave the value blank.
 Additionally, Asciidoctor automatically sets numerous built-in attributes at processing time and assigns them their default values unless you explicitly unset the attribute or assign it another value.
-For instance, Asciidoctor automatically sets all of the xref:xref:ref-character-replacement.adoc[character replacement attributes].
+For instance, Asciidoctor automatically sets all of the xref:ref-character-replacement.adoc[character replacement attributes].
 
 If you want to use the non-default value of a built-in attribute, you need to set it and assign it an alternative value.
 

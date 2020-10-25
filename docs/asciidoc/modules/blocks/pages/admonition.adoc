@@ -84,4 +84,4 @@ include::example$admonition.adoc[tag=para]
 include::example$admonition.adoc[tag=para]
 ====
 
-Learn more about using Font Awesome or custom icons with admonitions in the xref:macros:icon.adoc[icons section].
+Learn more about using Font Awesome or custom icons with admonitions in xref:macros:icons.adoc[].

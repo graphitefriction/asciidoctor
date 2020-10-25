@@ -3,7 +3,7 @@
 The options attribute is a versatile xref:element.adoc#named[named attribute] that can be assigned one or more values.
 It can also be defined globally as an attribute entry.
 
-== Block Assignment
+== Block assignment
 
 You can assign one or more options to a block element using the shorthand or formal syntax for the `options` attribute.
 
@@ -69,7 +69,7 @@ The following example show how to structure an attribute list when you have styl
 .Shorthand
 [source]
 ----
-[horizontal.properties%step] // <1> <2> <3>
+[horizontal.properties%step] <1> <2> <3>
 property 1:: does stuff
 property 2:: does different stuff
 ----
@@ -83,7 +83,7 @@ When you use the formal syntax, the positional and named attributes are separate
 .Formal
 [source]
 ----
-[horizontal, role="properties", options="step"] // <1>
+[horizontal, role="properties", options="step"] <1>
 property 1:: does stuff
 property 2:: does different stuff
 ----
