@@ -5,7 +5,7 @@ Included in:
 ////
 
 // tag::base[]
-The section <<images>> describes how to insert images into your document.
+The section <<anchors>> describes how automatic anchors work.
 // end::base[]
 
 // tag::xref-title[]

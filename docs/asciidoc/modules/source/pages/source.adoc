@@ -129,7 +129,7 @@ If the majority of your source blocks use the same source language, you can set 
 include::example$source.adoc[tag=src-lang]
 ....
 
-Additionally, you can use an xref:directives:include-directive.adoc[include directive] to insert source code into an AsciiDoc document directly from a file.
+Additionally, you can use an xref:directives:include-directives.adoc[include directive] to insert source code into an AsciiDoc document directly from a file.
 
 [listing]
 .Code block inserted from another file
@@ -140,6 +140,6 @@ include::example$source.adoc[tag=src-inc]
 //TODO mention the use of AsciiDoc tags to include code snippets and the indent flag to reset indentation
 
 TIP: If you specify custom substitutions on the source block using the `subs` attribute, make sure to include the `specialcharacters` substitution if you want to preserve syntax highlighting.
-However, if you do plan to modify the substitutions, we recommend using xref:subs:apply.adoc#incremental[incremental substitutions] instead.
+However, if you do plan to modify the substitutions, we recommend using xref:subs:apply-subs-to-blocks.adoc#incremental[incremental substitutions] instead.
 
 // Highlight PHP sidebar was taken from end of page and made its own page

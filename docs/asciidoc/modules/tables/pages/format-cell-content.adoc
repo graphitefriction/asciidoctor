@@ -1,6 +1,4 @@
 = Format Content by Cell
-:xrefstyle: short
-:listing-caption: Example
 
 == Cell styles and their operators
 
@@ -21,9 +19,8 @@ Don't insert any blank spaces between the `|` and the operator.
 
 Let's apply a style operator to each cell in <<ex-cell-styles>>.
 
-[#ex-cell-styles]
 .Apply a style operator to a cell
-[source]
+[source#ex-cell-styles]
 ----
 include::example$cell.adoc[tag=cell-v]
 ----
@@ -36,35 +33,34 @@ include::example$cell.adoc[tag=cell-v]
 [#override-column-style]
 == Override the column style on a cell
 
-When you assign a style operator to a cell, it overrides the xref:format-by-column.adoc[column's style operator].
+When you assign a style operator to a cell, it overrides the xref:format-column-content.adoc[column's style operator].
 In <<ex-override>>, the style operator assigned to the first column is overridden on two cells.
 The header row also overrides style operators.
 However, inline formatting markup is applied in addition to the style specified by an operator.
 
-[#ex-override]
 .Override the column style using a cell style operator
-[source]
+[source#ex-override]
 ----
-[cols="m,m"] // <1>
+[cols="m,m"] <1>
 |===
-|Column 1, header row |Column 2, header row // <2>
+|Column 1, header row |Column 2, header row <2>
 
 |This content is rendered using a monospace font because the column's specifier includes the `m` operator.
 |This content is rendered using a monospace font because the column's specifier includes the `m` operator.
 
-s|This content is rendered as bold paragraph text because the `s` operator in the cell's specifier overrides the style operator in the column specifier. // <3>
+s|This content is rendered as bold paragraph text because the `s` operator in the cell's specifier overrides the style operator in the column specifier. <3>
 |*This content is rendered using a monospace font because the column's specifier includes the `m` operator.
-It's also bold because it's marked up with the inline syntax for bold formatting.* // <4>
+It's also bold because it's marked up with the inline syntax for bold formatting.* <4>
 
-d|This content is rendered as regular paragraph text because the `d` operator in the cell's specifier overrides the style operator in the column specifier. // <5>
+d|This content is rendered as regular paragraph text because the `d` operator in the cell's specifier overrides the style operator in the column specifier. <5>
 |This content is rendered using a monospace font because the column's specifier includes the `m` operator.
 |===
 ----
-<1> The monospace operator (`m`) is assigned to both columns.
-<2> The header row ignores any style operators assigned via column or cell specifiers.
-<3> The strong operator (`s`) is assigned to this cell's specifier, overriding the column's monospace style.
-<4> Inline formatting is applied in addition to the style assigned via a column specifier.
-<5> The default operator (`d`) is assigned to this cell's specifier, resetting it to the default text style.
+. The monospace operator (`m`) is assigned to both columns.
+. The header row ignores any style operators assigned via column or cell specifiers.
+. The strong operator (`s`) is assigned to this cell's specifier, overriding the column's monospace style.
+. Inline formatting is applied in addition to the style assigned via a column specifier.
+. The default operator (`d`) is assigned to this cell's specifier, resetting it to the default text style.
 
 The table from <<ex-override>> is displayed below.
 
@@ -90,9 +86,8 @@ d|This content is rendered as regular paragraph text because the `d` operator in
 To use AsciiDoc block elements, such as delimited source blocks and lists, in a cell, place the `a` operator directly in front of the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
 Don't insert any blank spaces between the `|` and the operator.
 
-[#ex-asciidoc]
 .Apply the AsciiDoc block style operator to two cells
-[source]
+[source#ex-asciidoc]
 ....
 include::example$cell.adoc[tag=cell-ad]
 ....

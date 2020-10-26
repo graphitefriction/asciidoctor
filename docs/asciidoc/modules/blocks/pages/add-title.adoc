@@ -1,6 +1,4 @@
 = Add a Title to a Block
-:xrefstyle: short
-:listing-caption: Example
 
 You can assign a title to a block, whether it's styled using its style name or delimiters.
 
@@ -29,8 +27,8 @@ If the block doesn't have an attribute list, enter the title on a new line direc
 .Add a title to a delimited literal block
 [source]
 ----
-.Terminal Output // <1>
-.... // <2>
+.Terminal Output <1>
+.... <2>
 From github.com:asciidoctor/asciidoctor
  * branch        master   -> FETCH_HEAD
 Already up to date.

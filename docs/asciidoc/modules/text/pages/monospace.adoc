@@ -79,7 +79,7 @@ include::example$text.adoc[tag=literal-mono-with-plus]
 ----
 
 Passthroughs are a general purpose utility in AsciiDoc.
-You can learn about the various passthrough options in xref:subs:pass-macros.adoc[Inline Passthroughs].
+You can learn about the various passthrough options in xref:subs:pass-macro.adoc[].
 
 ////
 ==== Using legacy monospace markup
