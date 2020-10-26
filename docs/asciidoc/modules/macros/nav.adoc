@@ -10,13 +10,19 @@
 ** xref:xref-validate.adoc[Validating]
 * xref:footnote.adoc[Footnotes]
 
-.Images, Icons, and Multimedia
-* Images
-* xref:icons.adoc[Icons]
-** xref:image-icons.adoc[Image Icons]
-** xref:font-based-icons.adoc[Font-Based Icons]
-** xref:unicode-icons.adoc[Unicode Icons]
-* xref:audio-and-video.adoc[Audio and Video]
+.Images, Icons and Multimedia
+* xref:images.adoc[]
+** xref:images-directory.adoc[]
+** xref:image-url.adoc[]
+** xref:image-position.adoc[]
+** xref:image-size.adoc[]
+** xref:image-svg.adoc[]
+** xref:image-ref.adoc[]
+* xref:icons.adoc[]
+** xref:image-icons.adoc[]
+** xref:font-based-icons.adoc[]
+** xref:unicode-icons.adoc[]
+* xref:audio-and-video.adoc[]
 
 .UI Visualizations
 * xref:button-macro.adoc[Button Macro]

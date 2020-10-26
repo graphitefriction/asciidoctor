@@ -2,7 +2,7 @@
 
 Asciidoctor can display icons as text, images, or characters selected from an icon font.
 
-== `icons` attribute syntax
+== icons attribute syntax
 
 How an icon is displayed is based on the value assigned to the document attribute `icons`.
 
