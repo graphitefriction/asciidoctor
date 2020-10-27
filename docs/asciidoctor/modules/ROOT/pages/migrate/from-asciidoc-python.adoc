@@ -89,7 +89,7 @@ There are similar attributes to control how additional resources are resolved.
 |Sizes, lines, and colors
 |`big`, `small`, `underline`, `overline`, `line-through`, colors
 |user-specified `+[.<role-name>]+` and associated formatting in stylesheet
-|See xref:asciidoc:text:css-and-custom.adoc[custom text styles]
+|See xref:asciidoc:text:custom-inline-styles.adoc[custom text styles]
 |===
 
 === Table of contents
@@ -145,7 +145,7 @@ If you want to use the new Asciidoctor syntax, make sure to use `= Title` or exp
 pass:[=== Level 2 section title] +
 pass:[==== Level 3 section title] +
 pass:[===== Level 4 section title] +
-|See xref:asciidoc:sections:level-and-title.adoc[section levels and titles]
+|See xref:asciidoc:sections:titles-and-levels.adoc[section levels and titles]
 
 |Section numbers
 |`numbered`
@@ -172,7 +172,7 @@ pass:[===== Level 4 section title] +
 |Horizontal and vertical alignment for tables cells
 |`halign`, `valign`
 |Column and cell specifiers
-|See xref:asciidoc:tables:column.adoc#cols-align[align column content] or xref:asciidoc:tables:column.adoc#align-cell[cell content].
+|See xref:asciidoc:tables:align-by-column.adoc[align column content] or xref:asciidoc:tables:align-by-cell.adoc[cell content].
 
 |Make tables full page width in DocBook
 |`options="pgwide"`
@@ -200,7 +200,7 @@ pass:[===== Level 4 section title] +
 |+ifeval::[ ]+
 |Evaluates any Python expression.
 |Evaluates simple logical expressions testing the value of attributes.
-|See xref:asciidoc:directives:if-directive.adoc#ifeval[ifeval directive]
+|See xref:asciidoc:directives:ifeval-directives.adoc[ifeval directive]
 
 |Provide name of current document
 |`infile`
@@ -215,7 +215,7 @@ pass:[===== Level 4 section title] +
 |Substitute (`+`)
 |`replacements2`
 |Renamed to `post_replacements`
-|See xref:asciidoc:subs:post.adoc[post replacement substitutions]
+|See xref:asciidoc:subs:post-replacements.adoc[]
 
 |Suppress inline substitutions and retain block indents when importing large blocks of plain text
 |`plaintext`
@@ -246,7 +246,7 @@ a|If you want to send remarks to the output, use an extension, or:
 |Asciidoctor only replaces tabs with spaces in verbatim content blocks (listing, literal, etc.), and the attribute has no default.
 In other words, tabs are not expanded in verbatim content blocks unless this attribute is set on the block or the document.
 For all other text, Asciidoctor tabs are fixed at 4 spaces by the CSS.
-See xref:asciidoc:directives:indent.adoc[normalize block indentation] for more detail.
+See xref:asciidoc:directives:include-with-indent.adoc[normalize block indentation] for more detail.
 |===
 
 == Mathematical expressions

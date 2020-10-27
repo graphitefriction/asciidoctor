@@ -15,7 +15,7 @@ You simply check for the presence of the `basebackend-html` attribute using an `
 Details of this example and more `ifdef` and `ifndef` examples, are described in the following sections.
 See xref:ifeval-directives.adoc[Ifeval Directive] for `ifeval` examples.
 
-=== Processing
+== Processing
 
 Although a conditional preprocessor directive looks like a block macro, it's not a macro and is therefore not processed like one.
 Instead, it's a _preprocessor_ directive, just like `include`.
