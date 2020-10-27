@@ -1,3 +1,13 @@
+// tag::base[]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+// end::base[]
+
 // tag::base-co[]
 |=== // <1>
 // <2>
@@ -9,6 +19,20 @@
 
 |=== // <1>
 // end::base-co[]
+
+// tag::b-col-h[]
+[%header,cols=2*]
+|===
+|Name of Column 1
+|Name of Column 2
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|===
+// end::b-col-h[]
 
 // tag::base-alt[]
 [width="90"]
@@ -22,27 +46,6 @@
 
 |===
 // end::base-alt[]
-
-// tag::base-rolename[]
-[.rolename]
-|===
-| Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
-
-| Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
-|===
-// end::base-rolename[]
-
-// tag::base[]
-|===
-|Cell in column 1, row 1
-|Cell in column 2, row 1
-|Cell in column 3, row 1
-
-|Cell in column 1, row 2
-|Cell in column 2, row 2
-|Cell in column 3, row 2
-|===
-// end::base[]
 
 // tag::cell1[]
 |===
@@ -126,19 +129,7 @@
 |===
 // end::b-col-h-co[]
 
-// tag::b-col-h[]
-[%header,cols=2*]
-|===
-|Name of Column 1
-|Name of Column 2
 
-|Cell in column 1, row 1
-|Cell in column 2, row 1
-
-|Cell in column 1, row 2
-|Cell in column 2, row 2
-|===
-// end::b-col-h[]
 
 // tag::b-col-indv-co[]
 [cols="1,1,2", options="header"] // <1>

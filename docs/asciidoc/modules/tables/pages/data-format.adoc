@@ -1,4 +1,5 @@
 = Table Data Formats
+:navtitle: CSV, TSV and DSV Data
 :url-dsv: https://en.wikipedia.org/wiki/Delimiter-separated_values
 :url-rfc-4180: https://tools.ietf.org/html/rfc4180
 

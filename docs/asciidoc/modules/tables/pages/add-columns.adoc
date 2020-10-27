@@ -1,11 +1,9 @@
 = Add Columns to a Table
-:xrefstyle: short
-:listing-caption: Example
 
 The number of columns in a table is specified by the `cols` attribute or <<implicit-cols,by the number of cells found in the first non-blank line>> after the opening table delimiter (`|===`).
 
 [#cols-attribute]
-== Specify the number of columns with the `cols` attribute
+== Specify the number of columns with the cols attribute
 
 The `cols` attribute is set in the attribute list on a table block.
 It accepts a comma-separated list of column specifiers.
@@ -13,9 +11,8 @@ It accepts a comma-separated list of column specifiers.
 A column specifier is commonly represented by a number, but in some cases, can be represented by a symbol or letter.
 In <<ex-cols>>, `cols` is assigned a list of four numeric column specifiers.
 
-[#ex-cols]
-.Assign column specifiers to the `cols` attribute
-[source]
+.Assign column specifiers to the cols attribute
+[source#ex-cols]
 ----
 [cols="1,1,1,1"]
 ----
@@ -27,9 +24,8 @@ When the specifier is a number, such as `1` or `50`, the integer represents the 
 In <<ex-cols>>, each column will be the same width because the integer in each specifier is the same.
 Let's look at the column specifiers in <<ex-cols-alt>> and compare it to <<ex-cols>>.
 
-[#ex-cols-alt]
-.Assign column specifiers to the `cols` attribute
-[source]
+.Assign column specifiers to the cols attribute
+[source#ex-cols-alt]
 ----
 [cols="3,3,3,3"]
 ----
@@ -37,28 +33,27 @@ Let's look at the column specifiers in <<ex-cols-alt>> and compare it to <<ex-co
 Both <<ex-cols>> and <<ex-cols-alt>> will produce tables with four columns of equal width.
 Let's use the `cols` value in <<ex-cols-alt>> to create a table.
 
-[#ex-cols-table]
 .Create a table with four columns of equal width
-[source]
+[source#ex-cols-table]
 ----
-[cols="3,3,3,3"] // <1>
-|=== // <2>
-|Column 1 |Column 2 |Column 3 |Column 4 // <3>
-// <4>
-|Cell in column 1 // <5>
+[cols="3,3,3,3"] <1>
+|=== <2>
+|Column 1 |Column 2 |Column 3 |Column 4 <3>
+<4>
+|Cell in column 1 <5>
 |Cell in column 2
 |Cell in column 3
 |Cell in column 4
-|=== // <6>
+|=== <6>
 ----
-<1> In an attribute list, set the `cols` attribute, followed by an equals sign (`=`), and then a list of comma-separated column specifiers enclosed in double quotation marks (`"`).
-<2> On the line directly after the attribute list, enter the opening table delimiter.
+. In an attribute list, set the `cols` attribute, followed by an equals sign (`=`), and then a list of comma-separated column specifiers enclosed in double quotation marks (`"`).
+. On the line directly after the attribute list, enter the opening table delimiter.
 A table delimiter is one vertical bar followed by three equals signs (`|===`).
-<3> A table cell is specified by a vertical bar (`|`).
+. A table cell is specified by a vertical bar (`|`).
 Since four consecutive cells are entered on the first line directly after the delimiter, this row is implicitly set as the table's header row.
-<4> Insert a blank line after the header row.
-<5> The cells for the next row can be entered on a single line or on individual lines.
-<6> On a new line after the last cell of the last row, enter another table delimiter (`|===`) to close the table block.
+. Insert a blank line after the header row.
+. The cells for the next row can be entered on a single line or on individual lines.
+. On a new line after the last cell of the last row, enter another table delimiter (`|===`) to close the table block.
 
 <<ex-cols-table>> creates the table displayed below.
 
@@ -88,12 +83,12 @@ The operator tells the converter to interpret the integer as part of a column mu
 
 For example, let's rewrite the value of `[cols="5,5,5"]` as a column multiplier.
 
-.Represent `[cols="5,5,5"]` using a column multiplier
+.Represent [cols="5,5,5"] using a column multiplier
 [source]
 ----
-[cols="3*"] // <1>
+[cols="3*"] <1>
 ----
-<1> Assign an integer to `cols` that represents the number of columns in the table.
+. Assign an integer to `cols` that represents the number of columns in the table.
 Enter the multiplier operator (`+*+`) directly after the integer.
 
 The integer `3`, combined with the `+*+` operator, indicates that the table will contain three columns of equal width.
@@ -101,9 +96,8 @@ The integer `3`, combined with the `+*+` operator, indicates that the table will
 You can use a multiplier in a comma-separated list with column specifiers, too.
 In <<ex-spec-and-multiplier>>, the first column is represented by a column specifier, and the next three columns are represented by a multiplier.
 
-[#ex-spec-and-multiplier]
-.Assign a column specifier and a column multiplier to `cols`
-[source]
+.Assign a column specifier and a column multiplier to cols
+[source#ex-spec-and-multiplier]
 ----
 [cols="5,3*"]
 |===
@@ -149,23 +143,22 @@ Instead, you can implicitly declare the number of columns by entering all of the
 The processor will derive the number columns from the number of cells in this row.
 <<ex-implicit>> uses its first row to indicate that it has three columns.
 
-[#ex-implicit]
 .Create a table with three columns using its first row
-[source]
+[source#ex-implicit]
 ----
 |===
-// <1>
-|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1 // <2>
+<1>
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1 <2>
 
-|Cell in column 1, row 2 // <3>
+|Cell in column 1, row 2 <3>
 |Cell in column 2, row 2
 |Cell in column 3, row 2
 |===
 ----
-<1> After the opening delimiter, insert a blank line before the first row, unless you want the first row to be treated as header row.
-<2> Enter all of the first row's cells on a single line.
+. After the opening delimiter, insert a blank line before the first row, unless you want the first row to be treated as header row.
+. Enter all of the first row's cells on a single line.
 Each cell represents one column.
-<3> The cells in subsequent rows don't need to be entered on a single line.
+. The cells in subsequent rows don't need to be entered on a single line.
 
 The table in <<ex-implicit>> has three columns since its first row contains three cells.
 

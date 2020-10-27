@@ -22,13 +22,13 @@ Let's apply a style operator to each cell in <<ex-cell-styles>>.
 .Apply a style operator to a cell
 [source#ex-cell-styles]
 ----
-include::example$cell.adoc[tag=cell-v]
+include::example$cell.adoc[tag=styles]
 ----
 
 The table from <<ex-cell-styles>> is rendered below.
 
 .Result of <<ex-cell-styles>>
-include::example$cell.adoc[tag=cell-v]
+include::example$cell.adoc[tag=styles]
 
 [#override-column-style]
 == Override the column style on a cell
@@ -89,10 +89,10 @@ Don't insert any blank spaces between the `|` and the operator.
 .Apply the AsciiDoc block style operator to two cells
 [source#ex-asciidoc]
 ....
-include::example$cell.adoc[tag=cell-ad]
+include::example$cell.adoc[tag=adoc]
 ....
 
 The table from <<ex-asciidoc>> is rendered below.
 
 .Result of <<ex-asciidoc>>
-include::example$cell.adoc[tag=cell-ad]
+include::example$cell.adoc[tag=adoc]

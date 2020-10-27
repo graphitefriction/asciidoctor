@@ -1,13 +1,11 @@
 = Customize the Title Label
-:xrefstyle: short
-:listing-caption: Example
 :table-caption: Data Set
 
 When you xref:add-title.adoc[add a title to a table], the processor automatically prefixes it with the label _Table <n>._, where _<n>_ is the 1-based index of all of the titled tables in the document.
 This label can be modified at the document level or per table.
 It can also be xref:turn-off-title-label.adoc[deactivated].
 
-== Modify the label using `table-caption`
+== Modify the label using table-caption
 
 You can change the label for all titled tables using the document attribute `table-caption`.
 (Don't let the attribute's name mislead you.
@@ -20,15 +18,14 @@ In the document header, set the `table-caption` attribute and assign it your cus
 = Document Title
 :table-caption: Data Set <1> <2>
 ----
-<1> Set the document attribute `table-caption` and assign it the text you want to precede each table title.
-<2> Don't enter a number after the label text.
+. Set the document attribute `table-caption` and assign it the text you want to precede each table title.
+. Don't enter a number after the label text.
 The processor will automatically insert and increment the number.
 
 In <<ex-label>>, the first and third tables have a title, but the second table doesn't have a title.
 
-[#ex-label]
 .Add two titled tables and one untitled table to a document
-[source]
+[source#ex-label]
 ----
 = Document Title
 :table-caption: Data Set
@@ -96,7 +93,7 @@ The three tables from <<ex-label>> are displayed below.
 Notice that the table that doesn't have a title didn't get a label nor was it counted when the processor incremented the label number.
 Therefore, the third table is assigned the label _Data Set 2._
 
-== Modify the label of an individual table using `caption`
+== Modify the label of an individual table using caption
 
 You can customize the label on an individual table by setting the `caption` attribute.
 (Don't let the name of the attribute mislead you.
@@ -106,9 +103,8 @@ Labels assigned using `caption` don't get an automatically incremented number an
 
 CAUTION: If you want a space between the label and the title, you must add a trailing space to the value of the caption attribute.
 
-[#ex-caption]
-.Modify the label using `caption`
-[source]
+.Modify the label using caption
+[source#ex-caption]
 ----
 [caption="Table A. "] <1> <2>
 .A table with a custom label
@@ -119,8 +115,8 @@ CAUTION: If you want a space between the label and the title, you must add a tra
 |See Appendix R
 |===
 ----
-<1> Create an attribute list directly directly above the table's title and set the named attribute `caption`, followed by an equals sign (`=`), and then a value.
-<2> Enclose the value in double quotation marks (`"`).
+. Create an attribute list directly directly above the table's title and set the named attribute `caption`, followed by an equals sign (`=`), and then a value.
+. Enclose the value in double quotation marks (`"`).
 Otherwise the processor will remove any trailing whitespaces, and the title text will start directly after the last character of the label.
 
 The table from <<ex-caption>> is displayed below.

@@ -1,8 +1,6 @@
 = Format Content by Column
-:xrefstyle: short
-:listing-caption: Example
 
-A column style operator is applied to a column specifier and xref:add-columns.adoc#cols-attribute[assigned to the `cols` attribute].
+A column style operator is applied to a column specifier and xref:add-columns.adoc#cols-attribute[assigned to the cols attribute].
 
 [#cols-style]
 == Column styles and their operators
@@ -23,9 +21,8 @@ A style operator is always placed in the last position on a column's specifier o
 
 Let's apply a different style to each column in <<ex-style>>.
 
-[#ex-style]
 .Add a style operator to each column
-[source]
+[source#ex-style]
 ----
 [cols="h,m,s,e"]
 |===
@@ -68,9 +65,8 @@ Additionally, if a xref:format-cell-content.adoc#override-column-style[cell spec
 
 To use AsciiDoc block elements, such as delimited source blocks and lists, in a column, place the lowercase letter `a` on the column specifier.
 
-[#ex-asciidoc]
 .Apply the AsciiDoc block style operator to the first column
-[source]
+[source#ex-asciidoc]
 ....
 [cols="2a,2"]
 |===

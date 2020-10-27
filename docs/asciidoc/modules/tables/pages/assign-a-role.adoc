@@ -6,5 +6,6 @@ The preferred shorthand for assigning the role attribute is to put the role name
 
 [source]
 ----
-include::example$table.adoc[tag=base-rolename]
+[.name-of-role]
+include::example$table.adoc[tag=base]
 ----

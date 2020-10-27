@@ -2,6 +2,122 @@
 Examples for table sections, cell specifiers
 ////
 
+// tag::styles[]
+|===
+|Column 1 |Column 2
+
+2*>m|This content is duplicated across two columns (2*) and aligned to the right side of the cell (>).
+
+It's rendered using a monospace font (m).
+
+.3+^.>s|This cell spans 3 rows (`3+`).
+The content is centered horizontally (`+^+`), vertically aligned to the bottom of the cell (`.>`), and styled as strong (`s`).
+e|This content is italicized (`e`).
+
+m|This content is rendered using a monospace font (m).
+
+s|This content is bold (`s`).
+|===
+// end::styles[]
+
+// tag::adoc[]
+|===
+|Column 1 |Column 2
+
+a|This cell is prefixed with an `a`, so the processor interprets the following lines as an AsciiDoc list.
+
+* List item 1
+* List item 2
+* List item 3
+
+|This cell isn't prefixed with an `a`, so the processor doesn't interpret the following lines as an AsciiDoc list.
+
+* List item 1
+* List item 2
+* List item 3
+
+|This cell isn't prefixed with an `a`, so the processor doesn't interpret the listing block delimiters or the `source` style.
+
+[source,python]
+----
+import os
+print ("%s" %(os.uname()))
+----
+
+a|This cell is prefixed with an `a`, so the listing block is processed and rendered according to the `source` style rules.
+
+[source,python]
+----
+import os
+print "%s" %(os.uname())
+----
+
+|===
+// end::adoc[]
+
+// tag::span-cols[]
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row |Column 4, header row
+
+3+|This cell spans columns 1, 2, and 3 because its specifier contains a span of `3+`
+|Cell in column 4, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+|Cell in column 3, row 3
+|Cell in column 4, row 3
+|===
+// end::span-cols[]
+
+// tag::span-rows[]
+|===
+|Column 1, header row |Column 2, header row
+
+.2+|This cell spans rows 2 and 3 because its specifier contains a span of `.2+`
+|Cell in column 2, row 2
+
+|Cell in column 2, row 3
+
+|Cell in column 1, row 4
+|Cell in column 2, row 4
+|===
+// end::span-rows[]
+
+// tag::span-block[]
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row |Column 4, header row
+
+|Cell in column 1, row 2
+2.3+|This cell spans columns 2 and 3 and rows 2, 3, and 4 because its specifier contains a span of `2.3+`
+|Cell in column 4, row 2
+
+|Cell in column 1, row 3
+|Cell in column 4, row 3
+
+|Cell in column 1, row 4
+|Cell in column 4, row 4
+|===
+// end::span-block[]
+
+// tag::clone[]
+|===
+|Column 1, header row |Column 2, header row |Column 3, header row
+
+2*|This cell is duplicated in columns 1 and 2 because its specifier contains a duplication of `2*`
+|Cell in column 3, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+3*e|This cell specifier contains the duplication `3*` and style operator `e`.
+
+The cell's text is italicized and duplicated in column 3, row 3 and columns 1 and 2 on row 4.
+
+|Cell in column 3, row 4
+|===
+// end::clone[]
+
+== THESE ARE THE LEGACY EXAMPLES THAT MAY NO LONGER BE IN USE
+
 // tag::3dup[]
 |===
 
@@ -78,58 +194,7 @@ Examples for table sections, cell specifiers
 |===
 // end::cell-align[]
 
-// tag::cell-ad[]
-|===
-|Column 1 |Column 2
 
-a|This cell is prefixed with an `a`, so the processor interprets the following lines as an AsciiDoc list.
-
-* List item 1
-* List item 2
-* List item 3
-
-|This cell isn't prefixed with an `a`, so the processor doesn't interpret the following lines as an AsciiDoc list.
-
-* List item 1
-* List item 2
-* List item 3
-
-|This cell isn't prefixed with an `a`, so the processor doesn't interpret the listing block delimiters or the `source` style.
-
-[source,python]
-----
-import os
-print ("%s" %(os.uname()))
-----
-
-a|This cell is prefixed with an `a`, so the listing block is processed and rendered according to the `source` style rules.
-
-[source,python]
-----
-import os
-print "%s" %(os.uname())
-----
-
-|===
-// end::cell-ad[]
-
-// tag::cell-v[]
-|===
-|Column 1 |Column 2
-
-2*>m|This content is duplicated across two columns (2*) and aligned to the right side of the cell (>).
-
-It's rendered using a monospace font (m).
-
-.3+^.>s|This cell spans 3 rows (`3+`).
-The content is centered horizontally (`+^+`), vertically aligned to the bottom of the cell (`.>`), and styled as strong (`s`).
-e|This content is italicized (`e`).
-
-m|This content is rendered using a monospace font (m).
-
-s|This content is bold (`s`).
-|===
-// end::cell-v[]
 
 // tag::b-spec[]
 [cols="e,m,^,>s", width="25%"]

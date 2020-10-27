@@ -2,7 +2,7 @@
 // Using wikipedia's names for the operators. For reference, see https://en.wikipedia.org/wiki/Less-than_sign
 
 The alignment operators allow you to horizontally and vertically align a column's content.
-They're applied to a column specifier and xref:add-columns.adoc#cols-attribute[assigned to the `cols` attribute].
+They're applied to a column specifier and xref:add-columns.adoc#cols-attribute[assigned to the cols attribute].
 
 [#horizontal-operators]
 == Horizontal alignment operators
@@ -26,7 +26,8 @@ If the number of columns is assigned using a multiplier (`+<n>*+`), the horizont
 
 To horizontally center the content in a column, place the `+^+` operator at the beginning of the xref:add-columns.adoc#col-specifier[column's specifier].
 
-[source]
+.Center column content horizontally
+[source#ex-horizontal]
 ----
 [cols="^4,1"]
 |===
@@ -36,8 +37,9 @@ Content is left-aligned by default.
 |===
 ----
 
-The table from the above example is rendered below.
+The table from <<ex-horizontal>> is rendered below.
 
+.Result of <<ex-horizontal>>
 [cols="^4,1"]
 |===
 |This content is horizontally centered.
@@ -47,7 +49,8 @@ Content is left-aligned by default.
 
 When the columns are specified using the xref:add-columns.adoc#column-multiplier[multiplier], place the `+^+` operator after the multiplier operator (`+*+`).
 
-[source]
+.Horizontal alignment and multiplier operator order
+[source#ex-horizontal-multiplier]
 ----
 [cols="2*^",options=header]
 |===
@@ -59,8 +62,9 @@ When the columns are specified using the xref:add-columns.adoc#column-multiplier
 |===
 ----
 
-The table from the above example is rendered below.
+The table from <<ex-horizontal-multiplier>> is rendered below.
 
+.Result of <<ex-horizontal-multiplier>>
 [cols="2*^",options=header]
 |===
 |Column name
@@ -74,7 +78,8 @@ The table from the above example is rendered below.
 
 To align the content in a column to its right side, place the `+>+` operator in front of the column's specifier.
 
-[source]
+.Right align column content
+[source#ex-right]
 ----
 [cols=">4,1"]
 |===
@@ -84,8 +89,9 @@ Content is left-aligned by default.
 |===
 ----
 
-The table from the above example is rendered below.
+The table <<ex-right>> is rendered below.
 
+.Result of <<ex-right>>
 [cols=">4,1"]
 |===
 |This content is aligned to the right side of the column.
@@ -95,7 +101,8 @@ Content is left-aligned by default.
 
 When the columns are specified using the xref:add-columns.adoc#column-multiplier[multiplier], place the `+>+` operator after the multiplier operator (`+*+`).
 
-[source]
+.Right alignment and multiplier operator order
+[source#ex-right-multiplier]
 ----
 [cols="2*>",options=header]
 |===
@@ -107,8 +114,9 @@ When the columns are specified using the xref:add-columns.adoc#column-multiplier
 |===
 ----
 
-The table from the above example is rendered below.
+The table from <<ex-right-multiplier>> is rendered below.
 
+.Result of <<ex-right-multiplier>>
 [cols="2*>",options=header]
 |===
 |Column name
@@ -143,7 +151,8 @@ Then it's placed after the horizontal alignment operator, (e.g., `[cols="3*^pass
 
 To align the content in a column to the bottom of each cell, place the `+.>+` operator directly in front of the xref:adjust-column-widths.adoc[column's width].
 
-[source]
+.Bottom align column content
+[source#ex-bottom]
 ----
 [cols=".>2,1"]
 |===
@@ -153,8 +162,9 @@ Content is top-aligned by default.
 |===
 ----
 
-The table from the above example is rendered below.
+The table from <<ex-bottom>> is rendered below.
 
+.Result of <<ex-bottom>>
 [cols=".>2,1"]
 |===
 |This content is vertically aligned to the bottom of the cell.
@@ -166,7 +176,8 @@ Content is top-aligned by default.
 
 To vertically center the content in a column, place the `+.^+` operator directly in front of the xref:adjust-column-widths.adoc[column's width].
 
-[source]
+.Center column content vertically
+[source#ex-vertical]
 ----
 [cols=".^2,1"]
 |===
@@ -176,8 +187,9 @@ Content is top-aligned by default.
 |===
 ----
 
-The table from the above example is rendered below.
+The table from <<ex-vertical>> is rendered below.
 
+.Result of <<ex-vertical>>
 [cols=".^2,1"]
 |===
 |This content is centered vertically in the cell.
@@ -187,7 +199,8 @@ Content is top-aligned by default.
 
 To vertically align the content to the middle of the cells in all of the columns, enter the  `.^` operator after the xref:add-columns.adoc#column-multiplier[multiplier].
 
-[source]
+.Vertical alignment and multiplier operator order
+[source#ex-vertical-multiplier]
 ----
 [cols="2*.^",options=header]
 |===
@@ -199,8 +212,9 @@ To vertically align the content to the middle of the cells in all of the columns
 |===
 ----
 
-The table from the above example is rendered below.
+The table from <<ex-vertical-multiplier>> is rendered below.
 
+.Result of <<ex-vertical-multiplier>>
 [cols="2*.^",options=header]
 |===
 |Column name
@@ -219,7 +233,8 @@ The <<horizontal-operators,horizontal operator>> always precedes the <<vertical-
 Both operators precede the column width.
 When a xref:add-columns.adoc#column-multiplier[multiplier] is used, the operators are placed after the multiplier.
 
-[source]
+.Horizontally and vertically align column content
+[source#ex-center]
 ----
 [cols="^.>2,1,>.^1"]
 |===
@@ -236,8 +251,9 @@ centered vertically.
 |===
 ----
 
-The table from the above example is rendered below.
+The table from <<ex-center>> is rendered below.
 
+.Result of <<ex-center>>
 [cols="^.>2,1,>.^1"]
 |===
 |Column name |Column name |Column name

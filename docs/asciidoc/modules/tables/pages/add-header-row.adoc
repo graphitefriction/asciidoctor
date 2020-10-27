@@ -1,6 +1,4 @@
 = Create a Header Row
-:xrefstyle: short
-:listing-caption: Example
 
 The first row of a table is promoted to a header row if the `header` value is assigned to the table's `options` attribute.
 You can assign `header` to a table's first row explicitly or implicitly.
@@ -8,7 +6,7 @@ You can assign `header` to a table's first row explicitly or implicitly.
 TIP: The header row ignores any style operators assigned via column and cell specifiers.
 It also ignores alignment operators assigned to the table's column specifiers; however, any alignment operators assigned to a cell specifier in the header row are applied.
 
-== Explicitly assign `header` to the first row
+== Explicitly assign header to the first row
 
 The header row semantics and styles are explicitly assigned to the first row in a table by assigning `header` to the `options` attribute.
 The `options` attribute is set in the table's attribute list using the shorthand (`%value`) or formal syntax (`options="value"`).
@@ -16,11 +14,10 @@ The `options` attribute is set in the table's attribute list using the shorthand
 The `options` attribute is represented by the percent sign (`%`) when it's set using the shorthand syntax.
 In <<ex-short>>, `header` is assigned to using the shorthand syntax for `options`.
 
-[#ex-short]
 .Table with `header` assigned using the shorthand syntax
-[source]
+[source#ex-short]
 ----
-[%header,cols="2,2,1"] // <1>
+[%header,cols="2,2,1"] <1>
 |===
 |Column 1, header row
 |Column 2, header row
@@ -31,7 +28,7 @@ In <<ex-short>>, `header` is assigned to using the shorthand syntax for `options
 |Cell in column 3, row 2
 |===
 ----
-<1> Values assigned using the shorthand syntax must be entered before the `cols` attribute (or any other named attributes) in a table's attribute list, otherwise the processor will ignore them.
+. Values assigned using the shorthand syntax must be entered before the `cols` attribute (or any other named attributes) in a table's attribute list, otherwise the processor will ignore them.
 
 The table from <<ex-short>> is displayed below.
 
@@ -50,9 +47,8 @@ The table from <<ex-short>> is displayed below.
 In <<ex-formal>>, the `options` attribute is set and assigned the `header` value using the formal syntax.
 The `options` attribute accepts a comma-separated list of values.
 
-[#ex-formal]
-.Table with `header` assigned to the `options` attribute
-[source]
+.Table with header assigned to the options attribute
+[source#ex-formal]
 ----
 include::example$row.adoc[tag=opt-h]
 ----
@@ -62,7 +58,7 @@ The first row of the table in <<ex-formal>> is rendered using the corresponding 
 .Result of <<ex-formal>>
 include::example$row.adoc[tag=opt-h]
 
-== Implicitly assign `header` to the first row
+== Implicitly assign header to the first row
 
 You can implicitly define a header row based on how you layout the table.
 The following conventions determine when the first row automatically becomes the header row:
@@ -70,9 +66,8 @@ The following conventions determine when the first row automatically becomes the
 . The first line of content inside the table delimiters is not empty.
 . The second line of content inside the table delimiters is empty.
 
-[#ex-implicit]
-.First row is implicitly assigned `header`
-[source]
+.First row is implicitly assigned header
+[source#ex-implicit]
 ----
 include::example$row.adoc[tag=impl-h]
 ----
@@ -82,14 +77,13 @@ As seen in the result below, if all of these rules hold true, then the first row
 .Result of <<ex-implicit>>
 include::example$row.adoc[tag=impl-h]
 
-=== Deactivate the implicit assignment of `header`
+=== Deactivate the implicit assignment of header
 
 To suppress the implicit behavior of promoting the first row to a header row, assign the value `noheader` to the `options` attribute using the formal (`options=noheader`) or shorthand (`%noheader`) syntax.
 In <<ex-noheader>>, `noheader` is assigned using the shorthand syntax.
 
-[#ex-noheader]
-.Deactivate implicit header row with `noheader`
-[source]
+.Deactivate implicit header row with noheader
+[source#ex-noheader]
 ----
 [%noheader]
 |===

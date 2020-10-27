@@ -11,38 +11,41 @@ If you set the frame attribute, you can override the default value with the valu
 
 The `topbot` value draws a border on the top and bottom of the table.
 
-[source]
+.Table with frame=topbot
+[source#ex-topbot]
 ----
 [frame=topbot]
 include::example$row.adoc[tag=base-h]
 ----
 
-.Result: Table rendered with frame=topbot
-[width=90,frame=topbot]
+.Result of <<ex-topbot>>
+[frame=topbot]
 include::example$row.adoc[tag=base-h]
 
 The `sides` value draws a border on the right and left side of the table.
 
-[source]
+.Table with frame=sides
+[source#ex-sides]
 ----
 [frame=sides]
 include::example$row.adoc[tag=base-h]
 ----
 
-.Result: Table rendered with frame=sides
-[width=90,frame=sides]
+.Result of <<ex-sides>>
+[frame=sides]
 include::example$row.adoc[tag=base-h]
 
 The `none` value removes the borders around the table.
 
-[source]
+.Table with frame=none
+[source#ex-noframe]
 ----
 [frame=none]
 include::example$row.adoc[tag=base-h]
 ----
 
-.Result: Table rendered with frame=none
-[width=90,frame=none]
+.Result of <<ex-noframe>>
+[frame=none]
 include::example$row.adoc[tag=base-h]
 
 == Grid
@@ -53,38 +56,39 @@ If you set the `grid` attribute, you can override the default value with the val
 
 The `rows` value draws a border between the rows of the table.
 
-[source]
+.Table with grid=rows
+[source#ex-rows]
 ----
 [grid=rows]
 include::example$row.adoc[tag=base-h]
 ----
 
-.Result: Table rendered with grid=rows
-[width=90,grid=rows]
+.Result of <<ex-rows>>
+[grid=rows]
 include::example$row.adoc[tag=base-h]
 
 The `cols` value draws borders between the columns.
 
-[source]
+.Table with grid=cols
+[source#ex-cols]
 ----
 [grid=cols]
 include::example$row.adoc[tag=base-h]
 ----
 
-.Result: Table rendered with grid=cols
-[width=90,grid=cols]
+.Result of <<ex-cols>>
+[grid=cols]
 include::example$row.adoc[tag=base-h]
 
 The `none` value removes all borders between the cells.
 
-[source]
+.Table with grid=none
+[source#ex-nogrid]
 ----
 [grid=none]
 include::example$row.adoc[tag=base-h]
 ----
 
-.Result: Table rendered with grid=none
-[width=90,grid=none]
+.Result of <<ex-nogrid>>
+[grid=none]
 include::example$row.adoc[tag=base-h]
-
-//NOTE: At this time, Asciidoctor has not implemented the `align`, `halign`, or `valign` attributes.

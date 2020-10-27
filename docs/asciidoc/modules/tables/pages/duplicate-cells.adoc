@@ -1,6 +1,4 @@
 = Duplicate Cells
-:xrefstyle: short
-:listing-caption: Example
 // clone, copy, replicate, duplicate
 
 The contents of a cell can be duplicated in consecutive cells.
@@ -24,40 +22,13 @@ The duplication operator tells the converter to interpret the duplication factor
 To duplicate a cell, enter the duplication factor and duplication operator (`+<n>*+`) in the cell specifier.
 Don't insert any blank spaces between the duplication, any alignment or style operators (if present), and the xref:add-cells-and-rows.adoc#cell-separator[cell's separator] (`|`).
 
-[#ex-clone]
 .Duplicate the contents of two cells
-[source]
+[source#ex-clone]
 ----
-|===
-|Column 1, header row |Column 2, header row |Column 3, header row
-
-2*|This cell is duplicated in columns 1 and 2 because its specifier contains a duplication of `2*`
-|Cell in column 3, row 2
-
-|Cell in column 1, row 3
-|Cell in column 2, row 3
-3*e|This cell specifier contains the duplication `3*` and style operator `e`.
-
-The cell's text is italicized and duplicated in column 3, row 3 and columns 1 and 2 on row 4.
-
-|Cell in column 3, row 4
-|===
+include::example$cell.adoc[tag=clone]
 ----
 
 The table from <<ex-clone>> is displayed below.
 
 .Result of <<ex-clone>>
-|===
-|Column 1, header row |Column 2, header row |Column 3, header row
-
-2*|This cell is duplicated in columns 1 and 2 because its specifier contains a duplication of `2*`
-|Cell in column 3, row 2
-
-|Cell in column 1, row 3
-|Cell in column 2, row 3
-3*e|This cell specifier contains the duplication `3*` and style operator `e`.
-
-The cell's text is italicized and duplicated in column 3, row 3 and columns 1 and 2 on row 4.
-
-|Cell in column 3, row 4
-|===
+include::example$cell.adoc[tag=clone]
