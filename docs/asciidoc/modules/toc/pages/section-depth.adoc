@@ -1,23 +1,25 @@
-= Change the Displayed Section Levels
+= Change the Section Level Depth in the TOC
+:navtitle: Change the Section Level Depth
 
-You can adjust the depth of section levels that are displayed in the Table of Contents (TOC) with the `toclevels` attribute.
+You can adjust the depth of section levels that are displayed in the table of contents with the `toclevels` attribute.
 
-== Set `toclevels`
+== Set toclevels
 
-By default, the TOC displays level 1 and level 2 section titles.
-You can set a different depth with the `toclevels` attribute.
+By default, the TOC displays level 1 (`==`) and level 2 (`===`) section titles.
+You can assign a different level depth with the `toclevels` attribute.
 
 .Define toclevels value
-[source]
+[source#ex-levels]
 ----
-include::example$toc-level.adoc[]
+include::example$toc.adoc[tag=header]
+:toc: <1>
+:toclevels: 4 <2>
+include::example$toc.adoc[tag=body]
 ----
-<1> The `toc` attribute must be set in order to use `toclevels`.
-<2> `toclevels` is set and assigned the value `4` in the document header.
-The TOC will list the titles of the section 1, 2, 3, and 4 levels when the document is rendered.
+. The `toc` attribute must be set in order to use `toclevels`.
+. `toclevels` is set and assigned the value `4` in the document header.
+The TOC will list the titles of any sections, levels 1 through 4 (i.e., `==` through `=====`), when the document is rendered.
 
-.Result: Define toclevels value
-====
-#fix ex#
-//image::toc-level.png[Table of contents display levels]
-====
+The result of <<ex-levels>> is displayed below.
+
+image::toclevels.png[table of contents with the toclevels attribute set,role=screenshot]

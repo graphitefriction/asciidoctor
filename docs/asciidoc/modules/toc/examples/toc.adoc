@@ -1,9 +1,60 @@
-= The Dangerous and Thrilling Documentation Chronicles
-Kismet Chameleon
-:toc:
+// tag::header[]
+= The Intrepid Chronicles
+Kismet Lee; B. Steppenwolf; Pax Draeke
+// end::header[]
+// tag::body[]
 
-This journey begins on a bleary...
+== Certain Peril
 
-== Cavern Glow
+Daylight trickles across the cobblestones...
 
-The river rages through the cavern, rattling its content...
+=== A Recipe for Potion
+
+We have to harvest the leaves by the light of the teal moons...
+
+==== Searching for Ginseng
+
+Crawling through the twisted understory...
+
+== Dawn on the Plateau
+
+Hanging from...
+// end::body[]
+
+// tag::title[]
+:toc: <1>
+:toc-title: Table of Adventures <2>
+
+== Certain Peril
+
+Daylight trickles across the cobblestones...
+// end::title[]
+
+// tag::preamble[]
+:toc: preamble
+
+This adventure begins on a frigid morning.
+We've run out of coffee beans, but leaving our office means venturing into certain peril.
+
+== Certain Peril
+
+Daylight trickles across the cobblestones...
+
+== Dawn on the Plateau
+
+Hanging from...
+// end::preamble[]
+
+// tag::macro[]
+:toc: macro <1>
+
+== Certain Peril
+
+toc::[] <2>
+
+Daylight trickles across the cobblestones...
+
+== Dawn on the Plateau
+
+Hanging from...
+// end::macro[]

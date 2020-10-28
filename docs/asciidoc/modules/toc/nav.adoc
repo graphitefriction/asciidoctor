@@ -1,6 +1,6 @@
 .Table of Contents
-* xref:toc.adoc[Activate the Table of Contents]
-* xref:title.adoc[Customize the Table of Contents Title]
-* xref:section-depth.adoc[Change the Displayed Section Levels]
-* xref:position.adoc[Position the Table of Contents]
-* xref:toc-ref.adoc[Table of Contents Attributes Reference]
+* xref:toc.adoc[]
+* xref:title.adoc[]
+* xref:section-depth.adoc[]
+* xref:position.adoc[]
+* xref:toc-ref.adoc[]
