@@ -1,4 +1,6 @@
 = Character Replacement Substitutions
+:navtitle: Character Replacements
+:table-caption: Table
 :y: Yes
 //icon:check[role="green"]
 :n: No
@@ -7,19 +9,16 @@
 :url-unicode: https://en.wikipedia.org/wiki/List_of_Unicode_characters
 
 The character replacement substitution step processes textual characters such as marks, arrows and dashes and replaces them with the decimal format of their Unicode code point, i.e., their <<char-ref-sidebar,numeric character reference>>.
+The replacements step depends on the substitutions completed by the xref:special-characters.adoc[special characters step].
 
 // Table of Textual symbol replacements is inserted below
 include::partial$subs-symbol-repl.adoc[]
-
-WARNING: The `replacements` step depends on the substitutions completed by the `specialchars` step.
-This is important to keep in mind when applying custom substitutions to a block.
-See xref:apply-subs-to-blocks.adoc[Customize the substitutions applied to blocks] for more information.
 
 This substitution step also recognizes {url-html-ref}[HTML and XML character references^] as well as {url-unicode}[decimal and hexadecimal Unicode code points^] and substitutes them for their corresponding decimal form Unicode code point.
 
 For example, to produce the `&sect;` symbol you could write `\&sect;`, `\&#x00A7;`, or `\&#167;`.
 When the document is processed, `replacements` will replace the section symbol reference, regardless of whether it is a named character reference or a numeric character reference, with `\&#167;`.
-In turn, `\&#167;` will display as `&sect;`.
+In turn, `\&#167;` will display as &sect;.
 
 [#char-ref-sidebar]
 .Anatomy of a character reference
@@ -52,16 +51,17 @@ For example, to produce an `&#64;` sign using a Unicode escape sequence, you wou
 However, Asciidoctor doesn't process and replace Unicode escape sequences at this time.
 ****
 
-TIP: Asciidoctor also provides built-in attributes for representing some common symbols.
-These attributes and their corresponding output are listed in the xref:attributes:ref-character-replacement.adoc[Character replacement attributes reference].
+TIP: AsciiDoc also provides built-in attributes for representing some common symbols.
+These attributes and their corresponding output are listed in xref:attributes:ref-character-replacement.adoc[].
 
-== Blocks and inline elements subject to the replacements substitution step
+== Default replacements substitution
 
-The `replacements` step occurs within title, paragraph, example, quote, sidebar, and verse blocks.
+<<table-replace>> lists the specific blocks and inline elements the replacements substitution step applies to automatically.
 
-[width="60%", cols="3,^2"]
+.Blocks and inline elements subject to the replacements substitution step
+[#table-replace%autowidth,cols=",^"]
 |===
-|Blocks and elements |`replacements` applied
+|Blocks and elements |Substitution step applied by default
 
 |Attribute entry values |{n}
 
@@ -73,13 +73,14 @@ The `replacements` step occurs within title, paragraph, example, quote, sidebar,
 
 |Literal, listings, and source |{n}
 
-|Macros (except passthroughs) |{y}
+|Macros |{y} +
+(except passthrough macros)
 
-|Open |Varies
+|Open |{y}
 
 |Paragraphs |{y}
 
-|Passthroughs |{n}
+|Passthrough blocks |{n}
 
 |Quotes and verses |{y}
 
@@ -89,3 +90,12 @@ The `replacements` step occurs within title, paragraph, example, quote, sidebar,
 
 |Titles |{y}
 |===
+
+== replacements substitution value
+
+The replacements substitution step can be modified on blocks and inline elements.
+For blocks, the step's name, `replacements`, can be assigned to the xref:apply-subs-to-blocks.adoc[subs attribute].
+For inline elements, the built-in values `r` or `replacements` can be applied to the xref:apply-subs-to-text.adoc[inline pass macro] to add the replacements substitution step.
+
+WARNING: The replacements step depends on the substitutions completed by the xref:special-characters.adoc[special characters step].
+This is important to keep in mind when applying the `replacements` value to blocks and inline elements.

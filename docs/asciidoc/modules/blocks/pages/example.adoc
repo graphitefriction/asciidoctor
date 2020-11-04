@@ -15,12 +15,15 @@ Normal substitutions are applied to example content.
 
 If the example content is contiguous, i.e., not interrupted by blank lines, the block style name `example` can be placed directly on top of the text in an attribute list (`[]`).
 
-[source]
+.Assign example block style to paragraph
+[source#ex-style]
 ----
 .Optional title
 [example]
 This is an example of an example block.
 ----
+
+The result of <<ex-style>> is displayed below.
 
 .Optional title
 [example]
@@ -31,9 +34,10 @@ This is an example of an example block.
 
 If the example content includes multiple blocks or content separated by blank lines, place the content between delimiter lines consisting of four equals signs (`pass:[====]`).
 
-You don't need to set the block style name when you use the example's delimiters.
+You don't need to set the block style name when you use the example delimiters.
 
-[source]
+.Example block delimiter syntax
+[source#ex-block]
 ----
 .Onomatopoeia
 ====
@@ -42,6 +46,8 @@ The book hit the floor with a *thud*.
 He could hear doves *cooing* in the pine trees`' branches.
 ====
 ----
+
+The result of <<ex-block>> is displayed below.
 
 .Onomatopoeia
 ====

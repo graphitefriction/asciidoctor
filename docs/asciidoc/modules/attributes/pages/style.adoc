@@ -1,7 +1,7 @@
 = The Style Attribute
 
 The style attribute is the xref:element.adoc#named[first positional attribute] in an attribute list.
-It specifies a predefined set of characteristics to apply to a block element or macro.
+It specifies a predefined set of characteristics to apply to a block or macro.
 
 For example, a paragraph block can be assigned one of the following built-in style attributes:
 

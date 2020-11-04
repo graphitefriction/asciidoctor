@@ -121,7 +121,7 @@ For ordered lists, Asciidoctor supports the numeration styles such as lowergreek
 
 The full list of numeration styles that can be applied to an ordered list are as follows:
 
-[cols="2,3", width="50%"]
+[%autowidth]
 |===
 |Block style |CSS list-style-type
 
@@ -196,5 +196,5 @@ include::example$ordered.adoc[tag=num]
 include::example$ordered.adoc[tag=num]
 ====
 
-IMPORTANT: The start attribute must be a number, even when using a different numeration style.
+IMPORTANT: The `start` attribute must be a number, even when using a different numeration style.
 For instance, to start an alphabetic list at letter "c", set the numeration style to loweralpha and the start attribute to 3.

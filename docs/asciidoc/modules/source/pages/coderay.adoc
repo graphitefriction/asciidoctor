@@ -100,7 +100,7 @@ See the xref:asciidoctor:html:apply-code-stylesheets.adoc#coderay[CodeRay styles
 Note: I'm not getting this to work. Need to come back and do some quality assurance.
 ////
 
-== Highlight Select Lines
+== Highlight select lines
 
 Not to be confused with syntax highlighting, you can configure CodeRay to highlight (i.e., emphasize) select lines in order to call attention to them.
 This feature is activated on a source block if the following conditions are met:

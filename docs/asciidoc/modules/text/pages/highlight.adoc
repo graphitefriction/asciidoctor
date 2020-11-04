@@ -6,10 +6,12 @@
 When text is enclosed in a set of single or double hash symbols (`#`), and no style is assigned to it, the text will be rendered as highlighted text (text wrapped in `<mark>`).
 
 .Highlighted style syntax
-[source]
+[source#ex-highlight]
 ----
 include::example$text.adoc[tag=highlight]
 ----
+
+When <<ex-highlight>> is converted, the following HTML is produced.
 
 .Highlighted text HTML output
 [source,html]
@@ -17,7 +19,8 @@ include::example$text.adoc[tag=highlight]
 include::example$text.adoc[tag=highlight-html]
 ----
 
-.Rendered highlighted text
+The result of <<ex-highlight>> is rendered below.
+
 ====
 include::example$text.adoc[tag=highlight]
 ====

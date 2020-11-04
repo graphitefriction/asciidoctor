@@ -1,4 +1,4 @@
-= Using Indent with Included Content
+= Indent Included Content
 // aka Normalize Block Indentation
 // This content needs to be made applicable to includes...like add a step in the example flow to show it coming from an include file.
 

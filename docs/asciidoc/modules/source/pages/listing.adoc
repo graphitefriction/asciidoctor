@@ -1,72 +1,107 @@
 = Listing Blocks
-:keywords: source code snippets
+:replace-me: I've been replaced!
 
-Like xref:literal.adoc[literal blocks], the content in listing blocks is displayed exactly as you entered it.
-Listing block content is converted to `<pre>` text.
-The content in listing blocks is only subject to xref:subs:special-characters.adoc[special character] and callout substitutions.
+Blocks and paragraphs assigned the `listing` style display their rendered content exactly as you enter it.
+Listing content is converted to preformatted text (i.e., `<pre>`).
+The content is shown in a fixed-width font and endlines are preserved.
+It's only subject to xref:subs:special-characters.adoc[special character] and callout substitutions.
 
-The `listing` block name can be applied to content two ways.
+The listing style can be applied to content using any of the following methods:
 
-. Set the `listing` attribute on the element.
-. Contain the content within a delimited listing block.
+* indenting the first line of a paragraph by one or more spaces,
+* setting the `listing` style on a block or paragraph using an attribute list, or
+* enclosing the content within a set of listing block delimiters (`----`).
+
+== Indent method
+
+When a line begins with one or more spaces it is displayed as a listing block.
+This method is an easy way to insert simple code snippets.
+
+.Indicate listing content using an indent
+[source#ex-indent]
+----
+include::example$listing.adoc[tag=indent]
+----
+
+The result of <<ex-indent>> is rendered below.
+
+include::example$listing.adoc[tag=indent]
 
 == Listing style syntax
 
-The listing block name is applied to an element, such as a paragraph, by setting the `listing` attribute on that element.
+The block style `listing` can be applied to a block or paragraph, by setting the attribute `listing` using an attribute list.
 
 .Listing style syntax
-[source]
+[source#ex-style]
 ----
-include::example$listing.adoc[tag=para]
+include::example$listing.adoc[tag=style]
 ----
 
-.Result: Listing style
-include::example$listing.adoc[tag=para]
+The result of <<ex-style>> is rendered below.
+
+include::example$listing.adoc[tag=style]
 
 == Delimited listing block
 
 A delimited listing block is surrounded by lines composed of four hyphens (`----`).
+This method is useful when the content contains blank lines.
 
 .Delimited listing block syntax
-[source]
+[source#ex-block]
 ....
-include::example$listing.adoc[tag=bl]
+include::example$listing.adoc[tag=block]
 ....
 
-Here's how the block above appears when rendered as HTML.
+Here's how the block in <<ex-block>> appears when rendered.
 
-.Result: Delimited listing block
-include::example$listing.adoc[tag=bl]
+include::example$listing.adoc[tag=block]
 
 You should notice a few things about how the content is processed.
 
-* the HTML tag `<pre>` is escaped
-* then endlines are preserved
-* the phrase _listing block_ is not italicized, despite having underscores around it.
+* The HTML tag `<pre>` is escaped, that is, it's displayed verbatim, not interpreted.
+* The endlines are preserved.
+* The phrase _delimited listing block_ isn't italicized, despite having the underscore formatting marks around it.
 
-Listing blocks are good for displaying raw source code, especially when used in tandem with the `source` and `source-highlighter` attributes.
-The example below shows a listing block with `source` and the language `ruby` applied to its content.
+Listing blocks are good for displaying snippets of raw source code, especially when used in tandem with the `source` style and `source-highlighter` attribute.
+See xref:source.adoc[] to learn more about `source` and `source-highlighter`.
 
-.Source block syntax
-[source]
-....
-include::example$source.adoc[tag=src-base]
-....
+== Listing substitutions
 
-.Result: Listing block with the source attribute set
-====
-include::example$source.adoc[tag=src-base]
-====
+Content that is assigned the `listing` style, either via the explicit block style or the listing delimiters is subject to the xref:subs:substitutions.adoc#verbatim-group[verbatim substitution group].
+Only xref:subs:special-characters.adoc[special characters] and callouts are replaced automatically in listing content.
 
-Detailed instructions for using the xref:source.adoc[source and source-highlighter attributes] are provided on the source code paragraphs and blocks page.
+You can control the substitution steps applied to a listing block using the `subs` attribute.
 
-[listing]
-.Listing block with custom substitutions syntax
-....
-include::example$listing.adoc[tag=subs]
-....
+.Delimited listing block with custom substitutions syntax
+[#ex-subs]
+------
+[subs="+attributes"]
+----
+This is a _delimited listing block_
+with the `subs` attribute assigned
+the incremental value `+attributes`.
+This attribute reference:
 
-.Result: Listing block with custom substitutions applied
-// the attribute value is hard-coded in this result since the example depends
-// on a hypothetical document attribute
-include::example$listing.adoc[tag=subs-out]
+{replace-me}
+
+will be replaced with the attribute's
+value when rendered.
+----
+------
+
+The result of <<ex-subs>> is rendered below.
+
+[subs="+attributes"]
+----
+This is a _delimited listing block_
+with the `subs` attribute assigned
+the incremental value `+attributes`.
+This attribute reference:
+
+{replace-me}
+
+will be replaced with the attribute's
+value when rendered.
+----
+
+See xref:subs:apply-subs-to-blocks.adoc[] to learn more about the `subs` attribute and how to apply incremental substitutions to listing content.

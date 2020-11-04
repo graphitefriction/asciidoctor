@@ -1,14 +1,14 @@
 .URLs and Links
-* xref:link.adoc[URLs]
-* xref:relative-link.adoc[To Relative Files]
-* xref:link-ref.adoc[URL and Link Reference]
+* xref:link.adoc[]
+* xref:relative-link.adoc[]
+* xref:link-ref.adoc[]
 
 .Cross References and Footnotes
-* xref:xref.adoc[Cross References]
-** xref:inter-document-xref.adoc[Document to Document]
-** xref:xref-text-and-style.adoc[Text and Styles]
-** xref:xref-validate.adoc[Validating]
-* xref:footnote.adoc[Footnotes]
+* xref:xref.adoc[]
+** xref:inter-document-xref.adoc[]
+** xref:xref-text-and-style.adoc[]
+** xref:xref-validate.adoc[]
+* xref:footnote.adoc[]
 
 .Images, Icons and Multimedia
 * xref:images.adoc[]
@@ -25,6 +25,6 @@
 * xref:audio-and-video.adoc[]
 
 .UI Visualizations
-* xref:button-macro.adoc[Button Macro]
-* xref:keyboard-macro.adoc[Keyboard Macro]
-* xref:menu-macro.adoc[Menu Macro]
+* xref:button-macro.adoc[]
+* xref:keyboard-macro.adoc[]
+* xref:menu-macro.adoc[]

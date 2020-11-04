@@ -1,4 +1,4 @@
-= Escaping Unconstrained Formatting Marks
+= Escape Unconstrained Formatting Marks
 
 xref:troubleshoot-unconstrained-formatting.adoc[Unconstrained formatting marks] are meant to match anywhere in the text, context free.
 However, that means you catch them formatting text that you don't want styled.

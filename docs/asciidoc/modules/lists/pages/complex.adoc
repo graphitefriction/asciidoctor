@@ -19,12 +19,12 @@ include::example$complex.adoc[tag=indent]
 TIP: When items contain more than one line of text, leave a blank line before the next item to make the list easier to read.
 
 A list item may contain any type of AsciiDoc content, including paragraphs, delimited blocks, and block macros.
-You just need to _attach_ them to the list item.
+You just need to attach them to the list item.
 
 == List continuation
 
-To add additional paragraphs or other block elements to a list item, you must "`attach`" them (in a series) using a _list continuation_.
-A list continuation is a `{plus}` symbol on a line by itself, immediately adjacent to the block being attached.
+To add additional paragraphs or other block elements to a list item, you must "`attach`" them (in a series) using a list continuation.
+A [.term]*list continuation* is a `{plus}` symbol on a line by itself, immediately adjacent to the block being attached.
 
 Here's an example:
 

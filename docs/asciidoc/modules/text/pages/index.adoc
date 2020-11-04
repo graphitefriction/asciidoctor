@@ -6,16 +6,22 @@ You can also create custom inline formatting roles.
 
 == Formatting terms and concepts
 
-[[mark-def]]Formatting marks and sets:: A [.term]*formatting mark* is the character, such as `+*+`, `_`, or `~`, that indicates the inline style you want Asciidoctor to apply to the text.
+=== Formatting marks and sets
+
+A [#def-format-mark.term]*formatting mark* is a character, such as `+*+`, `_`, or `~`, that indicates the inline style you want Asciidoctor to apply to the text.
 Formatting marks come in sets.
-A [.term]*formatting set* consists of an identical opening mark and closing mark.
-The [.term]*opening mark* indicates where you want the style to start and the [.term]*closing mark* indicates where you want the style to end.
+
+A [#def-format-set.term]*formatting set* consists of an identical opening mark and closing mark.
+
+The [#def-open-mark.term]*opening mark* indicates where you want the style to start, and the [#def-close-mark.term]*closing mark* indicates where you want the style to end.
 Depending on where the formatting marks of a set are placed, a formatting set is either constrained or unconstrained.
 
-[[constrained-def]]Constrained set:: When a blank space directly precedes the formatting set's opening mark and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`) directly follows the set's closing mark, the formatting set is referred to as a *constrained set*.
+[#constrained-set]
+=== Constrained set
+
+When a blank space directly precedes the formatting set's opening mark and a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`) directly follows the set's closing mark, the formatting set is referred to as a [.term]*constrained set*.
 A constrained set uses a single opening mark and a single closing mark to enclose the text that will be styled.
-+
---
+
 For example, you use this form to format a word that stands alone,
 
 [source]
@@ -36,20 +42,20 @@ or to format a word adjacent to punctuation, like an exclamation mark.
 ----
 This stuff is *strong*!
 ----
---
 
-[[unconstrained-def]]Unconstrained set:: A double set of formatting marks is required to enclose text when the opening mark isn't directly preceded by a blank space or the closing mark isn't directly followed by a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`).
-In this context, a formatting set is an *unconstrained set*.
+[#unconstrained-set]
+=== Unconstrained set
+
+A double set of formatting marks is required to enclose text when the opening mark isn't directly preceded by a blank space or the closing mark isn't directly followed by a blank space or punctuation mark (`,`, `;`, `"`, `.`, `?`, and `!`).
+In this context, a formatting set is an [.term]*unconstrained set*.
 You use the unconstrained syntax to format just one or a few letters in a word.
-+
---
+
 [source]
 ----
 She spells her name with an "`h`", as in Sara**h**.
 ----
 
-See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained set?] and xref:escape-unconstrained-formatting.adoc[Escaping unconstrained formatting marks] for more examples and information.
---
+See xref:troubleshoot-unconstrained-formatting.adoc#when-to-use-unconstrained[When should I use an unconstrained set?] and xref:escape-unconstrained-formatting.adoc[] for more examples and information.
 
 == Inline text and punctuation styles
 
@@ -94,8 +100,8 @@ They can be changed to curved using the backtick (`++`++`) formatting mark.
 
 == Quotes substitutions
 
-When Asciidoctor processes text enclosed by inline formatting syntax, the marks are replaced by the corresponding HTML or XML tags, depending on your backend, during the `quotes` substitution phase.
-To control what formatting is applied to inline text, macro, or block, use the xref:subs:quotes.adoc[`quotes` substitution attribute].
+When Asciidoctor processes text enclosed by inline formatting syntax, the marks are replaced by the corresponding HTML or XML tags, depending on your backend, during the xref:subs:quotes.adoc[quotes substitution step].
+You can control when inline formatting is applied to inline text, macros, or blocks with the xref:subs:quotes.adoc#quotes-value[quotes substitution value].
 
 ////
 CAUTION: You may not always want these symbols to indicate text formatting.

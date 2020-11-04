@@ -1,6 +1,6 @@
 = Customize the Substitutions Applied to Text
 
-The inline pass macro (`+pass:[]+`) accepts the shorthand values in addition to the longhand values for specifying substitution steps.
+The inline pass macro (`++pass:[]++`) accepts the shorthand values in addition to the longhand values for specifying substitution steps.
 
 * `c` or `specialchars`
 * `q` or `quotes`
@@ -9,15 +9,19 @@ The inline pass macro (`+pass:[]+`) accepts the shorthand values in addition to 
 * `m` or `macros`
 * `p` or `post_replacements`
 
-== Applying substitutions to inline text
+== Apply substitutions to inline text
 
 Custom substitutions can also be applied to inline text with the xref:pass-macro.adoc[pass macro].
-For example, let's assume you need to underline a snippet of text using HTML tags in your AsciiDoc document.
+For instance, let's assume you need to underline a snippet of text using HTML tags in your AsciiDoc document.
 You'd do this with the inline pass macro.
-[source]
+
+.Inline pass macro syntax
+[source#ex-pass]
 ----
 include::example$pass.adoc[tag=in-macro]
 ----
+
+The result of <<ex-pass>> is rendered below.
 
 ====
 include::example$pass.adoc[tag=in-macro]
@@ -26,10 +30,13 @@ include::example$pass.adoc[tag=in-macro]
 However, you also need to bold the text and want to use the AsciiDoc markup for that formatting.
 In this case, you'd assign the `quotes` substitution step to the inline pass macro.
 
-[source]
+.Assign quotes to inline pass macro
+[source#ex-sub-quotes]
 ----
 include::example$pass.adoc[tag=s-macro]
 ----
+
+The result of <<ex-sub-quotes>> is rendered below.
 
 ====
 include::example$pass.adoc[tag=s-macro]
@@ -38,12 +45,16 @@ include::example$pass.adoc[tag=s-macro]
 You can also assign custom substitution steps to inline text that's in a block.
 In the listing block below, we want to process the inline formatting on the second line.
 
+.Listing block with inline formatting
+[source#ex-listing]
 ....
 include::example$pass.adoc[tag=sub-in]
 ....
-<1> `macros` is assigned to `subs`, which allows the `pass` macro within the block to be processed.
-<2> The `pass` macro is assigned the `quotes` value.
+. `macros` is assigned to `subs`, which allows the `pass` macro within the block to be processed.
+. The `pass` macro is assigned the `quotes` value.
 Text within the square brackets will be formatted.
+
+The result of <<ex-listing>> is rendered below.
 
 ====
 include::example$pass.adoc[tag=sub-out]

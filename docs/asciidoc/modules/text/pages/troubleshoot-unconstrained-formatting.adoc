@@ -1,19 +1,8 @@
-= Troubleshooting Unconstrained Formatting Sets
+= Troubleshoot Unconstrained Formatting Sets
 
-== What is an unconstrained set?
+An xref:index.adoc#unconstrained-set[unconstrained set] is often used to format just one or a few characters in a word.
 
-A double set of formatting marks is required to enclose text when the xref:index.adoc#mark-def[opening mark] isn't directly preceded by a blank space or it's directly followed by a blank space.
-Also, a double set of formatting marks is required when the xref:index.adoc#mark-def[closing mark] isn't directly followed by a blank space or punctuation mark.
-In this context, a formatting set is an *unconstrained set*.
-
-For example, you use an unconstrained set to format just one or a few letters in a word.
-
-[source]
-----
-She spells her name with an "`h`", as in Sara**h**.
-----
-
-[#when-to-use-unconstrained]
+[#use-unconstrained-set]
 == When should I use an unconstrained set?
 
 Consider the following questions:
@@ -22,12 +11,12 @@ Consider the following questions:
 . Is there a colon, semicolon, or closing curly bracket directly before the starting formatting mark?
 . Is there a space directly inside of the formatting mark?
 
-If you answered "`yes`" to any of these questions, you need to use an unconstrained formatting set.
+If you answered "`yes`" to any of these questions, you need to use an unconstrained set.
 
-To help you determine whether a particular syntax pattern requires an unconstrained set versus a xref:index.adoc#constrained-def[constrained set], consider the following scenarios:
+To help you determine whether a particular syntax pattern requires an unconstrained set versus a xref:index.adoc#constrained-set[constrained set], consider the following scenarios:
 
 .Constrained or Unconstrained?
-[#constrained-or-unconstrained,cols=4*]
+[#constrained-or-unconstrained]
 |===
 |AsciiDoc |Result |Formatting Set |Reason
 
@@ -62,8 +51,8 @@ To help you determine whether a particular syntax pattern requires an unconstrai
 |The adjacent hyphen is not a letter, number, underscore, colon, or semicolon.
 |===
 
-[#unconstrained-edge]
-=== Unconstrained formatting edge cases
+[#unconstrained-edge-cases]
+=== Unconstrained set edge cases
 
 There are cases when it might seem logical to use a constrained set, but an unconstrained set is required.
 xref:subs:substitutions.adoc[Substitutions] may be applied by the parser before getting to the formatting marks, in which case the characters adjacent to those marks may not be what you see in the original source.

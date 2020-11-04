@@ -2,16 +2,18 @@
 
 == Custom style syntax
 
-Additionally, text marked with hash symbols can be assigned built-in styles, such as `big` or `underline`.
+Text marked with hash symbols can be assigned built-in styles, such as `big` or `underline`.
 
 .Built-in CSS class syntax
-[source]
+[source#ex-css]
 ----
 include::example$text.adoc[tag=css-co]
 ----
-<1> The first positional attribute is treated as a role. You can assign it a custom or built-in CSS class.
+. The first positional attribute is treated as a role.
+You can assign it a custom or built-in CSS class.
 
-.Rendered CSS class styled text
+The results of <<ex-css>> are displayed below.
+
 ====
 include::example$text.adoc[tag=css]
 ====
@@ -19,12 +21,12 @@ include::example$text.adoc[tag=css]
 You can format text with custom styles that you define as well.
 
 .Custom CSS class syntax
-[source]
+[source#ex-custom]
 ----
 include::example$text.adoc[tag=css-custom]
 ----
 
-When converted to HTML, the word _asciidoctor_ is wrapped in `<span>` tags and the role `userinput` is used as the element's CSS class.
+When <<ex-custom>> is converted to HTML, the word _asciidoctor_ is wrapped in `<span>` tags and the role `userinput` is used as the element's CSS class.
 
 .HTML output
 [source,html]

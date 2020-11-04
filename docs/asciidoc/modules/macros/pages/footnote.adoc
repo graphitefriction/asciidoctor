@@ -1,31 +1,29 @@
 = Footnotes
-// anchor from um: user-footnotes
 
 You can add footnotes to your document using the footnote macro (`+footnote:[]+`).
 If you plan to reference a footnote more than once, use the footnote macro with a target (`+footnote:id[]+`).
 
 .Footnote syntax
-[source]
+[source#ex-footnote]
 ----
 include::example$footnote.adoc[tag=base-c]
 ----
-<1> Insert the footnote macro directly after any punctuation. Note that the footnote macro only uses a single colon (`:`).
-<2> Insert the footnote's content within the square brackets (`+[]+`). The text may span several lines.
-<3> If you plan to reuse a footnote, specify a unique ID in the target position.
-<4> To reference an existing footnote, you only need to insert the ID in the target slot (leaving the text in the square brackets empty).
+. Insert the footnote macro directly after any punctuation. Note that the footnote macro only uses a single colon (`:`).
+. Insert the footnote's content within the square brackets (`+[]+`). The text may span several lines.
+. If you plan to reuse a footnote, specify a unique ID in the target position.
+. To reference an existing footnote, you only need to insert the ID in the target slot (leaving the text in the square brackets empty).
 
 The footnotes will be numbered consecutively throughout the article.
 
-.Rendered footnotes
-====
+The results of <<ex-footnote>> are displayed below
+
 [.unstyled]
 |===
 a|
 include::example$footnote.adoc[tag=base-x]
 |===
-====
 
-== Externalizing a Footnote
+== Externalizing a footnote
 
 Since footnotes are defined using an inline macro, the footnote content ends up right alongside the text it's annotating, making that text harder to read.
 You can solve this probably by externalizing your footnotes using document attributes.
@@ -53,7 +51,7 @@ That's because headings (section titles and discrete headings) get converted out
 To resolve this problem, you must assign an explicit ID and reftext to any heading that contains a footnote.
 For example:
 
-[source,asciidoc]
+[source]
 ----
 See <<heading>>.
 

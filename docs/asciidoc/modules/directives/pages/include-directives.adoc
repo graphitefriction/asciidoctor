@@ -1,37 +1,29 @@
-= Include Directive
+= Getting Started with Include Directives
+// Include Directive Syntax and Processing
+// Include Directive Concepts and Syntax
 
-The include directive provides a way to import content from another file into the current document.
-The include directive must be placed on a line by itself with the following syntax:
+== What's an include directive?
 
-----
-\include::path[<attrlist>]
-----
-
-IMPORTANT: Although the include directive looks like a block macro, it isn't one.
-
-When the document is processed, the include directive is replaced by the contents of the include file.
+An [.term]*include directive* imports content from an external file into the content of the current document.
+When the current document is processed, the include directive syntax is replaced by the contents of the include file.
 Think of the include directive like a file expander.
-It has no awareness of the surrounding context.
+The include directive is a <<include-processing,preprocessor directive>>, so it has no awareness of the surrounding context.
 
-This directive is useful if you want to:
+== When is an include directive useful?
 
-* partition a large document into smaller files (for better organization and to make restructuring simpler),
- ** (always separate consecutive include directives by a blank line unless your intent is for the included lines to run together)
-* insert snippets of source code (so your examples are kept up-to-date with the latest source files),
-* populate tables with output from other programs (e.g., CSV data),
-* create document variants by combining the include directive with preprocessor conditionals (e.g., `ifdef`), and
-* reuse fragments and boilerplate content multiple times within the same document.
+The include directive is useful when you want to:
 
-You can use the include directive as many times as you want in the same document.
+* Partition a large document into smaller files for better organization and to make restructuring simpler.
+//** always separate consecutive include directives by a blank line unless your intent is for the included lines to run together
+* Insert source code from the external files where the code is maintained.
+* Populate tables with output, such as CSV data, from other programs.
+* Create document variants by combining the include directive with xref:ifdef-ifndef-directives.adoc[preprocessor conditionals].
+* Reuse content snippets and boilerplate content, such as term definitions, disclaimers, etc., multiple times within the same document.
 
-CAUTION: The include directive is _disabled_ when Asciidoctor is run in secure mode.
-In this mode, the include directive is converted to a link in the output document.
-To learn more about secure mode, refer to xref:asciidoctor::safe-modes.adoc[Manage Security with Safe Modes].
+[#include-syntax]
+== Include directive syntax
 
-[#include-anatomy]
-== Anatomy
-
-The include directive has the following anatomy:
+An include directive must be placed on a line by itself with the following syntax:
 
 [source,subs=+quotes]
 ----
@@ -45,31 +37,21 @@ The leveloffset, lines, tag(s), indent, and opts attributes are optional, making
 \include::content.adoc[]
 ----
 
-The sections that follows go into detail about when the include is processed, how the include file is resolved, and how each attribute is used.
-
 [#include-processing]
-== Processing
+== Include processing
 
-Although the include directive shares the same syntax as a block macro, *it's not a block macro* and therefore not processed like one.
-Instead, it's a preprocessor directive, just like `ifdef` and `ifeval`.
-It's important to understand the distinction.
+Although the include directive looks like a block macro, *it's not a macro and therefore isn't processed like one*.
+It's a preprocessor directive; it's important to understand the distinction.
 
-A [.term]*preprocessor directive* is processed when the lines are read, but before the document structure is parsed.
-Therefore, it's _not_ aware of the surrounding document structure.
-A preprocessor directive merely adds lines to the reader or takes lines away.
+include::partial$preprocessor.adoc[]
 The include directive is a preprocessor directive that always adds lines.
 
 The best way to think of the include directive is to imagine that it is being replaced by the lines from the include file (i.e., the imported lines).
-Only then does the parser read and interpret those lines.
-//That's also why it's important to surround the include directive by blank lines if it imports in a discrete structure.
-//You only want to place include files directly adjacent to one another if the imported content should be directly adjacent.
+Only after the lines from the target of the include directive are added to the current document does the parser read and interpret those lines.
 
-IMPORTANT: Take note of the blank lines between the include directives.
-The blank line between include directives prevents the first and last lines of the included files from being adjoined.
-This practice is *strongly* encouraged when combining document parts.
-If you don't include these blank lines, you might find that the AsciiDoc processor swallows section titles.
-This happens because the leading section title can get interpreted as the last line of the final paragraph in the preceding include.
-Only place include directives on consecutive lines if the intent is for the includes to run together (such as in a listing block).
+IMPORTANT: The include directive is disabled when Asciidoctor is run in secure mode.
+In secure mode, the include directive is converted to a link in the output document.
+See xref:asciidoctor::safe-modes.adoc[] to learn more.
 
 == Escaping an include directive
 
@@ -82,9 +64,9 @@ If you don't want the include directive to be processed, you must escape it usin
 Escaping the directive is necessary _even if it appears in a verbatim block_ since it's not aware of the surrounding document structure.
 
 [#include-resolution]
-== File resolution
+== Include file resolution
 
-The path used in an include directive may be either relative or absolute.
+The path used in an include directive can be relative or absolute.
 
 If the path relative, the processor resolves the path using the following rules:
 
@@ -94,16 +76,16 @@ If the path relative, the processor resolves the path using the following rules:
 
 //TODO show examples to contrast a relative vs an absolute include
 
-These defaults makes it easy to reason about how the path to the include file is resolved.
+These defaults make it easy to reason about how the path to the include file is resolved.
 
 If the processor cannot locate the file (perhaps because you mistyped the path), you'll still be able to convert the document.
-However, you will get the following warning message during conversion:
+However, you'll get the following warning message during conversion:
 
- asciidoctor: WARNING: master.adoc: line 3: include file not found: /.../content.adoc
+ asciidoctor: WARNING: my-document.adoc: line 3: include file not found: /.../content.adoc
 
 The following message will also be inserted into the output:
 
- Unresolved directive in master.adoc - include::content.adoc[]
+ Unresolved directive in my-document.adoc - include::content.adoc[]
 
 To fix the problem, edit the file path and run the converter again.
 If you don't want Asciidoctor to trigger a warning, and instead drop the include that cannot be found, add the `opts=optional` attribute to the include directive.

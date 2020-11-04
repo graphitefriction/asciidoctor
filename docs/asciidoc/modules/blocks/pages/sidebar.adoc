@@ -12,12 +12,15 @@ Normal substitutions are applied to sidebar content.
 
 If the sidebar content is contiguous, the block style `sidebar` can be placed directly on top of the text in an attribute list (`[]`).
 
-[source]
+.Assign sidebar block style to paragraph
+[source#ex-style]
 ----
 [sidebar]
 Sidebars are used to visually separate auxiliary bits of content
 that supplement the main text.
 ----
+
+The result of <<ex-style>> is displayed below.
 
 [sidebar]
 Sidebars are used to visually separate auxiliary bits of content that supplement the main text.
@@ -27,7 +30,8 @@ Sidebars are used to visually separate auxiliary bits of content that supplement
 A delimited sidebar block is delimited by a set of four consecutive asterisks (`pass:[****]`).
 You don't need to set the style name when you use the sidebar's delimiters.
 
-[source]
+.Sidebar block delimiter syntax
+[source#ex-block]
 ....
 .Optional Title
 ****
@@ -43,6 +47,8 @@ const { expect, expectCalledWith, heredoc } = require('../test/test-utils')
 ----
 ****
 ....
+
+The result of <<ex-block>> is displayed below.
 
 .Optional Title
 ****

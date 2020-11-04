@@ -1,5 +1,4 @@
 = Monospace
-// um anchor: mono
 
 In AsciiDoc, a span of text enclosed in a single set of backticks (`{backtick}`) is displayed using a fixed-width (i.e., monospaced) font.
 Monospace text formatting is typically used to represent text shown in computer terminals or code editors (often referred to as a codespan).
@@ -8,12 +7,14 @@ Monospace text formatting is typically used to represent text shown in computer 
 
 Here's an example:
 
-[source]
+.Constrained monospace syntax
+[source#ex-constrain]
 ----
 include::example$text.adoc[tag=mono]
 ----
 
-.Rendered monospace formatted text
+The result of <<ex-constrain>> is rendered below.
+
 ====
 include::example$text.adoc[tag=mono]
 ====
@@ -34,12 +35,17 @@ The command will re``link`` all packages.
 Monospaced text can also be formatted in bold or italic or both, as long as the markup sets are entered in the right order.
 The monospace markup must be the outermost formatting mark, then the bold marks, then the italic marks.
 
-Here's an example:
-
-[source]
+.Order of inline formatting syntax
+[source#ex-mix]
 ----
 `*_monospaced bold italic_*`
 ----
+
+The result of <<ex-mix>> is rendered below.
+
+====
+`*_monospaced bold italic_*`
+====
 
 == Literal Monospace
 
@@ -60,9 +66,10 @@ To make a true literal codespan in AsciiDoc, you must enclose the monospaced tex
 Rather than using a single set of backtick characters, you'll use the combination of the backtick and plus characters, where the plus characters fall on the inside of the backtick characters (e.g., `pass:[`+text+`]`).
 The plus characters are a shorthand for the `\pass:c[]` enclosure.
 
-Here's an example that contains literal, monospaced text.
+<<ex-literal>> contains literal, monospaced text.
 
-[source]
+.Literal monospace syntax
+[source#ex-literal]
 ----
 include::example$text.adoc[tag=literal-mono]
 ----
@@ -71,9 +78,10 @@ This shorthand syntax can accommodate most of the literal monospace cases.
 The main exception is when the text itself contains plus characters.
 To avoid confusing the processor, you'll need to switch to using the more formal passthrough macro to handle these cases.
 
-Here's an example of literal, monospaced text that contains plus characters.
+<<ex-plus>> shows literal, monospaced text that contains plus characters.
 
-[source]
+.Literal monospace syntax with + characters
+[source#ex-plus]
 ----
 include::example$text.adoc[tag=literal-mono-with-plus]
 ----

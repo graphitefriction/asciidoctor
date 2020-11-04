@@ -1,5 +1,4 @@
 = Passthrough Blocks
-// um anchor: pass-blocks
 
 The `pass` style and delimited passthrough block exclude the block's content from all substitutions unless the `subs` attribute is set.
 

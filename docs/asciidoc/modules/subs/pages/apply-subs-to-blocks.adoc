@@ -27,7 +27,7 @@ The output of `replacements` may depend on whether the `specialcharacters` subst
 `post_replacements`:: Substitution step that processes the line break character (`{plus}`).
 // end::group[]
 
-== Setting the subs attribute on a block
+== Set the subs attribute on a block
 
 Let's look at an example where you only want to process special characters, inline formatting markup, and callouts in a literal block.
 By default, literal blocks are only subject to special characters substitution.
@@ -42,15 +42,15 @@ include::example$subs.adoc[tag=subs-in]
 ====
 include::example$subs.adoc[tag=subs-out]
 ====
-<1> The `verbatim` value enables any special characters and callouts to be processed.
-<2> The `quotes` value enables the bold text formatting to be processed.
+. The `verbatim` value enables any special characters and callouts to be processed.
+. The `quotes` value enables the bold text formatting to be processed.
 
 You may be wondering why `verbatim` is specified in the previous example since it's applied to literal blocks by default.
 It's added because the `subs` attribute removes all of a block or inline elements default substitutions when it is set.
 The next section explains this concept in more detail.
 
 [#incremental]
-== Adding and removing substitution steps from a default substitution group
+== Add and remove substitution steps from a default substitution group
 
 When you set the `subs` attribute on a block, you automatically remove all of its default substitutions.
 For example, if you set `subs` on a literal block, and assign it a value of `attributes`, only attribute references are substituted.

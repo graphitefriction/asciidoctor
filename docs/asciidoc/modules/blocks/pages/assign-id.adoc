@@ -1,6 +1,4 @@
-== Assign an ID
-:xrefstyle: short
-:listing-caption: Example
+= Assign an ID
 
 You can assign an ID to any block using an attribute list.
 Once you've assigned an ID to a block, you can use that ID to link to it using a cross reference.
@@ -29,22 +27,22 @@ Roads? Where we're going, we don't need roads.
 When the style attribute is explicitly assigned to a block, the style name is always placed in the first position of the attribute list.
 Then, the ID is attached directly to the end of the style name.
 
-The blockquote with an assigned style and ID in <<ex-1>> shows this order of attributes.
+The blockquote with an assigned style and ID in <<ex-style-id>> shows this order of attributes.
 
-[#ex-1]
+
 .Assign a style and ID to a block
-[source]
+[source#ex-style-id]
 ----
 [quote#roads]
 Roads? Where we're going, we don't need roads.
 ----
 
-Since <<ex-1>> is a blockquote it should have some attribution and citation information.
-In <<ex-2>>, let's attribute this quote to its speaker and original context using the positional attribution attributes that are built into the `quote` style.
+Since <<ex-style-id>> is a blockquote it should have some attribution and citation information.
+In <<ex-cite>>, let's attribute this quote to its speaker and original context using the positional attribution attributes that are built into the `quote` style.
 
-[#ex-2]
+
 .Assign a style, ID, and positional attributes to a block
-[source]
+[source#ex-cite]
 ----
 [quote#roads,Dr. Emmett Brown,Back to the Future]
 Roads? Where we're going, we don't need roads.

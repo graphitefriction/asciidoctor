@@ -62,9 +62,9 @@ In this case, you need to change the inter-document cross references to refer to
 
 The file extension chosen for inter-document cross references is controlled by the `relfilesuffix` attribute.
 By default, this attribute is not set and the value of the `outfilesuffix` is used instead.
-If you want to change the file extension that gets used, you can do so by setting the `relfilesuffix` attributee.
+If you want to change the file extension that gets used, you can do so by setting the `relfilesuffix` attribute.
 
-The following example demonstrates how to use the `relfilesuffix` attribute to control the file extension for inter-docuemnt cross references on GitHub and the browser preview extension.
+The following example demonstrates how to use the `relfilesuffix` attribute to control the file extension for inter-document cross references on GitHub and the browser preview extension.
 
 [source]
 ----

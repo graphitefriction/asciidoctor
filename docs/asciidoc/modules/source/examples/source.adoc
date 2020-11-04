@@ -1,10 +1,4 @@
-////
-Included in:
-- user-manual: Source blocks
-////
-
 // tag::src-base[]
-.app.rb
 [source,ruby]
 ----
 require 'sinatra'
@@ -16,10 +10,8 @@ end
 // end::src-base[]
 
 // tag::src-base-co[]
-.app.rb // <1>
-[#src-listing] <2>
-[source,ruby] // <3> <4>
----- // <5>
+[source#hello,ruby] <1> <2> <3>
+---- <4>
 require 'sinatra'
 
 get '/hi' do
@@ -30,9 +22,7 @@ end
 
 // src-base-co-res is the result of src-base-co
 // tag::src-base-co-res[]
-[#src-listing]
-[source,ruby]
-.app.rb
+[source#hello,ruby]
 ----
 require 'sinatra'
 
@@ -46,8 +36,8 @@ end
 [source,xml] <!--1-->
 <meta name="viewport"
   content="width=device-width, initial-scale=1.0">
-
-This is normal content.  // <2>
+<2>
+This is normal content.
 // end::src-para-co[]
 
 // tag::src-para[]
@@ -59,6 +49,7 @@ This is normal content.
 // end::src-para[]
 
 // tag::src-lang[]
+= Document Title
 :source-highlighter: pygments
 :source-language: java
 
@@ -68,12 +59,16 @@ public void setAttributes(Attributes attributes) {
     this.options.put(ATTRIBUTES, attributes.map());
 }
 ----
+// end::src-lang[]
 
-You can override the global source language by specifying a source language on the block.
+// tag::override[]
+= Document Title
+:source-highlighter: pygments
+:source-language: java
 
 [source,ruby]
 require 'sinatra'
-// end::src-lang[]
+// end::override[]
 
 // tag::src-inc[]
 [source,ruby]

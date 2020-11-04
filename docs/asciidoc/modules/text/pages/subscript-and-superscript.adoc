@@ -12,10 +12,13 @@ Text is subscripted when you enclose it in a set of tildes (`{tilde}`) and super
 Subscript:: One tilde (`{tilde}`) on either side of a word or phrase makes it subscript.
 Superscript:: One caret (`{caret}`) on either side of a word or phrase makes it superscript.
 
-[source]
+.Subscript and superscript syntax
+[source#ex-basic]
 ----
 include::example$text.adoc[tag=sub-sup]
 ----
+
+The result of <<ex-basic>> is rendered below.
 
 ====
 include::example$text.adoc[tag=sub-sup]

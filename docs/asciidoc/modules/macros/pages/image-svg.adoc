@@ -38,7 +38,7 @@ The SVG also inherits CSS from the document stylesheets.
 How the options value works and when it should be used is described below:
 
 .Option values for SVG images (HTML output)
-[cols="1,1,2,2"]
+[%autowidth]
 |===
 |Option |HTML Element Used |Effect |When To Use
 

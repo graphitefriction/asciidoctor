@@ -1,7 +1,7 @@
 = Images Reference
 
 .Block and inline image attributes and values
-[cols="1,1,2,2"]
+[%autowidth]
 |===
 |Attribute |Value(s) |Example Syntax |Comments
 

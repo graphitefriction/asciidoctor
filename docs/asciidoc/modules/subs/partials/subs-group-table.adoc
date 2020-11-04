@@ -1,9 +1,10 @@
-.The substitution steps included in each substitution group
-[cols="1,6*^"]
+:table-caption: Table
+.Substitution steps executed in each substitution group
+[#table-subs-groups,cols="1,6*^"]
 |===
 |Group |Special characters |Quotes |Attributes |Replacements |Macros |Post replacements
 
-s|Header
+s|xref:subs:substitutions.adoc#header-group[Header]
 |{y}
 |{n}
 |{y}
@@ -11,7 +12,7 @@ s|Header
 |{n}
 |{n}
 
-s|None
+s|xref:subs:substitutions.adoc#none-group[None]
 |{n}
 |{n}
 |{n}
@@ -19,7 +20,7 @@ s|None
 |{n}
 |{n}
 
-s|Normal
+s|xref:subs:substitutions.adoc#normal-group[Normal]
 |{y}
 |{y}
 |{y}
@@ -27,7 +28,7 @@ s|Normal
 |{y}
 |{y}
 
-s|Pass
+s|xref:subs:substitutions.adoc#pass-group[Pass]
 |{n}
 |{n}
 |{n}
@@ -35,7 +36,7 @@ s|Pass
 |{n}
 |{n}
 
-s|Verbatim
+s|xref:subs:substitutions.adoc#verbatim-group[Verbatim]
 |{y}
 |{n}
 |{n}
@@ -43,3 +44,4 @@ s|Verbatim
 |{n}
 |{n}
 |===
+:!table-caption:

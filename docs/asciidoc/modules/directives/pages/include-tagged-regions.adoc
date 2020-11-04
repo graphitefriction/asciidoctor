@@ -15,7 +15,7 @@ Tags are useful when you want to identify specific regions of a file to include.
 You can then select the lines between the boundaries of the include tag/end directives to include using the `tags` attribute.
 
 TIP: If the target file has tagged lines, and you just want to ignore those lines, use the `tags` attribute to filter them out.
-See <<Tag filtering>> for details.
+See <<tag-filtering>> for details.
 
 The example below shows how you tag a region of content inside a file containing multiple code examples.
 
@@ -89,6 +89,7 @@ snippet b
 
 Notice that none of the lines with the tag directives are displayed.
 
+[#tag-filtering]
 == Tag filtering
 
 The previous section showed how to select tagged regions explicitly, but you can also use wildcards and exclusions.

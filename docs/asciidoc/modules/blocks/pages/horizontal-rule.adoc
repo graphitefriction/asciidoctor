@@ -1,15 +1,16 @@
 = Horizontal Rule
 
+A horizontal rule is created by entering three single quotation marks (`++'''++`) on a line.
+
 .Horizontal rule syntax
-[source]
+[source#ex-rule]
 ----
 '''
 ----
 
-.Result: Horizontal rule
-====
+The result of <<ex-rule>> is displayed below.
+
 '''
-====
 
 == Markdown-style horizontal rules
 
@@ -20,7 +21,6 @@ To avoid conflicts with AsciiDoc's block delimiter syntax, only 3 repeating char
 As with Markdown, whitespace between the characters is optional.
 
 .Markdown-style horizontal rule syntax
-[source,markdown]
 ----
 ---
 
@@ -30,16 +30,5 @@ As with Markdown, whitespace between the characters is optional.
 
 * * *
 ----
-
-.Result: Markdown-style horizontal rules
---
----
-
-- - -
-
-***
-
-* * *
---
 
 A macro definition for the Markdown horizontal rules is included in the AsciiDoc compatibility file so they can be recognized by the `asciidoc` command as well.

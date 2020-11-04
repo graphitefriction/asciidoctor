@@ -11,7 +11,7 @@ The safe mode can be referenced by one of the following attributes:
 
 * The value of the `safe-mode-name` attribute (e.g., unsafe, safe, etc.)
 * The value of the `safe-mode-level` attribute (e.g., 0, 10, etc.)
-* The presense of the `safe-mode-<name>` attribute, where `<name>` is the safe mode name.
+* The presence of the `safe-mode-<name>` attribute, where `<name>` is the safe mode name.
 
 The attributes in the next example define replacement text for features that are disabled in high security environments:
 

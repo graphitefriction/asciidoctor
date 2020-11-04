@@ -1,9 +1,9 @@
 = The ID Attribute
 
-The id attribute specifies a unique name for an element.
+The `id` attribute specifies a unique name for an element.
 That name can only be used once in a document.
 
-An id:
+An ID:
 
 . provides an internal link or cross reference anchor for an element, and
 . references an optional style or behavior used by the output processor.
@@ -17,7 +17,7 @@ NOTE: Section pending
 == Block assignment
 
 // tag::bl[]
-In an attribute list, there are two ways to assign an id attribute to a block element.
+In an attribute list, there are two ways to assign the `id` attribute to a block.
 
 . Prefixing the name with a hash (`#`).
 . Specifying the name with `id=name`.
@@ -78,7 +78,7 @@ The shorthand form in an attribute list does not impose this restriction.
 If you want to reference a block element, all you need to do is assign an ID to that block.
 You can enclose the ID in double square brackets:
 
-.Assigning an ID to a paragraph
+.Assign an ID to a paragraph
 [source]
 ----
 include::example$id.adoc[tag=block-id-brackets]
@@ -86,7 +86,7 @@ include::example$id.adoc[tag=block-id-brackets]
 
 or use the shorthand ID syntax:
 
-.Assigning an ID to a paragraph using shorthand syntax
+.Assign an ID to a paragraph using shorthand syntax
 [source]
 ----
 include::example$id.adoc[tag=block-id-shorthand]
@@ -95,7 +95,7 @@ include::example$id.adoc[tag=block-id-shorthand]
 You can also define an anchor anywhere in content that receives normal substitutions (specifically the macro substitution).
 You can enclose the ID in double square brackets:
 
-.Defining an inline anchor
+.Define an inline anchor
 [source]
 ----
 include::example$id.adoc[tag=anchor-brackets]
@@ -103,7 +103,7 @@ include::example$id.adoc[tag=anchor-brackets]
 
 or using the shorthand ID syntax.
 
-.Defining an inline anchor using shorthand syntax
+.Define an inline anchor using shorthand syntax
 [source]
 ----
 include::example$id.adoc[tag=anchor-shorthand]
@@ -122,7 +122,7 @@ include::example$id.adoc[tag=anchor-wrong]
 
 Instead, you would put it at the very start of the text of the list item:
 
-.Defining an inline anchor on a list item
+.Define an inline anchor on a list item
 [source]
 ----
 include::example$id.adoc[tag=anchor-list]
@@ -130,7 +130,7 @@ include::example$id.adoc[tag=anchor-list]
 
 Here's how you can define the ID for a section using an inline anchor:
 
-.Defining the ID of a section using an inline anchor
+.Define the ID of a section using an inline anchor
 [source]
 ----
 include::example$id.adoc[tag=anchor-header]
@@ -138,7 +138,7 @@ include::example$id.adoc[tag=anchor-header]
 
 To add additional anchors to a section, place them in front of the title.
 
-.Adding additional anchors to a section
+.Add additional anchors to a section
 [source]
 ----
 include::example$id.adoc[tag=anchor-header-extra]

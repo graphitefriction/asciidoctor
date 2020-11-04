@@ -2,7 +2,7 @@
 :url-fontawesome-icons: https://fontawesome.com/icons?d=gallery
 
 Asciidoctor can use the Font Awesome icon set.
-You can see the available icons and their names on the {url-fontawesome-icons}[Font Awesom icons page^].
+You can see the available icons and their names on the {url-fontawesome-icons}[Font Awesome icons page^].
 Using the Font Awesome icons requires online access by default.
 
 IMPORTANT: The default CSS stylesheet is required when using font-based icons.
@@ -14,12 +14,12 @@ To use Font Awesome's icons in your document, set the value of the `icons` docum
 [source]
 ----
 = Document Title
-:icons: font // <1>
+:icons: font <1>
 
-icon:tags[] ruby, asciidoctor // <2>
+icon:tags[] ruby, asciidoctor <2>
 ----
-<1> Set `icons` to `font` to use the Font Awesome icons.
-<2> Enter the name of the Font Awesome icon in the target field of the inline icon macro, followed by a set of square brackets (`[]`).
+. Set `icons` to `font` to use the Font Awesome icons.
+. Enter the name of the Font Awesome icon in the target field of the inline icon macro, followed by a set of square brackets (`[]`).
 
 .Result: Use Font Awesome tags icon
 icon:tags[] ruby, asciidoctor

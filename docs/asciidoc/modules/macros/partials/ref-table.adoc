@@ -1,65 +1,65 @@
 == Audio and video attributes and options
 
 .Audio attributes and values
-[cols="1m,1,2,2"]
+[%autowidth]
 |===
 |Attribute |Value(s) |Example Syntax |Notes
 
-|options
+|`options`
 |`autoplay`, `loop`, `controls`, `nocontrols`
 |`audio::ocean_waves.mp3[options="autoplay,loop"]`
 |The controls value is enabled by default
 |===
 
 .Video attributes and values
-[cols="1m,1,2m,2"]
+[%autowidth]
 |===
 |Attribute |Value(s) |Example Syntax |Notes
 
-|title
+|`title`
 |User defined text
-|.An ocean sunset
+|`.An ocean sunset`
 |
 
-|poster
+|`poster`
 |A URL to an image to show until the user plays or seeks.
-|poster=sunset.jpg
+|`poster=sunset.jpg`
 |Can be specified as the first positional (unnamed) attribute.
-Also used to specify the service when referring to a video hosted on YouTube (youtube) or Vimeo (vimeo).
+Also used to specify the service when referring to a video hosted on YouTube (`youtube`) or Vimeo (`vimeo`).
 
-|width
+|`width`
 |User-defined size in pixels.
-|width=640
+|`width=640`
 |Can be specified as the second positional (unnamed) attribute.
 
-|height
+|`height`
 |User-defined size in pixels.
-|height=480
+|`height=480`
 |Can be specified as the third positional (unnamed) attribute.
 
-|options
-|autoplay, loop, modest, nocontrols, nofullscreen
-|opts="autoplay,loop"
+|`options`
+|`autoplay`, `loop`, `modest`, `nocontrols`, `nofullscreen`
+|`opts="autoplay,loop"`
 |The controls are enabled by default.
-The modest option enables modest branding for a YouTube video.
+The `modest` option enables modest branding for a YouTube video.
 
-|start
+|`start`
 |User-defined playback start time in seconds.
-|start=30
+|`start=30`
 |
 
-|end
+|`end`
 |User-defined playback end time in seconds.
-|end=90
+|`end=90`
 |
 
-|theme
+|`theme`
 |The YouTube theme to use for the frame.
-|theme=light
-|Valid values are dark (the default) and light.
+|`theme=light`
+|Valid values are `dark` (the default) and `light`.
 
-|lang
+|`lang`
 |The language used in the YouTube frame.
-|lang=fr
+|`lang=fr`
 |A two-letter language code or fully specified locale.
 |===

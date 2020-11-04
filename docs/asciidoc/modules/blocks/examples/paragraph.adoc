@@ -1,23 +1,9 @@
-////
-Included in:
-- user-manual: Paragraphs
-- quick-syntax
-////
-
 // tag::para[]
-This journey begins one late Monday afternoon in Antwerp.
-Our team desperately needs coffee, but none of us dare open the office door.
-
-To leave means code dismemberment and certain death.
-// end::para[]
-
-// tag::b-para[]
 Paragraphs don't require any special markup in AsciiDoc.
 A paragraph is just one or more lines of consecutive text.
 
-To begin a new paragraph, separate it by at least one blank line.
-Newlines within a paragraph are not displayed.
-// end::b-para[]
+To begin a new paragraph, separate it by at least one blank line from the previous paragraph or block.
+// end::para[]
 
 // tag::hb-all[]
 Rubies are red, +
@@ -25,7 +11,7 @@ Topazes are blue.
 
 [%hardbreaks]
 Ruby is red.
-Java is black.
+Java is beige.
 // end::hb-all[]
 
 // tag::hb[]
@@ -36,7 +22,7 @@ Topazes are blue.
 // tag::hb-p[]
 [%hardbreaks]
 Ruby is red.
-Java is black.
+Java is beige.
 // end::hb-p[]
 
 // tag::b-hb[]

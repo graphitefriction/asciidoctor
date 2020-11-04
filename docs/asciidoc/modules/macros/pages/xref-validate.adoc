@@ -1,4 +1,4 @@
-= Validating Internal Cross References
+= Validate Internal Cross References
 
 Asciidoctor provides limited support for validating internal cross references.
 Validation occurs when a cross reference is first visited.

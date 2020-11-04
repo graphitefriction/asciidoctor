@@ -22,12 +22,12 @@ The text substitution steps replace characters, markup, attribute references, an
 When a document is processed, up to six text substitution steps may be carried out depending on the block or inline element's assigned substitution group.
 The processor runs the text substitution steps in the following order:
 
-. xref:special-characters.adoc[Special characters]
-. xref:quotes.adoc[Quotes (i.e., inline formatting)]
-. xref:attributes.adoc[Attribute references]
-. xref:replacements.adoc[Character replacements]
-. xref:macros.adoc[Macros]
-. xref:post-replacements.adoc[Post replacements]
+. xref:special-characters.adoc[]
+. xref:quotes.adoc[] (i.e., inline formatting)
+. xref:attributes.adoc[]
+. xref:replacements.adoc[]
+. xref:macros.adoc[]
+. xref:post-replacements.adoc[]
 
 These steps are organized into substitution groups.
 
@@ -35,51 +35,47 @@ These steps are organized into substitution groups.
 == Substitution groups
 
 Each block and inline element has a default substitution group that is applied unless you customize the substitution steps for a particular element.
-The table below shows the substitution steps included in each group.
+<<table-subs-groups>> shows the substitution steps that are executed in each group.
 
 include::partial$subs-group-table.adoc[]
 
+[#normal-group]
 === Normal substitution group
 
-The `normal` substitution group is applied to the majority of the AsciiDoc block and inline elements except for those specific elements listed under the groups described in the next sections.
+The normal substitution group (`normal`) is applied to the majority of the AsciiDoc block and inline elements except for those specific elements listed under the groups described in the next sections.
 
-==== Title substitution group
-
-The `title` substitution group includes the same substitutions as the `normal` group.
-However, the order that the steps are executed is slightly different.
-The steps are applied to titles in the following sequence:
-
-. Special characters
-. Quotes
-. Character replacements
-. Macros
-. Attribute references
-. Post replacements
-
+[#header-group]
 === Header substitution group
 
-The `header` substitution group is applied to metadata lines (author and revision information) in the document header.
+The header substitution group (`header`) is applied to metadata lines (author and revision information) in the document header.
 It's also applied to the values of attribute entries, regardless of whether those entries are defined in the document header or body.
 Only special characters, attribute references, and the inline pass macro are replaced in elements that fall under the header group.
 
 TIP: You can use the xref:apply-subs-to-text.adoc[inline pass macro] in attribute entries to customize the substitution steps applied to the attribute's value.
 
+[#verbatim-group]
 === Verbatim substitution group
 
-Literal, listing, and source blocks are processed using the `verbatim` substitution group.
+Literal, listing, and source blocks are processed using the verbatim substitution group (`verbatim`).
 Only special characters are replaced in these blocks.
 
+[#pass-group]
 === Pass substitution group
 
-The `pass` substitution group can only be applied to passthrough elements.
-Attribute references and macros are replaced in passthroughs.
+No substitution steps are applied to three of the elements in the pass substitution group (`pass`).
+These elements include the xref:pass-block.adoc[passthrough block], xref:pass-macro.adoc#inline-pass[inline pass macro], and xref:pass-macro.adoc#triple-plus[triple plus macro].
 
+The xref:pass-macro.adoc#def-plus[inline single plus and double plus macros] also belong to the pass group.
+Only the special characters substitution step is applied to these elements.
+
+[#none-group]
 === None substitution group
 
-The `none` substitution group is applied to comment blocks.
+The none substitution group (`none`) is applied to comment blocks.
+No substitution steps are applied to comments.
 
 == Escaping substitutions
-// This paragraph is all new
+
 Asciidoctor provides several approaches for preventing substitutions.
 When you want to prevent punctuation and symbols from being interpreted as formatting markup, xref:prevent.adoc[escaping the punctuation with a backslash] may be sufficient.
 For more comprehensive substitution prevention and control, you can use xref:pass-macro.adoc[inline passthrough macros] or xref:pass-block.adoc[passthrough blocks].

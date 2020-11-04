@@ -12,7 +12,7 @@ include::example$ui.adoc[tag=key]
 ----
 
 .Result: Keyboard macros displaying common browser keyboard shortcuts
-[width="50%"]
+[%autowidth]
 include::example$ui.adoc[tag=key]
 
 You no longer have to struggle to explain to users what keys they are supposed to press.

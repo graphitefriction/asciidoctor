@@ -17,8 +17,8 @@ image::sunset.jpg[] <1> <2>
 
 Content in document
 ----
-<1> To insert a block image, type the `image` macro name directly followed by two colons (`::`).
-<2> After the colons, enter the image file target.
+. To insert a block image, type the `image` macro name directly followed by two colons (`::`).
+. After the colons, enter the image file target.
 Type a set of square brackets (`+[]+`) directly after the target to complete the macro.
 
 The result of <<ex-block>> is displayed below.
@@ -41,11 +41,11 @@ You can also give the image an id, title, set its dimensions and make it a link.
 ----
 include::example$image.adoc[tag=attr-co]
 ----
-<1> Assigns an ID to the block.
-<2> Defines the title of the block image, which gets displayed underneath the image when rendered.
-<3> `link` makes the image a link (this can also be defined inside the attribute list of the block macro)
-<4> The first positional attribute, _Sunset_, is the image's alt text.
-<5> The second and third positional attributes define the width and height, respectively.
+. Assigns an ID to the block.
+. Defines the title of the block image, which gets displayed underneath the image when rendered.
+. `link` makes the image a link (this can also be defined inside the attribute list of the block macro)
+. The first positional attribute, _Sunset_, is the image's alt text.
+. The second and third positional attributes define the width and height, respectively.
 
 The result of <<ex-attributes>> is displayed below.
 
@@ -74,9 +74,9 @@ Click image:play.png[] to get the party started. <1>
 
 Click image:pause.png[title="Pause"] when you need a break. <2>
 ----
-<1> In the flow of an element, enter the macro name and a single colon (`+image:+`), followed by the image target.
+. In the flow of an element, enter the macro name and a single colon (`+image:+`), followed by the image target.
 Complete the macro with a set of square brackets (`+[]+`).
-<2> You can specify a comma-separated list of attributes inside the square brackets or leave them empty.
+. You can specify a comma-separated list of attributes inside the square brackets or leave them empty.
 
 The result of <<ex-inline>> is displayed below.
 

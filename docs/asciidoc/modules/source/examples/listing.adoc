@@ -1,21 +1,22 @@
-////
-Included in:
-- user-manual: Listing
-- quick-ref
-////
+// tag::indent[]
+ $ cd secure/vault/defops
+// end::indent[]
 
-// tag::para[]
+// tag::style[]
 [listing]
-This is an example of a paragraph styled with `listing`.
-Notice that the monospace markup is preserved in the output.
-// end::para[]
+This is an example of a paragraph assigned
+the `listing` style in an attribute list.
+Notice that the monospace marks are
+preserved in the output.
+// end::style[]
 
-// tag::bl[]
+// tag::block[]
 ----
-This is an example of a _listing block_.
+This is a _delimited listing block_.
+
 The content inside is displayed as <pre> text.
 ----
-// end::bl[]
+// end::block[]
 
 // tag::b-base[]
 .Gemfile.lock

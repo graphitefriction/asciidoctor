@@ -1,5 +1,4 @@
 = URLs and Links
-// um anchor: url
 
 A Uniform Resource Link (URL) represents the location of a resource on the web.
 Typical URLs contain a scheme, domain name, file name, and extension.
@@ -26,7 +25,7 @@ We call this a URL macro.
 ----
 include::example$url.adoc[tag=base-co]
 ----
-<1> The trailing period will not get caught up in the link.
+. The trailing period will not get caught up in the link.
 
 To prevent automatic linking of an URL, prepend it with a backslash (`\`).
 
@@ -46,7 +45,7 @@ If you prefer URLs to be shown with the scheme hidden, set the `hide-uri-scheme`
 https://asciidoctor.org
 ----
 
-When the hide-uri-scheme attribute is set, the above URL will render as follows:
+When the `hide-uri-scheme` attribute is set, the above URL will render as follows:
 
 [source,xml]
 ----

@@ -13,12 +13,13 @@ IMPORTANT: The callout number (at the target) must be placed at the end of the l
 
 Here's a basic example of a verbatim block that uses callouts:
 
-[source,subs=-callouts]
+.Callout syntax
+[source#ex-basic,subs=-callouts]
 ....
 include::example$callout.adoc[tag=basic]
 ....
 
-Here's how this example gets rendered:
+The result of <<ex-basic>> is rendered below.
 
 include::example$callout.adoc[tag=basic]
 
@@ -38,12 +39,13 @@ Asciidoctor will recognize the line comments characters in front of a callout nu
 
 Here are the line comments that are supported:
 
-[source,subs=specialcharacters]
+.Prevent callout copy and paste
+[source#ex-prevent,subs=specialcharacters]
 ....
 include::example$callout.adoc[tag=b-nonselect]
 ....
 
-Here's how it looks when rendered:
+The result of <<ex-prevent>> is rendered below.
 
 include::example$callout.adoc[tag=b-nonselect]
 
@@ -54,12 +56,13 @@ To use callouts in XML, you must place the callout's angled brackets around the 
 
 Here's how it appears in a listing:
 
-[source,subs=specialcharacters]
+.XML callout syntax
+[source#ex-xml,subs=specialcharacters]
 ....
 include::example$callout.adoc[tag=source-xml]
 ....
 
-Here's how it looks when rendered:
+The result of <<ex-xml>> is rendered below.
 
 include::example$callout.adoc[tag=source-xml]
 
@@ -75,5 +78,5 @@ The font icons setting also enables callout icons drawn using CSS.
 ----
 include::example$callout.adoc[tag=co-icon]
 ----
-<1> Activates the font-based icons in the HTML5 backend.
-<2> Admonition block that uses a font-based icon.
+. Activates the font-based icons in the HTML5 backend.
+. Admonition block that uses a font-based icon.

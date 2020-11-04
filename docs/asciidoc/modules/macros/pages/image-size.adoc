@@ -7,7 +7,7 @@ Since images often need to be sized according to the medium, there are several w
 
 In most output formats, the specified width is obeyed unless the image would exceed the content width or height, in which case it scaled to fit while maintaining the original aspect ratio (i.e., responsive scaling).
 
-== width and height
+== width and height attributes
 
 The primary way to specify the size of an image is to define the `width` and `height` attributes on the image macro.
 Since these two attributes are so common, they are the second and third (unnamed) positional attributes on the image macros.
@@ -37,7 +37,7 @@ Thus, when you set the dimensions, the values should reflect the original aspect
 If the values don't match the aspect ratio, the height is ignored by the browser.
 ****
 
-== pdfwidth
+== pdfwidth attribute
 
 Asciidoctor recognizes the following attributes to size images when converting to PDF using Asciidoctor PDF:
 
@@ -59,7 +59,7 @@ If `pdfwidth` is not provided, Asciidoctor PDF also accepts `scaledwidth`, or `w
 
 See {url-pdf-scaling}[image scaling in Asciidoctor PDF^] for more details.
 
-== scaledwidth
+== scaledwidth attribute
 
 Asciidoctor recognizes the following attributes to size images when converting to PDF using the DocBook toolchain:
 
@@ -85,7 +85,7 @@ DocBook also accepts the `width` attribute if `scaledwidth` is not provided.
 == Image sizing recap
 
 .Image sizing attributes
-[cols="1,2,2,2,2"]
+[%autowidth]
 |====
 |Backend |Absolute size |Relative to original size |Relative to content width |Relative to page width
 

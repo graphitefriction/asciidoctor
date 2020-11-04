@@ -1,14 +1,8 @@
-////
-Included in:
-- user-manual: Callouts
-- quick-ref
-////
-
 // tag::b-nonselect[]
 ----
-line of code  // <1>
-line of code  # <2>
-line of code  ;; <3>
+line of code // <1>
+line of code # <2>
+line of code ;; <3>
 line of code <!--4-->
 ----
 <1> A callout behind a line comment for C-style languages.
@@ -57,7 +51,8 @@ end
 
 // tag::co-icon[]
 = Document Title
-:icons: font // <1>
+:icons: font <1>
 
-NOTE: Asciidoctor now supports font-based admonition icons, powered by Font Awesome! // <2>
+NOTE: Asciidoctor now supports font-based admonition
+icons, powered by Font Awesome! <2>
 // end::co-icon[]
