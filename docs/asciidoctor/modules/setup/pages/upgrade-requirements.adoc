@@ -81,16 +81,10 @@ In most cases, they've been replaced with a new feature that provides improved f
 |===
 |Feature |Deprecated |New |As of Version |Notes
 
-|Implicit document title attribute
-|First content line at document top is set as title
-|pass:[= Title]
-|
-|Allowed with `compat-mode`
-
-|Two-line style document title
-|pass:[= Title] +
-pass:[=====]
-|pass:[= Title]
+|Setext (i.e., two-line style) document title
+l|Title
+=====
+l|= Title
 |
 |Asciidoctor accepts the two-line heading style to set the document title.
 However, by using it, you implicitly set `compat-mode`.
