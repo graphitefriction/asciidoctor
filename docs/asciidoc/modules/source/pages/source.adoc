@@ -10,7 +10,7 @@ NOTE we really want this ID on the section, but there are problems w/ multiple I
 Developers are accustomed to seeing source code colorized to emphasize the code's structure (i.e., keywords, types, delimiters, etc.).
 This technique is known as [.term]*syntax highlighting*.
 Since this technique is so prevalent, Asciidoctor integrates with a number of libraries to syntax highlight the source code blocks in your document.
-The list of integrated libraries includes Rouge, CodeRay, Pygments, highlight.js, and prettify.
+The list of integrated libraries includes Rouge, CodeRay, Pygments, and highlight.js.
 
 <<ex-source>> shows a listing block with the `source` style and language `ruby` applied to its content.
 
@@ -72,9 +72,9 @@ To disable source highlighting for a given source block, specify the language as
 |`highlightjs`
 |Asciidoctor, AsciidoctorJ, Asciidoctor.js
 
-|{url-prettify}[prettify^]
-|`prettify`
-|Asciidoctor, AsciidoctorJ, Asciidoctor.js
+//|{url-prettify}[prettify^]
+//|`prettify`
+//|Asciidoctor, AsciidoctorJ, Asciidoctor.js
 
 |{url-pygments}[Pygments^]
 |`pygments`
@@ -90,7 +90,7 @@ To disable source highlighting for a given source block, specify the language as
 To use Rouge, CodeRay, or Pygments, you must have the appropriate library installed on your system.
 See xref:rouge.adoc[], xref:coderay.adoc[], or xref:pygments.adoc[] for installation instructions.
 
-If you're using a client-side syntax highlighting library like xref:highlightjs.adoc[] or xref:prettify.adoc[], there's no need to install additional libraries.
+If you're using a client-side syntax highlighting library like xref:highlightjs.adoc[], there's no need to install additional libraries.
 The generated HTML will load the required source files from a CDN, custom URL, or file path.
 ====
 

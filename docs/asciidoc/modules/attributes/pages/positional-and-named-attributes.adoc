@@ -1,13 +1,4 @@
-= Attribute Lists
-
-Attribute lists:
-
-* apply to blocks, macros, and inline elements
-* can contain positional and named attributes
-* take precedence over document attributes (attribute entries)
-
-.Anatomy of an attribute list
- [positional_attribute_1,positional_attribute_2,named_attribute="value"]
+= Positional and Named Attributes
 
 Let's break down the difference between positional and named attributes.
 

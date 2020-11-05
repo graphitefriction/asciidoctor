@@ -1,7 +1,7 @@
 = The Role Attribute
 
 Blocks and many inline elements can be assigned one or more roles using the `role` attribute.
-The `role` attribute is a xref:element.adoc#named[named attribute].
+The `role` attribute is a xref:positional-and-named-attributes.adoc#named[named attribute].
 You can assign roles to blocks and inline elements using the shorthand dot (`.`) syntax or formal (`role=`) syntax for the `role` attribute.
 
 == Assign roles to blocks

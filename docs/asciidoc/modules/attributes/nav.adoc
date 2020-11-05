@@ -1,30 +1,28 @@
 .Document Attributes
-* xref:document.adoc[Getting Started with Document Attributes]
-** xref:attribute-entries.adoc[Attribute Entries]
-*** xref:names-and-values.adoc[Attribute Entry Names and Values]
-**** xref:wrap-values.adoc[Wrap Attribute Entry Values]
-**** xref:attribute-entry-substitutions.adoc[Customize Attribute Entry Substitutions]
-*** xref:set-inline.adoc[Inline Attribute Entries]
-* Using Built-in Document Attributes
+* xref:document-attributes.adoc[]
+* xref:attribute-entries.adoc[]
+** xref:names-and-values.adoc[Attribute Entry Names and Values]
+** xref:wrap-values.adoc[Wrap Attribute Entry Values]
+** xref:attribute-entry-substitutions.adoc[Customize Attribute Entry Substitutions]
+** xref:set-inline.adoc[Inline Attribute Entries]
+* Built-in Document Attributes
 ** xref:built-in-attributes.adoc[Set and Define Built-In Attributes]
 ** xref:reference-built-in-attributes.adoc[Reference Built-in Attributes]
 ** xref:boolean-attributes.adoc[Set and Unset Boolean Attributes]
 ** xref:unset-built-in-attributes.adoc[Unset Built-in Attributes]
-* Using Custom Document Attributes
+* Custom Document Attributes
 ** xref:custom-attributes.adoc[Set and Define Custom Attributes]
 ** xref:reference-custom-attributes.adoc[Reference Custom Attributes]
-*** xref:unresolved-references.adoc[Handle Unresolved References]
+** xref:unresolved-references.adoc[Handle Unresolved References]
 // ** Unset Custom Attributes
-* xref:assignment-precedence.adoc[Managing Attribute Assignment Precedence]
+* xref:assignment-precedence.adoc[Manage Attribute Assignment Precedence]
 //** Using Document Attributes from the CLI
 //** Using Document Attributes from the API
 
-////
-.Block and Inline Attributes
-* xref:element.adoc[Getting Started with Block and Inline Attributes]
-** xref:attribute-lists.adoc[Attribute Lists]
-** xref:style.adoc[Style]
-** xref:id.adoc[ID]
-** xref:options.adoc[Options]
-** xref:role.adoc[Role]
-////
+.Element Attributes
+* xref:element-attributes.adoc[]
+** xref:positional-and-named-attributes.adoc[]
+* xref:styles.adoc[]
+* xref:ids.adoc[]
+* xref:options.adoc[]
+* xref:roles.adoc[]
