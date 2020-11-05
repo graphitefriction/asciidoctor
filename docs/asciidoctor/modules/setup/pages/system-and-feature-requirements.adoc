@@ -1,47 +1,48 @@
 = System and Feature Requirements
-:release-version: 1.5.8
 
 Asciidoctor operates on macOS, Windows, and Linux.
-//AsciidoctorJ, Asciidoctor.js, as well as the Asciidoctor build integrations, alternate converters, and extensions may have additional requirements.
 
 == System requirements
 
-While we only test on Alpine Linux, Debian, and Fedora, Asciidoctor should operate as expected on most Linux distributions.
-
-[cols="20,25a",width="45%"]
+.Runtimes
+[cols="20,25a",width=50%]
 |===
 |Supported Platform |Supported Version(s)
 
 |Ruby
-|&#8805; 2.2
+|&#8805; 2.3
 
 |JRuby
-|&#8805; 9.0
+|&#8805; 9.1
 
-|Alpine Linux
-|&#8805; 3.6
+|TruffleRuby
+|&#8805; 20.2
+|===
 
-|Debian
-|&#8805; 9.3
+.Operating systems
+[cols="20,25a",width=50%]
+|===
+|Ubuntu
+|&#8805; 18.04 (bionic)
 
 |Fedora
-|&#8805; 26
+|&#8805; 31
 
 |macOS
 |High Sierra
 
 |Microsoft
 |Windows 10 +
-Windows 8.1 +
-Windows Server 2016 +
-Windows Server 2012 R2
+Windows Server 2019
 |===
+
+Note that while the community tests Asciidoctor on a variety of Linux distributions, it's only officially tested on Ubuntu and Fedora.
 
 == Feature requirements
 
 The following platforms *are only required if you're using certain AsciiDoc features*.
 
-[cols="30,20,15a",width="55%"]
+[cols="30,20,15a",width=75%]
 |===
 |Feature |Supported Platform |Supported Version(s)
 
