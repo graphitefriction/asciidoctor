@@ -1,10 +1,13 @@
 = Rouge
+:url-rouge: http://rouge.jneen.net
+:url-rouge-gem: https://rubygems.org/gems/rouge
+:url-rouge-repo: https://github.com/rouge-ruby/rouge/tree/master/lib/rouge/themes
 
-https://rouge.jneen.net[Rouge] is an extendable code highlighter written in Ruby that supports a vast array of languages.
+{url-rouge}[Rouge^] is an extendable code highlighter written in Ruby that supports a vast array of languages.
 
 == Install Rouge
 
-To use Rouge with Asciidoctor, you need the https://rubygems.org/gems/rouge[rouge] RubyGem.
+To use Rouge with Asciidoctor, you need the {url-rouge-gem}[rouge RubyGem^].
 You can use one of the following methods to install Rouge.
 
 Install using `gem` (all systems)::
@@ -45,7 +48,7 @@ Default: `table`.
 
 rouge-style::
 Controls the color theme used to for highlighting.
-You can find the list of themes in the https://github.com/rouge-ruby/rouge/tree/master/lib/rouge/themes[Rouge code repository].
+You can find the list of themes in the {url-rouge-repo}[Rouge code repository^].
 
 .Customizing a source block with Rouge line numbers
 [source]

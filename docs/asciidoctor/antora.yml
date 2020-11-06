@@ -1,6 +1,10 @@
 name: asciidoctor
 title: Asciidoctor
 version: '2.0'
+asciidoc:
+  attributes:
+    xrefstyle: short@
+    listing-caption: Example@
 nav:
 - modules/ROOT/nav-top.adoc
 - modules/setup/nav.adoc

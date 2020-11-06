@@ -1,4 +1,8 @@
 = Pygments
+:url-pygments: https://pygments.org
+:url-pygments-lang: https://pygments.org/languages/
+:url-python: https://www.python.org
+:url-pygments-gem: https://rubygems.org/gems/pygments.rb
 
 {url-pygments}[Pygments^] is a popular syntax highlighter that supports a broad range of {url-pygments-lang}[programming and template languages^].
 

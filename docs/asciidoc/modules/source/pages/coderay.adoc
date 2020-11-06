@@ -1,4 +1,6 @@
 = CodeRay
+:url-coderay: http://coderay.rubychan.de/
+:url-coderay-gem: https://rubygems.org/gems/coderay
 
 {url-coderay}[CodeRay^] is an encoding-aware, syntax highlighter that supports the languages listed below.
 

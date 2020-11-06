@@ -1,5 +1,9 @@
 = Source Code Blocks
 :table-caption: Table
+:url-coderay: http://coderay.rubychan.de/
+:url-highlightjs: https://highlightjs.org/
+:url-pygments: https://pygments.org
+:url-rouge: http://rouge.jneen.net
 ////
 From user manual:
 NOTE we really want this ID on the section, but there are problems w/ multiple IDs per section
