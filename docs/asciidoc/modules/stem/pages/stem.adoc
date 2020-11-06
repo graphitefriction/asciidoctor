@@ -15,7 +15,7 @@ To activate equation and formula support, simply set the `stem` attribute in the
 ----
 include::example$stem.adoc[tag=base-co]
 ----
-. The default interpreter value, `asciimath`, is assigned implicitly.
+<.> The default interpreter value, `asciimath`, is assigned implicitly.
 
 By default, Asciidoctor's stem support assumes all equations are AsciiMath if not specified explicitly.
 If you want to use the LaTeX interpreter by default, assign `latexmath` to the stem attribute.
@@ -45,8 +45,8 @@ The best way to mark up an inline formula is to use the `stem` macro.
 ----
 include::example$stem.adoc[tag=in-co]
 ----
-. The inline stem macro contains only one colon (`:`).
-. Place the content you want interpreted within the square brackets (`[ ]`) of the macro.
+<.> The inline stem macro contains only one colon (`:`).
+<.> Place the content you want interpreted within the square brackets (`[ ]`) of the macro.
 
 The result of <<ex-inline>> is displayed below.
 
@@ -81,8 +81,8 @@ Block formulas are marked up by assigning the `stem` style to a delimited passth
 ----
 include::example$stem.adoc[tag=bl-co]
 ----
-. Assign the stem style to the passthrough block.
-. A passthrough block is delimited by a line of four consecutive plus signs (`pass:[++++]`).
+<.> Assign the stem style to the passthrough block.
+<.> A passthrough block is delimited by a line of four consecutive plus signs (`pass:[++++]`).
 
 The result <<ex-block>> is rendered beautifully in the browser thanks to MathJax!
 

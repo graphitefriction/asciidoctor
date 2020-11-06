@@ -10,7 +10,7 @@ It contains cells that are arranged into rows according to the number of columns
 The number of columns a table contains can be specified implicitly using the number of cells in the table's first row or by setting the `cols` attribute.
 Each cell is specified by a vertical bar (`|`).
 
-If you're new to AsciiDoc tables, the xref:build-a-basic-table.adoc[Build a basic table page] provides step by step directions for creating your first table.
+If you're new to AsciiDoc tables, xref:build-a-basic-table.adoc[] provides step by step directions for creating your first table.
 
 == Style and layout options
 

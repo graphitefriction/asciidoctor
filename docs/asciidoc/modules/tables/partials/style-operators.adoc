@@ -1,36 +1,35 @@
-[cols="2,2m,6"]
 |===
 |Style |Operator |Description
 
 |AsciiDoc
-|a
+|`a`
 |Supports block elements (lists, delimited blocks, and block macros).
 This style effectively creates a nested, standalone AsciiDoc document.
 The parent document's implicit attributes, such as `doctitle`, are shadowed and custom attributes are inherited.
 // what does "shadowed" actually mean???
 
 |Default
-|d
+|`d`
 |All of the markup that is permitted in a paragraph (i.e., inline formatting, inline macros) is supported.
 
 |Emphasis
-|e
+|`e`
 |Text is italicized.
 
 |Header
-|h
+|`h`
 |Applies the header semantics and styles to the text and cell borders.
 
 |Literal
-|l
+|`l`
 |Content is treated as if it were inside a literal block.
 
 |Monospace
-|m
+|`m`
 |Text is rendered using a monospace font.
 
 |Strong
-|s
+|`s`
 |Text is bold.
 |===
 

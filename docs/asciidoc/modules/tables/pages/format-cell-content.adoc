@@ -41,26 +41,26 @@ However, inline formatting markup is applied in addition to the style specified 
 .Override the column style using a cell style operator
 [source#ex-override]
 ----
-[cols="m,m"] <1>
+[cols="m,m"] <.>
 |===
-|Column 1, header row |Column 2, header row <2>
+|Column 1, header row |Column 2, header row <.>
 
 |This content is rendered using a monospace font because the column's specifier includes the `m` operator.
 |This content is rendered using a monospace font because the column's specifier includes the `m` operator.
 
-s|This content is rendered as bold paragraph text because the `s` operator in the cell's specifier overrides the style operator in the column specifier. <3>
+s|This content is rendered as bold paragraph text because the `s` operator in the cell's specifier overrides the style operator in the column specifier. <.>
 |*This content is rendered using a monospace font because the column's specifier includes the `m` operator.
-It's also bold because it's marked up with the inline syntax for bold formatting.* <4>
+It's also bold because it's marked up with the inline syntax for bold formatting.* <.>
 
-d|This content is rendered as regular paragraph text because the `d` operator in the cell's specifier overrides the style operator in the column specifier. <5>
+d|This content is rendered as regular paragraph text because the `d` operator in the cell's specifier overrides the style operator in the column specifier. <.>
 |This content is rendered using a monospace font because the column's specifier includes the `m` operator.
 |===
 ----
-. The monospace operator (`m`) is assigned to both columns.
-. The header row ignores any style operators assigned via column or cell specifiers.
-. The strong operator (`s`) is assigned to this cell's specifier, overriding the column's monospace style.
-. Inline formatting is applied in addition to the style assigned via a column specifier.
-. The default operator (`d`) is assigned to this cell's specifier, resetting it to the default text style.
+<.> The monospace operator (`m`) is assigned to both columns.
+<.> The header row ignores any style operators assigned via column or cell specifiers.
+<.> The strong operator (`s`) is assigned to this cell's specifier, overriding the column's monospace style.
+<.> Inline formatting is applied in addition to the style assigned via a column specifier.
+<.> The default operator (`d`) is assigned to this cell's specifier, resetting it to the default text style.
 
 The table from <<ex-override>> is displayed below.
 

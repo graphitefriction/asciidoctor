@@ -22,8 +22,8 @@ Hanging from...
 // end::body[]
 
 // tag::title[]
-:toc: <1>
-:toc-title: Table of Adventures <2>
+:toc: <.>
+:toc-title: Table of Adventures <.>
 
 == Certain Peril
 
@@ -46,11 +46,11 @@ Hanging from...
 // end::preamble[]
 
 // tag::macro[]
-:toc: macro <1>
+:toc: macro <.>
 
 == Certain Peril
 
-toc::[] <2>
+toc::[] <.>
 
 Daylight trickles across the cobblestones...
 

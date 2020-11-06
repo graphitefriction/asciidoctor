@@ -10,8 +10,8 @@ end
 // end::src-base[]
 
 // tag::src-base-co[]
-[source#hello,ruby] <1> <2> <3>
----- <4>
+[source#hello,ruby] <.> <.> <.>
+---- <.>
 require 'sinatra'
 
 get '/hi' do
@@ -33,10 +33,10 @@ end
 // end::src-base-co-res[]
 
 // tag::src-para-co[]
-[source,xml] <!--1-->
+[source,xml] <!--.-->
 <meta name="viewport"
   content="width=device-width, initial-scale=1.0">
-<2>
+<.>
 This is normal content.
 // end::src-para-co[]
 

@@ -36,24 +36,24 @@ Let's use the `cols` value in <<ex-cols-alt>> to create a table.
 .Create a table with four columns of equal width
 [source#ex-cols-table]
 ----
-[cols="3,3,3,3"] <1>
-|=== <2>
-|Column 1 |Column 2 |Column 3 |Column 4 <3>
-<4>
-|Cell in column 1 <5>
+[cols="3,3,3,3"] <.>
+|=== <.>
+|Column 1 |Column 2 |Column 3 |Column 4 <.>
+<.>
+|Cell in column 1 <.>
 |Cell in column 2
 |Cell in column 3
 |Cell in column 4
-|=== <6>
+|=== <.>
 ----
-. In an attribute list, set the `cols` attribute, followed by an equals sign (`=`), and then a list of comma-separated column specifiers enclosed in double quotation marks (`"`).
-. On the line directly after the attribute list, enter the opening table delimiter.
+<.> In an attribute list, set the `cols` attribute, followed by an equals sign (`=`), and then a list of comma-separated column specifiers enclosed in double quotation marks (`"`).
+<.> On the line directly after the attribute list, enter the opening table delimiter.
 A table delimiter is one vertical bar followed by three equals signs (`|===`).
-. A table cell is specified by a vertical bar (`|`).
+<.> A table cell is specified by a vertical bar (`|`).
 Since four consecutive cells are entered on the first line directly after the delimiter, this row is implicitly set as the table's header row.
-. Insert a blank line after the header row.
-. The cells for the next row can be entered on a single line or on individual lines.
-. On a new line after the last cell of the last row, enter another table delimiter (`|===`) to close the table block.
+<.> Insert a blank line after the header row.
+<.> The cells for the next row can be entered on a single line or on individual lines.
+<.> On a new line after the last cell of the last row, enter another table delimiter (`|===`) to close the table block.
 
 <<ex-cols-table>> creates the table displayed below.
 
@@ -86,9 +86,9 @@ For example, let's rewrite the value of `[cols="5,5,5"]` as a column multiplier.
 .Represent [cols="5,5,5"] using a column multiplier
 [source]
 ----
-[cols="3*"] <1>
+[cols="3*"] <.>
 ----
-. Assign an integer to `cols` that represents the number of columns in the table.
+<.> Assign an integer to `cols` that represents the number of columns in the table.
 Enter the multiplier operator (`+*+`) directly after the integer.
 
 The integer `3`, combined with the `+*+` operator, indicates that the table will contain three columns of equal width.
@@ -147,18 +147,18 @@ The processor will derive the number columns from the number of cells in this ro
 [source#ex-implicit]
 ----
 |===
-<1>
-|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1 <2>
+<.>
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1 <.>
 
-|Cell in column 1, row 2 <3>
+|Cell in column 1, row 2 <.>
 |Cell in column 2, row 2
 |Cell in column 3, row 2
 |===
 ----
-. After the opening delimiter, insert a blank line before the first row, unless you want the first row to be treated as header row.
-. Enter all of the first row's cells on a single line.
+<.> After the opening delimiter, insert a blank line before the first row, unless you want the first row to be treated as header row.
+<.> Enter all of the first row's cells on a single line.
 Each cell represents one column.
-. The cells in subsequent rows don't need to be entered on a single line.
+<.> The cells in subsequent rows don't need to be entered on a single line.
 
 The table in <<ex-implicit>> has three columns since its first row contains three cells.
 

@@ -44,14 +44,14 @@ The revision line in <<ex-line>> contains a revision number, date, and remark.
 [source#ex-line]
 ----
 = The Intrepid Chronicles
-Kismet Lee <1>
-2.9, October 31, 2021: Fall incarnation <2> <3> <4>
+Kismet Lee <.>
+2.9, October 31, 2021: Fall incarnation <.> <.> <.>
 ----
-<1> The author line must be directly above the revision line.
-<2> The revision line must begin with the revision number.
-<3> The date is separated from the version by a comma (`,`).
+<.> The author line must be directly above the revision line.
+<.> The revision line must begin with the revision number.
+<.> The date is separated from the version by a comma (`,`).
 The date can contain letters, numbers, symbols, and attribute references.
-<4> The remark is separated from the date by a colon (`:`).
+<.> The remark is separated from the date by a colon (`:`).
 
 When the default stylesheet is applied, the revision information is displayed on the same line as the author information.
 Note that the revision number is preceded with the word _Version_.

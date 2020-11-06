@@ -11,11 +11,11 @@
 ** xref:boolean-attributes.adoc[]
 ** xref:unset-built-in-attributes.adoc[]
 * Custom Document Attributes
-** xref:custom-attributes.adoc[Set and Define Custom Attributes]
-** xref:reference-custom-attributes.adoc[Reference Custom Attributes]
-** xref:unresolved-references.adoc[Handle Unresolved References]
+** xref:custom-attributes.adoc[]
+** xref:reference-custom-attributes.adoc[]
+** xref:unresolved-references.adoc[]
 // ** Unset Custom Attributes
-* xref:assignment-precedence.adoc[Manage Attribute Assignment Precedence]
+* xref:assignment-precedence.adoc[]
 //** Using Document Attributes from the CLI
 //** Using Document Attributes from the API
 

@@ -1,4 +1,4 @@
-= Getting Started with Include Directives
+= Get Started with Include Directives
 // Include Directive Syntax and Processing
 // Include Directive Concepts and Syntax
 
@@ -93,8 +93,8 @@ If you don't want Asciidoctor to trigger a warning, and instead drop the include
 If you store your AsciiDoc files in nested folders at different levels, relative file paths can quickly become awkward and inflexible.
 A common pattern to help here is to define the paths in attributes defined in the header, then prefix all include paths with a reference to one of these attributes:
 
-[listing]
-....
+[source]
+------
 :includedir: _includes
 :sourcedir: ../src/main/java
 
@@ -104,7 +104,7 @@ A common pattern to help here is to define the paths in attributes defined in th
 ----
 \include::{sourcedir}/org/asciidoctor/Asciidoctor.java[]
 ----
-....
+------
 
 Keep in mind that no matter how Asciidoctor resolves the path to the file, access to that file is limited by the safe mode setting under which Asciidoctor is run.
 If a path violates the security restrictions, it may be truncated.

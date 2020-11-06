@@ -39,7 +39,7 @@ If you're not using the DocBook toolchain for publishing, you must translate eac
 One way is to set the following attributes in the document header or by passing the attributes via the API or CLI:
 
 .Attributes that control built-in labels
-[cols="10,20,10",width="80%"]
+[%autowidth]
 |===
 |Attribute name |Used for |Default
 
@@ -141,6 +141,7 @@ To use this file to translate the built-in labels according the value of the `la
 ----
 \include::locale/attributes.adoc[]
 ----
+
 . Set the language using the `lang` attribute.
 This attribute must be set before the include directive gets processed.
 For example:

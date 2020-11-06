@@ -1,6 +1,7 @@
 = TOC Attributes Reference
 
-[cols="1,1,2,2,1"]
+//[cols="1,1,2,2,1"]
+[%autowidth]
 |===
 |Attribute |Values |Example Syntax |Notes |Backends
 

@@ -25,10 +25,10 @@ In <<ex-line-compound>>, the first author has a compound first name and the seco
 [source#ex-line-compound]
 ----
 = Drum and Bass Breakbeats
-Ann_Marie Jenson; Tomás López_del_Toro <1> <2>
+Ann_Marie Jenson; Tomás López_del_Toro <.> <.>
 ----
-<1> To signal to the processor that _Ann Marie_ is the author's first name (instead of their first and middle names), type an underscore (`+_+`) between each part of the author's first name.
-<2> The second author's last name consists of three words.
+<.> To signal to the processor that _Ann Marie_ is the author's first name (instead of their first and middle names), type an underscore (`+_+`) between each part of the author's first name.
+<.> The second author's last name consists of three words.
 Type an underscore (`+_+`) between each word of the author's last name.
 
 The result of <<ex-line-compound>> is displayed below.
@@ -62,16 +62,16 @@ An underscore (`+_+`) should also be placed between each part of a compound name
 [source#ex-compound]
 ----
 = Quantum Networks
-:author: Mara_Moss Wirribi <1>
+:author: Mara_Moss Wirribi <.>
 
 == About {author}
 
-{firstname} lives on the Bellarine Peninsula near Geelong, Australia. <2>
+{firstname} lives on the Bellarine Peninsula near Geelong, Australia. <.>
 ----
-<1> Assign the author's name to the `author` attribute.
+<.> Assign the author's name to the `author` attribute.
 Enter an underscore (`+_+`) between each part of the author's first name.
 This ensures that their full first name is correct when it's automatically assigned to `firstname` by the processor.
-<2> The built-in attribute `firstname` is referenced in the document's body.
+<.> The built-in attribute `firstname` is referenced in the document's body.
 The author's first name is automatically extracted from the value of `author` and assigned to `firstname`.
 
 The result of <<ex-compound>>, displayed below, shows that the processor assigned the correct words to the built-in attribute `firstname` since the author's full first name, _Mara Moss_, is displayed where `firstname` was referenced.

@@ -13,7 +13,7 @@ In <<ex-short>>, `footer` is assigned using the shorthand syntax for `options`.
 .Table with footer assigned using the shorthand syntax
 [source#ex-short]
 ----
-[%header%footer,cols="2,2,1"] <1>
+[%header%footer,cols="2,2,1"] <.>
 |===
 |Column 1, header row
 |Column 2, header row
@@ -28,7 +28,7 @@ In <<ex-short>>, `footer` is assigned using the shorthand syntax for `options`.
 |Column 3, footer row
 |===
 ----
-. Values assigned using the shorthand syntax must be entered before the `cols` attribute (or any other named attributes) in a table's attribute list, otherwise the processor will ignore them.
+<.> Values assigned using the shorthand syntax must be entered before the `cols` attribute (or any other named attributes) in a table's attribute list, otherwise the processor will ignore them.
 
 The table from <<ex-short>> is displayed below.
 

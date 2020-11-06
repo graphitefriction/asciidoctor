@@ -50,8 +50,8 @@ In the listing block below, we want to process the inline formatting on the seco
 ....
 include::example$pass.adoc[tag=sub-in]
 ....
-. `macros` is assigned to `subs`, which allows the `pass` macro within the block to be processed.
-. The `pass` macro is assigned the `quotes` value.
+<.> `macros` is assigned to `subs`, which allows the `pass` macro within the block to be processed.
+<.> The `pass` macro is assigned the `quotes` value.
 Text within the square brackets will be formatted.
 
 The result of <<ex-listing>> is rendered below.

@@ -27,17 +27,17 @@ The delimited literal block in <<ex-title>> is titled _Terminal Output_.
 .Add a title to a delimited block
 [source#ex-title]
 ----
-.Terminal Output <1>
-.... <2>
+.Terminal Output <.>
+.... <.>
 From github.com:asciidoctor/asciidoctor
  * branch        master   -> FETCH_HEAD
 Already up to date.
 ....
 ----
-. The block title is entered on a new line.
+<.> The block title is entered on a new line.
 The title must begin with a dot (`.`).
 Don't put a space between the dot and the first character of the title.
-. If you aren't applying attributes to a block, enter the opening delimiter on a new line directly after the title.
+<.> If you aren't applying attributes to a block, enter the opening delimiter on a new line directly after the title.
 
 The result of <<ex-title>> is displayed below.
 
@@ -58,15 +58,15 @@ When you're applying attributes to a block, the title is placed on the line abov
 .Add a title to a delimited source code block
 [source#ex-title-list]
 ....
-.Specify GitLab CI stages <1>
-[source,yaml] <2>
+.Specify GitLab CI stages <.>
+[source,yaml] <.>
 ----
 image: node:10.16.3-buster
 stages: [ init, verify, deploy ]
 ----
 ....
-. The block title is entered on a new line.
-. The block's attribute list is entered on a new line directly after the title.
+<.> The block title is entered on a new line.
+<.> The block's attribute list is entered on a new line directly after the title.
 
 The result of <<ex-title-list>> is displayed below.
 

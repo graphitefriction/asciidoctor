@@ -23,19 +23,19 @@ Notice in <<ex-basic-header>> that there are no blank lines between any of the e
 .Common elements in a header
 [source#ex-basic-header]
 ----
-= Document Title <1>
-Kismet R. Lee <kismet@asciidoctor.org> <2>
-:description: The document's description. <3>
-:sectanchors: <4>
-:url-repo: https://my-git-repo.com <5>
-<6>
+= Document Title <.>
+Kismet R. Lee <kismet@asciidoctor.org> <.>
+:description: The document's description. <.>
+:sectanchors: <.>
+:url-repo: https://my-git-repo.com <.>
+<.>
 ----
-<1> Document title
-<2> Author line
-<3> Attribute entry assigning metadata to a built-in document attribute
-<4> Attribute entry setting a built-in document attribute
-<5> Attribute entry assigning a value to a user-defined document attribute
-<6> Blank line that ends the document header
+<.> Document title
+<.> Author line
+<.> Attribute entry assigning metadata to a built-in document attribute
+<.> Attribute entry setting a built-in document attribute
+<.> Attribute entry assigning a value to a user-defined document attribute
+<.> Blank line that ends the document header
 
 There are a few attribute entries in <<ex-basic-header>>.
 Each attribute entry, whether built-in or user-defined, must be entered on its own line.
@@ -53,11 +53,11 @@ The next line after the first blank line that contains content is interpreted as
 = Document Title
 Kismet R. Lee <kismet@asciidoctor.org>
 :url-repo: https://my-git-repo.com
-<1>
-This is the first line of content in the document body. <2>
+<.>
+This is the first line of content in the document body. <.>
 ----
-<1> A blank line ends the document header.
-<2> After the blank line, the next line with content starts the body of the document.
+<.> A blank line ends the document header.
+<.> After the blank line, the next line with content starts the body of the document.
 
 The first line of the document body can be any valid AsciiDoc content, such as a section heading, paragraph, table, include directive, image, etc.
 Any attributes defined below the first blank line are not part of the document header and will not be scoped to the entire document.

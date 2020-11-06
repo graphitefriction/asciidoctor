@@ -1,8 +1,8 @@
 // tag::attr-co[]
-[#img-sunset] <1>
-.A mountain sunset <2>
-[link=https://www.flickr.com/photos/javh/5448336655] <3>
-image::sunset.jpg[Sunset,300,200] <4> <5>
+[#img-sunset] <.>
+.A mountain sunset <.>
+[link=https://www.flickr.com/photos/javh/5448336655] <.>
+image::sunset.jpg[Sunset,300,200] <.> <.>
 // end::attr-co[]
 
 // tag::attr[]

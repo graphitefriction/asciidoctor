@@ -20,7 +20,7 @@ You can also control whether a section is numbered on a section by section basis
 === Toggle section numbers on or off per section
 
 The `sectnums` attribute is a unique attribute.
-It's a [.term]_flexible attribute_, which means it can be set and unset midstream in a document, even if it is enabled through the API or CLI.
+It's a [.term]*flexible attribute*, which means it can be set and unset midstream in a document, even if it is enabled through the API or CLI.
 This allows you to toggle numbering on and off throughout a document.
 
 //You can also use `sectnums` above any section title in the document to toggle the auto-numbering setting.
@@ -58,7 +58,7 @@ The `sectnumlevels` attribute accepts a value of 0 through 5, and it can only be
 ----
 include::example$section.adoc[tag=sectnuml]
 ----
-<1> When the `sectnumlevels` attribute is assigned a value of `2`, level 3 through 5 section titles are not numbered.
+<.> When the `sectnumlevels` attribute is assigned a value of `2`, level 3 through 5 section titles are not numbered.
 // (i.e., not prefixed with a number).
 
 When the `doctype` is `book`, level-1 sections become xref:chapters.adoc[chapters].

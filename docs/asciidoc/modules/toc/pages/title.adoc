@@ -11,8 +11,8 @@ To generate a TOC with a custom title, set the `toc-title` attribute in the head
 ----
 include::example$toc.adoc[tags=header;title]
 ----
-. The `toc` attribute must be set in order to use `toc-title`.
-. The `toc-title` is set and assigned the value `Table of Adventures` in the document's header.
+<.> The `toc` attribute must be set in order to use `toc-title`.
+<.> The `toc-title` is set and assigned the value `Table of Adventures` in the document's header.
 
 The result of <<ex-title>> is displayed below.
 

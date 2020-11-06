@@ -1,4 +1,4 @@
-= Getting Started with Element Attributes
+= Get Started with Element Attributes
 
 Element attributes are a powerful means of controlling the built-in settings of individual block and inline elements.
 They're also used to apply user-defined behavior and supplemental information, such as citation information and fallback content, to certain elements.

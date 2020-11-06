@@ -1,8 +1,7 @@
 // tag::para[]
 This journey begins one late Monday afternoon in Antwerp.
-Our team desperately needs coffee, but none of us dare open the office door.
 
-To leave means code dismemberment and certain death.
+Our team desperately needs coffee, but none of us dare open the office door.
 // end::para[]
 
 // tag::b-para[]
@@ -58,12 +57,14 @@ This text will be styled as a lead paragraph (i.e., larger font).
 
 // tag::b-i[]
 _To tame_ the wild wolpertingers we needed to build a *charm*.
-But **u**ltimate victory could only be won if we divined the *_true name_* of the __war__lock.
+But **u**ltimate victory could only be won if we divined the
+*_true name_* of the __war__lock.
 // end::b-i[]
 
 // tag::b-i-n[]
 _To tame_ the wild wolpertingers we needed to build a *charm*.
-But **u**ltimate victory could only be won if we divined the *_true name_* of the __war__lock.
+But **u**ltimate victory could only be won if we divined the
+*_true name_* of the __war__lock.
 // end::b-i-n[]
 
 // tag::b-bold-italic-mono[]
@@ -89,15 +90,21 @@ monospace bold italic `*_constrained_*` & ``**__un__**``constrained
 // end::monospace-vs-codespan[]
 
 // tag::c-quote-co[]
-"`What kind of charm?`" Lazarus asked. "`An odoriferous one or a mineral one?`" // <1>
+"`What kind of charm?`" Lazarus asked.
+"`An odoriferous one or a mineral one?`" <.>
 
-Kizmet shrugged. "`The note from Olaf's desk says '`wormwood and licorice,`' but these could be normal groceries for werewolves.`" // <2>
+Kizmet shrugged.
+"`The note from Olaf's desk says '`wormwood and licorice,`'
+but these could be normal groceries for werewolves.`" <.>
 // end::c-quote-co[]
 
 // tag::c-quote[]
-"`What kind of charm?`" Lazarus asked. "`An odoriferous one or a mineral one?`"
+"`What kind of charm?`" Lazarus asked.
+"`An odoriferous one or a mineral one?`"
 
-Kizmet shrugged. "`The note from Olaf's desk says '`wormwood and licorice,`' but these could be normal groceries for werewolves.`"
+Kizmet shrugged.
+"`The note from Olaf's desk says '`wormwood and licorice,`'
+but these could be normal groceries for werewolves.`"
 // end::c-quote[]
 
 // tag::b-c-quote[]
@@ -109,18 +116,21 @@ Olaf's desk was a mess.
 
 All of the werewolves`' desks were a mess.
 
-Olaf had been with the company since the `'60s.
+Olaf had been with the company since the `'00s.
 // end::b-c-quote[]
 
 // tag::apos[]
-Olaf had been with the company since the `'60s.
+Olaf had been with the company since the `'00s.
 His desk overflowed with heaps of paper, apple cores and squeaky toys.
 We couldn't find Olaf's keyboard.
-The state of his desk was replicated, in triplicate, across all of the werewolves`' desks.
+The state of his desk was replicated, in triplicate, across all of
+the werewolves`' desks.
 // end::apos[]
 
 // tag::sub-sup[]
-"`Well the H~2~O formula written on their whiteboard could be part of a shopping list, but I don't think the local bodega sells E=mc^2^,`" Lazarus replied.
+"`Well the H~2~O formula written on their whiteboard could be part
+of a shopping list, but I don't think the local bodega sells
+E=mc^2^,`" Lazarus replied.
 // end::sub-sup[]
 
 // tag::b-sub-sup[]
@@ -130,8 +140,10 @@ The state of his desk was replicated, in triplicate, across all of the werewolve
 // end::b-sub-sup[]
 
 // tag::mono[]
-"`Wait!`" Indigo plucked a small vial from her desk's top drawer and held it toward us.
-The vial's label read: `E=mc^2^`; the `E` represents _energy_, but also pure _genius!_
+"`Wait!`" Indigo plucked a small vial from her desk's top drawer
+and held it toward us.
+The vial's label read: `E=mc^2^`; the `E` represents _energy_,
+but also pure _genius!_
 // end::mono[]
 
 // tag::literal-mono[]
@@ -157,7 +169,7 @@ Werewolves are #allergic to cinnamon#.
 // end::highlight-html[]
 
 // tag::css-co[]
-Do werewolves believe in [.small]#small print#? // <1>
+Do werewolves believe in [.small]#small print#? <.>
 
 [.big]##O##nce upon an infinite loop.
 // end::css-co[]

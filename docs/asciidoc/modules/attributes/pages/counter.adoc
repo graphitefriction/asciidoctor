@@ -11,7 +11,7 @@ Since counters are attributes, counter names follow the same rules as xref:names
 The most important rule to note is that letters in counter names _must be lowercase_.
 
 The counter value is incremented and displayed every time the `counter:` attribute reference is used.
-The term [.term]_increment_ means advance to the next value in the sequence.
+The term [.term]*increment* means advance to the next value in the sequence.
 If the counter value is an integer, add 1.
 If the counter value is a character, move to the next letter in the Latin alphabet.
 The default start value of a counter is 1.

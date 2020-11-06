@@ -12,7 +12,7 @@ You can include a description of the document using the `description` attribute.
 ----
 include::example$metadata.adoc[tag=desc-base]
 ----
-<1> If the document's description is long, you can break the attribute's value across several lines by ending each line with a backslash `\` that is preceded by a space.
+<.> If the document's description is long, you can break the attribute's value across several lines by ending each line with a backslash `\` that is preceded by a space.
 
 When converted to HTML, the document description value is assigned to the HTML `<meta>` tag.
 

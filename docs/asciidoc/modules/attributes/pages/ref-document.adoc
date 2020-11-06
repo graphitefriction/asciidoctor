@@ -31,11 +31,11 @@ If you set the attribute but leave the value empty, Asciidoctor will fall back t
 Header Set:: The attribute can be set and assigned a value (or unset) in the document's header.
 In almost all cases, these attributes can also be set, defined, or unset in the API or command line.
 If you set an attribute from the command line or API, it's defined for the whole document and can't be changed in the document header or body unless `@` is added to the end of the value.
-See xref:assignment-precedence.adoc[Attribute Assignment Precedence] for more information.
+See xref:assignment-precedence.adoc[] for more information.
 The one exception to this rule is the `sectnums` attribute, which can always be changed.
 
 Body Set:: The attribute can be set, assigned a value, or unset in the document's body (anywhere below the document header).
-When you set an attribute in the body, it's visible from the point it's set until it's unset (unless it's overridden by xref:assignment-precedence.adoc[Attribute Assignment Precedence]).
+When you set an attribute in the body, it's visible from the point it's set until it's unset (unless it's overridden by the xref:assignment-precedence.adoc[assignment precedence]).
 
 == Compliance attributes
 

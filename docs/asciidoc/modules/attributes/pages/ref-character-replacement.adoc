@@ -1,6 +1,6 @@
 = Character Replacement Attributes Reference
 
-[width="75%", cols="^4m,^3l,^3"]
+[%autowidth,cols="^m,^l,^"]
 |===
 |Attribute name |Replacement text |Appearance
 

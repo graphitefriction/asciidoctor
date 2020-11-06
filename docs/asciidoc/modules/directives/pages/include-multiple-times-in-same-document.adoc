@@ -37,5 +37,5 @@ See xref:chain-{chapter}[].
 The first time the [.path]_fragment-chain.adoc_ file is included, the ID of the included section resolves to `chain-operation`.
 The second time the file included, the ID resolves to `chain-maintenance`.
 
-In order for this to work, you must use the long-hand forms of both the ID assignment and the cross-reference.
+In order for this to work, you must use the long-hand forms of both the ID assignment and the cross reference.
 The single quotes around the variable name in the assignment are required to force variable substitution (aka interpolation).

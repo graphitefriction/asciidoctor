@@ -150,6 +150,7 @@ The full list of numeration styles that can be applied to an ordered list are as
 
 Here are a few examples showing various numeration styles as defined by the block style shown in the header row:
 
+[%autowidth]
 |===
 |[arabic] ^[2]^ |[decimal] |[loweralpha] |[lowergreek]
 

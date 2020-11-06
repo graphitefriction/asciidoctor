@@ -10,11 +10,11 @@ The built-in attributes `author` and `email` can be explicitly set and assigned 
 [source#ex-entries]
 ----
 = The Intrepid Chronicles
-:author: Kismet R. Lee <1>
-:email: kismet@asciidoctor.org <2>
+:author: Kismet R. Lee <.>
+:email: kismet@asciidoctor.org <.>
 ----
-<1> The author's name is assigned to the built-in attribute `author`
-<2> The author's email is assigned to the built-in attribute `email`
+<.> The author's name is assigned to the built-in attribute `author`
+<.> The author's email is assigned to the built-in attribute `email`
 
 When the default stylesheet is applied, the author information assigned to these attributes is displayed on the byline.
 The result of <<ex-entries>> is displayed below.

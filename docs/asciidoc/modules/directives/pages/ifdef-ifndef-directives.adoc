@@ -13,7 +13,7 @@ For example, say you want to include a certain section of content only when conv
 Conditional preprocessor directives make this possible.
 You simply check for the presence of the `basebackend-html` attribute using an `ifdef` directive.
 Details of this example and more `ifdef` and `ifndef` examples, are described in the following sections.
-See xref:ifeval-directives.adoc[Ifeval Directive] for `ifeval` examples.
+See xref:ifeval-directives.adoc[] for `ifeval` examples.
 
 == Conditional processing
 
@@ -63,9 +63,6 @@ It isn't necessary for short blocks, but if you are conditionally including a se
 Other readers reviewing your docs source code may go cross-eyed when reading your source docs if you don't.
 \endif::env-github[]
 ----
-
-TIP: A great example of long-form conditional formatting is the source of this user manual!
-We use it to show and hide entire sections when building individual content for separate guides.
 
 If you're only dealing with a single line of text, you can put the content directly inside the square brackets and drop the `endif` directive.
 

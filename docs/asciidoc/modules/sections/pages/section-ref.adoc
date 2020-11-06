@@ -2,7 +2,7 @@
 
 == Section attributes
 
-[cols="1,2,1,1"]
+[%autowidth]
 |===
 |Feature |Attribute |Value(s) |Notes
 
@@ -81,7 +81,7 @@
 
 == Section styles
 
-[cols="1,1,1,1"]
+[%autowidth]
 |===
 |Feature |Style Name |Doctypes |Converters
 

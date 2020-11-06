@@ -35,9 +35,9 @@ However, if you want to use AsciiDoc's book features, the `doctype` attribute ne
 [source]
 ----
 = Title of My Document
-:doctype: book <1>
+:doctype: book <.>
 ----
-<1> Set `doctype` in the document header and assign it the value `book`.
+<.> Set `doctype` in the document header and assign it the value `book`.
 Explicit values must be offset from the closing colon (`:`) by at least one space.
 
 To override an attribute's default value, you have to explicitly assign a value when you set the attribute.

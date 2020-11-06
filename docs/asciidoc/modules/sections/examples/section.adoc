@@ -177,7 +177,7 @@ Unnumbered Section
 // tag::sectnuml[]
 = Title
 :sectnums:
-:sectnumlevels: 2 // <1>
+:sectnumlevels: 2 <.>
 // end::sectnuml[]
 
 // tag::md[]

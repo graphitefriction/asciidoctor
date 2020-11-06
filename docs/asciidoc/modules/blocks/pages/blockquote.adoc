@@ -28,11 +28,11 @@ If the quote is a single line or paragraph, you can place the attribute list dir
 ----
 include::example$quote.adoc[tag=para2-c]
 ----
-. Mark lead-in text explaining the context or setting of the quote using a period (`.`). (optional)
-. For content that doesn't require the preservation of line breaks, set `quote` in the first position of the attribute list.
-. The second position contains who the excerpt is attributed to. (optional)
-. Enter additional citation information in the third position. (optional)
-. Enter the excerpt or quote text on the line immediately following the attribute list.
+<.> Mark lead-in text explaining the context or setting of the quote using a period (`.`). (optional)
+<.> For content that doesn't require the preservation of line breaks, set `quote` in the first position of the attribute list.
+<.> The second position contains who the excerpt is attributed to. (optional)
+<.> Enter additional citation information in the third position. (optional)
+<.> Enter the excerpt or quote text on the line immediately following the attribute list.
 
 The result of <<ex-style>> is displayed below.
 

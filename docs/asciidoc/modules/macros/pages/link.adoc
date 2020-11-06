@@ -25,7 +25,7 @@ We call this a URL macro.
 ----
 include::example$url.adoc[tag=base-co]
 ----
-. The trailing period will not get caught up in the link.
+<.> The trailing period will not get caught up in the link.
 
 To prevent automatic linking of an URL, prepend it with a backslash (`\`).
 

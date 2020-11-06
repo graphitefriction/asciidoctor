@@ -24,7 +24,7 @@ Since commas are normally used to separate individual attributes, you must quote
 include::example$include.adoc[tag=m-line-comma]
 ----
 
-To avoid having to quote the list of ranges, you can instead separate them using semi-colons.
+To avoid having to quote the list of ranges, you can instead separate them using semicolons.
 
 [source]
 ----

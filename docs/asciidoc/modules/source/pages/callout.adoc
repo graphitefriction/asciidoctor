@@ -78,5 +78,5 @@ The font icons setting also enables callout icons drawn using CSS.
 ----
 include::example$callout.adoc[tag=co-icon]
 ----
-. Activates the font-based icons in the HTML5 backend.
-. Admonition block that uses a font-based icon.
+<.> Activates the font-based icons in the HTML5 backend.
+<.> Admonition block that uses a font-based icon.

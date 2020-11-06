@@ -114,10 +114,10 @@ To apply highlighting to source code, you must add the `source` style to a listi
 ....
 include::example$source.adoc[tag=src-base-co]
 ....
-. Assign the block style `source` to the first position in the attribute list.
-. An optional ID can be added to the block by appending it to style using the shorthand syntax (`#`) for `id`.
-. Assign a source language to the second position.
-. The source style is typically assigned to delimited listing and literal blocks.
+<.> Assign the block style `source` to the first position in the attribute list.
+<.> An optional ID can be added to the block by appending it to style using the shorthand syntax (`#`) for `id`.
+<.> Assign a source language to the second position.
+<.> The source style is typically assigned to delimited listing and literal blocks.
 
 The result of <<ex-code>> is displayed below.
 
@@ -128,8 +128,8 @@ include::example$source.adoc[tag=src-base-co-res]
 ----
 include::example$source.adoc[tag=src-para-co]
 ----
-. Place the attribute list directly on the paragraph.
-. Once an empty line is encountered the syntax highlighting is unset.
+<.> Place the attribute list directly on the paragraph.
+<.> Once an empty line is encountered the syntax highlighting is unset.
 
 The result of <<ex-style>> is displayed below.
 

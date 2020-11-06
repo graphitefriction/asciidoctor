@@ -16,9 +16,9 @@ This [.term]*sets* -- that is, turns on -- the document attribute so you can use
 
 [source]
 ----
-:name-of-an-attribute: <1>
+:name-of-an-attribute: <.>
 ----
-. The attribute's name is directly preceded with a opening colon (`:`) and directly followed by a closing colon (`:`).
+<.> The attribute's name is directly preceded with a opening colon (`:`) and directly followed by a closing colon (`:`).
 
 In many cases, you explicitly assign a value to a document attribute by entering information after its name in the attribute entry.
 The value must be offset from the closing colon (`:`) by at least one space.
@@ -26,18 +26,18 @@ Be aware that xref:attribute-entry-substitutions.adoc[header substitutions] auto
 
 [source]
 ----
-:name-of-an-attribute: value of the attribute <1>
+:name-of-an-attribute: value of the attribute <.>
 ----
-. An explicitly assigned value is offset from the closing colon (`:`) by at least one blank space.
+<.> An explicitly assigned value is offset from the closing colon (`:`) by at least one blank space.
 At the end of the value, press kbd:[Enter].
 
 Some built-in attributes don't require a value to be explicitly assigned in an attribute entry because they're a boolean attribute or have a default value.
 
 [source]
 ----
-:name-of-an-attribute: <1>
+:name-of-an-attribute: <.>
 ----
-. If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
+<.> If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
 
 The values of built-in boolean attributes are always blank because their only accepted value is an _empty string_.
 Other built-in attributes may have a default value.

@@ -65,8 +65,8 @@ If the `toc` document attribute isn't assigned the value `macro`, any TOC macro 
 ----
 include::example$toc.adoc[tags=header;macro]
 ----
-<1> The `toc` attribute must be set to `macro` to enable the use of the TOC macro.
-<2> In this example, the TOC macro is placed below the first section's title, indicating that this is the location where the TOC will be displayed once the document is rendered.
+<.> The `toc` attribute must be set to `macro` to enable the use of the TOC macro.
+<.> In this example, the TOC macro is placed below the first section's title, indicating that this is the location where the TOC will be displayed once the document is rendered.
 
 The result of <<ex-macro>> is displayed below.
 

@@ -1,7 +1,7 @@
 = Header Reference
 //Attributes and Values
 
-[cols="2,2,1,2"]
+[%autowidth]
 |===
 |Attribute |Values |Converters |Notes
 

@@ -17,11 +17,11 @@ Check that you have a `python2` (Linux), `python` (macOS), or `py -2` (Windows) 
 .Installing Python and the pygments.rb gem via the CLI (cross platform)
 [source,console]
 ....
-$ "`\which apt-get || \which dnf || \which yum || \which brew`" install python # <1>
-$ gem install pygments.rb # <2>
+$ "`\which apt-get || \which dnf || \which yum || \which brew`" install python # <.>
+$ gem install pygments.rb # <.>
 ....
-<1> Install Python using your package manager
-<2> Install the pygments.rb gem
+<.> Install Python using your package manager
+<.> Install the pygments.rb gem
 
 Once you've installed these libraries, assign `pygments` to the `source-highlighter` attribute in your document's header.
 
@@ -89,7 +89,7 @@ To list the available Pygments styles, run the following command in a terminal:
 The pygments.rb gem uses a bundled version of Pygments (often ahead of the latest release).
 This command ensures that you are invoking the `pygmentize` command from the Pygments used by that gem.
 
-== Highlight Select Lines
+== Highlight select lines
 
 Not to be confused with syntax highlighting, you can configure Pygments to highlight (i.e., emphasize) select lines in order to call attention to them.
 This feature is activated on a source block if the highlight attribute is defined.

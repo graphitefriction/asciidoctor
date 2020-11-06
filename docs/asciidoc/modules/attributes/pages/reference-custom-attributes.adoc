@@ -28,16 +28,16 @@ In <<ex-reference>>, the attribute `url-repo` is referenced twice and `disclaime
 .User-defined attribute referenced in the document body
 [source#ex-reference]
 ----
-Asciidoctor is {url-repo}[open source]. <1>
+Asciidoctor is {url-repo}[open source]. <.>
 
-WARNING: {disclaimer} <2>
+WARNING: {disclaimer} <.>
 If you're missing a lime colored sock, file a ticket in
-the {url-repo}/issues[Asciidoctor issue tracker]. <3>
+the {url-repo}/issues[Asciidoctor issue tracker]. <.>
 ----
-<1> Attribute references can be used in macros.
-<2> Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.
+<.> Attribute references can be used in macros.
+<.> Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.
 Since there isn't a blank line between the `disclaimer` reference and the next sentence, the sentence will be directly appended to the end of the attribute's value when it's processed.
-<3> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:link.adoc[URL macro].
+<.> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:link.adoc[URL macro].
 
 As you can see below, the attribute references are replaced with the corresponding attribute value when the document is processed.
 

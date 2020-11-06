@@ -14,12 +14,12 @@ To use Font Awesome's icons in your document, set the value of the `icons` docum
 [source]
 ----
 = Document Title
-:icons: font <1>
+:icons: font <.>
 
-icon:tags[] ruby, asciidoctor <2>
+icon:tags[] ruby, asciidoctor <.>
 ----
-. Set `icons` to `font` to use the Font Awesome icons.
-. Enter the name of the Font Awesome icon in the target field of the inline icon macro, followed by a set of square brackets (`[]`).
+<.> Set `icons` to `font` to use the Font Awesome icons.
+<.> Enter the name of the Font Awesome icon in the target field of the inline icon macro, followed by a set of square brackets (`[]`).
 
 .Result: Use Font Awesome tags icon
 icon:tags[] ruby, asciidoctor

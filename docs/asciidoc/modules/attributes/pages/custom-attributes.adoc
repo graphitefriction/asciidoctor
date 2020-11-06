@@ -30,12 +30,13 @@ A best practice is to only use lowercase letters in the name and avoid starting 
 
 A prime use case for attribute entries is to promote frequently used text and URLs to the top of the document.
 
-[source#user-set-ex]
+.Create a user-defined attribute and value
+[source#ex-user-set]
 ----
-:disclaimer: Don't pet the wild Wolpertingers. If you let them into your system, we're \ <1>
+:disclaimer: Don't pet the wild Wolpertingers. If you let them into your system, we're \ <.>
 not responsible for any loss of hair, chocolate, or purple socks.
 :url-repo: https://github.com/asciidoctor/asciidoctor
 ----
-<1> Long values can be xref:wrap-values.adoc[soft wrapped] using a backslash (`\`).
+<.> Long values can be xref:wrap-values.adoc[soft wrapped] using a backslash (`\`).
 
 Now, you can xref:reference-custom-attributes.adoc[reference these attributes] throughout the document.

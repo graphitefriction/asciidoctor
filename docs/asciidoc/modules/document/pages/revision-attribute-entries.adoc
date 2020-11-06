@@ -21,13 +21,13 @@ The order of the attribute entries doesn't affect their order in the byline of a
 ----
 = The Intrepid Chronicles
 :revdate: April 4, 2022
-:revnumber: LPR55 <1>
-:revremark: The spring incarnation of {doctitle} <2>
-:version-label!: <3>
+:revnumber: LPR55 <.>
+:revremark: The spring incarnation of {doctitle} <.>
+:version-label!: <.>
 ----
-<1> Any non-numeric characters that precede the version number aren't dropped when `revnumber` is set using an attribute entry.
-<2> The value of `revremark` can contain attribute references.
-<3> The `version-label` attribute is unset so that the word _Version_ isn't displayed in the byline.
+<.> Any non-numeric characters that precede the version number aren't dropped when `revnumber` is set using an attribute entry.
+<.> The value of `revremark` can contain attribute references.
+<.> The `version-label` attribute is unset so that the word _Version_ isn't displayed in the byline.
 
 The result of <<ex-entries>> is displayed below.
 

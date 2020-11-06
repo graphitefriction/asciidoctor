@@ -6,9 +6,8 @@ These _environment attributes_ provide information about the runtime environment
 Like document attributes, environment attributes can be referenced wherever attribute references are permitted.
 It's recommended that you treat these attributes as read only.
 
-[#env-attributes-table]
 // tag::table[]
-[cols="1m,2,1m"]
+[#env-attributes-table,cols="1m,2,1m"]
 |===
 |Attribute |Description |Example Value
 

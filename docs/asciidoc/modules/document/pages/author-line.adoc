@@ -39,10 +39,10 @@ The author line must be placed on the line directly below the xref:title.adoc[do
 [source#ex-line]
 ----
 = The Intrepid Chronicles
-Kismet R. Lee <kismet@asciidoctor.org> <1> <2>
+Kismet R. Lee <kismet@asciidoctor.org> <.> <.>
 ----
-<1> Enter the author's name on the line below the document title.
-<2> In a set of angle brackets (`< >`), enter the author's email or URL.
+<.> Enter the author's name on the line below the document title.
+<.> In a set of angle brackets (`< >`), enter the author's email or URL.
 
 Remember, a middle name and email are optional.
 The processor assigns the content on the author line to the built-in attributes using word position, word count, and syntax.

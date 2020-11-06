@@ -1,7 +1,7 @@
 = Section Styles for Articles and Books
 
 AsciiDoc provides built-in styles for the specialized front matter and back matter sections found in journal articles, academic papers, and books.
-These styled sections are referred to as [.term]_special sections_.
+These styled sections are referred to as [.term]*special sections*.
 The document type, `article` or `book`, determines which section styles are available for use.
 
 == Book section styles

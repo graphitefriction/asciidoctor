@@ -36,14 +36,14 @@ But you can change this behavior by setting the `subs` attribute in the block's 
 ....
 include::example$subs.adoc[tag=subs-in]
 ....
-<1> The `subs` attribute is set in the attribute list and assigned the `verbatim` and `quotes` values.
-<2> The formatting markup in this line will be replaced when the `quotes` step runs.
+<.> The `subs` attribute is set in the attribute list and assigned the `verbatim` and `quotes` values.
+<.> The formatting markup in this line will be replaced when the `quotes` step runs.
 
 ====
 include::example$subs.adoc[tag=subs-out]
 ====
-. The `verbatim` value enables any special characters and callouts to be processed.
-. The `quotes` value enables the bold text formatting to be processed.
+<.> The `verbatim` value enables any special characters and callouts to be processed.
+<.> The `quotes` value enables the bold text formatting to be processed.
 
 You may be wondering why `verbatim` is specified in the previous example since it's applied to literal blocks by default.
 It's added because the `subs` attribute removes all of a block or inline elements default substitutions when it is set.
