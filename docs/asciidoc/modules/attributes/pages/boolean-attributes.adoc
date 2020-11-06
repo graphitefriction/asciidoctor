@@ -27,7 +27,7 @@ When `sectanchors` is set, it xref:sections:title-links.adoc#anchor[activates an
 = Document Title
 :sectanchors: <1>
 ----
-<1> The value of `sectanchors` is always left empty because it's a boolean attribute.
+. The value of `sectanchors` is always left empty because it's a boolean attribute.
 
 == Unsetting a boolean attribute
 
@@ -48,7 +48,7 @@ The `sectids` attribute xref:sections:ids.adoc[generates an ID for each section]
 = Document Title
 :!sectids: <1>
 ----
-<1> On a new line, type a colon (`:`), directly followed by a bang symbol (`!`), the attribute's name, and then another colon (`:`).
+. On a new line, type a colon (`:`), directly followed by a bang symbol (`!`), the attribute's name, and then another colon (`:`).
 After the closing colon, press kbd:[Enter].
 The attribute is now unset and its behavior won't be applied to the document.
 

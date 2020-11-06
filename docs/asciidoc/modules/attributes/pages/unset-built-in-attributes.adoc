@@ -14,8 +14,8 @@ Don't add a value to the entry.
 :name!: <1>
 :!name: <2>
 ----
-<1> An attribute is unset when a `!` is appended to its name.
-<2> An attribute is unset when a `!` is prefixed to its name.
+. An attribute is unset when a `!` is appended to its name.
+. An attribute is unset when a `!` is prefixed to its name.
 
 Let's unset the attribute `example-caption`.
 This is an attribute that is set and assigned a default value of `Example` automatically by Asciidoctor when you use an example block.
@@ -25,7 +25,7 @@ This is an attribute that is set and assigned a default value of `Example` autom
 = Title
 :example-caption!: <1>
 ----
-<1> Example blocks won't be labeled and numbered, e.g., Example 1, because the attribute controlling that behavior is unset with the `!`.
+. Example blocks won't be labeled and numbered, e.g., Example 1, because the attribute controlling that behavior is unset with the `!`.
 The `!` can be placed either before or after the attribute's name.
 `:!example-caption:` also unsets the attribute.
 
@@ -50,9 +50,9 @@ To do that, you'd unset `sectnums` before the first section you didn't want numb
 :sectnums: <3>
 == Section Title
 ----
-<1> The `sectnums` attribute is set in the header to activate section numbering throughout the document.
-<2> `sectnums` is unset by adding a `!` to it's name.
+. The `sectnums` attribute is set in the header to activate section numbering throughout the document.
+. `sectnums` is unset by adding a `!` to it's name.
 The `!` can be placed either before or after the attribute's name.
 The attribute entry must be placed on its own line.
 All of the sections below where the attribute is unset will not be numbered.
-<3> `sectnums` is set and all subsequent sections will be numbered.
+. `sectnums` is set and all subsequent sections will be numbered.

@@ -1,7 +1,10 @@
-= Getting Started with Document Attributes
+= Get Started with Document Attributes
+
+You can think of a document attribute as a global variable for the AsciiDoc language.
+
+== What are document attributes?
 
 Document attributes are a powerful text replacement tool and means of controlling built-in settings and behavior for a whole document or regions of a document.
-You can think of a document attribute as a global variable for the AsciiDoc language.
 
 Document attributes:
 
@@ -23,9 +26,9 @@ Their sole function is to turn on or turn off a feature.
 
 User-defined attributes:: #TBA#
 
-== What does setting and unsetting a document attribute mean?
+== What does setting a document attribute mean?
 
-* be unset (turned off) with a leading (preferred) or trailing `!` added to the name
+* be set (turned on)
 
 == What does defining a document attribute mean?
 
@@ -46,6 +49,10 @@ Document attributes cannot:
 ** multiple paragraphs
 ** blocks (tables, sidebars, examples, etc)
 ** other whitespace-dependent markup
+
+== What does unsetting a document attribute mean?
+
+* be unset (turned off) with a leading (preferred) or trailing `!` added to the name
 
 == Where are document attributes set, defined, and unset?
 

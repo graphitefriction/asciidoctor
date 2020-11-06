@@ -18,7 +18,7 @@ This [.term]*sets* -- that is, turns on -- the document attribute so you can use
 ----
 :name-of-an-attribute: <1>
 ----
-<1> The attribute's name is directly preceded with a opening colon (`:`) and directly followed by a closing colon (`:`).
+. The attribute's name is directly preceded with a opening colon (`:`) and directly followed by a closing colon (`:`).
 
 In many cases, you explicitly assign a value to a document attribute by entering information after its name in the attribute entry.
 The value must be offset from the closing colon (`:`) by at least one space.
@@ -28,7 +28,7 @@ Be aware that xref:attribute-entry-substitutions.adoc[header substitutions] auto
 ----
 :name-of-an-attribute: value of the attribute <1>
 ----
-<1> An explicitly assigned value is offset from the closing colon (`:`) by at least one blank space.
+. An explicitly assigned value is offset from the closing colon (`:`) by at least one blank space.
 At the end of the value, press kbd:[Enter].
 
 Some built-in attributes don't require a value to be explicitly assigned in an attribute entry because they're a boolean attribute or have a default value.
@@ -37,7 +37,7 @@ Some built-in attributes don't require a value to be explicitly assigned in an a
 ----
 :name-of-an-attribute: <1>
 ----
-<1> If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
+. If you don't want to explicitly assign a value to the attribute, press kbd:[Enter] after the closing colon (`:`).
 
 The values of built-in boolean attributes are always blank because their only accepted value is an _empty string_.
 Other built-in attributes may have a default value.
@@ -51,11 +51,11 @@ The attribute's value can be reassigned or the attribute unset at any subsequent
 
 Many, but not all, document attributes can be set, assigned a value, or unset in the document's body (anywhere below the document header).
 When you set an attribute in the body, it's visible from the point it's set until it's unset.
-See the xref:ref-document.adoc[Document Attributes Reference] for where in a document each attribute can be set.
+See the xref:ref-document.adoc[] for where in a document each attribute can be set.
 
 Finally, document attributes can also be set, assigned values, and unset via the CLI and API, but these methods don't use the attribute entry syntax.
 When an attribute is set from the command line or API, it's defined for the whole document and can't be changed in the document header or body unless `@` is added to the end of the value.
-See xref:assignment-precedence.adoc[Managing Attribute Assignment Precedence] for more information.
+See xref:assignment-precedence.adoc[] for more information.
 The one exception to this rule is the `sectnums` attribute, which can always be changed.
 
 ////

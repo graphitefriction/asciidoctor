@@ -1,4 +1,4 @@
-= Set Attributes Inline
+= Inline Attribute Entries
 
 In places where document attribute entry lines are not normally processed, such as in a table cell, document attributes can be assigned using the following syntax:
 
