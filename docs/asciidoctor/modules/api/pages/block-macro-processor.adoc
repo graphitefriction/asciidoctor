@@ -1,4 +1,5 @@
 = Block Macro Processor Extension Example
+:navtitle: Block Macro Processor
 
 Purpose::
 Create a block macro named `gist` for embedding a gist.

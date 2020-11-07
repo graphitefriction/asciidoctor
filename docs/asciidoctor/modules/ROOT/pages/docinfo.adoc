@@ -9,7 +9,7 @@ Docinfo files are useful for injecting auxiliary metadata, stylesheet, and scrip
 The docinfo feature does not apply to all backends.
 While it works when converting to output formats such as HTML and DocBook, it does not work when converting to PDF using Asciidoctor PDF.
 
-The docinfo feature must be explicitly enabled using the `docinfo` attribute (see <<Enabling docinfo>>).
+The docinfo feature must be explicitly enabled using the `docinfo` attribute (see <<enable-docinfo>>).
 Which docinfo files get used depends on the value of the `docinfo` attribute as well as the backend.
 
 [#head]
@@ -44,9 +44,9 @@ Here's an example:
 ----
 
 Docinfo files for HTML output must be saved with the `.html` file extension.
-See <<Naming docinfo files>> for more details.
+See <<name-docinfo>> for more details.
 
-The docinfo file for DocBook 5.0 output may include any of the {url-docbook-info-ref}[`<info>` element's children^], such as:
+The docinfo file for DocBook 5.0 output may include any of the {url-docbook-info-ref}[<info> element's children^], such as:
 
 * `<address>`
 * `<copyright>`
@@ -78,15 +78,16 @@ The following example shows some of the content a docinfo file for DocBook might
 </keywordset>
 
 <printhistory>
-  <para>April, 2019. Twenty-sixth printing.</para>
+  <para>April, 2021. Twenty-sixth printing.</para>
 </printhistory>
 ----
 
 Docinfo files for DocBook output must be saved with the `.xml` file extension.
-See <<Naming docinfo files>> for more details.
+See <<name-docinfo>> for more details.
 
 To see a real-world example of a docinfo file for DocBook, checkout the {url-richfaces-docinfo}[RichFaces Developer Guide docinfo file^].
 
+[#footer-docinfo]
 == Footer docinfo files
 
 Footer docinfo files are differentiated from head docinfo files by the addition of `-footer` to the file name.
@@ -103,6 +104,7 @@ To disable the "Last updated" line in the footer, unassign the attribute `last-u
 To disable the footer completely, set the attribute `nofooter`. Then having a footer docinfo file effectively replaces the default footer with your custom footer.
 ////
 
+[#name-docinfo]
 == Naming docinfo files
 
 The file that gets selected to provide the docinfo depends on which converter is in use (html, docbook, etc) and whether the docinfo scope is configured for a specific document ("`private`") or for all documents in the same directory ("`shared`").
@@ -132,6 +134,7 @@ The file extension of the docinfo file must match the file extension of the outp
 |`docinfo-footer<outfilesuffix>`
 |===
 
+[#enable-docinfo]
 == Enabling docinfo
 
 To specify which file(s) you want to apply, set the `docinfo` attribute to any combination of these values:
@@ -147,7 +150,7 @@ Setting `docinfo` with no value is equivalent to setting the value to `private`.
 
 For example:
 
-[source]
+[source,asciidoc]
 ----
 :docinfo: shared,private-footer
 ----
@@ -188,7 +191,7 @@ If other AsciiDoc files are added to the same folder, and `docinfo` is set to `s
 By default, docinfo files are searched for in the same folder as the document file.
 If you want to keep them anywhere else, set the `docinfodir` attribute to their location:
 
-[source]
+[source,asciidoc]
 ----
 :docinfodir: common/meta
 ----
@@ -212,11 +215,11 @@ For example, if you created the following docinfo file:
 And this source document:
 
 .Source document including a revision number
-[source]
+[source,asciidoc]
 ----
 = Document Title
 Author Name
-v1.0, 2019-06-01
+v1.0, 2020-12-30
 :doctype: book
 :backend: docbook
 :docinfo:
@@ -231,7 +234,7 @@ Then the converted DocBook output would be:
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" lang="en">
   <info>
     <title>Document Title</title>
-    <date>2019-06-01</date>
+    <date>2020-12-30</date>
     <author>
       <personname>
         <firstname>Author</firstname>
@@ -241,12 +244,12 @@ Then the converted DocBook output would be:
     <authorinitials>AN</authorinitials>
     <revhistory>
       <revision>
-        <revnumber>1.0</revnumber> <!--1-->
-        <date>2019-06-01</date>
+        <revnumber>1.0</revnumber> <!--.-->
+        <date>2020-12-30</date>
         <authorinitials>AN</authorinitials>
       </revision>
     </revhistory>
   </info>
 </book>
 ----
-<1> The revnumber attribute reference was replaced by the source document's revision number in the converted output.
+<.> The revnumber attribute reference was replaced by the source document's revision number in the converted output.

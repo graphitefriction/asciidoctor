@@ -20,7 +20,7 @@ If the stylesheet is in the same directory as your document, you can apply it wh
 
 Alternatively, let's set the `stylesheet` attribute in the header of [.path]_my-sample.adoc_.
 
-[source]
+[source,asciidoc]
 ----
 include::example$mysample-stylesheet.adoc[]
 ----
@@ -35,7 +35,7 @@ Asciidoctor uses the relative or absolute path you assign to the `stylesdir` att
 Let's move [.path]_my-styles.css_ into [.path]_my-documents/my-stylesheets_.
 Our AsciiDoc document, [.path]_my-sample.adoc_, is saved in the [.path]_my-documents_ directory.
 
-[source]
+[source,asciidoc]
 ----
 include::example$mysample-stylesdir.adoc[]
 ----
@@ -53,7 +53,7 @@ You can also set `stylesdir` in the CLI.
 
 If you don't want to embed the [.path]_my-styles.css_ stylesheet into your HTML output, make sure to set `linkcss`.
 
-[source]
+[source,asciidoc]
 ----
 include::example$mysample-stylesdir-link.adoc[]
 ----
@@ -70,25 +70,25 @@ One way to solve this problem is to maintain the path to `stylesdir` in each doc
 
 Let's say you have three AsciiDoc documents saved in the following directory structure:
 
-----
+....
 /my-documents
   a.adoc
   b.adoc
   /my-nested-documents
     c.adoc
   /my-stylesheets
-----
+....
 
 For [.path]_a.adoc_ and [.path]_b.adoc_, set `stylesdir` to:
 
-[source]
+[source,asciidoc]
 ----
 :stylesdir: my-stylesheets
 ----
 
 For [.path]_c.adoc_, set `stylesdir` to:
 
-[source]
+[source,asciidoc]
 ----
 :stylesdir: ../my-stylesheets
 ----

@@ -1,4 +1,5 @@
-= Migrate from DocBook XML
+= Migrate from DocBook XML to Asciidoctor
+:navtitle: Migrate from DocBook XML
 :url-docbookrx: https://github.com/opendevise/docbookrx
 // docbookrx.adoc, included in user-manual: Convert DocBook XML to AsciiDoc
 

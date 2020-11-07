@@ -1,7 +1,8 @@
 = Migrate from AsciiDoc.py to Asciidoctor
+:navtitle: Migrate from AsciiDoc.py
 :url-diagram: {url-org}/asciidoctor-diagram
 :url-tests: {url-org}/asciidoctor/tree/master/test
-:url-doctest: https://github.com/asciidoctor/asciidoctor-doctest
+:url-doctest: {url-org}/asciidoctor-doctest
 :url-manpage: {url-project}/man/asciidoctor
 //:uri-diffs: {uri-home}/docs/asciidoc-asciidoctor-diffs/
 // um anchor: migrating-from-asciidoc-python
@@ -20,7 +21,7 @@ For most documents, you can simply replace the call to AsciiDoc.py (`asciidoc`) 
 
 // $ asciidoctor -a compat-mode document.adoc
 
-You can also run Asciidoctor on the JVM using #AsciidoctorJ# or with JavaScript using xref:asciidoctor.js::index.adoc[Asciidoctor.js].
+You can also run Asciidoctor on the JVM using AsciidoctorJ or with JavaScript using xref:asciidoctor.js::index.adoc[Asciidoctor.js].
 
 == Default HTML backend
 

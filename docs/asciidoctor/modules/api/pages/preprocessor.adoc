@@ -1,8 +1,5 @@
 = Preprocessor Extension Example
-////
-exten-pre.adoc,Included in:
-- user-manual: Extensions: Preprocessor example
-////
+:navtitle: Preprocessor
 
 Purpose::
 Skim off front matter from the top of the document that gets used by site generators like Jekyll and Awestruct.

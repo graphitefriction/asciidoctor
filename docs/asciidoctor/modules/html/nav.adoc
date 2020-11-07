@@ -1,21 +1,21 @@
-.Generating HTML
-* xref:convert-to-html.adoc[Convert AsciiDoc to HTML]
-** xref:manage-images.adoc[Manage Images]
-** xref:manage-stylesheets.adoc[Manage Stylesheets]
-** xref:apply-code-stylesheets.adoc[Apply CodeRay & Pygments Stylesheets]
-** xref:create-stylesheet.adoc[Create a Custom Stylesheet]
-** xref:apply-stylesheet.adoc[Apply a Custom Stylesheet]
-* xref:convert-to-xhtml.adoc[Convert AsciiDoc to XHTML]
-* xref:favicon.adoc[Adding a favicon]
+.Generate HTML
+* xref:convert-to-html.adoc[]
+** xref:manage-images.adoc[]
+** xref:manage-stylesheets.adoc[]
+** xref:apply-code-stylesheets.adoc[]
+** xref:create-stylesheet.adoc[]
+** xref:apply-stylesheet.adoc[]
+* xref:convert-to-xhtml.adoc[]
+* xref:favicon.adoc[]
 
-.Generating Man Pages
-* xref:manpage:convert-to-man-page.adoc[Convert AsciiDoc to Man Pages]
+.Generate Man Pages
+* xref:manpage:convert-to-man-page.adoc[]
 
-.Generating DocBook
-* xref:docbook:convert-to-docbook.adoc[Convert AsciiDoc to DocBook]
+.Generate DocBook
+* xref:docbook:convert-to-docbook.adoc[]
 
-.Preview & Publishing Tools
-* xref:ROOT:preview-tools.adoc[Preview Tools]
-* HTML Slidedecks
-* xref:static-site-generators.adoc[Static Site Generators]
-* Antora Documentation Sites
+.Preview and Publishing Tools
+* xref:ROOT:preview-tools.adoc[]
+//* HTML Slidedecks
+* xref:static-site-generators.adoc[]
+//* Antora Documentation Sites

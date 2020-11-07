@@ -1,8 +1,5 @@
 = Tree Processor Extension Example
-////
-exten-tree.adoc, included in:
-- user-manual: Extensions: Tree Processor Example
-////
+:navtitle: Tree Processor
 
 Purpose::
 Detect literal blocks that contain shell commands, strip the prompt character and style the command using CSS in such a way that the prompt character cannot be selected (as seen on help.github.com).

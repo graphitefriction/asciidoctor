@@ -65,6 +65,7 @@ The following platforms *are only required if you're using certain AsciiDoc feat
 |4.7
 |===
 
+////
 == Next
 
 xref:install-on-linux.adoc[Linux]::
@@ -72,6 +73,6 @@ Install Asciidoctor using the package manager on many Linux distributions includ
 
 xref:install-on-macos.adoc[macOS]::
 Install Asciidoctor using Homebrew on macOS.
-
+////
 //xref:install-on-windows.adoc[Windows]::
 //Install Asciidoctor using Chocolatey on Windows.

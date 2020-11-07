@@ -15,7 +15,7 @@ This is the mandatory behavior when the safe mode is `SECURE`.
 
 To have your document link to the stylesheet, set the `linkcss` attribute in the document's header.
 
-[source]
+[source,asciidoc]
 ----
 include::example$mysample-link.adoc[]
 ----

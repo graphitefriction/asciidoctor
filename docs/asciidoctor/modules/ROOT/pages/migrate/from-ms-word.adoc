@@ -1,4 +1,5 @@
-= Migrate from MS Word
+= Migrate from MS Word to Asciidoctor
+:navtitle: Migrate from MS Word
 :description: This document presents various tools and strategies for migrating from MS Word to AsciiDoc.
 :url-pandoc: https://pandoc.org
 :url-google-asciidoc: https://chrome.google.com/webstore/detail/asciidoc-processor/eghlmnhjljbjodpeehjjcgfcjegcfbhk/

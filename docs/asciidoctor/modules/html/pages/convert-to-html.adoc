@@ -1,4 +1,4 @@
-= Convert to HTML using the CLI
+= Convert AsciiDoc to HTML
 
 Asciidoctor's default output format is HTML.
 
@@ -9,7 +9,7 @@ In this section, we'll create a sample document, then process and convert it wit
 . Create an AsciiDoc file like the one below
 . Save the file as [.path]_my-sample.adoc_
 
-[source]
+[source,asciidoc]
 ----
 include::example$mysample.adoc[]
 ----

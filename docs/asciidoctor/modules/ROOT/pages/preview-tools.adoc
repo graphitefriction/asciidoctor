@@ -1,4 +1,4 @@
-= Edit and Preview Tools
+= Editing and Preview Tools
 Dan Allen; Guillaume Grossetie
 :y: Yes
 :n: No
@@ -63,12 +63,12 @@ While it's true any text editor will do, an editor that supports source highligh
 |{n}
 |===
 
-=== AsciiDoc FX
+== AsciiDoc FX
 
 {url-asciidocfx}[AsciiDoc FX^] is an editor and terminal emulator written with JavaFX 8.
 See its documentation for {url-asciidocfx-docs}[download and installation instructions^].
 
-=== Atom
+== Atom
 
 Install https://atom.io/[Atom^].
 Then from the Atom editor menus, navigate to menu:Atom[Preferences].
@@ -80,7 +80,7 @@ https://atom.io/packages/asciidoc-image-helper[AsciiDoc Image Helper^] :: provid
 https://atom.io/packages/autocomplete-asciidoc[AsciiDoc Autocomplete^] :: automatically completes AsciiDoc language items
 https://atom.io/packages/asciidoc-assistant[AsciiDoc Assistant^] :: Installs useful components to Atom for editing AsciiDoc files (including the above packages)
 
-=== Brackets
+== Brackets
 
 Install http://brackets.io/[Brackets^].
 Then from the Brackets file menu, open the extension manager.
@@ -90,7 +90,7 @@ More information:
 
 * https://github.com/asciidoctor/brackets-asciidoc-preview[AsciiDoc Preview for Brackets^]
 
-=== IntelliJ IDEA
+== IntelliJ IDEA
 
 Install the community plugin {url-intellij-plugin}[AsciiDoc^].
 

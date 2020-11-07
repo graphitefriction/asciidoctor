@@ -1,4 +1,5 @@
 = Inline Macro Processor Extension Example
+:navtitle: Inline Macro Processor
 
 Purpose::
 Create an inline macro named `man` that links to a manpage.

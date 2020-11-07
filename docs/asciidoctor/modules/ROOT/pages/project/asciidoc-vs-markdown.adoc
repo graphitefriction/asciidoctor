@@ -1,6 +1,5 @@
 = AsciiDoc Versus Markdown
 :description: A brief comparison of AsciiDoc and Markdown.
-:keywords: asciidoc, markdown, syntax, comparison
 
 The most compelling reason to choose a lightweight markup language for writing is to minimize the number of technical concepts an author must grasp in order to be immediately productive.
 In other words, the goal is to be able to _write without friction_.
@@ -50,9 +49,8 @@ This extensibility not only means that AsciiDoc has a lot more to offer, with ro
 The following table shows the AsciiDoc syntax as it compares to Markdown.
 Since AsciiDoc supports a broader range of syntax than Markdown, this side-by-side comparison focuses mainly on areas where the syntax overlaps.
 
-[#asciidoc-vs-markdown]
 .A selection of AsciiDoc language features compared to Markdown
-[cols="1,3,3"]
+[#asciidoc-vs-markdown%autowidth]
 |===
 |Language Feature |Markdown |AsciiDoc
 

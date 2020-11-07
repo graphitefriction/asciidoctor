@@ -1,15 +1,15 @@
-.Getting Started
-* xref:core-concepts.adoc[Core Concepts]
-* xref:converters.adoc[Choose a Converter]
-* xref:cli.adoc[Command Line Interface Basics]
-* xref:html:convert-asciidoc-file.adoc[Convert Your First File]
+.Get Started
+* xref:core-concepts.adoc[]
+* xref:converters.adoc[]
+* xref:cli.adoc[]
+* xref:html:convert-asciidoc-file.adoc[]
 
 .Processing Files
-* xref:output-file-name.adoc[Specify an Output File]
-* xref:io-piping.adoc[Piping Output]
-* xref:process-multiple-files.adoc[Process Multiple Files]
-* xref:docinfo.adoc[Configure Docinfo Files]
+* xref:output-file.adoc[]
+* xref:io-piping.adoc[]
+* xref:process-multiple-files.adoc[]
+* xref:docinfo.adoc[]
 //** Adding Header Content
 //** Adding Footer Content
-* xref:safe-modes.adoc[Manage Security with Safe Modes]
-** xref:set-safe-mode.adoc[Set Safe Mode]
+* xref:safe-modes.adoc[]
+** xref:set-safe-mode.adoc[]

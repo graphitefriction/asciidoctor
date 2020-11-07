@@ -1,4 +1,5 @@
 = Docinfo Processor Extension Example
+:navtitle: Docinfo Processor
 
 Purpose::
 Appends the Google Analytics tracking code to the bottom of an HTML document.

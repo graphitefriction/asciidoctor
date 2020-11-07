@@ -1,5 +1,4 @@
 = Install Asciidoctor on Linux
-:release-version: 1.5.8
 :url-fedora: https://apps.fedoraproject.org/packages/rubygem-asciidoctor
 :url-alpine: https://pkgs.alpinelinux.org/packages?name=asciidoctor
 
@@ -42,7 +41,7 @@ You'll also use the gem command to use a <<pre-release,pre-release version of As
 [#gem]
 == gem install
 
-If you plan to install Asciidoctor using the `gem` command, you should use https://rvm.io[RVM] to install Ruby in your home directory (i.e., user space) first.
+If you plan to install Asciidoctor using the `gem` command, you should use https://rvm.io[RVM^] to install Ruby in your home directory (i.e., user space) first.
 Then, you can safely use the `gem` command to install or update the Asciidoctor gem.
 When using RVM, gems are installed in a location isolated from the system.
 
@@ -76,7 +75,3 @@ To install Asciidoctor for a project using Bundler:
  $ bundle
 
 include::partial$success.adoc[]
-
-== Next
-
-Get started with Asciidoctor and learn its xref:ROOT:core-concepts.adoc[core concepts].

@@ -1,4 +1,5 @@
 = Block Processor Extension Example
+:navtitle: Block Processor
 
 Purpose::
 Register a custom block style named `shout` that uppercases all the words and converts periods to exclamation points.

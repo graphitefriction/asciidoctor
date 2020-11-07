@@ -5,6 +5,10 @@ asciidoc:
   attributes:
     xrefstyle: short@
     listing-caption: Example@
+    release-version: '2.0.11'
+    url-rubygem: https://rubygems.org/gems/asciidoctor
+    url-foundation: https://foundation.zurb.com
+    url-jruby: https://jruby.org
 nav:
 - modules/ROOT/nav-top.adoc
 - modules/setup/nav.adoc

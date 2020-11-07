@@ -7,7 +7,7 @@ As an alternative, you can embed the images directly into the document by settin
 
  $ asciidoctor -a data-uri my-sample.adoc
 
-[source]
+[source,asciidoc]
 ----
 include::example$mysample-data-uri.adoc[]
 ----

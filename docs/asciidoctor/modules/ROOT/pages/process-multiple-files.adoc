@@ -1,4 +1,4 @@
-= Process Multiple Source Files from the CLI
+= Process Multiple Source Files
 
 The Asciidoctor CLI can convert multiple files in a single invocation.
 If you pass multiple source filenames or a filename pattern to the CLI, Asciidoctor will convert each file in turn.

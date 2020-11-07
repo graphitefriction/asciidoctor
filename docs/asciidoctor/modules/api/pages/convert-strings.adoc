@@ -1,4 +1,5 @@
 = Load and Convert Strings Using the API
+:navtitle: Load and Convert Strings
 
 To parse an AsciiDoc-formatted string into a document object model, use:
 
@@ -86,11 +87,3 @@ Since embeddable DocBook isn't that useful, we also enable the standalone docume
 ----
 puts Asciidoctor.convert '*This* is Asciidoctor.', header_footer: true, backend: 'docbook'
 ----
-
-== Next steps
-
-Let's say you don't like some (or all) of the output that Asciidoctor produces.
-That's no problem.
-You can change it.
-And yes, any of it!
-Let's find out how to customize the output Asciidoctor spits out in the next chapter.

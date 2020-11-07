@@ -1,4 +1,5 @@
 = Convert Your First AsciiDoc File
+:navtitle: Convert Your First File
 
 Assumptions:
 

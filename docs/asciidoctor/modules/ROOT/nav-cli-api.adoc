@@ -1,4 +1,4 @@
-.CLI & API References
-* xref:notifications.adoc[Error & Warning Notifications]
-* xref:cli-options-and-parameters.adoc[CLI Options & Parameters]
-* xref:api:api-options.adoc[Ruby API Options]
+.CLI and API References
+* xref:notifications.adoc[]
+* xref:cli-options-and-parameters.adoc[]
+* xref:api:api-options.adoc[]

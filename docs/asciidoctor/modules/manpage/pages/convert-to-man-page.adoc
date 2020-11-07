@@ -34,7 +34,7 @@ To see the man page in HTML, run:
 
 Here is an example man page composed in AsciiDoc for the `eve` command:
 
-[source]
+[source,asciidoc]
 ----
 include::example$manpage.adoc[]
 ----

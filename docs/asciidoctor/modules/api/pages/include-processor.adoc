@@ -1,4 +1,5 @@
 = Include Processor Extension Example
+:navtitle: Include Processor
 
 Purpose::
 Include a file from a URI.

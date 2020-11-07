@@ -1,8 +1,8 @@
-= Favicon
+= Add a Favicon
 
 When using Asciidoctor to generate a standalone HTML document (i.e., the `header_footer` option is `true`), you can instruct the processor to include a link to a favicon by setting the favicon attribute in the document header.
 
-[source]
+[source,asciidoc]
 ----
 = Document Title
 :favicon:
@@ -37,7 +37,7 @@ Notice the mimetype is automatically set based on the file extension of the imag
 The value of the `iconsdir` attribute is not prepend to the favicon path as it is with icons in the content.
 If you want this directory to be included in the favicon path, you must reference it explicitly:
 
-[source]
+[source,asciidoc]
 ----
 :favicon: {iconsdir}/favicon.png
 ----

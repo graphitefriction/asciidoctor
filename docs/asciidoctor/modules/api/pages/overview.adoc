@@ -1,4 +1,6 @@
 = Asciidoctor Ruby API Overview
+:navtitle: Ruby API Overview
+:url-api: https://www.rubydoc.info/gems/asciidoctor
 ////
 API introduction for Asciidoctor
 included in the user-manual Quickstarts, Using the Ruby API
@@ -19,7 +21,7 @@ To use Asciidoctor in your application, you first need to require the gem:
 [source,ruby]
 require 'asciidoctor'
 
-This one statement makes all of the https://www.rubydoc.info/gems/asciidoctor/2.0.9/Asciidoctor[public APIs in Asciidoctor] available to your script or application.
+This one statement makes all of the {url-api}[public APIs in Asciidoctor] available to your script or application.
 Now you can start processing AsciiDoc documents.
 The main entry points in the Asciidoctor API are the static methods to load or convert AsciiDoc documents, which we'll cover on this page.
 
@@ -47,12 +49,3 @@ You can convert the file to DocBook 5.0 by setting the `:backend` option to `'do
 Asciidoctor.convert_file 'my-sample.adoc', backend: 'docbook'
 
 The command will output to the file [.path]_my-sample.xml_ in the same directory.
-
-== Next
-
-You can use the API to:
-
-* xref:convert-strings.adoc[Convert strings]
-* xref:load-templates.adoc[Load custom templates]
-* xref:set-safe-mode.adoc[Set the safe mode]
-* xref:register-extensions.adoc[Register extensions]

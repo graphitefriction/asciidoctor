@@ -1,8 +1,5 @@
 = Postprocessor Extension Example
-////
-exten-tree.adoc, included in:
-- user-manual: Extensions: Postprocessor example
-////
+:navtitle: Postprocessor
 
 Purpose::
 Insert copyright text in the footer.

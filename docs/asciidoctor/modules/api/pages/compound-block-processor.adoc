@@ -1,4 +1,5 @@
 = Compound Block Processor Example
+:navtitle: Compound Block Processor
 
 Purpose::
 Register a custom block named `collapsible` that transforms a listing block into a compound block composed of the following:

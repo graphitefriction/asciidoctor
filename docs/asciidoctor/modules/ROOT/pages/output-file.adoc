@@ -1,4 +1,4 @@
-= Specify an Output File from the CLI
+= Specify an Output File
 // Included in user-manual: Specifying an output file
 
 By default, the Asciidoctor CLI writes the converted output file to the same directory as the input file.

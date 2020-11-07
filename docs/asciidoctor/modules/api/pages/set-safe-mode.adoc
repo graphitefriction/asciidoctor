@@ -1,4 +1,5 @@
 = Set the Safe Mode Using the API
+:navtitle: Set Safe Mode
 
 The default xref:ROOT:safe-modes.adoc[safe mode] in the API is `SECURE`.
 You can change the safe mode using a string, symbol or integer value.

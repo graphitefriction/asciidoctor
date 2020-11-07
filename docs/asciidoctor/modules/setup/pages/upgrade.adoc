@@ -41,7 +41,7 @@ You're advised against using the `gem update` command to update a gem managed by
 Doing so puts the system into an inconsistent state as the package manager can no longer track the files (which get installed under [.path]_/usr/local_).
 Simply put, system gems should only be managed by the package manager.
 
-If you want to use a version of Asciidoctor that is newer than what is installed by the package manager, you should use https://rvm.io[RVM] to install Ruby in your home directory (i.e., user space).
+If you want to use a version of Asciidoctor that is newer than what is installed by the package manager, you should use https://rvm.io[RVM^] to install Ruby in your home directory (i.e., user space).
 Then, you can safely use the `gem` command to install or update the Asciidoctor gem.
 When using RVM, gems are installed in a location isolated from the system.
 ====

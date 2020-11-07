@@ -1,4 +1,5 @@
-= Migrate from Confluence XHTML
+= Migrate from Confluence XHTML to Asciidoctor
+:navtitle: Migrate from Confluence XHTML
 :url-pandoc: https://pandoc.org
 
 You can convert Atlassian Confluence XHTML pages to Asciidoctor using this Groovy script.
@@ -10,8 +11,11 @@ If you have trouble running this script, you can use the Pandoc command referenc
 .convert.groovy
 [source,groovy]
 ----
-include::https://gist.githubusercontent.com/melix/6020336/raw/059d83a3dae933de71d585c3f6b229a3c62fa857/convert.groovy[]
+include::example$convert.groovy[]
 ----
+
+This script was created by Cédric Champeau (https://gist.github.com/melix[melix]).
+You can find the source of this script hosted at this https://gist.github.com/melix/6020336[gist].
 
 The script is designed to be run locally on HTML files or directories containing HTML files exported from Confluence.
 
@@ -23,6 +27,3 @@ The script is designed to be run locally on HTML files or directories containing
 . Run `groovy convert filename.html` to convert a single file.
 . Confirm the output file meets requirements
 . Recurse through a directory by using this command pattern: `groovy convert directory/*.html`
-
-This script was created by Cédric Champeau (https://gist.github.com/melix[melix]).
-You can find the source of this script hosted at this https://gist.github.com/melix/6020336[GitHub Gist].

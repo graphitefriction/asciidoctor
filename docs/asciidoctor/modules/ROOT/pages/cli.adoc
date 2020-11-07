@@ -13,7 +13,7 @@ To confirm that Asciidoctor is available, execute:
 
 The following information should be output in your terminal:
 
- Asciidoctor 1.5.8 [https://asciidoctor.org]
+ Asciidoctor {release-version} [https://asciidoctor.org]
 
 To invoke Asciidoctor from the CLI and convert an `.adoc` file, execute:
 
@@ -21,14 +21,10 @@ To invoke Asciidoctor from the CLI and convert an `.adoc` file, execute:
 
 This will use the built-in defaults for options and create a new file in the same directory as the input file, with the same base name, but with the `.html` extension.
 
-The xref:cli-options-and-parameters.adoc[Command Line Options and Parameters] describes the available Asciidoctor CLI options and parameters.
+The xref:cli-options-and-parameters.adoc[] describes the available Asciidoctor CLI options and parameters.
 
 Full help is provided in the {url-manpage}[Asciidoctor man page^] or via:
 
  $ asciidoctor --help
 
 //There is also an `asciidoctor-safe` command, which turns on safe mode by default, preventing access to files outside the parent directory of the source file.
-
-== Next
-
-xref:html:convert-asciidoc-file.adoc[Convert your first AsciiDoc file to HTML] using the default converter.
