@@ -1,4 +1,4 @@
-= AsciiDoc Syntax Documentation
+= AsciiDoc Language Documentation
 
 [caption="Migration in Progress"]
 TIP: This documentation is in migration.
