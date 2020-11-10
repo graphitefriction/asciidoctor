@@ -1,6 +1,0 @@
-.Migrate to Asciidoctor
-** xref:migrate/from-asciidoc-python.adoc[]
-** xref:migrate/from-docbook-xml.adoc[]
-** xref:migrate/from-markdown.adoc[]
-** xref:migrate/from-confluence-xhtml.adoc[]
-** xref:migrate/from-ms-word.adoc[]

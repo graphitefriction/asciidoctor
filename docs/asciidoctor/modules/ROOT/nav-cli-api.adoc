@@ -1,4 +1,0 @@
-.CLI and API References
-* xref:notifications.adoc[]
-* xref:cli-options-and-parameters.adoc[]
-* xref:api:api-options.adoc[]

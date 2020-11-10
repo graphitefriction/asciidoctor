@@ -1,4 +1,4 @@
-= Manage Security with Safe Modes
+= Security Modes
 
 Asciidoctor provides security levels that control the read and write access of attributes, the include directive, macros, and scripts while a document is processing.
 Each level includes the restrictions enabled in the prior security level.
@@ -48,7 +48,7 @@ Additionally, it:
 * disables `docdir` and `docfile` (as these can reveal information about the host filesystem)
 * disables source highlighting
 
-xref:api:register-extensions.adoc[Asciidoctor extensions] may still embed content into the document depending whether they honor the safe mode setting.
+xref:extensions:register.adoc[Asciidoctor extensions] may still embed content into the document depending whether they honor the safe mode setting.
 
 *This is the default safe mode for the API.*
 Its integer value is `20`.
@@ -79,6 +79,6 @@ Its integer value is `20`.
 TIP: GitHub processes AsciiDoc files using the `SECURE` level.
 ////
 
-You can set the xref:set-safe-mode.adoc[safe mode from the CLI] and the xref:api:set-safe-mode.adoc[API].
+You can set the xref:cli:set-safe-mode.adoc[safe mode from the CLI] and the xref:api:set-safe-mode.adoc[API].
 Asciidoctor also provides access to the current safe mode through xref:asciidoc:directives:safe-modes.adoc[built-in attributes].
 You can use these attributes to enable or disable content based on the current safe mode of the processor.

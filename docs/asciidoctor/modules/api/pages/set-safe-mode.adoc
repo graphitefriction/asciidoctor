@@ -15,4 +15,4 @@ or
 
  result = Asciidoctor.convert_file('master.adoc', :safe => 10)
 
-You can also set the xref:ROOT:set-safe-mode.adoc[safe mode from the CLI] and xref:asciidoc:directives:safe-modes.adoc[manage attributes by safe mode].
+You can also set the xref:cli:set-safe-mode.adoc[safe mode from the CLI] and xref:asciidoc:directives:safe-modes.adoc[manage attributes by safe mode].

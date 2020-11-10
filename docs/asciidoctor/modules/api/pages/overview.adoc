@@ -1,5 +1,4 @@
-= Asciidoctor Ruby API Overview
-:navtitle: Ruby API Overview
+= Process AsciiDoc Using the API
 :url-api: https://www.rubydoc.info/gems/asciidoctor
 ////
 API introduction for Asciidoctor

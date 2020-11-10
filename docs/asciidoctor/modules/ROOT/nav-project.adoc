@@ -1,5 +1,4 @@
-.Policies and Governance
-* xref:project/benefits.adoc[]
-** xref:project/asciidoc-vs-markdown.adoc[]
-* xref:project/release-schedule.adoc[]
-* xref:project/license-and-authors.adoc[]
+* About Asciidoctor
+//.Asciidoctor Project and Community
+** xref:project/release-schedule.adoc[]
+** xref:project/license-and-authors.adoc[]

@@ -1,0 +1,26 @@
+= Supported Integrations
+
+The following integrations *are only required if you're using certain features*.
+
+[%autowidth]
+|===
+|Feature |Supported Integration |Supported Versions
+
+|Stem equations and formulas
+|MathJax
+|2.7.4
+
+.3+|Server-side syntax highlighting for source code blocks
+|CodeRay
+|1.1.2
+
+|Pygments
+|2.2.0
+
+|Rouge
+|3.1.1
+
+|Inline, admonition or callout font-based icons
+|Font Awesome
+|4.7
+|===

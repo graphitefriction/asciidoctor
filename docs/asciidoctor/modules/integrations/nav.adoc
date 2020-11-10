@@ -1,0 +1,2 @@
+* Integrations
+** xref:supported-platforms.adoc[]
