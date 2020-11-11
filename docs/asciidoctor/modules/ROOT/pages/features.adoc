@@ -1,5 +1,5 @@
-= Asciidoctor's Most Notable Benefits
-:navtitle: Why AsciiDoc and Asciidoctor
+= Asciidoctor's Features and Benefits
+:navtitle: Features and Benefits
 :url-rewrite: https://github.com/ocpsoft/rewrite/tree/master/transform-markup
 :url-manpage: {url-project}/man/asciidoctor
 // user-manual: Asciidoctor's most notable benefits

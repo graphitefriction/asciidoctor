@@ -45,7 +45,7 @@ include::example$text.adoc[tag=apos]
 ====
 
 If you don't want an apostrophe that is bound by two characters to be rendered as curved, escape it by preceding it with a backslash (`{backslash}`).
-The xref:subs:prevent.adoc[] and xref:subs:pass-macro.adoc[] pages detail additional ways to prevent punctuation substitutions.
+The xref:subs:prevent.adoc[] and xref:pass:pass-macro.adoc[] pages detail additional ways to prevent punctuation substitutions.
 
 .Escape an apostrophe
 [source#ex-escape]

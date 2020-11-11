@@ -1,4 +1,4 @@
-= Formatting Inline Text and Punctuation
+= Text Formatting and Punctuation
 
 Just as we emphasize certain words and phrases when we speak, we emphasize them in text with formatting and punctuation.
 AsciiDoc provides six inline text styles and one punctuation style that are applied solely with formatting marks and two built-in styles that are applied with an additional role.

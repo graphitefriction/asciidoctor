@@ -95,7 +95,7 @@ These attributes and their corresponding output are listed in xref:attributes:re
 
 The replacements substitution step can be modified on blocks and inline elements.
 For blocks, the step's name, `replacements`, can be assigned to the xref:apply-subs-to-blocks.adoc[subs attribute].
-For inline elements, the built-in values `r` or `replacements` can be applied to the xref:apply-subs-to-text.adoc[inline pass macro] to add the replacements substitution step.
+For inline elements, the built-in values `r` or `replacements` can be applied to xref:apply-subs-to-text.adoc[inline text] to add the replacements substitution step.
 
 WARNING: The replacements step depends on the substitutions completed by the xref:special-characters.adoc[special characters step].
 This is important to keep in mind when applying the `replacements` value to blocks and inline elements.

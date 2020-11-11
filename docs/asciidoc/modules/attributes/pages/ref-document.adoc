@@ -39,41 +39,45 @@ When you set an attribute in the body, it's visible from the point it's set unti
 
 == Compliance attributes
 
-[cols="10,^15,15,^5,^5,30"]
+[%autowidth,cols="m,^,,^,^,"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set  |Notes
 
 |attribute-missing
 |{n}
-|*skip*, drop, drop-line, warn
+|`*skip*` +
+`drop` +
+`drop-line` +
+`warn`
 |{y}
 |{y}
 |Controls how xref:unresolved-references.adoc#missing[missing attribute references] are handled.
 
 |attribute-undefined
 |{n}
-|*drop-line*, drop
+|`*drop-line*` +
+`drop`
 |{y}
 |{y}
 |Controls how xref:unresolved-references.adoc#undefined[undefined attributes] are handled.
 
 |compat-mode
 |{n}
-|_empty_
+e|empty
 |{y}
 |{y}
 |Controls when the legacy parser is used to parse the document.
 
 |experimental
 |{n}
-|_empty_
+e|empty
 |{y}
 |{n}
-|Enables xref:macros:menu-macro.adoc[], xref:macros:keyboard-macro.adoc[], and xref:macros:button-macro.adoc[].
+|Enables xref:macros:ui-macros.adoc[] and xref:macros:keyboard-macro.adoc[].
 
 |reproducible
 |{n}
-|_empty_
+e|empty
 |{y}
 |{n}
 |Prevents last-updated date from being added to HTML footer or DocBook info element.
@@ -84,55 +88,62 @@ Useful for storing the output in a source code control system as it prevents spu
 [#builtin-attributes-i18n]
 == Internationalization and numbering
 
-[cols="10,^15,15,^5,^5,30"]
+[%autowidth,cols="m,^,,^,^,"]
 |===
 |Name |Automatically Set |Values |Header Set |Body Set |Notes
 
 |appendix-caption
 |Only when section assigned `Appendix` style
-|*Appendix*, _any_
+|`*Appendix*` +
+_user-defined_
 |{y}
 |{y}
 |Label added before an xref:sections:appendix.adoc[appendix title].
 
 |appendix-number
 |Only when section assigned `Appendix` style
-|*A*, _letter or number_
+|`*A*` +
+_letter or number_
 |{y}
 |{y}
 |Stores appendix letter or number sequence start.
 
 |appendix-refsig
 |
-|*Appendix*, _any_
+|`*Appendix*` +
+_any_
 |{y}
 |{y}
 |Signifier added to Appendix title cross references.
 
 |caution-caption
 |{y}
-|*Caution*, _any_
+|`*Caution*` +
+_any_
 |{y}
 |{y}
 |Text used to label CAUTION admonitions when icons aren't enabled.
 
 |chapter-number
 |Only when `doctype` is `book`
-|*1*, _number_
+|`*1*` +
+_number_
 |
 |
 |Stores chapter number sequence start.
 
 |chapter-refsig
 |
-|*Chapter*, _any_
+|`*Chapter*` +
+_any_
 |{y}
 |{y}
 |Signifier added to Chapter titles in cross references.
 
 |chapter-label
 |Only when `doctype` is `book`
-|*Chapter*, _any_
+|`*Chapter*` +
+_any_
 |{y}
 |{y}
 |xref:sections:chapters.adoc[Label added to level-1 section titles (chapters)].
@@ -141,49 +152,55 @@ _Book doctype only_.
 
 |example-caption
 |{y}
-|*Example*, _any_
+|`*Example*` +
+_any_
 |{y}
 |{y}
 |Text used to label example blocks.
 
 |example-number
 |{y}
-|*1*, _number_
+|`*1*` +
+_number_
 |
 |
 |Stores example number sequence start.
 
 |figure-caption
 |{y}
-|*Figure*, _any_
+|`*Figure*` +
+_any_
 |{y}
 |{y}
 |Text used to label images and figures.
 
 |figure-number
 |{y}
-|*1*, _number_
+|`*1*` +
+_number_
 |
 |
 |Stores figure number sequence start.
 
 |important-caption
 |{y}
-|*Important*, _any_
+|`*Important*` +
+_any_
 |{y}
 |{y}
 |Text used to label IMPORTANT admonitions when icons are not enabled.
 
 |lang
 |
-|*en*, valid XML country code
+|`*en*` +
+valid XML country code
 |{y}
 |
 |Language used on root element of the output document
 
 |last-update-label
 |
-|*Last updated*, _any_
+|`*Last updated*`, _any_
 |{y}
 |
 |Text used for “Last updated” label in footer.
@@ -197,14 +214,14 @@ _Book doctype only_.
 
 |listing-number
 |
-|*1*, _number_
+|`*1*`, _number_
 |
 |
 |Stores listing number sequence start.
 
 |manname-title
 |
-|*NAME*, _any_
+|`*NAME*`, _any_
 |{y}
 |
 |Label for program name section in the man page.
@@ -218,7 +235,7 @@ _Book doctype only_.
 
 |note-caption
 |{y}
-|*Note*, _any_
+|`*Note*`, _any_
 |{y}
 |{y}
 |Text used to label NOTE admonitions when icons aren't enabled.
@@ -232,49 +249,56 @@ _Book doctype only_.
 
 |section-refsig
 |
-|*Section*, _any_
+|`*Section*` +
+_any_
 |{y}
 |{y}
 |Signifier added to title of numbered sections in cross reference text.
 
 |table-caption
 |{y}
-|*Table*, _any_
+|`*Table*` +
+_any_
 |{y}
 |{y}
 |Text of label prefixed to table titles.
 
 |table-number
 |{y}
-|*1*, _number_
+|`*1*` +
+_number_
 |{y}
 |{y}
 |Stores table number sequence start.
 
 |tip-caption
 |{y}
-|*Tip*, _any_
+|`*Tip*` +
+_any_
 |{y}
 |{y}
 |Text used to label TIP admonitions when icons aren't enabled.
 
 |toc-title
 |Only if `toc` is set
-|*Table of Contents*, _any_
+|`*Table of Contents*` +
+_any_
 |{y}
 |
 |xref:toc:title.adoc[Title for table of contents].
 
 |untitled-label
 |
-|*Untitled*, _any_
+|`*Untitled*` +
+_any_
 |{y}
 |
 |Default document title if document doesn't have a document title.
 
 |warning-caption
 |{y}
-|*Warning*, _any_
+|`*Warning*` +
+_any_
 |{y}
 |{y}
 |Text used to label TIP admonitions when icons aren't enabled.
@@ -512,7 +536,7 @@ See xref:sections:ids.adoc#disable[Disable ID generation].
 |*auto*, left, right, macro or preamble
 |{y}
 |{n}
-|Turns on xref:toc:toc.adoc[table of contents] and specifies xref:toc:position.adoc[its location].
+|Turns on xref:toc:index.adoc[table of contents] and specifies xref:toc:position.adoc[its location].
 
 |toclevels
 |Only if `toc` is set
@@ -861,7 +885,7 @@ Only used when `icons` attribute is set to `font`.
 |_empty_
 |{y}
 |{y}
-|xref:source:wrap.adoc[Wrap wide code listings].
+|xref:asciidoctor:backends:html/wrap.adoc[Wrap wide code listings].
 
 |pygments-css
 |
@@ -893,10 +917,10 @@ Only used when `icons` attribute is set to `font`.
 
 |source-highlighter
 |{n}
-|coderay, highlightjs, prettify, pygments, rouge
+|coderay, highlightjs, pygments, rouge
 |{y}
 |{n}
-|xref:source:source.adoc#enabling-source-highlighter[Specifies source code highlighter].
+|xref:verbatim:source-highlighter.adoc[Specifies source code highlighter].
 
 |source-indent
 |{n}
@@ -911,7 +935,7 @@ Only used when `icons` attribute is set to `font`.
 |_Source code language name_
 |{y}
 |{y}
-|xref:source:source.adoc#applying-source-highlighting[Default language for source code blocks].
+|xref:verbatim:source-highlighter.adoc[Default language for source code blocks].
 
 |source-linenums-option
 |{n}

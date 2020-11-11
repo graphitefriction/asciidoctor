@@ -1,2 +1,6 @@
 * Integrations
 ** xref:supported-platforms.adoc[]
+** xref:rouge.adoc[]
+** xref:coderay.adoc[]
+** xref:highlightjs.adoc[]
+** xref:pygments.adoc[]

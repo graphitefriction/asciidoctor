@@ -1,2 +1,1 @@
-.Equations, Formulas and STEM
 * xref:stem.adoc[]

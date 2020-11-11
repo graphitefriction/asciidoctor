@@ -1,1 +1,2 @@
 * xref:safe-modes.adoc[]
+** xref:attributes-and-safe-modes.adoc[]

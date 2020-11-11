@@ -1,4 +1,4 @@
-= Equations and Formulas
+= Equations, Formulas and STEM
 :stem:
 :url-mathjax: https://www.mathjax.org
 :url-asciimath: https://docs.mathjax.org/en/latest/input/asciimath.html

@@ -10,7 +10,7 @@
 
 In order to use Pygments with Asciidoctor, you need {url-python}[Python 2^] and the {url-pygments-gem}[pygments.rb gem^].
 
-TIP: You _do not_ need to install Pygments itself.
+TIP: You do not need to install Pygments itself.
 It comes bundled with the pygments.rb gem.
 
 IMPORTANT: You must have Python 2 installed to use pygments.rb.
@@ -26,6 +26,8 @@ $ gem install pygments.rb # <.>
 ....
 <.> Install Python using your package manager
 <.> Install the pygments.rb gem
+
+== Activate Pygments
 
 Once you've installed these libraries, assign `pygments` to the `source-highlighter` attribute in your document's header.
 
@@ -46,7 +48,7 @@ Default: `pastie`.
 pygments-css::
 Controls what method is used for applying CSS to the tokens.
 Can be `class` (CSS classes) or `style` (inline styles).
-See the xref:asciidoctor:html:apply-code-stylesheets.adoc#pygments[Pygments stylesheet section] to learn more about how the value `class` is handled.
+See the xref:backends:html/apply-code-stylesheets.adoc#pygments[Pygments stylesheet section] to learn more about how the value `class` is handled.
 Default: `class`.
 
 pygments-linenums-mode::
@@ -92,31 +94,6 @@ To list the available Pygments styles, run the following command in a terminal:
 
 The pygments.rb gem uses a bundled version of Pygments (often ahead of the latest release).
 This command ensures that you are invoking the `pygmentize` command from the Pygments used by that gem.
-
-== Highlight select lines
-
-Not to be confused with syntax highlighting, you can configure Pygments to highlight (i.e., emphasize) select lines in order to call attention to them.
-This feature is activated on a source block if the highlight attribute is defined.
-
-The highlight attribute accepts a comma or semi-colon delimited list of line ranges.
-A line range is represented by two numbers separated by a double period (e.g., `2..5`).
-These numbers correspond to the line numbers of the source block, inclusive, where the first line is 1.
-
-.Highlight select lines in a source block
-[source]
-....
-:source-highlighter: pygments
-
-[source,ruby,highlight=2..5]
-----
-ORDERED_LIST_KEYWORDS = {
-  'loweralpha' => 'a',
-  'lowerroman' => 'i',
-  'upperalpha' => 'A',
-  'upperroman' => 'I',
-}
-----
-....
 
 == Using a custom Pygments installation
 

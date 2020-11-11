@@ -25,7 +25,7 @@ However, a passthrough could come in handy if you need to output more sophistica
 
 == Control substitutions on a passthrough block
 
-You can use the xref:apply-subs-to-blocks.adoc[subs attribute to specify a comma-separated list of substitutions].
+You can use the xref:subs:apply-subs-to-blocks.adoc[subs attribute to specify a comma-separated list of substitutions].
 These substitutions will be applied to the content prior to it being reintroduced to the output document.
 
 [source]

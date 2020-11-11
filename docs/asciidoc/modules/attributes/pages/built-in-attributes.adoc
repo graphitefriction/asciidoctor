@@ -10,7 +10,7 @@ Many built-in attributes only take effect when defined in the document header wi
 Many built-in attributes have a default value.
 When you want to activate a built-in attribute and assign it its default value, you can leave the value in the attribute entry empty.
 
-For example, to turn on the xref:toc:toc.adoc[Table of Contents for a document], you set the `toc` attribute using an attribute entry in the document header.
+For example, to turn on the xref:toc:index.adoc[Table of Contents for a document], you set the `toc` attribute using an attribute entry in the document header.
 
 [source]
 ----

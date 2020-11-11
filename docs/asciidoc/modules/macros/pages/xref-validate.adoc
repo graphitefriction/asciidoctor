@@ -1,4 +1,4 @@
-= Validate Internal Cross References
+= Validate Cross References
 
 Asciidoctor provides limited support for validating internal cross references.
 Validation occurs when a cross reference is first visited.
@@ -12,6 +12,7 @@ Consider the following example:
 
 ----
 See <<foobar>>.
+
 [#foobaz]
 == Foobaz
 ----

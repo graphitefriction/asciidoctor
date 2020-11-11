@@ -7,7 +7,7 @@ Like document attributes, environment attributes can be referenced wherever attr
 It's recommended that you treat these attributes as read only.
 
 // tag::table[]
-[#env-attributes-table,cols="1m,2,1m"]
+[#env-attributes-table%autowidth,cols="m,,m"]
 |===
 |Attribute |Description |Example Value
 

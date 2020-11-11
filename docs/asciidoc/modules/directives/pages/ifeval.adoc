@@ -1,5 +1,4 @@
-= Ifeval Directive
-//[#ifeval]
+= ifeval Directive
 
 Content between `ifeval` and `endif` gets included if the expression inside the square brackets evaluates to true.
 

@@ -41,4 +41,4 @@ A passthrough is the primary mechanism by which to escape content in AsciiDoc.
 They're far more comprehensive and consistent than using a backslash.
 As the name implies, a passthrough passes content directly through to the output document without applying any substitutions.
 
-You can also control and prevent substitutions in inline text with the xref:pass-macro.adoc[inline passthrough macros] and for entire blocks of content with the xref:pass-block.adoc[block passthrough].
+You can control and prevent substitutions in inline text with the xref:pass:pass-macro.adoc[inline passthrough macros] and for entire blocks of content with the xref:pass:pass-block.adoc[block passthrough].

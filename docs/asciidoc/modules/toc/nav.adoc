@@ -1,6 +1,5 @@
-.Table of Contents
-* xref:toc.adoc[]
-* xref:title.adoc[]
-* xref:section-depth.adoc[]
-* xref:position.adoc[]
-* xref:toc-ref.adoc[]
+* xref:index.adoc[]
+** xref:title.adoc[]
+** xref:section-depth.adoc[]
+** xref:position.adoc[]
+** xref:toc-ref.adoc[]

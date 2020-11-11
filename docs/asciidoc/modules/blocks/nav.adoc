@@ -1,34 +1,22 @@
-.Block Syntax and Features
 * xref:get-started.adoc[]
 ** xref:build-basic-block.adoc[]
 ** xref:add-title.adoc[]
 ** xref:assign-id.adoc[]
-//* xref:attributes:element.adoc[]
-//** xref:attributes:attribute-lists.adoc[]
 //** xref:attributes:style.adoc[]
-//** xref:attributes:id.adoc[]
-//** xref:attributes:options.adoc[]
-//** xref:attributes:role.adoc[]
-* Advanced Block Patterns
-** xref:nest.adoc[]
-** xref:masquerade.adoc[]
-** xref:open.adoc[]
+** Advanced Block Patterns
+*** xref:nest.adoc[]
+*** xref:masquerade.adoc[]
+*** xref:open.adoc[]
 //** Customizing Substitutions
-* xref:troubleshoot-blocks.adoc[]
-
-.Paragraphs, Breaks, and Comments
+** xref:troubleshoot-blocks.adoc[]
 * xref:paragraph.adoc[]
 ** xref:preamble-and-lead.adoc[]
 ** xref:paragraph-alignment.adoc[]
 * xref:line-and-page-breaks.adoc[]
 * xref:horizontal-rule.adoc[]
 * xref:ROOT:comment.adoc[]
-
-.Admonition, Example, and Sidebar Blocks
 * xref:admonition.adoc[]
 * xref:example.adoc[]
 * xref:sidebar.adoc[]
-
-.Excerpt and Verse Blocks
 * xref:blockquote.adoc[]
 * xref:verse.adoc[]

@@ -79,6 +79,5 @@ Its integer value is `20`.
 TIP: GitHub processes AsciiDoc files using the `SECURE` level.
 ////
 
-You can set the xref:cli:set-safe-mode.adoc[safe mode from the CLI] and the xref:api:set-safe-mode.adoc[API].
-Asciidoctor also provides access to the current safe mode through xref:asciidoc:directives:safe-modes.adoc[built-in attributes].
-You can use these attributes to enable or disable content based on the current safe mode of the processor.
+The safe mode can be set from the  xref:cli:set-safe-mode.adoc[CLI] and the xref:api:set-safe-mode.adoc[API].
+You can also xref:attributes-and-safe-modes.adoc[manage attributes by safe mode].

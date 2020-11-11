@@ -1,8 +1,8 @@
-.Lists and Counters
-* xref:ordered.adoc[]
-* xref:unordered.adoc[]
+* Lists
+** xref:ordered.adoc[]
+** xref:unordered.adoc[]
+** xref:checklist.adoc[]
+** xref:continuation.adoc[]
 * xref:description.adoc[]
-* xref:complex.adoc[]
-* xref:checklist.adoc[]
-* xref:qanda.adoc[]
+** xref:qanda.adoc[]
 * xref:attributes:counter.adoc[]

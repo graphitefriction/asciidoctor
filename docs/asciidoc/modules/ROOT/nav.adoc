@@ -1,6 +1,5 @@
-.AsciiDoc Documents
+* Key Concepts
 //* xref:get-started.adoc[]
-* xref:doctypes.adoc[]
-* xref:elements.adoc[]
-* xref:attributes:get-started.adoc[]
-* xref:language-support.adoc[]
+** xref:doctypes.adoc[]
+** xref:elements.adoc[]
+** xref:attributes:get-started.adoc[]

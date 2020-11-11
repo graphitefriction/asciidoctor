@@ -1,18 +1,19 @@
-= Keyboard UI Macro
+= Keyboard Macro
 
 IMPORTANT: You must set the `experimental` attribute to enable the UI macros.
 
 == Keyboard macro syntax
 
-Asciidoctor recognizes a macro for creating keyboard shortcuts using the syntax `+kbd:[key(+key)*]+`.
+The keyboard macro helps communicate what keys on a keyboard should be pressed.
+The macro uses the syntax `+kbd:[key(+key)*]+`.
 
-[source]
+.Using the keyboard macro syntax
+[source#ex-kbd]
 ----
 include::example$ui.adoc[tag=key]
 ----
 
-.Result: Keyboard macros displaying common browser keyboard shortcuts
+The result of <<ex-kbd>> is displayed below.
+
 [%autowidth]
 include::example$ui.adoc[tag=key]
-
-You no longer have to struggle to explain to users what keys they are supposed to press.

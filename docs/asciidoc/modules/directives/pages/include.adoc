@@ -1,8 +1,8 @@
-= Get Started with Include Directives
+= include Directive
 // Include Directive Syntax and Processing
 // Include Directive Concepts and Syntax
 
-== What's an include directive?
+== What is an include directive?
 
 An [.term]*include directive* imports content from an external file into the content of the current document.
 When the current document is processed, the include directive syntax is replaced by the contents of the include file.
@@ -17,7 +17,7 @@ The include directive is useful when you want to:
 //** always separate consecutive include directives by a blank line unless your intent is for the included lines to run together
 * Insert source code from the external files where the code is maintained.
 * Populate tables with output, such as CSV data, from other programs.
-* Create document variants by combining the include directive with xref:ifdef-ifndef-directives.adoc[preprocessor conditionals].
+* Create document variants by combining the include directive with xref:conditionals.adoc[conditional preprocessor directives].
 * Reuse content snippets and boilerplate content, such as term definitions, disclaimers, etc., multiple times within the same document.
 
 [#include-syntax]

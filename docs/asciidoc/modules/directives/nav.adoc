@@ -1,14 +1,11 @@
-.Include Directives
-* xref:include-directives.adoc[]
+* xref:include.adoc[]
 ** xref:include-with-leveloffset.adoc[]
 ** xref:include-with-indent.adoc[]
 ** xref:include-multiple-times-in-same-document.adoc[]
 ** xref:include-list-item-content.adoc[]
-* xref:include-tagged-regions.adoc[]
-* xref:include-lines.adoc[]
-* xref:include-uri.adoc[]
-
-.Conditional Directives
-* xref:ifdef-ifndef-directives.adoc[]
-** xref:safe-modes.adoc[]
-* xref:ifeval-directives.adoc[]
+** xref:include-tagged-regions.adoc[]
+** xref:include-lines.adoc[]
+** xref:include-uri.adoc[]
+* xref:conditionals.adoc[]
+** xref:ifdef-ifndef.adoc[]
+** xref:ifeval.adoc[]

@@ -5,6 +5,8 @@
 
 {url-highlightjs}[Highlight.js^] is a popular client-side syntax highlighter that supports a broad range of {url-highlightjs-lang}[languages^].
 
+== Assign highlightjs to source-highlighter
+
 To use highlight.js, simply add the following attribute entry to the header of your AsciiDoc file:
 
 [source]
@@ -12,7 +14,7 @@ To use highlight.js, simply add the following attribute entry to the header of y
 :source-highlighter: highlightjs
 ----
 
-By default, Asciidoctor will link to the highlight.js library and stylesheet hosted on {url-highlightjs-cdn}[cdnjs^] (currently version 9.15.10).
+By default, Asciidoctor will link to the highlight.js library and stylesheet hosted on {url-highlightjs-cdn}[cdnjs^].
 The version of the highlight.js library Asciidoctor loads from the CDN only includes support for languages in the common language bundle (apache, bash, coffeescript, cpp, cs, css, diff, http, ini, java, javascript, json, makefile, markdown, nginx, objectivec, perl, php, properties, python, ruby, shell, sql, xml, and yaml).
 
 To load additional languages supported by highlight.js, list them in the value of the `highlightjs-languages` document attribute (separated by commas):
@@ -22,6 +24,8 @@ To load additional languages supported by highlight.js, list them in the value o
 :source-highlighter: highlightjs
 :highlightjs-languages: rust, swift
 ----
+
+== Using a custom highlight.js library
 
 If you'd rather use a personal copy of highlight.js instead of the one hosted on the CDN, follow these steps:
 

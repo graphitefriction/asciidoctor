@@ -3,6 +3,7 @@
 *** xref:html/manage-images.adoc[]
 *** xref:html/manage-stylesheets.adoc[]
 *** xref:html/apply-code-stylesheets.adoc[]
+*** xref:html/wrap.adoc[]
 *** xref:html/create-stylesheet.adoc[]
 *** xref:html/apply-stylesheet.adoc[]
 *** xref:html/favicon.adoc[]

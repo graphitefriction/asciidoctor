@@ -19,7 +19,7 @@ The macros step replaces a macro's content with the appropriate built-in and use
 |===
 |Blocks and elements |Substitution step applied by default
 
-|Attribute entry values |Only the xref:pass-macro.adoc#inline-pass[pass macro]
+|Attribute entry values |Only the xref:pass:pass-macro.adoc#inline-pass[pass macro]
 
 |Comments |{n}
 
@@ -50,4 +50,4 @@ The macros step replaces a macro's content with the appropriate built-in and use
 
 The macros substitution step can be modified on blocks and inline elements.
 For blocks, the step's name, `macros`, can be assigned to the xref:apply-subs-to-blocks.adoc[subs attribute].
-For inline elements, the built-in values `m` or `macros` can be applied to the xref:apply-subs-to-text.adoc[inline pass macro] to add the macros substitution step.
+For inline elements, the built-in values `m` or `macros` can be applied to xref:apply-subs-to-text.adoc[inline text] to add the macros substitution step.

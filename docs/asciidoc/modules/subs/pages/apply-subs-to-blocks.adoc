@@ -106,5 +106,5 @@ If you are applying the same set of substitutions to numerous blocks, you should
 include::example$subs.adoc[tag=subs-attr]
 ....
 
-Another way to ensure consistency and keep your documents clean and simple is to use the xref:asciidoctor:api:tree-processor.adoc[Tree Processor extension].
+Another way to ensure consistency and keep your documents clean and simple is to use the xref:asciidoctor:extensions:tree-processor.adoc[tree Processor extension].
 ====

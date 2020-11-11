@@ -8,7 +8,11 @@ The following integrations *are only required if you're using certain features*.
 
 |Stem equations and formulas
 |MathJax
-|2.7.4
+|2.7.9
+
+|Client-side syntax highlighting for source code blocks
+|Highlight.js
+|9.18.3
 
 .3+|Server-side syntax highlighting for source code blocks
 |CodeRay

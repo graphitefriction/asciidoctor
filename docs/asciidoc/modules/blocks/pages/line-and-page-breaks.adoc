@@ -1,6 +1,5 @@
 = Line and Page Breaks
 
-[#hardbreaks]
 == Line breaks
 
 Since adjacent lines of text are combined into a single paragraph when Asciidoctor converts a document, that means you can wrap paragraph text or put each sentence or phrase on a separate line.
@@ -41,7 +40,7 @@ To preserve line breaks throughout your whole document, set the `hardbreaks` att
 include::example$paragraph.adoc[tag=hb-attr]
 ----
 
-You can also preserve line breaks using xref:source:literal.adoc[literal blocks], xref:source:listing.adoc[listing blocks], and xref:verse.adoc[verses].
+You can also preserve line breaks using xref:verbatim:literal.adoc[literal blocks], xref:verbatim:listing.adoc[listing blocks], and xref:verse.adoc[verses].
 
 == Page breaks
 

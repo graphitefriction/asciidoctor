@@ -61,7 +61,7 @@ a|
 **bold**
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 *bold*
 ----
@@ -73,7 +73,7 @@ a|
 **b**old
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 **b**old
 ----
@@ -85,7 +85,7 @@ a|
 *italic*
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 _italic_
 ----
@@ -93,7 +93,7 @@ _italic_
 |Italic (unconstrained)
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 __i__talic
 ----
@@ -105,7 +105,7 @@ a|
 `monospace`
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 `monospace`
 ----
@@ -117,7 +117,7 @@ a|
 `m`onospace
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 ``m``onospace
 ----
@@ -129,7 +129,7 @@ a|
 [Asciidoctor](https://asciidoctor.org)
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 https://asciidoctor.org[Asciidoctor]
 ----
@@ -141,7 +141,7 @@ a|
 [user guide](user-guide.html)
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 link:user-guide.html[user guide]
 xref:user-guide.adoc[user guide]
@@ -154,7 +154,7 @@ a|
 [get the PDF]({% raw %}{{ site.url }}{% endraw %}/assets/mydoc.pdf)
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 link:{site-url}/assets/mydoc.pdf[get the PDF]
 ----
@@ -168,7 +168,7 @@ See [Usage](#_usage).
 <h2 id="_usage">Usage</h2>
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 See <<_usage>>.
 
@@ -182,7 +182,7 @@ a|
 <h2 id="usage">Usage</h2>
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 [#usage]
 == Usage
@@ -191,7 +191,7 @@ a|
 |Inline anchor
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 . [[step-1]]Download the software
 ----
@@ -203,7 +203,7 @@ a|
 ![Logo](/images/logo.png)
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 image:logo.png[Logo]
 ----
@@ -211,7 +211,7 @@ image:logo.png[Logo]
 |Block image w/ alt text
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 image::logo.png[Logo]
 ----
@@ -223,7 +223,7 @@ a|
 ## Heading 2
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 == Heading 2
 ----
@@ -237,7 +237,7 @@ a|
 > Another paragraph in quote.
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 ____
 Quoted text.
@@ -254,13 +254,13 @@ a|
 ----
 a|
 .Indented (by 1 or more spaces)
-[source,asciidoc]
+[source]
 ----
  $ gem install asciidoctor
 ----
 
 .Delimited
-[source,asciidoc]
+[source]
 ----
 ....
 $ gem install asciidoctor
@@ -281,7 +281,7 @@ public class Person {
 ```
 ----
 a|
-[source,asciidoc]
+[source]
 ....
 [source,java]
 ----
@@ -305,7 +305,7 @@ a|
 * bananas
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 * apples
 * oranges
@@ -322,7 +322,7 @@ a|
 3. third
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 . first
 . second
@@ -346,7 +346,7 @@ ___
 _ _ _
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 '''
 ----
@@ -354,7 +354,7 @@ a|
 |Typographic quotes (aka "`smart quotes`")
 |Enabled through an extension switch, but offer little control in how they are applied.
 a|
-[source,asciidoc]
+[source]
 ----
 The `'90s popularized a new form of music known as "`grunge`" rock.
 It'll turn out to have an impact that extended well beyond music.
@@ -375,7 +375,7 @@ permalink: /docs/writing-posts/
 ----
 a|
 .Native support!
-[source,asciidoc]
+[source]
 ----
 = Writing posts
 :awestruct-layout: base
@@ -387,7 +387,7 @@ a|
 |Admonitions
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 TIP: You can add line numbers to source listings by adding the word `numbered` in the attribute list after the language name.
 ----
@@ -395,7 +395,7 @@ TIP: You can add line numbers to source listings by adding the word `numbered` i
 |Sidebars
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 .Lightweight Markup
 ****
@@ -406,7 +406,7 @@ Writing languages that let you type less and express more.
 |Block titles
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 .Grocery list
 * Milk
@@ -417,7 +417,7 @@ a|
 |Includes
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 \include::intro.adoc[]
 ----
@@ -431,7 +431,7 @@ Go to the [home page][home].
 [home]: https://example.org
 ----
 a|
-[source,asciidoc]
+[source]
 ----
 :home: https://example.org
 
@@ -441,7 +441,7 @@ Go to the {home}[home page].
 |Custom CSS classes
 |_n/a_
 a|
-[source,asciidoc]
+[source]
 ----
 [.path]_Gemfile_
 ----
@@ -464,16 +464,9 @@ Asciidoctor, which is used for converting AsciiDoc on GitHub and GitLab, emulate
 For details about migration, see #url-home/docs/asciidoc-syntax-quick-reference/#markdown-compatibility[Markdown Compatibility#.
 
 ////
-To read more about the shortcomings of Markdown, see these opinion pieces:
-
-* https://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/[Why You Shouldn't Use "`Markdown`" for Documentation]
-* https://medium.com/@bbirdiman/markdown-considered-harmful-495ccfe24a52[Markdown Considered Harmful]
-* https://www.simple-talk.com/blogs/2014/02/28/sundown-on-markdown/[Sundown on Markdown?]
-
-
 ===== Description Lists in AsciiDoc
 
-[source,asciidoc]
+[source]
 ----
 a term:: a description
 another term:: another description
@@ -481,7 +474,7 @@ another term:: another description
 
 They can even hold code examples:
 
-[source,asciidoc]
+[source]
 ....
 term with code example:: a description
 +
@@ -496,7 +489,7 @@ public class Person {
 
 An AsciiDoc table can be written as a series of lists which use a vertical bar as the list marker:
 
-[source,asciidoc]
+[source]
 ----
 [cols=3]
 |===

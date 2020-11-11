@@ -6,7 +6,8 @@ asciidoc:
     xrefstyle: short@
     listing-caption: Example@
     release-version: '2.0.11'
-    ruby-version: '2.6.0p0'
+    ruby-description: 'ruby 2.7.0p0 [x86_64-linux]'
+    url-ruby: https://www.ruby-lang.org
     url-rubygem: https://rubygems.org/gems/asciidoctor
     url-foundation: https://foundation.zurb.com
     url-jruby: https://jruby.org
@@ -25,6 +26,7 @@ nav:
 - modules/tooling/nav.adoc
 - modules/integrations/nav.adoc
 - modules/extensions/nav.adoc
+- modules/ROOT/nav-lang.adoc
 - modules/ROOT/nav-errors.adoc
 - modules/migrate/nav.adoc
 - modules/ROOT/nav-project.adoc

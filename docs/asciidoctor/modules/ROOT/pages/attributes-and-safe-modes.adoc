@@ -1,10 +1,10 @@
-= Using ifdef to Set Attributes By Safe Mode
+= Manage Attributes By Safe Mode
 // anchor: set-safe-attrs
 
 Asciidoctor provides security levels that control the read and write access of attributes, the include directive, macros, and scripts while a document is processing.
 Each level includes the restrictions enabled in the prior security level.
 
-Asciidoctor provides access to the xref:asciidoctor::safe-modes.adoc[current safe mode] through built-in attributes.
+Asciidoctor provides access to the xref:safe-modes.adoc[current safe mode] through built-in attributes.
 You can use these attributes to enable or disable content based on the current safe mode of the processor.
 
 The safe mode can be referenced by one of the following attributes:
@@ -15,7 +15,7 @@ The safe mode can be referenced by one of the following attributes:
 
 The attributes in the next example define replacement text for features that are disabled in high security environments:
 
-[source]
+[source,asciidoc]
 ----
 \ifdef::safe-mode-secure[]
 Link to chapters instead of including them.
@@ -24,7 +24,7 @@ Link to chapters instead of including them.
 
 This feature is particularly handy for displaying content on GitHub, where the safe mode is set to its most restrictive setting, secure.
 
-You can set the xref:asciidoctor::set-safe-mode.adoc[safe mode from the CLI] and the xref:asciidoctor:api:set-safe-mode.adoc[API].
+You can set the xref:cli:set-safe-mode.adoc[safe mode from the CLI] and the xref:api:set-safe-mode.adoc[API].
 
 ////
 Allow the include directive to import a file from a URI.

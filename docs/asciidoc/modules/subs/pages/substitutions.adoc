@@ -51,7 +51,7 @@ The header substitution group (`header`) is applied to metadata lines (author an
 It's also applied to the values of attribute entries, regardless of whether those entries are defined in the document header or body.
 Only special characters, attribute references, and the inline pass macro are replaced in elements that fall under the header group.
 
-TIP: You can use the xref:apply-subs-to-text.adoc[inline pass macro] in attribute entries to customize the substitution steps applied to the attribute's value.
+TIP: You can use the inline pass macro in attribute entries to xref:apply-subs-to-text.adoc[customize the substitution steps applied to the attribute's value].
 
 [#verbatim-group]
 === Verbatim substitution group
@@ -63,9 +63,9 @@ Only special characters are replaced in these blocks.
 === Pass substitution group
 
 No substitution steps are applied to three of the elements in the pass substitution group (`pass`).
-These elements include the xref:pass-block.adoc[passthrough block], xref:pass-macro.adoc#inline-pass[inline pass macro], and xref:pass-macro.adoc#triple-plus[triple plus macro].
+These elements include the xref:pass:pass-block.adoc[passthrough block], xref:pass:pass-macro.adoc#inline-pass[inline pass macro], and xref:pass:pass-macro.adoc#triple-plus[triple plus macro].
 
-The xref:pass-macro.adoc#def-plus[inline single plus and double plus macros] also belong to the pass group.
+The xref:pass:pass-macro.adoc#def-plus[inline single plus and double plus macros] also belong to the pass group.
 Only the special characters substitution step is applied to these elements.
 
 [#none-group]
@@ -78,4 +78,4 @@ No substitution steps are applied to comments.
 
 Asciidoctor provides several approaches for preventing substitutions.
 When you want to prevent punctuation and symbols from being interpreted as formatting markup, xref:prevent.adoc[escaping the punctuation with a backslash] may be sufficient.
-For more comprehensive substitution prevention and control, you can use xref:pass-macro.adoc[inline passthrough macros] or xref:pass-block.adoc[passthrough blocks].
+For more comprehensive substitution prevention and control, you can use xref:pass:pass-macro.adoc[inline passthrough macros] or xref:pass:pass-block.adoc[passthrough blocks].
