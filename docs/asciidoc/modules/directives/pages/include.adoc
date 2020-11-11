@@ -1,6 +1,10 @@
-= include Directive
+= Includes
 // Include Directive Syntax and Processing
 // Include Directive Concepts and Syntax
+
+You can include content from another file into the current AsciiDoc document using the include directive.
+The included content can be AsciiDoc or it can be any other text format.
+Where that content is included in the document determines how it will be processed.
 
 == What is an include directive?
 
