@@ -1,6 +1,6 @@
 = Customize the Substitutions Applied to Text
 
-The inline pass macro (`++pass:[]++`) accepts the shorthand values in addition to the longhand values for specifying substitution steps.
+The inline pass macro (`++pass:[]++`) accepts the shorthand values in addition to the longhand values for specifying substitution types.
 
 * `c` or `specialchars`
 * `q` or `quotes`
@@ -28,7 +28,7 @@ include::pass:example$pass.adoc[tag=in-macro]
 ====
 
 However, you also need to bold the text and want to use the AsciiDoc markup for that formatting.
-In this case, you'd assign the `quotes` substitution step to the inline pass macro.
+In this case, you'd assign the `quotes` substitution to the inline pass macro.
 
 .Assign quotes to inline pass macro
 [source#ex-sub-quotes]
@@ -42,7 +42,7 @@ The result of <<ex-sub-quotes>> is rendered below.
 include::pass:example$pass.adoc[tag=s-macro]
 ====
 
-You can also assign custom substitution steps to inline text that's in a block.
+You can also assign custom substitutions to inline text that's in a block.
 In the listing block below, we want to process the inline formatting on the second line.
 
 .Listing block with inline formatting

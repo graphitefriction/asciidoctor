@@ -1,4 +1,4 @@
-= Substitution Steps and Groups
+= Substitutions
 :y: Yes
 //icon:check[role="green"]
 :n: No
@@ -16,11 +16,11 @@ The single plus macro has no explanation (at least not in this module).
 The deprecate syntax needs to be moved to the deprecated table and/or migration docs.
 ////
 
-== Substitution steps
+== Substitution types
 
-The text substitution steps replace characters, markup, attribute references, and macros with the appropriate output for a given converter.
-When a document is processed, up to six text substitution steps may be carried out depending on the block or inline element's assigned substitution group.
-The processor runs the text substitution steps in the following order:
+Each substitution type replace characters, markup, attribute references, and macros in text with the appropriate output for a given converter.
+When a document is processed, up to six substitution types may be carried out depending on the block or inline element's assigned substitution group.
+The processor runs the substitutions in the following order:
 
 . xref:special-characters.adoc[]
 . xref:quotes.adoc[] (i.e., inline formatting)
@@ -29,13 +29,13 @@ The processor runs the text substitution steps in the following order:
 . xref:macros.adoc[]
 . xref:post-replacements.adoc[]
 
-These steps are organized into substitution groups.
+For convenience, these types are grouped and ordered into substitution groups.
 
 [#substitution-groups]
 == Substitution groups
 
-Each block and inline element has a default substitution group that is applied unless you customize the substitution steps for a particular element.
-<<table-subs-groups>> shows the substitution steps that are executed in each group.
+Each block and inline element has a default substitution group that is applied unless you customize the substitutions for a particular element.
+<<table-subs-groups>> shows the substitution types that are executed in each group.
 
 include::partial$subs-group-table.adoc[]
 
@@ -51,7 +51,7 @@ The header substitution group (`header`) is applied to metadata lines (author an
 It's also applied to the values of attribute entries, regardless of whether those entries are defined in the document header or body.
 Only special characters, attribute references, and the inline pass macro are replaced in elements that fall under the header group.
 
-TIP: You can use the inline pass macro in attribute entries to xref:apply-subs-to-text.adoc[customize the substitution steps applied to the attribute's value].
+TIP: You can use the inline pass macro in attribute entries to xref:apply-subs-to-text.adoc[customize the substitution types applied to the attribute's value].
 
 [#verbatim-group]
 === Verbatim substitution group
@@ -62,17 +62,17 @@ Only special characters are replaced in these blocks.
 [#pass-group]
 === Pass substitution group
 
-No substitution steps are applied to three of the elements in the pass substitution group (`pass`).
+No substitutions are applied to three of the elements in the pass substitution group (`pass`).
 These elements include the xref:pass:pass-block.adoc[passthrough block], xref:pass:pass-macro.adoc#inline-pass[inline pass macro], and xref:pass:pass-macro.adoc#triple-plus[triple plus macro].
 
 The xref:pass:pass-macro.adoc#def-plus[inline single plus and double plus macros] also belong to the pass group.
-Only the special characters substitution step is applied to these elements.
+Only the special characters substitution is applied to these elements.
 
 [#none-group]
 === None substitution group
 
 The none substitution group (`none`) is applied to comment blocks.
-No substitution steps are applied to comments.
+No substitutions are applied to comments.
 
 == Escaping substitutions
 

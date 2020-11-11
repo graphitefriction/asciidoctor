@@ -7,13 +7,13 @@ Asciidoctor supports several inline passthrough macros.
 
 [[def-plus]]single and double plus:: A special syntax for preventing inline text from being formatted.
 Only xref:subs:special-characters.adoc[special characters] are replaced in the output format.
-The substitution steps can't be modified using the step and group substitution values.
+The substitutions can't be modified for this type of passthrough.
 
 triple plus:: A special inline syntax for designating passthrough content.
-No substitution steps are applied nor can they be added using the step and group substitution values.
+No substitutions are applied nor can they be added using the step and group substitution values.
 
 inline pass macro:: An inline macro named `pass` that can be used to passthrough content.
-You can apply specific substitutions to the macro's target using the substitution step and group values.
+You can apply specific substitutions to the macro's target using substitution types and groups.
 +
 [source]
 ----
@@ -45,7 +45,7 @@ include::example$pass.adoc[tag=3p]
 [#inline-pass]
 == Inline pass macro
 
-To exclude inline content from all of the substitution steps enclose it in the inline pass macro.
+To exclude inline content from all of the substitutions, enclose it in the inline pass macro.
 For example, here's one way to format text as underline when generating HTML from AsciiDoc:
 
 [source]

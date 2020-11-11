@@ -70,7 +70,7 @@ See xref:source.adoc[] to learn more about `source` and `source-highlighter`.
 Content that is assigned the `listing` style, either via the explicit block style or the listing delimiters is subject to the xref:subs:substitutions.adoc#verbatim-group[verbatim substitution group].
 Only xref:subs:special-characters.adoc[special characters] and callouts are replaced automatically in listing content.
 
-You can control the substitution steps applied to a listing block using the `subs` attribute.
+You can control the substitutions applied to a listing block using the `subs` attribute.
 
 .Delimited listing block with custom substitutions syntax
 [#ex-subs]

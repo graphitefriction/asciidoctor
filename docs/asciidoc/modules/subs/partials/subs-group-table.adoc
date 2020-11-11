@@ -1,5 +1,5 @@
 :table-caption: Table
-.Substitution steps executed in each substitution group
+.Substitution types used by each substitution group
 [#table-subs-groups,cols="1,6*^"]
 |===
 |Group |Special characters |Quotes |Attributes |Replacements |Macros |Post replacements
