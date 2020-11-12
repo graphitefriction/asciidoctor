@@ -1,0 +1,49 @@
+= Link Macro Attribute Parsing
+
+The text between the square brackets of a URL or link macro is parsed intelligently.
+
+== Linked text alongside named attributes
+
+Normally, the value is treated as the linked text.
+In other words, it is treated as the first positional (unnamed) attribute.
+
+[source]
+----
+https://discuss.asciidoctor.org[Discuss Asciidoctor]
+----
+
+However, if the value contains both an equals sign and a comma, and the comma comes after the equals sign, the value is parsed as an attrlist.
+
+The following example shows a URL macro with both custom linked text and named attributes.
+
+[source]
+----
+https://discuss.asciidoctor.org[Discuss Asciidoctor,role=external,window=_blank]
+----
+
+Let's consider a case when the macro has named attributes, but the linked text also contains commas.
+In this case, you must escape the commas in the linked text by enclosing it in double quotes.
+
+[source]
+----
+https://example.org["Google, Yahoo, Bing",role=teal]
+----
+
+== Blank window shorthand
+
+Since configuring a link to target a blank window is a common practice, AsciiDoc provides a shorthand for it.
+Instead of having to append `window=_blank` to the attrlist, you can add a caret (`+^+`) to the end of the linked text.
+
+[source]
+----
+include::example$url.adoc[tag=linkattrs-s]
+----
+
+CAUTION: If you use the caret syntax more than once in a single paragraph, you may need to escape the first occurrence with a backslash.
+
+If the attrlist has both linked text and named attributes, the caret should fall at the end of the linked text, but inside the double quotes if present.
+
+[source]
+----
+https://example.org["Google, Yahoo, Bing^",role=teal]
+----
