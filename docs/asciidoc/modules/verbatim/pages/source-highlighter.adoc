@@ -41,7 +41,7 @@ You can also declare this attribute using the CLI or API.
 |Asciidoctor, AsciidoctorJ, Asciidoctor PDF
 
 |highlight.js
-|`highlightjs`
+|`highlight.js`
 |Asciidoctor, AsciidoctorJ, Asciidoctor.js
 
 |Pygments

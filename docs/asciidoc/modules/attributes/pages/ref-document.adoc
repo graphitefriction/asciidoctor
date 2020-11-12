@@ -917,7 +917,7 @@ Only used when `icons` attribute is set to `font`.
 
 |source-highlighter
 |{n}
-|coderay, highlightjs, pygments, rouge
+|coderay, highlight.js, pygments, rouge
 |{y}
 |{n}
 |xref:verbatim:source-highlighter.adoc[Specifies source code highlighter].
