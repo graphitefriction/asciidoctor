@@ -355,7 +355,7 @@ These are some of the more interesting ones when migrating:
 
 * xref:directives:include-lines-and-tags.adoc[Partial includes]
 * xref:attributes:safe-modes.adoc[Additional safe modes]
-* xref:macros:icon.adoc[Icon-based fonts and inline icons]
+* xref:macros:icons.adoc[Icon-based fonts and inline icons]
 * {url-diagram}[Asciidoctor Diagram^]
 
 A detailed list of the improvements is shown in #Differences between Asciidoctor and AsciiDoc.py#.

@@ -79,4 +79,4 @@ The result of <<ex-icon>> is displayed below.
 
 include::example$admonition.adoc[tag=para]
 
-Learn more about using Font Awesome or custom icons with admonitions in xref:macros:icons.adoc[].
+Learn more about using Font Awesome or custom icons with admonitions in xref:macros:icons-font.adoc[].
