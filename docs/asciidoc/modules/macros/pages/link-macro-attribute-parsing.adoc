@@ -15,6 +15,9 @@ https://discuss.asciidoctor.org[Discuss Asciidoctor]
 However, if the text contains both an equals sign (`=`) and a comma (`,`), and the comma comes after the equals sign, the text is parsed as an attribute list.
 In this case, the linked text is the first positional attribute.
 
+When attribute parsing is enabled, the link macro recognizes all the common attributes (id, role, and opts).
+It also recognizes a handful of attributes that are specific to the link macro.
+
 The following example shows a URL macro with custom linked text alongside named attributes.
 
 [source]
