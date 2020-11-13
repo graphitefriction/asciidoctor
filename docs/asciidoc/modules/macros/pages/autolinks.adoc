@@ -25,7 +25,19 @@ include::example$url.adoc[tag=base-co]
 The URL is also used as the linked text.
 If you want to custom the linked text, you can use the xref:url-macro.adoc[URL macro].
 
+In plain text documents, a bare URL is often enclosed in angle brackets.
+
+[source]
+----
+You'll often see <https://example.org> used in examples.
+----
+
+To accommodate this convention, the AsciiDoc processor will still recognize the URL as an autolink, but will discard the angle brackets in the output (as they are not deemed significant).
+
 Any link created from a bare URL (i.e., an autolink) automatically gets assigned the "bare" role.
+This allows the theming system (e.g., CSS) to recognize autolinks (and other bare URLs) and style them distinctly.
+
+== Email autolinks
 
 AsciiDoc also detects and autolinks most email addresses.
 
