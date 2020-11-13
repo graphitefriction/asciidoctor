@@ -2,6 +2,7 @@
 ** xref:build-basic-block.adoc[]
 ** xref:add-title.adoc[]
 ** xref:assign-id.adoc[]
+** xref:styles.adoc[]
 //** xref:attributes:style.adoc[]
 ** Advanced Block Patterns
 *** xref:nest.adoc[]
