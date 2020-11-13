@@ -1,6 +1,6 @@
-= Breaks and Horizontal Rules
+= Breaks
 
-== Line breaks
+== Hard line breaks
 
 Since adjacent lines of text are combined into a single paragraph when Asciidoctor converts a document, that means you can wrap paragraph text or put each sentence or phrase on a separate line.
 The line breaks won't appear in the output.
@@ -8,7 +8,7 @@ The line breaks won't appear in the output.
 However, if you want the line breaks in a paragraph to be preserved, you can use a space followed by a plus sign (`{plus}`) or set the `hardbreaks` option on the paragraph.
 All of the line breaks in an entire document can be preserved with the `hardbreaks` document attribute.
 
-TIP: Line breaks are automatically retained in xref:verbatim:literal-blocks.adoc[literal], xref:verbatim:listing-blocks.adoc[listing], xref:verbatim:source-blocks.adoc[source], and xref:verses.adoc[verse] blocks and paragraphs.
+TIP: Hard line breaks are automatically retained in xref:verbatim:literal-blocks.adoc[literal], xref:verbatim:listing-blocks.adoc[listing], xref:verbatim:source-blocks.adoc[source], and xref:verses.adoc[verse] blocks and paragraphs.
 
 === Inline line break syntax
 
@@ -55,8 +55,6 @@ To preserve line breaks throughout your entire document, set the `hardbreaks` do
 include::example$paragraph.adoc[tag=hb-attr]
 ----
 
-
-
-include::partial$horizontal-rules.adoc[]
+include::partial$thematic-breaks.adoc[]
 
 include::partial$page-breaks.adoc[]
