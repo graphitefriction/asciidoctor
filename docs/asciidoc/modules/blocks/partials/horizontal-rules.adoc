@@ -1,4 +1,4 @@
-= Horizontal Rule
+== Horizontal rules
 
 A horizontal rule is created by entering three single quotation marks (`++'''++`) on a line.
 
@@ -12,7 +12,7 @@ The result of <<ex-rule>> is displayed below.
 
 '''
 
-== Markdown-style horizontal rules
+=== Markdown-style horizontal rules
 
 Asciidoctor recognizes Markdown horizontal rules.
 The motivation here is to ease migration of Markdown documents to AsciiDoc documents.

@@ -35,7 +35,7 @@ If you're missing a lime colored sock, file a ticket in
 the {url-repo}/issues[Asciidoctor issue tracker]. <.>
 ----
 <.> Attribute references can be used in macros.
-<.> Attribute references can be used in blocks, such as xref:blocks:admonition.adoc[admonitions], and inline.
+<.> Attribute references can be used in blocks, such as xref:blocks:admonitions.adoc[admonitions], and inline.
 Since there isn't a blank line between the `disclaimer` reference and the next sentence, the sentence will be directly appended to the end of the attribute's value when it's processed.
 <.> The reference to the `url-repo-ex` attribute is inserted into a longer URL address and used in a xref:macros:url-macro.adoc[URL macro].
 
