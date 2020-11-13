@@ -1,4 +1,4 @@
-= The Options Attribute
+= Options Attribute
 
 The `options` attribute is a versatile xref:positional-and-named-attributes.adoc#named[named attribute] that can be assigned one or more values.
 It can be defined globally as document attribute as well as a block attribute on an individual block.
