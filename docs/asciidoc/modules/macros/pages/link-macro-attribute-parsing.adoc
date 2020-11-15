@@ -15,15 +15,24 @@ https://discuss.asciidoctor.org[Discuss Asciidoctor]
 However, if the text contains both an equals sign (`=`) and a comma (`,`), and the comma comes after the equals sign, the text is parsed as an attribute list.
 In this case, the linked text is the first positional attribute.
 
-When attribute parsing is enabled, the link macro recognizes all the common attributes (id, role, and opts).
-It also recognizes a handful of attributes that are specific to the link macro.
-
 The following example shows a URL macro with custom linked text alongside named attributes.
 
 [source]
 ----
-https://discuss.asciidoctor.org[Discuss Asciidoctor,role=external,window=_blank]
+https://discuss.asciidoctor.org[Discuss Asciidoctor,role=resource,window=_blank]
 ----
+
+If you want to define a single named attribute, but leave the linked text empty (so it falls back to the URL), then you need to start the attribute list with a comma.
+In other words, you need to leave a slot for the linked text so that the parser knows where it ends.
+Otherwise, the parser will treat the named attribute as the linked text.
+
+[source]
+----
+https://discuss.asciidoctor.org[,role=resource]
+----
+
+When attribute parsing is enabled, the link macro recognizes all the common attributes (id, role, and opts).
+It also recognizes a handful of attributes that are specific to the link macro.
 
 Let's consider a case when the linked text contains a comma and macro also has named attributes.
 In this case, you must enclose the linked text in double quotes so that it gets preserved by the parser.
