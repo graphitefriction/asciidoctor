@@ -10,8 +10,8 @@ Converting the AsciiDoc source is more than just grunt work, though.
 It's an opportunity to interpret and embellish your content to get more out of it than what you put in.
 In other words, it's like computer-assisted writing.
 
-The work of converting the AsciiDoc source to another format is handled by the converter.
-An AsciiDoc processor provides several built-in converters, including one that make HTML and DocBook.
+The work of converting the AsciiDoc source to another format is handled by a converter.
+An AsciiDoc processor provides several built-in converters, including ones for making HTML and DocBook.
 To activate one of these converters, you set the backend on the document (default: html).
 The backend is a keyword that tells the processor which output format you want to make.
 The processor then selects the converter that makes that output format.
@@ -22,4 +22,4 @@ First, it parses the AsciiDoc document.
 This parsing produces a structured document that reflects the written structure and interprets all the meaningful markup.
 The processor then passes this structured document to the converter to transform it into the output format.
 
-In short, the processor accepts a string (which may come from a file), parses it into a structure document, then produces another string (which may be written to a file).
+In short, the processor accepts a string (which may be read from a file), parses it into a structure document, then produces another string (which may be written to a file).
