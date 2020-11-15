@@ -1,5 +1,9 @@
 = Glossary of Terms
 
+[caption="Work in Progress"]
+CAUTION: This glossary is a work in progress.
+It does not include all the terms in AsciiDoc.
+
 attribute reference:: An expression for dereferencing the value of a document attribute.
 
 admonition:: a callout paragraph or block that has a label or icon indicating its priority.

@@ -2,7 +2,7 @@
 :url-asciidoc-lang: https://projects.eclipse.org/projects/technology.asciidoc
 
 [caption="Migration in Progress"]
-TIP: This documentation is in migration.
+CAUTION: This documentation is in migration.
 If you're looking for the current Asciidoctor and AsciiDoc documentation, visit https://asciidoctor.org/docs.
 
 .About this Documentation

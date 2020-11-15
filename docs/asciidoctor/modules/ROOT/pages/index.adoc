@@ -1,7 +1,7 @@
 = Asciidoctor Documentation
 
 [caption="Migration in Progress"]
-TIP: This documentation is in migration.
+CAUTION: This documentation is in migration.
 If you're looking for the current Asciidoctor and AsciiDoc documentation, visit https://asciidoctor.org/docs.
 
 {url-project}[Asciidoctor^] is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML, DocBook, and other formats.
