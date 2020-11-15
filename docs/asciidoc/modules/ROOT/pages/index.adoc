@@ -5,19 +5,6 @@
 CAUTION: This documentation is in migration.
 If you're looking for the current Asciidoctor and AsciiDoc documentation, visit https://asciidoctor.org/docs.
 
-== About this documentation
-
-You're reading the user-facing documentation for the AsciiDoc language as its implemented in xref:asciidoctor::index.adoc[Asciidoctor].
-This documentation does not cover how to set up and use Asciidoctor to process AsciiDoc content.
-You can find that documentation in the xref:asciidoctor::index.adoc[Asciidoctor] section of this website.
-
-This documentation has been submitted as the initial contribution for the {url-asciidoc-lang}[AsciiDoc Language] project at Eclipse.
-That project will use this documentation as the basis for drafting a specification for the AsciiDoc language.
-It will also be used as the draft of the user-facing guide for the AsciiDoc Language, which will also be maintained by that project.
-
-This documentation will remain here until the AsciiDoc Language project starts publishing its own documentation for the AsciiDoc Language.
-At that point, the documentation will be removed from this website and readers will be redirected to the official website for the language.
-
 == About AsciiDoc
 
 AsciiDoc is a lightweight and semantic markup language primarily designed for writing technical documentation.
@@ -33,3 +20,16 @@ The ability to produce multiple output formats allows AsciiDoc to be used in sta
 
 AsciiDoc bridges the gap between ease of writing and the rigorous requirements of technical authoring and publishing.
 AsciiDoc only requires a text editor to read or write, thereby offering a very low bar to get started.
+
+== About this documentation
+
+You're reading the user-facing documentation for the AsciiDoc language as its implemented in xref:asciidoctor::index.adoc[Asciidoctor].
+This documentation does not cover how to set up and use Asciidoctor to process AsciiDoc content.
+You can find that documentation in the xref:asciidoctor::index.adoc[Asciidoctor] section of this website.
+
+This documentation has been submitted as the initial contribution for the {url-asciidoc-lang}[AsciiDoc Language] project at Eclipse.
+That project will use this documentation as the basis for drafting a specification for the AsciiDoc language.
+It will also be used as the draft of the user-facing guide for the AsciiDoc Language, which will also be maintained by that project.
+
+This documentation will remain here until the AsciiDoc Language project starts publishing its own documentation for the AsciiDoc Language.
+At that point, the documentation will be removed from this website and readers will be redirected to the official website for the language.
