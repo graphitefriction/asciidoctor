@@ -1,0 +1,75 @@
+= Key Concepts
+
+== Document
+
+A document represents the top-level block element in AsciiDoc.
+It consists of an optional document header and either a) one or more sections preceded by an optional preamble or b) a sequence of top-level blocks only.
+
+The document can be configured using a document header.
+The header is not a block itself, but contributes metadata to the document, such as the document title and document attributes.
+
+== Elements
+
+An element is an identifiable, addressable, and composible chunk of content in a document.
+An AsciiDoc document is merely a composition of all the elements it contains.
+
+Elements are a hierarchy of types, where one element may be a specialization of a family of elements.
+For example, a sidebar block is a block element, so it shares the traits of all block elements, and also adds some of its own.
+Elements include the document, sections, blocks, block macros, and inline phrases and macros.
+
+== Attributes
+
+Attributes are the name given to metadata in AsciiDoc.
+An attribute is a name/value pair.
+Though, for elements, the name can be an index.
+
+An attribute is an abstract term.
+There are two concrete classifications for attributes: document attributes and element attributes.
+
+Document attributes, as the name implies, are associated directly with the document.
+These attributes are used to export information about the document and runtime, control behavior of the processor, and to store reusable values or phrases.
+Document attributes can be referenced in the content using an attribute reference (whereever the attribute substitution is enabled).
+A Document attribute can be defined in the document using an attribute entry or from the API or CLI.
+
+Element attributes are metadata on a specific element, like a block or an inline element, and only apply to that element.
+Element attributes are not accessible at all from the content, so they cannot be referenced like document attributes.
+Element attributes enrich or configure the behavior of an element, such as to apply a role or set the width of an image.
+An element attribute is defined using an attribute list on an element, or an avaiable shorthand like a block title line.
+
+== Macros
+
+A macro is a syntax for representing non-text elements or that expands into text using the provided metadata.
+
+Here's an example of a block macro:
+
+[source]
+----
+image::sunset.jpg[Sunset]
+----
+
+Here's an example of an inline macro:
+
+[source]
+----
+Click the button with the image:star.png[Star] icon to favorite the project.
+----
+
+You can think of a macro like a function.
+A syntax of macro follows the form of a name, a target which is sometimes optional, and an attribute list consisting of zero or more element attributes enclosed in square brackets.
+There are two variations of a macro: block and inline.
+In a block macro, the name and target are separated by two colons (`::`) and it must reside on a line by itself.
+In an inline macro, the name and target are separated by a single colon (`:`) and it can be alongside text and other inline elements.
+A block macro is always parsed, whereas an inline macro is only parsed where the macro substitution is enabled.
+
+== Preprocessor Directives
+
+There's another syntax in AsciiDoc that look a lot like block macros, only they aren't.
+These are the preprocessor directives.
+
+A preprocessor directive is function that controls lines that are fed into the parser.
+A conditional preprocessor directive can configure lines to be included or excluded based on the presence of an attribute (ifdef, ifndef) or another arbitrary condition (ifeval).
+An include directive can add additional lines to the document taken from another document.
+
+Like a block macro, a preprocessor directive must be on a line by itself.
+While the preprocessor directive can access document attributes, it is not otherwise aware of the context around it.
+It's only a line processor.
