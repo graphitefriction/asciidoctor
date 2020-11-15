@@ -33,7 +33,8 @@ Although the document header is optional, it's often used to specify the documen
 
 This is a basic AsciiDoc document by {author}.
 
-This document contains two paragraphs and has a header that specifies the document title.
+This document contains two paragraphs.
+It also has a header that specifies the document title.
 ----
 
 Almost any combination of blocks constitutes a valid AsciiDoc document (with some structural requirements dictated by the document type).
@@ -64,6 +65,9 @@ The same is true for an attribute entry, a block title, a block attribute list, 
 Blank lines can also be significant.
 A single blank line separates the header from the body.
 Blocks are also separated by a blank line, as you saw in the two paragraph example earlier.
+
+In contrast, lines in paragraph content are insignificant.
+To make a hard break in a paragraph, you must explicitly mark it (or set the option that enables hard line breaks).
 
 Keep these points in mind as you're learning about the AsciiDoc syntax.
 

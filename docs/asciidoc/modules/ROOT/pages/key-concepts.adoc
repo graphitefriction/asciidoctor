@@ -15,13 +15,14 @@ An AsciiDoc document is merely a composition of all the elements it contains.
 
 Elements are a hierarchy of types, where one element may be a specialization of a family of elements.
 For example, a sidebar block is a block element, so it shares the traits of all block elements, and also adds some of its own.
-Elements include the document, sections, blocks, block macros, and inline phrases and macros.
+
+Elements include the document itself, sections, blocks, block macros, breaks, and inline phrases and macros.
 
 == Attributes
 
 Attributes are the name given to metadata in AsciiDoc.
 An attribute is a name/value pair.
-Though, for elements, the name can be an index.
+Though, for elements, the name can be a numerical index (i.e., an unnamed, positional attribute).
 
 An attribute is an abstract term.
 There are two concrete classifications for attributes: document attributes and element attributes.
@@ -51,11 +52,12 @@ Here's an example of an inline macro:
 
 [source]
 ----
-Click the button with the image:star.png[Star] icon to favorite the project.
+Click the button with the image:star.png[Star] to favorite the project.
 ----
 
 You can think of a macro like a function.
 A syntax of macro follows the form of a name, a target which is sometimes optional, and an attribute list consisting of zero or more element attributes enclosed in square brackets.
+
 There are two variations of a macro: block and inline.
 In a block macro, the name and target are separated by two colons (`::`) and it must reside on a line by itself.
 In an inline macro, the name and target are separated by a single colon (`:`) and it can be alongside text and other inline elements.
