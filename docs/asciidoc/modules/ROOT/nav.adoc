@@ -2,7 +2,7 @@
 ** xref:document-structure.adoc[]
 ** xref:key-concepts.adoc[]
 ** xref:document-processing.adoc[]
-* Old Intro Pages
-** xref:doctypes.adoc[]
-** xref:elements.adoc[]
-** xref:attributes:types.adoc[]
+** Old Intro Pages
+*** xref:doctypes.adoc[]
+*** xref:elements.adoc[]
+*** xref:attributes:types.adoc[]
