@@ -61,6 +61,7 @@ An element attribute is defined using an attribute list on an element, or an ava
 
 == Macros
 
+As you read through this documentation, you'll frequently see references to the term macro.
 A macro is a syntax for representing non-text elements or that expands into text using the provided metadata.
 
 Here's an example of a block macro:
