@@ -86,6 +86,10 @@ The style is used by the converter to apply special behavior to blocks of the sa
 
 == Block commonalities
 
+//Every block can have one or more lines of block metadata.
+//This metadata can be in the form of block attributes, a block anchor, or a block title.
+//These metadata lines should be directly adjacent to the block itself.
+
 All blocks can accomodate zero or more lines of metadata stacked directly on top of the block.
 These lines populate the properties of the block, such as the ID, title, and options.
 These metadata lines are as follows:
