@@ -86,9 +86,9 @@ In a block macro, the name and target are separated by two colons (`::`) and it 
 In an inline macro, the name and target are separated by a single colon (`:`) and it can be alongside text and other inline elements.
 A block macro is always parsed, whereas an inline macro is only parsed where the macro substitution is enabled.
 
-== Preprocessor Directives
+== Preprocessor directives
 
-There's another syntax in AsciiDoc that look a lot like block macros, only they aren't.
+There's another syntax in AsciiDoc that looks a lot like block macros, only they aren't.
 These are the preprocessor directives.
 
 A preprocessor directive is function that controls lines that are fed into the parser.
