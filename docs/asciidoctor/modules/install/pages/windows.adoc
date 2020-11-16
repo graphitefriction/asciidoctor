@@ -1,11 +1,10 @@
 = Install Asciidoctor on Windows
 
-To use Asciidoctor with Windows, you have two options.
-You can use Chocolatey or Rubyinstaller.
+To install Asciidoctor on Windows, you can use Chocolatey or Rubyinstaller.
 
 == Chocolatey
 
-When you already use https://chocolatey.org[chocolatey] on your machine, you can use:
+When you already use https://chocolatey.org[chocolatey^] on your machine, you can use:
 
 [source]
 ----
@@ -16,4 +15,4 @@ Then follow the xref:gem.adoc[gem installation instructions].
 
 == Rubyinstaller
 
-Or you use the https://rubyinstaller.org/downloads/[Rubyinstaller], download the package for your Windows Version and after the installation, then follow the xref:gem.adoc[gem installation instructions].
+Or you use the https://rubyinstaller.org/downloads/[Rubyinstaller^], download the package for your Windows Version and after the installation, then follow the xref:gem.adoc[gem installation instructions].

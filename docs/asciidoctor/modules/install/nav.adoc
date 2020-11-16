@@ -6,4 +6,3 @@
 ** xref:windows.adoc[]
 ** xref:upgrade-requirements.adoc[]
 ** xref:upgrade.adoc[]
-//* xref:ROOT:language-support.adoc[Language Support]

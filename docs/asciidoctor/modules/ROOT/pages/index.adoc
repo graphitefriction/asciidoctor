@@ -5,7 +5,7 @@ CAUTION: This documentation is in migration.
 If you're looking for the current Asciidoctor and AsciiDoc documentation, visit https://asciidoctor.org/docs.
 
 {url-project}[Asciidoctor^] is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML, DocBook, and other formats.
-Asciidoctor is packaged as a RubyGem and published to {url-rubygem}[RubyGems.org^].
+Asciidoctor is packaged as a RubyGem and published to {url-rubygem}/asciidoctor[RubyGems.org^].
 The gem is also included in several Linux distributions, including Fedora, Debian, Ubuntu, and Alpine.
 Asciidoctor is open source, {url-org}/asciidoctor[hosted on GitHub^] and released under the MIT license.
 
@@ -30,7 +30,7 @@ The Asciidoctor test suite has > 2,000 tests to ensure compatibility with the As
 == The JVM and JavaScript
 
 You can run Asciidoctor on the JVM using JRuby.
-To invoke the Asciidoctor API directly from Java and other JVM languages, use #AsciidoctorJ#.
+To invoke the Asciidoctor API directly from Java and other JVM languages, use {url-asciidoctorj}[AsciidoctorJ].
 There are plugins available that integrate Asciidoctor into Apache Maven, Gradle, or Javadoc builds.
 
 Asciidoctor also runs in JavaScript.

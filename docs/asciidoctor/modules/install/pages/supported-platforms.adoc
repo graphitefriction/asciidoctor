@@ -4,7 +4,7 @@ Asciidoctor operates on Linux, macOS and Windows and requires one of the support
 
 == Ruby runtimes
 
-Asciidoctor requires one of the following implementations of {url-ruby}[Ruby].
+Asciidoctor requires one of the following implementations of {url-ruby}[Ruby^].
 
 [%autowidth]
 |===
