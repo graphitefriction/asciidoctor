@@ -11,9 +11,10 @@ If you're looking for the documentation for the AsciiDoc language itself, refer 
 
 == What is Asciidoctor?
 
-Asciidoctor is a fast, open source text processor for parsing AsciiDoc into a document model and/or converting it to output formats such as HTML 5, DocBook, PDF, and EPUB 3.
+Asciidoctor is a fast, open source text processor for parsing AsciiDoc into a document model and converting to output formats such as [.nowrap]#HTML 5#, [.nowrap]#DocBook 5#, PDF, and [.nowrap]#EPUB 3#.
 
-To simplify installation, Asciidoctor is packaged and distributed as a RubyGem (aka gem) to {url-rubygem}[RubyGems.org^], which can be installed on all major operating systems using Ruby packaging tools.
+To simplify installation, Asciidoctor is packaged and distributed as a RubyGem (aka gem) named https://rubygems.org/gem/asciidoctor[asciidoctor] to {url-rubygem}[RubyGems.org^].
+The asciidoctor gem can be installed on all major operating systems using Ruby packaging tools.
 Asciidoctor is also distributed as a package for numerous Linux distributions as well as macOS.
 
 The Asciidoctor software is open source under the terms of the MIT license and {url-org}[hosted on GitHub^].
@@ -22,23 +23,24 @@ The Asciidoctor software is open source under the terms of the MIT license and {
 
 Asciidoctor provides two primary interfaces for processing AsciiDoc documents:
 
-[cols=2*a]
+[cols=2*]
 |===
 | CLI | API
 
-|
+a|
  $ asciidoctor document.adoc
 
-See xref:cli:index.adoc[] to learn more about this interface.
 
-|
+a|
 [source,ruby]
 ----
 require 'asciidoctor'
-Asciidoctor.convert_file 'document.adoc', safe: :safe
+Asciidoctor.convert_file \
+  'document.adoc', safe: :safe
 ----
 
-See xref:api:index.adoc[] to learn more about this interface.
+|See xref:cli:cli.adoc[] to learn more about this interface.
+|See xref:api:overview.adoc[] to learn more about this interface.
 |===
 
 == Relationship to AsciiDoc
