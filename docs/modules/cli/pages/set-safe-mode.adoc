@@ -1,4 +1,5 @@
 = Set the Safe Mode Using the CLI
+:navtitle: Set the Safe Mode
 
 When Asciidoctor is invoked via the CLI, the xref:ROOT:safe-modes.adoc[safe mode] is set to `UNSAFE` by default.
 You can change the security level by executing one of the following commands:

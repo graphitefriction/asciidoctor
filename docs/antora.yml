@@ -19,8 +19,11 @@ asciidoc:
 nav:
 - modules/ROOT/nav-top.adoc
 - modules/install/nav.adoc
-- modules/ROOT/nav-get-started.adoc
-- modules/backends/nav.adoc
+- modules/get-started/nav.adoc
+- modules/ROOT/nav-converters.adoc
+- modules/html-backend/nav.adoc
+- modules/docbook-backend/nav.adoc
+- modules/manpage-backend/nav.adoc
 - modules/cli/nav.adoc
 - modules/api/nav.adoc
 - modules/ROOT/nav-safe-modes.adoc

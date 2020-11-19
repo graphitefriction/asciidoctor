@@ -40,3 +40,28 @@ gem 'asciidoctor'
 
 To upgrade the gem, specify the new version in the Gemfile and run `bundle` again.
 Using `bundle update` (without specifying a gem) is *not* recommended as it will also update other gems, which may not be the desired result.
+
+== Upgrade using gem update
+
+[CAUTION]
+====
+You're advised against using the `gem update` command to update a gem managed by the package manager.
+Doing so puts the system into an inconsistent state as the package manager can no longer track the files (which get installed under [.path]_/usr/local_).
+Simply put, system gems should only be managed by the package manager.
+
+If you want to use a version of Asciidoctor that is newer than what is installed by the package manager, you should use {url-rvm}[RVM^] to install Ruby in your home directory (i.e., user space).
+Then, you can safely use the `gem` command to install or update the Asciidoctor gem.
+When using RVM, gems are installed in a location isolated from the system.
+====
+
+You can upgrade Asciidoctor using the gem `update` command:
+
+ $ gem update asciidoctor
+
+[TIP]
+====
+If you accidentally use `gem install` instead of `gem update`, then you'll end up with both versions installed.
+To remove the older version, use the following `gem` command:
+
+ $ gem cleanup asciidoctor
+====

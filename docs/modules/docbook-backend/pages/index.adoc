@@ -1,10 +1,14 @@
-= Convert AsciiDoc to DocBook
+= Generate DocBook from AsciiDoc
+:navtitle: Generate DocBook
 :url-docbook45: https://github.com/asciidoctor/asciidoctor-docbook45
 :url-yelp: https://wiki.gnome.org/action/show/Apps/Yelp
 
+== DocBook 5.0 converter
+
 Asciidoctor can produce DocBook 5.0 XML output.
-//Since the AsciiDoc syntax was designed with DocBook output in mind, the conversion is very good.
-//There's a corresponding DocBook element for each AsciiDoc element.
+There's a corresponding DocBook element for each AsciiDoc element.
+
+== Generate DocBook with the docbook converter
 
 To convert the [.path]_mysample.adoc_ document to DocBook 5.0 format, call the processor with the backend flag set to `docbook`.
 

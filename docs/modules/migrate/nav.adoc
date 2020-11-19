@@ -1,4 +1,5 @@
 * Migration Guides
+** xref:upgrade.adoc[]
 ** xref:asciidoc-python.adoc[]
 ** xref:docbook-xml.adoc[]
 ** xref:markdown.adoc[]

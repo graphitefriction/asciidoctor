@@ -1,8 +1,8 @@
-= Before You Upgrade
+= Upgrade Asciidoctor 1.5.x to Asciidoctor 2.0
 //Syntax, Attributes, and Commands: What's Changed?
 
 IMPORTANT: This page if for users upgrading from a previous version of Asciidoctor to the latest stable version of Asciidoctor.
-If your migrating from AsciiDoc Python, see xref:migrate:asciidoc-python.adoc[].
+If your migrating from AsciiDoc Python, see xref:asciidoc-python.adoc[].
 
 When you upgrade Asciidoctor you may also need to update some of the syntax and attributes in your AsciiDoc documents.
 Major version releases can include new AsciiDoc syntax capabilities as well as syntax changes that make it more consistent.
@@ -106,7 +106,7 @@ If you want to use the new Asciidoctor syntax, make sure to use `= Title` or exp
 
 == New features
 
-Visit xref:ROOT:whats-new.adoc[] for a complete list of new Asciidoctor and AsciiDoc features.
+Visit xref:ROOT:whats-new.adoc[] for a complete list of new Asciidoctor features.
 
 ////
 == Proposed changes for future versions
@@ -155,17 +155,4 @@ pass:[--]
 When it isn't feasibly to update your documents prior to upgrading Asciidoctor, you can run Asciidoctor in compatibility mode.
 Compatibility mode is activated by setting the `compat-mode` attribute and allows Asciidoctor to accept and apply the deprecated syntax and/or behavior.
 However, *not all deprecated syntax or behavior is available under the compatibility mode*.
-////
-
-////
-== Next
-
-xref:upgrade.adoc#upgrade-on-linux[Upgrade on Linux]::
-Upgrade Asciidoctor using the package manager on many Linux distributions including Fedora, RHEL, Debian, Ubuntu, and Alpine Linux.
-
-xref:upgrade.adoc#upgrade-on-macos[Upgrade on macOS]::
-Upgrade Asciidoctor using Homebrew on macOS.
-
-xref:upgrade.adoc#gem-update[Upgrade using gem update]::
-Upgrade Asciidoctor using the `gem update` command.
 ////

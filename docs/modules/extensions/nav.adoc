@@ -1,4 +1,5 @@
-* xref:register.adoc[Extensions]
+* xref:index.adoc[]
+** xref:register.adoc[]
 ** xref:preprocessor.adoc[]
 ** xref:tree-processor.adoc[]
 ** xref:postprocessor.adoc[]

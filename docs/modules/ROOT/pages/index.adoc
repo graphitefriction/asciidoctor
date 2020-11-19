@@ -39,8 +39,8 @@ Asciidoctor.convert_file \
   'document.adoc', safe: :safe
 ----
 
-|See xref:cli:cli.adoc[] to learn more about this interface.
-|See xref:api:overview.adoc[] to learn more about this interface.
+|See xref:cli:index.adoc[] to learn more about this interface.
+|See xref:api:index.adoc[] to learn more about this interface.
 |===
 
 == Relationship to AsciiDoc
@@ -86,7 +86,7 @@ Building atop AsciidoctorJ, there are also plugins that integrate Asciidoctor in
 
 === JavaScript
 
-Thanks to xref:asciidoctorjs::index.adoc[Asciidoctor.js], Asciidoctor can also be used in JavaScript.
+Thanks to xref:asciidoctor.js::index.adoc[Asciidoctor.js], Asciidoctor can also be used in JavaScript.
 The Asciidoctor.js project uses Opal to transpile the Ruby source in Asciidoctor to JavaScript.
 The result is a fully-functional version of Asciidoctor that works on any JavaScript runtime, such as a modern browser or Node.js.
 Asciidoctor.js even provides an alternate CLI, which means you can get the full Asciidoctor experience with only a JavaScript runtime.

@@ -1,4 +1,4 @@
-= Piping Content Through the CLI
+= Pipe Content Through the CLI
 
 In addition to converting files, the Asciidoctor CLI can read content from standard input (STDIN) and/or write content to standard output (STDOUT).
 This feature is called piping.

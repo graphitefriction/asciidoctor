@@ -1,10 +1,12 @@
-= Wrap or Scroll
+= Verbatim Block Line Wrapping
 
-The default Asciidoctor stylesheet wraps long lines in listing and literal blocks by applying the CSS `white-space: pre-wrap` and `word-wrap: break-word`.
+The default Asciidoctor stylesheet wraps long lines in verbatim blocks by applying the CSS `white-space: pre-wrap` and `word-wrap: break-word`.
 The lines are wrapped at word boundaries, similar to how most text editors wrap lines.
 This prevents horizontal scrolling which some users considered a greater readability problem than line wrapping.
 
 However, this behavior is configurable because there are times when you don't want the lines in listing and literal blocks to wrap.
+
+== Prevent line wrapping
 
 There are two ways to prevent lines from wrapping so that horizontal scrolling is used instead:
 

@@ -1,5 +1,6 @@
-= Command Line Interface Basics
-:url-manpage: {url-project}/man/asciidoctor
+= Process AsciiDoc Using the CLI
+:url-manpage: https://github.com/asciidoctor/asciidoctor/blob/master/man/asciidoctor.adoc
+
 ////
 command-line-usage.adoc
 Command line usage quick start for Asciidoctor
@@ -13,15 +14,16 @@ To confirm that Asciidoctor is available, execute:
 
 The following information should be output in your terminal:
 
+[subs=attributes+]
  Asciidoctor {release-version} [https://asciidoctor.org]
 
 To invoke Asciidoctor from the CLI and convert an `.adoc` file, execute:
 
- $ asciidoctor <asciidoc_file>
+ $ asciidoctor <asciidoc-file>
 
 This will use the built-in defaults for options and create a new file in the same directory as the input file, with the same base name, but with the `.html` extension.
 
-The xref:cli-options-and-parameters.adoc[] describes the available Asciidoctor CLI options and parameters.
+The xref:options-and-parameters.adoc[] describes the available Asciidoctor CLI options and parameters.
 
 Full help is provided in the {url-manpage}[Asciidoctor man page^] or via:
 

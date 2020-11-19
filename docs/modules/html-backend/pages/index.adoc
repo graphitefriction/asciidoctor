@@ -1,10 +1,13 @@
 = Generate HTML from AsciiDoc
+:navtitle: Generate HTML
 
-== Convert AsciiDoc to HTML
+== HTML 5 converter
 
 Asciidoctor's default output format is HTML.
 
 `html5`:: HTML 5 markup styled with CSS3.
+
+== Generate HTML using the html5 converter
 
 In this section, we'll create a sample document, then process and convert it with Asciidoctor's `html5` converter.
 
@@ -48,7 +51,7 @@ The document's text, titles, and link is styled by the default Asciidoctor style
 As a result, you could save [.path]_my-sample.html_ to any computer and it will look the same.
 
 [#xhtml]
-== Convert AsciiDoc to XHTML
+== Generate XHTML
 
 To convert AsciiDoc to XHTML, set the backend to `xhtml5`.
 

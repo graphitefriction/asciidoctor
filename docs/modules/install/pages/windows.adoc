@@ -1,4 +1,4 @@
-= Install Asciidoctor on Windows
+= Install on Windows
 
 To install Asciidoctor on Windows, you can use Chocolatey or Rubyinstaller.
 
