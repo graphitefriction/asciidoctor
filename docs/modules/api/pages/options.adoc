@@ -1,4 +1,4 @@
-= Ruby API Options
+= API Options
 
 [cols="15m,15,15,15,15"]
 |===

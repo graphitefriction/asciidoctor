@@ -1,9 +1,9 @@
-= Security Modes
+= Safe Modes
 
 Asciidoctor provides security levels that control the read and write access of attributes, include directives, macros, and scripts while a document is processing.
 Each level includes the restrictions enabled in the prior security level.
 
-== Safe modes
+== Safe mode levels
 
 `UNSAFE`::
 A safe mode level that disables any security features enforced by Asciidoctor.

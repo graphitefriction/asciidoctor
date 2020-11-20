@@ -1,5 +1,6 @@
 = What's New in Asciidoctor {page-component-version}
 :doctype: book
+:page-toclevels: 0
 :url-releases-asciidoctor: {url-org}/asciidoctor/releases
 :url-milestone: {url-org}/asciidoctor/milestone/33?closed=1:
 

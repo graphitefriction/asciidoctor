@@ -1,4 +1,4 @@
-= Upgrade Asciidoctor 1.5.x to Asciidoctor 2.0
+= Upgrade from Asciidoctor 1.5.x to 2.0
 //Syntax, Attributes, and Commands: What's Changed?
 
 IMPORTANT: This page if for users upgrading from a previous version of Asciidoctor to the latest stable version of Asciidoctor.
