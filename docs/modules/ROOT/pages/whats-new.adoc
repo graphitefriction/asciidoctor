@@ -1,4 +1,5 @@
-= What's New in Asciidoctor {page-component-version}
+//= What's New (Asciidoctor {page-component-version})
+= What's New ({page-component-version})
 :doctype: book
 :page-toclevels: 0
 :url-releases-asciidoctor: {url-org}/asciidoctor/releases
