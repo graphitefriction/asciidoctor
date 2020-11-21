@@ -5,7 +5,7 @@ CAUTION: This documentation is in migration.
 If you're looking for the current Asciidoctor documentation, visit https://asciidoctor.org/docs.
 
 This section of the website contains the documentation for {url-project}[Asciidoctor^], a Ruby-based AsciiDoc processor.
-Asciidoctor currently serves as the reference implementation for how the AsciiDoc language is interpreted.
+Asciidoctor currently serves as the reference implementation for how to interpret the AsciiDoc language.
 If you're looking for the documentation for the AsciiDoc language itself, refer to the xref:asciidoc::index.adoc[AsciiDoc section] of this website.
 //You can also find the documentation for AsciidoctorJ, Asciidoctor.js, and various extensions and integrations in other areas of this website.
 
