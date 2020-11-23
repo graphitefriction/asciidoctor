@@ -1,0 +1,40 @@
+= Asciidoctor Mathematical
+:url-asciidoctor-mathematical: https://github.com/asciidoctor/asciidoctor-mathematical
+
+Asciidoctor Mathematical is an Asciidoctor extension that transforms STEM notation to a displayable format during processing.
+The library is called Asciidoctor Mathematical because it relies on the mathematical library to parse and transform (aka render) LaTeX expressions.
+It also uses the AsciiMath library to convert AsciiMath to LaTeX so mathematical can process it.
+
+== How it works
+
+The library works by visiting each STEM node, passing the expression source to the STEM processor to transform it into an image, then inserting the image back into the parse document, effectively replacing the STEM node.
+This takes the burden of transforming the STEM off the converter.
+All the converter sees are the generated images.
+That makes Asciidoctor Mathematical an all-purpose solution for STEM processing.
+It works with the built-in converters as well as the converters for PDF and EPUB3.
+
+The main drawback of Asciidoctor Mathmatical when compared to MathJax is that you don't have a lot of control over the size and resolution of the images it generates.
+//And since it produces static images, the displayable format is not interactive
+So when converting to HTML, MathJax is going to give you a better result.
+
+== Install
+
+Asciidoctor Mathematical is distributed as a RubyGem named asciidoctor-mathematical.
+You can install it using the Ruby packaging tools (gem or bundle).
+
+ $ gem install asciidoctor-mathematical
+
+However, since it depends on native libraries, you may run into difficulty installing it.
+In that case, consider using the Asciidoctor Docker container, which comes with the asciidoctor-mathematical gem preinstalled.
+
+== Activate
+
+To activate the Asciidoctor Mathematical extension, you must require the gem when invoking Asciidoctor:
+
+ $ asciidoctor -r asciidoctor-mathematical stem.adoc
+
+When the extension is activated, it will automatically find STEM nodes in the parsed document and replace them with images.
+
+== More info
+
+To learn more about how to use this extension and the options it provides, see the {url-asciidoctor-mathematical}[project's README].
