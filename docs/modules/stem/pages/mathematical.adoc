@@ -1,21 +1,29 @@
 = Asciidoctor Mathematical
 :url-asciidoctor-mathematical: https://github.com/asciidoctor/asciidoctor-mathematical
 
-Asciidoctor Mathematical is an Asciidoctor extension that transforms STEM notation to a displayable format during processing.
-The library is called Asciidoctor Mathematical because it relies on the mathematical library to parse and transform (aka render) LaTeX expressions.
-It also uses the AsciiMath library to convert AsciiMath to LaTeX so mathematical can process it.
+{url-asciidoctor-mathematical}[Asciidoctor Mathematical] is an Asciidoctor extension that transforms STEM notation to a displayable format during processing.
+The library is called Asciidoctor Mathematical because it relies on the Mathematical library to parse and transform (aka render) LaTeX expressions.
+It also relies on the AsciiMath library to convert AsciiMath to LaTeX so Mathematical can process it.
 
 == How it works
 
-The library works by visiting each STEM node, passing the expression source to the STEM processor to transform it into an image, then inserting the image back into the parse document, effectively replacing the STEM node.
-This takes the burden of transforming the STEM off the converter.
+The library works by visiting each STEM node in the parsed document and converting it to an image, effectively replacing the STEM node with an image node.
+This takes the burden of transforming the STEM off of the converter.
 All the converter sees are the generated images.
-That makes Asciidoctor Mathematical an all-purpose solution for STEM processing.
-It works with the built-in converters as well as the converters for PDF and EPUB3.
+
+Upon visiting each STEM node, the extension first extracts the expression source.
+If the expression is written in AsciiMath, the extension uses the AsciiMath library to convert that expression to LaTeX.
+The extension then passes the expression to Mathematical to render it as an image.
+Once that's done, the extension replaces the STEM node in the parsed document with an image node that references the generated image.
+When the extension finishes processing all the STEM nodes, it unsets the `stem` attribute on the document to indicate no further STEM processing should be performed on the document.
+
+Since Asciidoctor Mathematical replaces all STEM nodes with image nodes, it serves as an an all-purpose solution for STEM processing.
+All converters know how do deal with image nodes.
+The extension can be used with the built-in converters as well as extended converters such as PDF and EPUB3.
 
 The main drawback of Asciidoctor Mathmatical when compared to MathJax is that you don't have a lot of control over the size and resolution of the images it generates.
-//And since it produces static images, the displayable format is not interactive
-So when converting to HTML, MathJax is going to give you a better result.
+It also lacks the interactivity with the expression that MathJax provides.
+So when your converting to HTML, MathJax is going to give you a better result.
 
 == Install
 
