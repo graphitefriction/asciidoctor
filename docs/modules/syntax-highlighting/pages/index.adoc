@@ -76,6 +76,11 @@ h|Client-side
 |HTML, PDF, EPUB3, Reveal.js
 |===
 
+Note that syntax highlighting is not available when generating DocBook.
+The assumption is that this is a task the DocBook toolchain can handle.
+The DocBook converter generates a `<programlisting>` tag for the source block and passes through the source language as specified in the AsciiDoc.
+It's then up to the DocBook toolchain to apply syntax highlighting to the contents of that tag.
+
 You can explore these integrations in depth on the xref:highlightjs.adoc[], xref:rouge.adoc[], xref:pygments.adoc[], and xref:coderay.adoc[] pages.
 
 You can also create your own integration by making a xref:custom.adoc[].
