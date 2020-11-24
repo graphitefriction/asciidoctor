@@ -18,7 +18,7 @@ Here's how we expect it to appear:
 puts "Hello, World!"
 ----
 
-It's up to an AsciiDoc processor such as Asciidoctor to apply the syntax highlighting to this source block, a process we refer to as *source highlighting*.
+It's up to an AsciiDoc processor such as Asciidoctor to apply the syntax highlighting to this source block, a process referred to as *source highlighting*.
 Asciidoctor provides adapters that integrate with several popular syntax highlighter libraries to perform this task.
 It also provides an interface for implementing a custom syntax highlighter adapter.
 
